@@ -87,27 +87,47 @@
 
 -->
 
-<div class="column-layout clearfix">
+<div class="siteHeaderContainer">
 
+  <div class="siteHeader column-layout clearfix">
+  
   <!-- Begin block: main-header -->
   {% block main-header %}
     <!-- base.html -->
   {% endblock %}
   <!-- End block: main-header -->
-    
-  <!-- Begin block: main-content -->
-  {% block main-content %}
+  
+  </div><!-- End .column-layout (@init gdgs) -->
+
+</div><!-- End .siteHeaderContainer -->
+
+<div class="siteMainContainer">
+  
+  <div class="siteMain column-layout clearfix">
+      
+  <!-- Begin block: main -->
+  {% block main %}
     <!-- base.html -->
   {% endblock %}
-  <!-- End block: main-content -->
+  <!-- End block: main -->
+  
+  </div><!-- End .column-layout (@init gdgs) -->
 
+</div><!-- End .siteMainContainer -->
+
+<div class="siteFooterContainer">
+
+  <div class="siteFooter column-layout clearfix">
+  
   <!-- Begin block: main-footer -->
   {% block main-footer %}
     <!-- base.html -->
   {% endblock %}
   <!-- End block: main-footer -->
+  
+  </div><!-- End .column-layout (@init gdgs) -->
 
-</div><!-- End .column-layout (@init gdgs)
+</div><!-- End .siteFooterContainer -->
   
 <!--
 

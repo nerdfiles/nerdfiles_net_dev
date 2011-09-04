@@ -7,9 +7,16 @@
 </div>
 {% endblock %}
 
-{% block main-content %}
+{% block main %}
 <div class="columns-16" role="main">
-  <p>Home.</p>
+
+  <div class="siteIntro">
+    {% placeholder "Site Main Content" %}
+  </div><!-- End .siteIntro -->
+  <div class="siteProjects"></div><!-- End .siteProjects -->
+  <div class="sitePlayground"></div><!-- End .sitePlayground -->
+  <div class="siteContact"></div><!-- End .siteProjects -->
+
 </div>
 {% endblock %}
 
