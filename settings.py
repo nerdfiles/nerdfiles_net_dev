@@ -84,6 +84,9 @@ MEDIA_URL = "/_assets/"
 # Examples: "http://foo.com/static/admin/", "/static/admin/".
 ADMIN_MEDIA_PREFIX = '/_assets/admin/'
 
+# django cms admin location
+# CMS_MEDIA_URL = '/_assets/'
+
 # Additional locations of static files
 """
 STATICFILES_DIRS = (
@@ -162,8 +165,9 @@ TEMPLATE_DIRS = (
 
 # django cms templates
 CMS_TEMPLATES = (
-    ('template_1.html', 'Template One'),
-    ('template_2.html', 'Template Two'),
+  ('template-home.html', 'Template: Home'),
+  ('template-1.html', 'Template: One'),
+  ('template-2.html', 'Template: Two'),
 )
 
 # installed apps

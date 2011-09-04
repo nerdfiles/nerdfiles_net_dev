@@ -1,15 +1,62 @@
 {% load cms_tags %}
-<!doctype html>
+
+<!DOCTYPE 
+  html
+  public "♥">
+
+<html lang="en">
+
 <head>
   <title>{{ request.current_page.get_title }}</title>
   {% plugins_media %}
 </head>
 
 <body>
-    {% placeholder "main" %}
-    
-    {% block base_content %}
-      <!-- base.html > base_content -->
-    {% endblock %}
+
+<!--
+
+
+
+
+
+
+
+
+          This section has been intentionally left blank.
+
+
+
+
+
+
+
+
+-->
+
+  {% block main-content %}
+    {% placeholder "Main Content" %}
+  {% endblock %}
+  
+<!--
+
+
+
+
+
+
+
+
+          This section has been intentionally left blank.
+
+
+
+
+
+
+
+
+-->
+  
 </body>
+
 </html>
