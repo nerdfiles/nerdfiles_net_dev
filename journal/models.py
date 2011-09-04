@@ -6,7 +6,7 @@ class Post(models.Model):
   title = models.CharField(max_length=200)
   pub_date = models.DateTimeField('Date published')
 
-class Comments(models.Model):
+class Comment(models.Model):
   post = models.ForeignKey(Post)
   title = models.CharField(max_length=200)
   pub_date = models.DateTimeField('Date published')
