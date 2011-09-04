@@ -166,8 +166,7 @@ TEMPLATE_DIRS = (
 # django cms templates
 CMS_TEMPLATES = (
   ('template-home.html', 'Template: Home'),
-  ('template-1.html', 'Template: One'),
-  ('template-2.html', 'Template: Two'),
+  ('template-home-extended.html', 'Template: Home, Extended'),
 )
 
 # installed apps
