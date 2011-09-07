@@ -3,7 +3,7 @@
 
 {% block main-header %}
 <div class="columns-16">
-  <p>Header.</p>
+  <div class="logo"><a href="http://nerdfiles.net" title="nerdfiles.net">nerdfiles.net</a></div>
 </div>
 {% endblock %}
 
@@ -11,17 +11,26 @@
 <div class="columns-16" role="main">
 
   <div class="siteIntro">
-    {% placeholder "Site Main Content" %}
+    {% placeholder "Site "Intro" Content" %}
   </div><!-- End .siteIntro -->
-  <div class="siteProjects"></div><!-- End .siteProjects -->
-  <div class="sitePlayground"></div><!-- End .sitePlayground -->
-  <div class="siteContact"></div><!-- End .siteProjects -->
+  
+  <div class="siteProjects">
+    {% placeholder "Site "Projects" Content" %}
+  </div><!-- End .siteProjects -->
+  
+  <div class="sitePlayground">
+    {% placeholder "Site "Playground" Content" %}
+  </div><!-- End .sitePlayground -->
+  
+  <div class="siteContact">
+    {% placeholder "Site "Contact" Content" %}
+  </div><!-- End .siteProjects -->
 
 </div>
 {% endblock %}
 
 {% block main-footer %}
 <div class="columns-16">
-  <p>Footer.</p>
+  <p>&copy; 2003-2011. Rights, right?</p>
 </div>
 {% endblock %}

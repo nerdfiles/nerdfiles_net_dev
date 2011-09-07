@@ -1,0 +1,121 @@
+@import url("preview.css");
+@import url("wym.css");
+
+/* SEMANTIC EDITOR PRESENTATION CONTROLS */
+.prescontrol td             { padding: 0; border: none; }
+.prescontrolheadings        { margin-right: 260px; }
+.prescontrolheadings select { background: inherit; border: none; width: 100%;}
+.prescontrolclasslistcont div { clear:left; }
+.prescontrolclasslist         { overflow-y: scroll; border: none; }
+.prescontrolerror           { color: red; text-align: center; padding-top: 5px; }
+.prescontrolclasslistcont   { width: 220px; float: right; }
+.prescontrol .prescontrolclasslist label {
+    /* Override some stuff set by Django admin CSS*/
+    display: inline;
+    width: auto;
+    float: none;
+    /* Make them harder to 'fall off' w.r.t tooltips */
+    line-height: 1.5em;
+    font-size: 100%;
+}
+
+.prescontrol .prescontrolheadings label {
+    display: inline; /* override hiding */
+    width: auto;
+    float: none;
+}
+
+.prescontrolheadings select { border: 1px solid #ccc; font-size: 110%;}
+.prescontrolheadings option {color: #666;}
+.prescontrolheadings option.column  {color: blue; }
+.prescontrolheadings option.row  {color: black; }
+
+/* the editor controls (containers, commands, classes) */
+
+.wym_skin_semanticeditor .wym_panel ul {
+    padding: 2px;
+    margin: 0 0 5px;
+    background: #f0f3f8;
+    }
+
+.wym_section.wym_panel li,
+.wym_tools li  {
+    display: inline-block;
+    margin-bottom: 4px;
+    font: small-caption;
+    font-size: 95%;
+    }
+
+.wym_panel li a,
+.wym_tools li a {
+    color: black;
+    background: #eee;
+    border: 1px solid black;
+    display: inline;
+    padding: 0px 3px 1px;
+    border-radius: 3px;
+    margin-right: .3em;
+    text-transform: lowercase;
+    }
+
+.wym_section.wym_panel li.class-category     {display: list-item; }
+.wym_section.wym_panel li.class-category h3  {display: inline; padding-right: 3px;}
+.wym_section.wym_panel li.class-category ul  {display: inline;}
+
+
+/* containers - red */
+
+.wym_containers li a            {color: #a33; border: 1px solid #a33;}
+.wym_containers li a.used       {background: #a33;}
+
+/* column controls - blue */
+
+.wym_layout_commands li a       {color: #67a; border: 1px solid #67a;}
+.wym_layout_commands li a.used  {background: #67a;}
+
+/* classes - green */
+
+.wym_classes li a               {color: #686; border: 1px solid #686;}
+.wym_classes li a.used          {background: #686}
+
+/* all share the same .used class */
+
+.wym_containers li a.used,
+.wym_layout_commands li a.used,
+.wym_classes li a.used {color: white;}
+
+/* and the same hover class */
+
+.wym_containers li a:hover,
+.wym_layout_commands li a:hover,
+.wym_classes li a:hover,
+.wym_tools li a:hover  {
+    background: black;
+    color: white;
+    border: 1px solid black;
+    }
+
+/* semantic buttons - red */
+
+li.wym_tools_strong a,
+li.wym_tools_emphasis a,
+li.wym_tools_ordered_list a,
+li.wym_tools_unordered_list a,
+li.wym_tools_table a,
+li.wym_tools_indent a,
+li.wym_tools_outdent a        {color: #a33; border: 1px solid #a33;}
+
+/* style buttons - green */
+
+li.wym_tools_superscript a,
+li.wym_tools_subscript a   {color: #686; border: 1px solid #686}
+
+/* is anything ever .disabled? */
+
+.wym_skin_semanticeditor .wym_section a.disabled,
+.wym_skin_semanticeditor .wym_section a.disabled:hover {
+    color: #888;
+    cursor: default;
+    background-color: #dde8dd;
+    border: 1px solid #dde8dd;
+}

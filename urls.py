@@ -14,6 +14,8 @@ urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
     
+    (r'^semantic/', include('semanticeditor.urls')),
+    
     # django cms
     url(r'^', include('cms.urls')),
     #url(r'_assets/', include('cms.urls')),

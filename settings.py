@@ -169,6 +169,8 @@ CMS_TEMPLATES = (
   ('template-home-extended.html', 'Template: Home, Extended'),
 )
 
+SEMANTICEDITOR_MEDIA_URL = os.path.join(MEDIA_URL, "semanticeditor/")
+
 # installed apps
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -191,6 +193,8 @@ INSTALLED_APPS = (
     'menus',
     'south',
     'appmedia',
+    
+    'semanticeditor',
     
     # django cms plugins
     'cms.plugins.text',
