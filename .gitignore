@@ -3,5 +3,7 @@ _assets/css-lib/gdgs/*
 _assets/js-lib/
 .gitignore~
 settings.py
+urls.py
+*.db
 *.pyc
 *.swp
