@@ -4,3 +4,4 @@ _assets/js-lib/
 .gitignore~
 settings.py
 *.pyc
+*.swp
