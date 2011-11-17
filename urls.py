@@ -33,7 +33,7 @@ urlpatterns = patterns('',
 
 # == LOCAL ======================================== #
 
-if settings.LOCAL_DEVELOPMENT:
+if settings.DEBUG:
   urlpatterns = patterns('',
     url(r'^'+settings.ASSETS_URL+'(?P<path>.*)$', 'django.views.static.serve',
     {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
