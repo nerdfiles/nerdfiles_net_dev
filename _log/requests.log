@@ -1199,3 +1199,10 @@ DatabaseError: no such table: django_session
 2011-11-16 23:16:48,884 [WARNING] django.request: Not Found: /favicon.ico/
 2011-11-16 23:16:52,606 [WARNING] django.request: Not Found: /favicon.ico/
 2011-11-16 23:16:54,785 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:45:48,204 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:45:50,048 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:45:53,421 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:45:59,551 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:46:05,968 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 02:02:25,156 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 02:16:37,125 [WARNING] django.request: Not Found: /favicon.ico/

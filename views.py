@@ -2,7 +2,6 @@
 
 # == IMPORTS ======================================== #
 
-from view_utils import *
 from django.conf import settings
 from django.conf.urls.defaults import *
 from django.core.urlresolvers import reverse
@@ -29,7 +28,7 @@ def render_response(req, *args, **kwargs):
     return render_to_response(*args, **kwargs)
 
 def error_404(request):
-  return render_response('404.tmpl')
+  return render_response(request, '404.tmpl')
 
 def error_500(request):
-  return render_response('500.tmpl')
+  return render_response(request, '500.tmpl')
