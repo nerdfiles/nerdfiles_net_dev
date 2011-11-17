@@ -10,7 +10,7 @@
 # == PROJECT ======================================= #
 
 """
-  @project          baptistemergencyhospital
+  @project          nerdfiles_net_dev
   @contributor      Aaron Alexander (nerdfiles@gmail.com)
   @datetime         11.4.2011.11.56.a
   @devlogin         admin/admin
@@ -51,8 +51,8 @@ VENV_ROOT = os.path.join('/Users','nerdfiles','.virtualenvs','nerdfiles_net_dev'
 
 # == DEVELOPMENT/DEBUGGING ======================================= #
 
-LOCAL_DEVELOPMENT = False
-DEBUG = False
+LOCAL_DEVELOPMENT = True
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 
@@ -73,7 +73,7 @@ INTERNAL_IPS = ('127.0.0.1',)
 if LOCAL_DEVELOPMENT:
   HOSTNAME = 'http://localhost:8001'
 else:
-  HOSTNAME = 'http://baptistemerencyhospital.com'
+  HOSTNAME = 'http://nerdfiles.net'
 
 SECRET_KEY = 'h35nfv4bn6klt-1@dkyknvc*-h@$n7fm92$^9kc6^^6ito*jd4'
 
@@ -130,7 +130,7 @@ ADMIN_MEDIA_PREFIX = '/_static/admin/'
 
 # == theme == #
 
-THEME = "baptistemergencyhospital"
+THEME = "nerdfiles_net_dev"
 THEME_DIR = os.path.join(PROJECT_ROOT, "_themes", THEME)
 
 # == template == #
@@ -239,7 +239,7 @@ INSTALLED_APPS = (
   # == apps == #
   'notification',
     
-  # == custom/baptistemergencyhospital == #
+  # == custom/nerdfiles_net_dev == #
   
   'nerdfiles_net_dev',
   
