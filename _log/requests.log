@@ -1199,3 +1199,325 @@ DatabaseError: no such table: django_session
 2011-11-16 23:16:48,884 [WARNING] django.request: Not Found: /favicon.ico/
 2011-11-16 23:16:52,606 [WARNING] django.request: Not Found: /favicon.ico/
 2011-11-16 23:16:54,785 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:45:54,197 [WARNING] django.request: Not Found: /
+2011-11-17 01:45:54,198 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried nerdfiles_net_dev.views.error_404. Error was: No module named nerdfiles_net_dev.views
+2011-11-17 01:45:55,774 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:45:55,774 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried nerdfiles_net_dev.views.error_404. Error was: No module named nerdfiles_net_dev.views
+2011-11-17 01:49:23,875 [WARNING] django.request: Not Found: /
+2011-11-17 01:49:23,875 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried nerdfiles_net_dev.views.error_404. Error was: No module named nerdfiles_net_dev.views
+2011-11-17 01:49:24,915 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:49:24,915 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried nerdfiles_net_dev.views.error_404. Error was: No module named nerdfiles_net_dev.views
+2011-11-17 01:50:31,388 [WARNING] django.request: Not Found: /
+2011-11-17 01:50:31,388 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried nerdfiles_net_dev.views.error_404. Error was: No module named nerdfiles_net_dev.views
+2011-11-17 01:50:33,586 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:50:33,586 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried nerdfiles_net_dev.views.error_404. Error was: No module named nerdfiles_net_dev.views
+2011-11-17 01:54:13,648 [WARNING] django.request: Not Found: /
+2011-11-17 01:54:13,649 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried nerdfiles_net_dev.views.error_404. Error was: No module named nerdfiles_net_dev.views
+2011-11-17 01:54:14,524 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:54:14,525 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried nerdfiles_net_dev.views.error_404. Error was: No module named nerdfiles_net_dev.views
+2011-11-17 01:54:16,906 [WARNING] django.request: Not Found: /
+2011-11-17 01:54:16,906 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried nerdfiles_net_dev.views.error_404. Error was: No module named nerdfiles_net_dev.views
+2011-11-17 01:54:17,484 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:54:17,484 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried nerdfiles_net_dev.views.error_404. Error was: No module named nerdfiles_net_dev.views
+2011-11-17 01:55:48,569 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-17 01:55:48,570 [ERROR] django.request: Internal Server Error: /playground/js-loader-comparison/1_labjs.html/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried nerdfiles_net_dev.views.error_404. Error was: No module named nerdfiles_net_dev.views
+2011-11-17 01:58:16,547 [WARNING] django.request: Not Found: /
+2011-11-17 01:58:16,548 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried views.error_404. Error was: No module named view_utils
+2011-11-17 01:58:19,593 [WARNING] django.request: Not Found: /
+2011-11-17 01:58:19,594 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried views.error_404. Error was: No module named view_utils
+2011-11-17 01:58:20,316 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 01:58:20,316 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 149, in get_response
+    callback, param_dict = resolver.resolve404()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 300, in resolve404
+    return self._resolve_special('404')
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 297, in _resolve_special
+    raise ViewDoesNotExist("Tried %s. Error was: %s" % (callback, str(e)))
+ViewDoesNotExist: Tried views.error_404. Error was: No module named view_utils
+2011-11-17 01:59:55,367 [WARNING] django.request: Not Found: /
+2011-11-17 01:59:55,369 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(req)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:10:55,592 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-17 02:10:55,594 [ERROR] django.request: Internal Server Error: /playground/js-loader-comparison/1_labjs.html/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(req)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:14:38,503 [WARNING] django.request: Not Found: /
+2011-11-17 02:14:38,504 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:14:40,271 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 02:14:40,272 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:14:43,462 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 02:14:43,464 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:14:44,815 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 02:14:44,816 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:14:50,860 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 02:14:50,861 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:14:54,589 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 02:14:54,590 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:14:57,321 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 02:14:57,322 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:15:21,262 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 02:15:21,263 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:15:28,316 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 02:15:28,317 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:15:34,292 [WARNING] django.request: Not Found: /aa/
+2011-11-17 02:15:34,292 [ERROR] django.request: Internal Server Error: /aa/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
+2011-11-17 02:15:34,776 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-17 02:15:34,777 [ERROR] django.request: Internal Server Error: /favicon.ico/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 150, in get_response
+    response = callback(request, **param_dict)
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 31, in error_404
+    return render_response('404.tmpl')
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/views.py", line 27, in render_response
+    kwargs['context_instance'] = RequestContext(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/context.py", line 173, in __init__
+    self.update(processor(request))
+  File "/home/nerdfiles/webapps/django/nerdfiles_net/context_processors.py", line 12, in site_info
+    'SITE_URL': 'http://'+request.META.get('HTTP_HOST', ""),
+AttributeError: 'str' object has no attribute 'META'
