@@ -35,8 +35,14 @@
 
 <body class="">
 
+{% cms_toolbar %}
+
 <div class="container">
-<p>blugggh.</p>
+{% block main_content %}
+  {% placeholder "Main Content" or %}
+  <p>blugggh.</p>
+  {% endplaceholder %}
+{% endblock %}
 </div>
 
 {% render_block "js" %}
