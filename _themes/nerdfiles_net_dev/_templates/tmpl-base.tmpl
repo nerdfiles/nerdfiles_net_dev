@@ -1,17 +1,38 @@
 {% load cms_tags menu_tags sekizai_tags %}
+
 <!DOCTYPE HTML>
 
-{% block js %}
-{% addtoblock "js" %}
+{% block font %}
+{% addtoblock "font" %}
+{% include "font-base.tmpl" %}
 {% endaddtoblock %}
 {% endblock %}
 
 {% block css %}
 {% addtoblock "css" %}
+{% include "css-base.tmpl" %}
 {% endaddtoblock %}
 {% endblock %}
 
-{% render_block "css" %}
-{% render_block "js" %}
+{% block js %}
+{% addtoblock "js" %}
+{% include "js-base.tmpl" %}
+{% endaddtoblock %}
+{% endblock %}
 
-<p>kldjadjaldj</p>
+<html lang="en">
+
+<head>
+<title>/-;</title>
+{% render_block "font" %}
+{% render_block "css" %}
+</head>
+
+<body>
+<div class="container">
+<p>Fucken.</p>
+</div>
+{% render_block "js" %}
+</body>
+
+</html>
