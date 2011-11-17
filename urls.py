@@ -40,6 +40,6 @@ if settings.LOCAL_DEVELOPMENT:
     url(r'', include('django.contrib.staticfiles.urls')),
   ) + urlpatterns
 
-handler404 = 'nerdfiles_net_dev.views.error_404'
-handler500 = 'nerdfiles_net_dev.views.error_500'
+handler404 = 'views.error_404'
+handler500 = 'views.error_500'
 
