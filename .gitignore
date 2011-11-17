@@ -2,6 +2,8 @@ _assets/css-lib/*
 _assets/css-lib/gdgs/*
 _assets/js-lib/
 .gitignore~
+*.db
+urls.py
 settings.py
 urls.py
 *.db
