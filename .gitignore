@@ -3,7 +3,13 @@ _assets/css-lib/gdgs/*
 _assets/js-lib/
 .gitignore~
 <<<<<<< HEAD
+<<<<<<< HEAD
 .gitignore
+=======
+*.db
+urls.py
+_log/*
+>>>>>>> dev
 =======
 *.db
 urls.py
