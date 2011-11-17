@@ -1,1 +1,23 @@
-@import "/_assets/css-lib/gdgs/_css-lib/gdgs/module-importer.css";
+@import "../css-lib/gdgs/_css-lib/gdgs/_modules/reset.scss";
+@import "../css-lib/gdgs/_css-lib/gdgs/_modules/typesetting.scss";
+@import "../css-lib/gdgs/_css-lib/gdgs/_modules/system.scss";
+@import "../css-lib/gdgs/_css-lib/gdgs/_modules/form.scss";
+@import "../css-lib/gdgs/_css-lib/gdgs/_modules/tools.scss";
+@import "../css-lib/gdgs/_css-lib/gdgs/_modules/table.scss";
+@import "../css-lib/gdgs/_css-lib/gdgs/_modules/bounds.scss";
+@import "../css-lib/gdgs/_css-lib/gdgs/_modules/standardize.scss";
+@import "../css-lib/gdgs/_css-lib/gdgs/_modules/font.scss";
+
+@import "../css-lib/gdgs/_css-lib/gdgs/_modules/mixins.scss";
+
+body { 
+  @include show-guide-16("/_assets/css-lib/gdgs/_css-lib/gdgs/"); }
+
+/**
+ * Init Structure 
+ */
+
+.siteIntro { 
+  @include columns-8;
+  @include begin;
+}

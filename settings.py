@@ -1,229 +1,404 @@
-# Django settings for nerdfiles_net_dev project.
 # -*- coding: utf-8 -*-
 
-import os
+# == ALBUM ======================================= #
 
-# paths
-gettext = lambda s: s
-PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
-PROJECT_DIR = PROJECT_PATH
-ROOT_DIR = os.path.split(PROJECT_DIR)[0]
+"""
+  ARTIST_NAME - ABLUM_NAME
+  LINK
+"""
 
-# debug
-DEBUG = True
+# == PROJECT ======================================= #
+
+"""
+  @project          baptistemergencyhospital
+  @contributor      Aaron Alexander (nerdfiles@gmail.com)
+  @datetime         11.4.2011.11.56.a
+  @devlogin         admin/admin
+"""
+
+# == IMPORTS ======================================= #
+
+from django.conf import settings
+import os, sys, datetime
+import posixpath
+import logging
+
+
+# == UTIL ======================================= #
+
+PROJECT_ROOT = os.path.dirname(__file__)
+DIRNAME = os.path.dirname(os.path.abspath(__file__))
+_ = lambda s: s
+
+
+# == pythonpath inserts == #
+
+# local
+ 
+#sys.path.insert(0, PROJECT_ROOT)
+#sys.path.insert(1, os.path.join(PROJECT_ROOT, "djangologging"))
+
+# apache mod_wsgi
+
+#sys.path.append(PROJECT_ROOT)
+#sys.path.append(os.path.join(PROJECT_ROOT, "djangologging"))
+
+
+# == VENV ======================================== #
+
+VENV_ROOT = os.path.join('/Users','nerdfiles','.virtualenvs','nerdfiles_net_dev')
+
+
+# == DEVELOPMENT/DEBUGGING ======================================= #
+
+LOCAL_DEVELOPMENT = False
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-# roles & assignments
+
+# == ADMIN/GENERAL ======================================= #
+
 ADMINS = (
-  ('Aaron Alexander', 'nerdfiles@gmail.com'),
+  ('nerdfiles', 'nerdfiles@gmail.com'),
 )
 
 MANAGERS = ADMINS
 
-# language
-LANGUAGES = [
-    ('en', 'English'),
-]
-
-# db
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', 
-        'NAME': os.path.join(PROJECT_DIR, 'database.sqlite'), 
-        'USER': '', 
-        'PASSWORD': '', 
-        'HOST': '', 
-        'PORT': '', 
-    }
-}
-
-# Local time zone for this installation. Choices can be found here:
-# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
-# although not all choices may be available on all operating systems.
-# On Unix systems, a value of None will cause Django to use the same
-# timezone as the operating system.
-# If running in a Windows environment this must be set to the same as your
-# system time zone.
 TIME_ZONE = 'America/Chicago'
-
-# Language code for this installation. All choices can be found here:
-# http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
-# If you set this to False, Django will make some optimizations so as not
-# to load the internationalization machinery.
+INTERNAL_IPS = ('127.0.0.1',)
+
+if LOCAL_DEVELOPMENT:
+  HOSTNAME = 'http://localhost:8001'
+else:
+  HOSTNAME = 'http://baptistemerencyhospital.com'
+
+SECRET_KEY = 'h35nfv4bn6klt-1@dkyknvc*-h@$n7fm92$^9kc6^^6ito*jd4'
+
+
+# == DB ======================================= #
+
+"""
+  @engines 'postgresql_psycopg2'|'postgresql'|'mysql'|'sqlite3'|'oracle'
+  @note If using local settings, this will be overridden.
+"""
+
+DATABASE_ENGINE = 'django.db.backends.sqlite3'
+DATABASE_NAME = 'dev.db'
+DATABASE_USER = ''
+DATABASE_PASSWORD = ''
+DATABASE_HOST = ''
+DATABASE_PORT = ''
+
+
+# == LANGUAGE ======================================= #
+
+LANGUAGE_CODE = 'en-us'
+LANGUAGES = [('en', 'en'),]
+DEFAULT_LANGUAGE = 0
+
+
+# == I18N ======================================= #
+
 USE_I18N = True
 
-# If you set this to False, Django will not format dates, numbers and
-# calendars according to the current locale
+
+# == LOCALIZATION ======================================= #
+
 USE_L10N = True
 
-# Absolute filesystem path to the directory that will hold user-uploaded files.
-# Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_PATH, "_assets")
 
-# URL that handles the media served from MEDIA_ROOT. Make sure to use a
-# trailing slash.
-# Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
-MEDIA_URL = "/_assets/"
+# == URLCONF ======================================= #
 
-# Absolute path to the directory static files should be collected to.
-# Don't put anything in this directory yourself; store your static files
-# in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/home/media/media.lawrence.com/static/"
-#STATIC_ROOT = os.path.join(PROJECT_PATH, "_static")
+ROOT_URLCONF = 'nerdfiles_net_dev.urls'
 
-# URL prefix for static files.
-# Example: "http://media.lawrence.com/static/"
-#STATIC_URL = '/_static/'
 
-# URL prefix for admin static files -- CSS, JavaScript and images.
-# Make sure to use a trailing slash.
-# Examples: "http://foo.com/static/admin/", "/static/admin/".
-ADMIN_MEDIA_PREFIX = '/_assets/admin/'
+# == URL ======================================= #
 
-# django cms admin location
-# CMS_MEDIA_URL = '/_assets/'
+# == media url == #
 
-# Additional locations of static files
-"""
-STATICFILES_DIRS = (
-    # Put strings here, like "/home/html/static" or "C:/www/django/static".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-)
-"""
+MEDIA_URL = '/_assets/'
 
-# List of finder classes that know how to find static files in
-# various locations.
-"""
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    #'django.contrib.staticfiles.finders.DefaultStorageFinder',
-)
-"""
+# == admin media == #
 
-from django.contrib.staticfiles.finders import AppDirectoriesFinder
-from django.contrib.staticfiles.storage import AppStaticStorage
+ADMIN_MEDIA_PREFIX = '/_static/admin/'
 
-class AppMediaStorage(AppStaticStorage):
-  source_dir = '_assets'
-    
-class AppMediaDirectoriesFinder(AppDirectoriesFinder):
-  storage_class = AppMediaStorage
 
-# Make this unique, and don't share it with anybody.
-SECRET_KEY = 't_1-ta$zhywj&0i9#%x@w+fg195=yv7v99xk@jc&vgedhzqd*l'
+# == THEME/TEMPLATE/MEDIA ======================================= #
 
-# List of callables that know how to import templates from various sources.
-TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.Loader',
-    'django.template.loaders.app_directories.Loader',
-    #'django.template.loaders.eggs.Loader',
-)
+# == theme == #
 
-# middleware classes
-MIDDLEWARE_CLASSES = (
-    'django.middleware.common.CommonMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    
-    # django cms
-    'cms.middleware.page.CurrentPageMiddleware',
-    'cms.middleware.user.CurrentUserMiddleware',
-    'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.media.PlaceholderMediaMiddleware',
-)
+THEME = "baptistemergencyhospital"
+THEME_DIR = os.path.join(PROJECT_ROOT, "_themes", THEME)
 
-# template_context_processors
-TEMPLATE_CONTEXT_PROCESSORS = (
-    'django.contrib.auth.context_processors.auth',
-    'django.core.context_processors.i18n',
-    'django.core.context_processors.request',
-    'django.core.context_processors.media',
-    'cms.context_processors.media',
-)
+# == template == #
 
-# root url spec
-ROOT_URLCONF = 'urls'
-
-# template directories
 TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
+  #os.path.join(PROJECT_ROOT, "_themes",),
+  os.path.join(PROJECT_ROOT, "_themes", THEME, "_templates"),
+)
+
+# == media == #
+
+MEDIA_ROOT = os.path.realpath(os.path.join(THEME_DIR, "_assets"))
+
+# == static == #
+
+STATIC_ROOT = os.path.realpath(os.path.join(THEME_DIR, '_static'))
+STATIC_URL = '/_static/'
+
+if LOCAL_DEVELOPMENT:
+  ASSETS_URL = '_assets/'
+else:
+  ASSETS_URL = '_static/'
+
+
+# == STATIC ======================================= #
+
+STATICFILES_DIRS = (
+  #("_static", os.path.join(PROJECT_ROOT, "_themes", THEME, "_assets")),
+)
+
+STATICFILES_FINDERS = (
+  'django.contrib.staticfiles.finders.FileSystemFinder',
+  'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+  'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
+
+
+# == TEMPLATE LOADERS ======================================= #
+
+TEMPLATE_LOADERS = (
+  'django.template.loaders.filesystem.Loader',
+  'django.template.loaders.app_directories.Loader',
+  'django.template.loaders.eggs.Loader',
+)
+
+
+# == TEMPLATE LOADERS ======================================= #
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+  'django.core.context_processors.auth',
+  'django.core.context_processors.i18n',
+  'django.core.context_processors.request',
+  'django.core.context_processors.media',
+  'django.core.context_processors.static',
+  'cms.context_processors.media',
+  'sekizai.context_processors.sekizai',
+  'context_processors.site_info',
+)
+
+
+# == MIDDLEWARE CLASSES ======================================= #
+
+MIDDLEWARE_CLASSES = (
+  'django.middleware.common.CommonMiddleware',
+  'django.contrib.sessions.middleware.SessionMiddleware',
+  'django.middleware.csrf.CsrfViewMiddleware',
+  'django.contrib.auth.middleware.AuthenticationMiddleware',
+  'django.contrib.messages.middleware.MessageMiddleware',
+  'cms.middleware.multilingual.MultilingualURLMiddleware',
+  'cms.middleware.page.CurrentPageMiddleware',
+  'cms.middleware.user.CurrentUserMiddleware',
+  'cms.middleware.toolbar.ToolbarMiddleware',
     
-    # The docs say it should be absolute path: PROJECT_PATH is precisely one.
-    # Life is wonderful!
-    os.path.join(PROJECT_PATH, "_templates"),
+  #'djangologging.middleware.LoggingMiddleware',
+  #'djangologging.middleware.SuppressLoggingOnAjaxRequestsMiddleware',
 )
 
-# django cms templates
-CMS_TEMPLATES = (
-  ('template-home.html', 'Template: Home'),
-  ('template-home-extended.html', 'Template: Home, Extended'),
-)
 
-SEMANTICEDITOR_MEDIA_URL = os.path.join(MEDIA_URL, "semanticeditor/")
+# == INSTALLED APPS ======================================= #
 
-# installed apps
 INSTALLED_APPS = (
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.sites',
-    'django.contrib.messages',
-    #'django.contrib.staticfiles',
+
+  # == core == #
+  'django.contrib.admin',
+  'django.contrib.auth',
+  'django.contrib.contenttypes',
+  'django.contrib.sessions',
+  'django.contrib.sites',
+  'django.contrib.messages',
+  'django.contrib.staticfiles',
+ 
+  # == django cms == #
+  'cms',
+  'menus',
+  'mptt',
+  'south',
+  'cms.plugins.text',
+  'cms.plugins.picture',
+  'cms.plugins.link',
+  'cms.plugins.file',
+  'cms.plugins.snippet',
+  'cms.plugins.googlemap',
+  'sekizai',
+  'south',
+ 
+  # == apps == #
+  'notification',
     
-    # admin
-    'django.contrib.admin',
-    'django.contrib.admindocs',
-    
-    # custom
-    'journal',
-    
-    # django cms
-    'cms',
-    'mptt',
-    'menus',
-    'south',
-    'appmedia',
-    
-    'semanticeditor',
-    
-    # django cms plugins
-    'cms.plugins.text',
-    'cms.plugins.picture',
-    'cms.plugins.link',
-    'cms.plugins.file',
-    'cms.plugins.snippet',
-    'cms.plugins.googlemap',
+  # == custom/baptistemergencyhospital == #
+  
+  'nerdfiles_net_dev',
+  
+  # == admin == #
+  'django.contrib.admin',
+  'django.contrib.admindocs',
 )
 
-# A sample logging configuration. The only tangible logging
-# performed by this configuration is to send an email to
-# the site admins on every HTTP 500 error.
-# See http://docs.djangoproject.com/en/dev/topics/logging for
-# more details on how to customize your logging configuration.
+MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
+
+CMS_MEDIA_PATH = 'cms/'
+CMS_MEDIA_ROOT = MEDIA_ROOT + CMS_MEDIA_PATH
+CMS_MEDIA_URL = MEDIA_URL + CMS_MEDIA_PATH
+CMS_TEMPLATES = (
+  
+  # errors
+  ('404.tmpl', 'Template: 404 (not found)'),
+  ('500.tmpl', 'Template: 500 (generic error)'),
+  
+  # standards
+  ('tmpl-base.tmpl', 'Template: Base'),
+  ('tmpl-home.tmpl', 'Template: Homepage'),
+  
+  # pages
+  ('tmpl-single-base.tmpl', 'Single Template: Base'), # presentation of generic single content
+  
+  # forms
+  ('tmpl-form-base.tmpl', 'Form Template: Base'),
+  
+  # aggregates
+  ('tmpl-list-base.tmpl', 'List Template: Base'),
+  
+)
+
+
+# == APP: DEBUG TOOLBAR ======================================= #
+"""
+  @see http://pypi.python.org/pypi/django-debug-toolbar/
+"""
+if DEBUG:
+  MIDDLEWARE_CLASSES += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+  INSTALLED_APPS += ('debug_toolbar',)
+
+  DEBUG_TOOLBAR_PANELS = (
+    'debug_toolbar.panels.version.VersionDebugPanel',
+    'debug_toolbar.panels.timer.TimerDebugPanel',
+    'debug_toolbar.panels.settings_vars.SettingsVarsDebugPanel',
+    'debug_toolbar.panels.headers.HeaderDebugPanel',
+    'debug_toolbar.panels.request_vars.RequestVarsDebugPanel',
+    'debug_toolbar.panels.template.TemplateDebugPanel',
+    'debug_toolbar.panels.sql.SQLDebugPanel',
+    'debug_toolbar.panels.signals.SignalDebugPanel',
+    'debug_toolbar.panels.logger.LoggingPanel',
+  )
+
+  def custom_show_toolbar(request):
+    return True
+
+  DEBUG_TOOLBAR_CONFIG = {
+    'MEDIA_URL': '/_static/debug_toolbar/',
+    'INTERCEPT_REDIRECTS': False,
+    'SHOW_TOOLBAR_CALLBACK': custom_show_toolbar,
+  }
+
+
+# == APP: PIL ======================================= #
+"""
+  @see http://www.pythonware.com/products/pil/
+"""
+
+PIL_IMAGEFILE_MAXBLOCK = 1024 * 2 ** 10
+
+
+# == EMAIL SETTINGS ======================================= #
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+
+# == LOGGING ======================================= #
+
 LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
+  'version': 1,
+  'disable_existing_loggers': True,
+  'formatters': {
+    'standard': {
+      'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
     },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-    }
+    'verbose': {
+      'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+    },
+    'simple': {
+      'format': '%(levelname)s %(message)s'
+    },
+  },
+  'handlers': {
+    'file': {
+      'level': 'INFO',
+      'class': 'logging.handlers.RotatingFileHandler',
+      'filename': os.path.join(PROJECT_ROOT, '_log', 'requests.log'),
+      'maxBytes': 1024*1024*5, # 5MB
+      'backupCount': 10,
+      'formatter': 'standard'
+    },
+    'file_userlogins': {              # define and name a handler
+      'level': 'DEBUG',
+      'class': 'logging.FileHandler', # set the logging class to log to a file
+      'formatter': 'verbose',         # define the formatter to associate
+      'filename': os.path.join(PROJECT_ROOT, '_log', 'userlogins.log') # log file
+    },
+    'file_usersaves': {               # define and name a second handler
+      'level': 'DEBUG',
+      'class': 'logging.FileHandler', # set the logging class to log to a file
+      'formatter': 'verbose',         # define the formatter to associate
+      'filename': os.path.join(PROJECT_ROOT, '_log', 'usersaves.log')  # log file
+    },
+  },
+  'loggers': {
+    'django.request': {
+      'handlers': ['file'],
+      'level': 'INFO',
+      'propagate': False,
+    },
+    'logview.userlogins': {            # define a logger - give it a name
+      'handlers': ['file_userlogins'], # specify what handler to associate
+      'level': 'INFO',                 # specify the logging level
+      'propagate': True,
+    },     
+
+    'logview.usersaves': {             # define another logger
+      'handlers': ['file_usersaves'],  # associate a different handler
+      'level': 'INFO',                 # specify the logging level
+      'propagate': True,
+    },        
+  }       
 }
+
+
+# == CACHING ======================================= #
+
+CACHES = {
+  'default': {
+    'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+    'LOCATION': '127.0.0.1:11211',
+  }
+}
+
+CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
+CACHE_TIMEOUT = 60*30
+CACHE_PREFIX = "Z"
+
+
+# == LOCAL ======================================= #
+
+try:
+  from local_settings import *
+except ImportError:
+  pass
+
