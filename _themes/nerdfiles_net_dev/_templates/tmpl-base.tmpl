@@ -14,9 +14,21 @@
 {% endaddtoblock %}
 {% endblock %}
 
+{% block scriptloader %}
+{% addtoblock "scriptloader" %}
+{% include "js-scriptloader.tmpl" %}
+{% endaddtoblock %}
+{% endblock %}
+
 {% block js %}
 {% addtoblock "js" %}
 {% include "js-base.tmpl" %}
+{% endaddtoblock %}
+{% endblock %}
+
+{% block analytics %}
+{% addtoblock "analytics" %}
+{% include "js-analytics.tmpl" %}
 {% endaddtoblock %}
 {% endblock %}
 
@@ -30,6 +42,7 @@
 
 {% render_block "font" %}
 {% render_block "css" %}
+{% render_block "scriptloader" %}
 
 </head>
 
@@ -46,6 +59,8 @@
 </div>
 
 {% render_block "js" %}
+
+{% render_block "analytics" %}
 
 </body>
 
