@@ -18,7 +18,8 @@
 
     Plugin.prototype.init = function () {
         var $elem = this.element,
-        	opts = this.options;
+        	opts = this.options,
+        	_this = this;
 
         $(function() {
 
