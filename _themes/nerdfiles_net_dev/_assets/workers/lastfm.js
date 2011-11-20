@@ -1,8 +1,4 @@
-function msgr(e) {
-
   var httpRequest,
-  	  worker = this,
-      msgSent = e.data;
 
   function makeRequest(url) {
     if (window.XMLHttpRequest) { // Mozilla, Safari, ...
@@ -36,6 +32,11 @@ function msgr(e) {
       alert('There was a problem with the request.');
     }
   }
+
+function msgr(e) {
+
+  var worker = this,
+      msgSent = e.data;
   
   switch (msgSent.cmd) {
     case 'init':
