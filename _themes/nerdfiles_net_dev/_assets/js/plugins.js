@@ -30,9 +30,9 @@
 		    $.ajax({
 			    url: '/lastfm/', 
 			    success: function(data) {
-		    		var $elem = $(element).append('<ul></ul>');
+		    		var $elem = $(element).prepend('<ul></ul>');
 		    		$.each(data, function(i, value) {
-		    			$elem.find('ul').append('<li>'+data[i].title+'</li>')
+		    			$elem.find('ul').append('<li><a href="+'data[i].url'+">'+data[i].title+'</a></li>')
 		    		});
 		    	}
 		    });
