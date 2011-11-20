@@ -27,9 +27,12 @@
 
         plugin.weekly_artists = function() {
 
-		    $.ajax('/lastfm/', function(data) {
+		    $.ajax({
+			    url: '/lastfm/', 
+			    success: function(data) {
 		    	console.log(data);
-		    })
+		    	}
+		    });
 
         }
 
