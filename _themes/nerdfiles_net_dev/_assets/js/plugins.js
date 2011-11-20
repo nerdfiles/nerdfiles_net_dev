@@ -36,7 +36,7 @@
 	      this.msg = msg;
 	    }
 
-   		//console.log(data);
+   		console.log(this);
 
 	    if (window.Worker) {
 	      var lastfm = new Worker('/_assets/workers/lastfm.js');
