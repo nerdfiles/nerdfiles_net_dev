@@ -21,11 +21,11 @@
         	opts = this.options,
         	_this = this;
 
-        $(function() {
+        //$(function() {
 
         	_this.lastfm();
 
-    	});
+    	//});
     };
 
     Plugin.prototype.lastfm = function() {
