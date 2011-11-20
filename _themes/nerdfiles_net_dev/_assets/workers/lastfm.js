@@ -1,6 +1,7 @@
 function msgr(e) {
 
-  var worker = this,
+  var httpRequest,
+  	  worker = this,
       msgSent = e.data;
 
   function makeRequest(url) {
