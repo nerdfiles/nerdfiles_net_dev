@@ -1,10 +1,5 @@
 "use strict";
 
-// jQuery Plugin Boilerplate
-// A boilerplate for jumpstarting jQuery plugins development
-// version 1.1, May 14th, 2011
-// by Stefan Gabos
-
 ;(function($) {
 
     $.djangoLastFM = function(element, options) {
@@ -32,7 +27,7 @@
 			    success: function(data) {
 		    		var $elem = $(element).prepend('<ul></ul>');
 		    		$.each(data, function(i, value) {
-		    			$elem.find('ul').append('<li><a href="+'data[i].url'+">'+data[i].title+'</a></li>');
+		    			$elem.find('ul').append('<li><a href="'+data[i].url+'">'+data[i].title+'</a></li>');
 		    		});
 		    	}
 		    });
