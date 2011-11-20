@@ -23,8 +23,6 @@
 
         plugin.init = function() {
             plugin.settings = $.extend({}, defaults, options);
-
-            plugin.worker();
         }
 
         plugin.worker = function() {
@@ -38,6 +36,10 @@
 		      var lastfm = new Worker('/_assets/workers/lastfm.js');
 		      
 		      lastfm.addEventListener('message', function(e) {
+		        console.log(e.data);
+		      }, false);
+
+		      $('body').bind('click', function(e) {
 		        lastfm.postMessage(new WorkerMessage('init', 'data'))
 		      }, false);
 		      
