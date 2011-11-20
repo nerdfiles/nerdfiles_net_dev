@@ -2,6 +2,8 @@
 
 ;(function($) {
 
-	$('div').data('plugin_lastfm').load_data();
+	$(function() {
+		$('div').data('djangoLastFM').worker();
+	});
 
 })(jQuery);
