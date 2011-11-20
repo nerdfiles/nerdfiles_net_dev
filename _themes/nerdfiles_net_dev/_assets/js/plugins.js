@@ -5,7 +5,7 @@
 // version 1.1, May 14th, 2011
 // by Stefan Gabos
 
-(function($) {
+;(function($) {
 
     $.djangoLastFM = function(element, options) {
 
@@ -23,7 +23,6 @@
 
         plugin.init = function() {
             plugin.settings = $.extend({}, defaults, options);
-            plugin.worker();
         }
 
         plugin.worker = function() {
@@ -48,7 +47,7 @@
 
     }
 
-    $.fn.pluginName = function(options) {
+    $.fn.djangoLastFM = function(options) {
 
         return this.each(function() {
             if (undefined == $(this).data('djangoLastFM')) {
