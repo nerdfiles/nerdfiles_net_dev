@@ -1,4 +1,4 @@
-  var httpRequest,
+  var httpRequest;
 
   function makeRequest(url) {
     if (window.XMLHttpRequest) { // Mozilla, Safari, ...
