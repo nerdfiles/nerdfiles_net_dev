@@ -41,7 +41,7 @@
 
 		      $('body').bind('click', function(e) {
 		        lastfm.postMessage(new WorkerMessage('init', 'data'))
-		      }, false);
+		      });
 		      
 		    }
 
