@@ -22,7 +22,14 @@ def trial_deploy():
   local('rm -rf tmp/ && mkdir tmp')
   put('/home/nerdfiles/webapps/django/nerdfiles_net/package.tar.gz', '/home/nerdfiles/webapps/django/nerdfiles_net/tmp/')
   with cd('/home/nerdfiles/webapps/django/'):
-    #run('tar xzf /tmp/nerdfiles_net_package.tgz')
+    run('tar xzf nerdfiles_net/tmp/package.tar.gz')
+    run('touch nerdfiles_net.wsgi')
+
+def prod_deploy():
+  local('rm -rf tmp/ && mkdir tmp')
+  put('package.tar.gz', '/home/nerdfiles/webapps/django/nerdfiles_net/tmp/')
+  with cd('/home/nerdfiles/webapps/django/'):
+    #run('tar xzf nerdfiles_net/package.tar.gz')
     run('touch nerdfiles_net.wsgi')
 
 """
