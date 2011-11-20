@@ -25,25 +25,11 @@
             plugin.settings = $.extend({}, defaults, options);
         }
 
-        plugin.worker = function() {
+        plugin.weekly_artists = function() {
 
-		    function WorkerMessage(cmd, msg) {
-		      this.cmd = cmd;
-		      this.msg = msg;
-		    }
-
-		    if (window.Worker) {
-		      var lastfm = new Worker('/_static/workers/lastfm.js');
-		      
-		      lastfm.addEventListener('message', function(e) {
-		        console.log(e.data);
-		      }, false);
-
-		      $('body').bind('click', function(e) {
-		        lastfm.postMessage(new WorkerMessage('sendr', 'data'))
-		      });
-		      
-		    }
+		    $.ajax('/lastfm/', function(data) {
+		    	console.log(data);
+		    })
 
         }
 

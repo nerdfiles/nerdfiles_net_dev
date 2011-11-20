@@ -4,7 +4,7 @@
 
 	$(function() {
 		$('div').djangoLastFM({'foo': 'bar'});
-		$('div').data('djangoLastFM').worker();
+		$('div').data('djangoLastFM').weekly_artists();
 	});
 
 })(jQuery);
