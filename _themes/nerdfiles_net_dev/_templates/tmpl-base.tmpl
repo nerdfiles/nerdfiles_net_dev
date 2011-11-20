@@ -60,6 +60,14 @@
 
 {% render_block "js" %}
 
+{% load lastfm_widget %}
+
+<!-- ... -->
+
+{% get_lastfm_widget as lastfm_widget %}
+<h2>{{ lastfm_widget.title }}</h2>
+{{ lastfm_widget.content }}
+
 {% render_block "analytics" %}
 
 </body>
