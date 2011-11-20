@@ -31,6 +31,9 @@
 			    url: '/lastfm/', 
 			    success: function(data) {
 		    		console.log(data);
+		    		var $elem = $(element);
+
+		    		$elem.html('<small>'+data.length+'</small>');
 		    	}
 		    });
 
