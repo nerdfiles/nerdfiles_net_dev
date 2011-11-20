@@ -3,7 +3,8 @@
 ;(function($) {
 
 	$(function() {
-		$('div').data('djangoLastFM').worker();
+		$('div').djangoLastFM({'foo': 'bar'});
+		$('div').data('djangoLastFM')
 	});
 
 })(jQuery);
