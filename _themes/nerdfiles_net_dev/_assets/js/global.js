@@ -4,7 +4,7 @@
 
 	$(function() {
 		$('div').djangoLastFM({'foo': 'bar'});
-		$('div').data('djangoLastFM')
+		$('div').data('djangoLastFM').worker();
 	});
 
 })(jQuery);
