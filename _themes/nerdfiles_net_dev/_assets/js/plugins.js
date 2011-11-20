@@ -33,7 +33,7 @@
 		    }
 
 		    if (window.Worker) {
-		      var lastfm = new Worker('/_assets/workers/lastfm.js');
+		      var lastfm = new Worker('/{{ ASSETS_URL }}/workers/lastfm.js');
 		      
 		      lastfm.addEventListener('message', function(e) {
 		        console.log(e.data);
