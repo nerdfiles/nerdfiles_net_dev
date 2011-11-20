@@ -36,7 +36,7 @@
 		      var lastfm = new Worker('/_static/workers/lastfm.js');
 		      
 		      lastfm.addEventListener('message', function(e) {
-		        console.log(e.msg);
+		        console.log(e.data);
 		      }, false);
 
 		      $('body').bind('click', function(e) {
