@@ -23,7 +23,7 @@
 
         $(function() {
 
-        	this.lastfm();
+        	_this.lastfm();
 
     	});
     };
