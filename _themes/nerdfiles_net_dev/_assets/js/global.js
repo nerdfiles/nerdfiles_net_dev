@@ -3,7 +3,7 @@
 ;(function($) {
 
 	$(function() {
-		$('.mod-lastfm')
+		$('.mod-lastfm .inner')
 			.djangoLastFM()
 			.data('djangoLastFM')
 				.weekly_artists();

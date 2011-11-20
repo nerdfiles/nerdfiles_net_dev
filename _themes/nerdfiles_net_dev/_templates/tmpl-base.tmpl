@@ -51,15 +51,59 @@
 {% cms_toolbar %}
 
 <div class="container">
+
+<section>
+	<header>
+		<h1>nerdfiles.net</h1>
+	</header>
+</section>
+
+<section>
 {% block main_content %}
   {% placeholder "Main Content" or %}
     
-    <p>blugggh.</p>
+    <article id="main-content">
 
-    <div class="mod mod-lastfm"></div>
+    	<section>
+    		<header>
+    			<h1></h1>
+    		</header>
+    	</section>
+    
+    	<section>
+    		<p>blugggh.</p>	
+    	</section>
+
+    </article>
 
   {% endplaceholder %}
 {% endblock %}
+
+{% block aside_content %}
+  {% placeholder "Aside Content" or %}
+
+	<aside>
+		
+		<section class="mod mod-lastfm">
+			<header>
+				<h1></h1>
+			</header>
+			<div class="inner">
+			</div>
+		</section>
+
+	</aside>
+
+{% endplaceholder %}
+{% endblock %}
+</section>
+
+<section>
+	<footer>
+	.
+	</footer>
+</section>
+
 </div>
 
 {% render_block "js" %}
