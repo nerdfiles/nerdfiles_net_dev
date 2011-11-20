@@ -30,7 +30,7 @@
 		    $.ajax({
 			    url: '/lastfm/', 
 			    success: function(data) {
-		    	console.log(data);
+		    		console.log(data);
 		    	}
 		    });
 
