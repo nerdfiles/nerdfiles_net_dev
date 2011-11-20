@@ -1,7 +1,7 @@
 function msgr(e) {
 
   var worker = this,
-      msgSent = data; // e.data;
+      msgSent = e.data;
   
   switch (msgSent.cmd) {
     case 'init':
