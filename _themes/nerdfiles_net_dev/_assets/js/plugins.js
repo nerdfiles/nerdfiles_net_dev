@@ -24,6 +24,7 @@
         //$(function() {
 
         	_this.lastfm();
+        	console.log(_this);
 
     	//});
     };
@@ -36,8 +37,6 @@
 	      this.cmd = cmd;
 	      this.msg = msg;
 	    }
-
-   		console.log(this);
 
 	    if (window.Worker) {
 	      var lastfm = new Worker('/_assets/workers/lastfm.js');
