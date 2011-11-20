@@ -40,7 +40,7 @@
 		      }, false);
 
 		      $('body').bind('click', function(e) {
-		        lastfm.postMessage(new WorkerMessage('init', 'data'))
+		        lastfm.postMessage(new WorkerMessage('sendr', 'data'))
 		      });
 		      
 		    }
