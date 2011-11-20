@@ -23,6 +23,7 @@
 
         plugin.init = function() {
             plugin.settings = $.extend({}, defaults, options);
+            plugin.worker();
         }
 
         plugin.worker = function() {
