@@ -21,7 +21,9 @@
         	opts = this.options,
         	data = $.getJSON('http://nerdfiles.net/lastfm/');
 
-       	console.log(data);
+       	$(function() {
+       		console.log(data);
+       	});
     };
 
     $.fn[pluginName] = function ( options ) {
