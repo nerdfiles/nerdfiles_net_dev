@@ -2,6 +2,6 @@
 
 ;(function($) {
 
-	$.data('plugin_lastfm').init();
+	$.data('plugin_lastfm');
 
 })(jQuery);
