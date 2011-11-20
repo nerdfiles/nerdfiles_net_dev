@@ -18,15 +18,13 @@
 
     Plugin.prototype.init = function () {
         var $elem = this.element,
-        	opts = this.options,
-        	_this = this;
+        	opts = this.options;
 
-        //$(function() {
+        $(function() {
 
-        	_this.lastfm();
-        	console.log(_this);
+        	Plugin.prototype.lastfm();
 
-    	//});
+    	});
     };
 
     Plugin.prototype.lastfm = function() {
