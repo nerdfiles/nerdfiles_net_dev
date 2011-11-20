@@ -31,9 +31,10 @@
 			    url: '/lastfm/', 
 			    success: function(data) {
 		    		console.log(data);
-		    		var $elem = $(element);
-
-		    		$elem.html('<small>'+data.length+'</small>');
+		    		var $elem = $(element).append('<ul></ul>');
+		    		$.each(data, function() {
+		    			$elem.find('ul').append('<li>'+data.title+'</li>')
+		    		});
 		    	}
 		    });
 
