@@ -20,25 +20,34 @@
         var $elem = this.element,
         	opts = this.options;
 
+        $(function() {
+
+        	this.lastfm();
+
+    	});
+    };
+
+    Plugin.prototype.lastfm = function() {
+    	var $elem = this.element,
+    		opts = this.options;
+
 	    function WorkerMessage(cmd, msg) {
 	      this.cmd = cmd;
 	      this.msg = msg;
 	    }
 
-       	$(function() {
-       		//console.log(data);
+   		//console.log(data);
 
-		    if (window.Worker) {
-		      var lastfm = new Worker('/_assets/workers/lastfm.js');
-		      
-		      lastfm.addEventListener('message', function(e) {
-		        console.log(e.data);
-		      }, false);
-		      
-		    }
-       		
-       	});
-    };
+	    if (window.Worker) {
+	      var lastfm = new Worker('/_assets/workers/lastfm.js');
+	      
+	      lastfm.addEventListener('message', function(e) {
+	        console.log(e.data);
+	      }, false);
+	      
+	    }
+       	
+    }
 
     $.fn[pluginName] = function ( options ) {
         return this.each(function () {
