@@ -53,7 +53,15 @@
 <div class="container">
 {% block main_content %}
   {% placeholder "Main Content" or %}
-  <p>blugggh.</p>
+    
+    <p>blugggh.</p>
+
+    {% get_lastfm_widget as lastfm_widget %}
+    <!--h2>{{ lastfm_widget.title }}</h2-->
+    <div class="mod mod-lastfm">
+    	{{ lastfm_widget.content }}
+    </div>
+
   {% endplaceholder %}
 {% endblock %}
 </div>
@@ -63,10 +71,6 @@
 {% load lastfm_widget %}
 
 <!-- ... -->
-
-{% get_lastfm_widget as lastfm_widget %}
-<h2>{{ lastfm_widget.title }}</h2>
-{{ lastfm_widget.content }}
 
 {% render_block "analytics" %}
 
