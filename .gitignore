@@ -2,3 +2,5 @@ settings.py
 *.pyc
 *.swo
 urls.py
+deploy/*
+tmp/*
