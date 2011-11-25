@@ -15343,3 +15343,5 @@ Traceback (most recent call last):
 TemplateSyntaxError: Invalid block tag: 'addtoblock', expected 'endblock' or 'endblock js'
 2011-11-24 18:42:35,005 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
 2011-11-24 18:56:33,283 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-24 19:12:29,182 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-24 19:26:28,370 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
