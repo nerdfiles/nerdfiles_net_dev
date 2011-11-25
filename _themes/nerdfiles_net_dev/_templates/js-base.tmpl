@@ -1,7 +1,8 @@
 <!-- == BEHAVIOR: {% block jsmode %}BASE{% endblock %} ======================================= -->
 
-{% block before_jsmode %}{% endblock %}
+{% block before_script %}{% endblock %}
 
+{% block script %}
 <script> 
   Modernizr.load([
     {
@@ -40,3 +41,4 @@
     }
   ]);
 </script> 
+{% endblock %}

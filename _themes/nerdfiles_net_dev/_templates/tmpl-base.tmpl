@@ -38,7 +38,7 @@
 
 <meta charset="utf-8" />
 
-<title>/-;</title>
+<title>nerdfiles.net</title>
 
 {% render_block "font" %}
 {% render_block "css" %}
@@ -46,44 +46,49 @@
 
 </head>
 
-<body class="">
+<body class="nerdfiles-net {% block body_class %}base{% endblock %}">
 
 {% cms_toolbar %}
 
 <div class="container">
 
-<section>
-	<header>
-		<h1>nerdfiles.net</h1>
-	</header>
-</section>
+<header>
+	<h1>nerdfiles.net</h1>
+</header>
 
-<section>
 {% block main_content %}
-  {% placeholder "Main Content" or %}
-    
+<section>
     <article id="main-content">
 
-    	<section>
-    		<header>
-    			<h1></h1>
-    		</header>
-    	</section>
+        <section>
+          <header>
+            <h1>
+              <!-- !!! -->
+            </h1>
+          </header>
+        </section>
     
-    	<section>
-    		<p>blugggh.</p>	
-    	</section>
+        <section>
+        {% placeholder "Main Content" or %}
+          <p>blugggh.</p>
+        {% endplaceholder %}
+        </section>
 
     </article>
-
-  {% endplaceholder %}
+</section>
 {% endblock %}
 
 {% block aside_content %}
-  {% placeholder "Aside Content" or %}
+<!--
+{# 
+  @note since customarily a section with multiple 
+        modules, placeholders should go inside .inner.
+#}
+-->
+<section>
+  <!--aside>
+  {# placeholder "Aside Content" or #}
 
-	<aside>
-		
 		<section class="mod mod-lastfm">
 			<header>
 				<h1>This Week</h1>
@@ -96,23 +101,22 @@
 			</div>
 		</section>
 
-	</aside>
-
-{% endplaceholder %}
+	{# endplaceholder #}
+	</aside-->
+</section>
 {% endblock %}
-</section>
 
-<section>
-	<footer>
-	.
-	</footer>
-</section>
+{% block footer %}
+<footer>
+{% placeholder "Footer" or %}
+	<p>...</p>
+{% endplaceholder %}
+</footer>
+{% endblock %}
 
-</div>
+</div><!-- End .container -->
 
 {% render_block "js" %}
-
-<!-- ... -->
 
 {% render_block "analytics" %}
 

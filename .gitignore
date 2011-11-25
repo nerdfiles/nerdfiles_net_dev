@@ -4,3 +4,5 @@ settings.py
 urls.py
 deploy/*
 tmp/*
+*.db-hold
+
