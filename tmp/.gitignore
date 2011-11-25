@@ -2,7 +2,3 @@ settings.py
 *.pyc
 *.swo
 urls.py
-deploy/*
-tmp/*
-*.db-hold
-*.db

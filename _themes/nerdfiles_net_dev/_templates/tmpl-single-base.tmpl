@@ -1,0 +1,16 @@
+{% extends 'tmpl-base.tmpl' %}
+{% load cms_tags menu_tags sekizai_tags lastfm_widget %}
+
+{% block js %}
+{% addtoblock "js" %}
+{% include "js-sinlge-base.tmpl" %}
+{% endaddtoblock %}
+{% endblock %}
+
+{% block footer %}
+<footer>
+{% placeholder "Footer" or %}
+	<p>...</p>
+{% endplaceholder %}
+</footer>
+{% endblock %}
