@@ -1,4 +1,5 @@
 settings.py
+_log/*
 *.pyc
 *.swo
 urls.py

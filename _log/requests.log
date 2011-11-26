@@ -15422,3 +15422,10 @@ TemplateSyntaxError: Invalid block tag: 'addtoblock', expected 'endblock' or 'en
 2011-11-25 09:42:03,736 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
 2011-11-25 09:52:57,902 [WARNING] django.request: Not Found: /robots.txt/
 2011-11-25 09:56:37,320 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 11:24:06,488 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:17,341 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:19,249 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:21,406 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:25,469 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:31,015 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:36,755 [WARNING] django.request: Not Found: /favicon.ico/
