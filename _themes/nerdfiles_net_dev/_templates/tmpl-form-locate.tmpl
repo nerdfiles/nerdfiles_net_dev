@@ -1,4 +1,5 @@
 {% extends 'tmpl-form-base.tmpl' %}
+{% load cms_tags menu_tags sekizai_tags lastfm_widget %}
 
 {% block main_content %}
 <section>
@@ -19,6 +20,8 @@
             id="anon"
             tabindex="1">
             
+            {% csrf_token %}
+            
             <fieldset>
                 <legend></legend>
                 
@@ -26,7 +29,7 @@
                 
                     <div class="field-label">
                     
-                        <label for=""></label>
+                        <label for="">Test input</label>
                     
                     </div>
                     

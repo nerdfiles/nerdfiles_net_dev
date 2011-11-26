@@ -1,16 +1,16 @@
 "use strict";
 
-;(function(window, document, $, undefined) {
+;(function(window, document, $) {
 
 	$(function() {
 	
-	  // lastfm hookup test
-	  /*
+        // lastfm hookup test
+        /*
 		$('.mod-lastfm .inner')
 			.djangoLastFM()
 			.data('djangoLastFM')
 				.weekly_artists();
-		*/
+	    */
 
 	});
 

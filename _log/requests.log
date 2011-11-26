@@ -15422,3 +15422,1330 @@ TemplateSyntaxError: Invalid block tag: 'addtoblock', expected 'endblock' or 'en
 2011-11-25 09:42:03,736 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
 2011-11-25 09:52:57,902 [WARNING] django.request: Not Found: /robots.txt/
 2011-11-25 09:56:37,320 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 12:47:04,851 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-25 12:47:04,994 [WARNING] django.request: Not Found: /hash-test/
+2011-11-25 12:48:38,036 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/change_template/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 292, in change_template
+    page.save()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/models/pagemodel.py", line 360, in save
+    super(Page, self).save(**kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/mptt/models.py", line 695, in save
+    super(MPTTModel, self).save(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/base.py", line 460, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/models/pagemodel.py", line 384, in save_base
+    ret = super(Page, self).save_base(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/base.py", line 570, in save_base
+    created=(not record_exists), raw=raw, using=using)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/dispatch/dispatcher.py", line 172, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/signals.py", line 215, in update_placeholders
+    instance.rescan_placeholders()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/models/pagemodel.py", line 1054, in rescan_placeholders
+    placeholders = get_placeholders(self.get_template())
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 12:48:40,931 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 12:49:01,091 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 12:49:09,094 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 12:52:42,313 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 12:53:02,065 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 12:54:17,958 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 12:54:38,483 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 12:54:50,079 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 12:56:29,451 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 13:12:46,040 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 13:26:35,064 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 13:34:13,893 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-25 13:41:40,875 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 13:47:56,588 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 13:49:01,603 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/options.py", line 307, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 517, in change_view
+    'placeholders': plugins.get_placeholders(selected_template),
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 13:49:13,833 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/options.py", line 307, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 517, in change_view
+    'placeholders': plugins.get_placeholders(selected_template),
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 13:49:49,348 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/options.py", line 307, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 517, in change_view
+    'placeholders': plugins.get_placeholders(selected_template),
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 13:50:00,657 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/options.py", line 307, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 517, in change_view
+    'placeholders': plugins.get_placeholders(selected_template),
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 13:50:17,072 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/options.py", line 307, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 517, in change_view
+    'placeholders': plugins.get_placeholders(selected_template),
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'placeholder', expected 'endblock' or 'endblock main_content'
+2011-11-25 13:53:50,691 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-25 13:54:58,408 [WARNING] django.request: Forbidden (CSRF token missing or incorrect.): /locate/
+2011-11-25 13:56:31,762 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 13:59:49,276 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 88, in __init__
+    self.kwargs, self.blocks = self.options.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 55, in parse
+    return argument_parser.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 35, in parse
+    self.parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/templatetags/cms_tags.py", line 156, in parse_blocks
+    return super(PlaceholderParser, self).parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 166, in parse_blocks
+    nodelist = self.parser.parse(block_identifiers)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
+2011-11-25 14:00:04,497 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 88, in __init__
+    self.kwargs, self.blocks = self.options.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 55, in parse
+    return argument_parser.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 35, in parse
+    self.parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/templatetags/cms_tags.py", line 156, in parse_blocks
+    return super(PlaceholderParser, self).parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 166, in parse_blocks
+    nodelist = self.parser.parse(block_identifiers)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
+2011-11-25 14:02:00,250 [ERROR] django.request: Internal Server Error: /locate/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/views.py", line 106, in details
+    return render_to_response(template_name, context)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/shortcuts/__init__.py", line 20, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 181, in render_to_string
+    t = get_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 88, in __init__
+    self.kwargs, self.blocks = self.options.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 55, in parse
+    return argument_parser.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 35, in parse
+    self.parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/templatetags/cms_tags.py", line 156, in parse_blocks
+    return super(PlaceholderParser, self).parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 166, in parse_blocks
+    nodelist = self.parser.parse(block_identifiers)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
+2011-11-25 14:03:54,553 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/options.py", line 307, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 517, in change_view
+    'placeholders': plugins.get_placeholders(selected_template),
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 88, in __init__
+    self.kwargs, self.blocks = self.options.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 55, in parse
+    return argument_parser.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 35, in parse
+    self.parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/templatetags/cms_tags.py", line 156, in parse_blocks
+    return super(PlaceholderParser, self).parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 166, in parse_blocks
+    nodelist = self.parser.parse(block_identifiers)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
+2011-11-25 14:04:09,963 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/change_template/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 292, in change_template
+    page.save()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/models/pagemodel.py", line 360, in save
+    super(Page, self).save(**kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/mptt/models.py", line 695, in save
+    super(MPTTModel, self).save(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/base.py", line 460, in save
+    self.save_base(using=using, force_insert=force_insert, force_update=force_update)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/models/pagemodel.py", line 384, in save_base
+    ret = super(Page, self).save_base(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/base.py", line 570, in save_base
+    created=(not record_exists), raw=raw, using=using)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/dispatch/dispatcher.py", line 172, in send
+    response = receiver(signal=self, sender=sender, **named)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/signals.py", line 215, in update_placeholders
+    instance.rescan_placeholders()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/models/pagemodel.py", line 1054, in rescan_placeholders
+    placeholders = get_placeholders(self.get_template())
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 88, in __init__
+    self.kwargs, self.blocks = self.options.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 55, in parse
+    return argument_parser.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 35, in parse
+    self.parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/templatetags/cms_tags.py", line 156, in parse_blocks
+    return super(PlaceholderParser, self).parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 166, in parse_blocks
+    nodelist = self.parser.parse(block_identifiers)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
+2011-11-25 14:04:10,496 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/options.py", line 307, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 517, in change_view
+    'placeholders': plugins.get_placeholders(selected_template),
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 88, in __init__
+    self.kwargs, self.blocks = self.options.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 55, in parse
+    return argument_parser.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 35, in parse
+    self.parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/templatetags/cms_tags.py", line 156, in parse_blocks
+    return super(PlaceholderParser, self).parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 166, in parse_blocks
+    nodelist = self.parser.parse(block_identifiers)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
+2011-11-25 14:04:48,667 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/options.py", line 307, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 517, in change_view
+    'placeholders': plugins.get_placeholders(selected_template),
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 88, in __init__
+    self.kwargs, self.blocks = self.options.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 55, in parse
+    return argument_parser.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 35, in parse
+    self.parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/templatetags/cms_tags.py", line 156, in parse_blocks
+    return super(PlaceholderParser, self).parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 166, in parse_blocks
+    nodelist = self.parser.parse(block_identifiers)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
+2011-11-25 14:05:11,559 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/options.py", line 307, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 517, in change_view
+    'placeholders': plugins.get_placeholders(selected_template),
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 88, in __init__
+    self.kwargs, self.blocks = self.options.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 55, in parse
+    return argument_parser.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 35, in parse
+    self.parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/templatetags/cms_tags.py", line 156, in parse_blocks
+    return super(PlaceholderParser, self).parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 166, in parse_blocks
+    nodelist = self.parser.parse(block_identifiers)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
+2011-11-25 14:05:29,040 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 111, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/options.py", line 307, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/decorators.py", line 93, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/views/decorators/cache.py", line 79, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/admin/sites.py", line 197, in inner
+    return view(request, *args, **kwargs)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/admin/pageadmin.py", line 517, in change_view
+    'placeholders': plugins.get_placeholders(selected_template),
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/utils/plugins.py", line 112, in get_placeholders
+    compiled_template = get_template(template)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 157, in get_template
+    template, origin = find_template(template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 134, in find_template
+    source, display_name = loader(name, dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 42, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 48, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader.py", line 168, in get_template_from_string
+    return Template(source, origin, name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 108, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 136, in compile_string
+    return parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 214, in do_extends
+    nodelist = parser.parse()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/loader_tags.py", line 192, in do_block
+    nodelist = parser.parse(('endblock', 'endblock %s' % block_name))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 239, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 88, in __init__
+    self.kwargs, self.blocks = self.options.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/core.py", line 55, in parse
+    return argument_parser.parse(parser, tokens)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 35, in parse
+    self.parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/templatetags/cms_tags.py", line 156, in parse_blocks
+    return super(PlaceholderParser, self).parse_blocks()
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/classytags/parser.py", line 166, in parse_blocks
+    nodelist = self.parser.parse(block_identifiers)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 237, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/template/base.py", line 290, in invalid_block_tag
+    raise self.error(token, "Invalid block tag: '%s', expected %s" % (command, get_text_list(["'%s'" % p for p in parse_until])))
+TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
+2011-11-25 14:12:11,725 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 14:21:09,433 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-25 14:26:44,321 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 14:42:57,296 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 14:45:57,251 [WARNING] django.request: Not Found: /2008/03/29/rethinking-gettier-case-ii/
+2011-11-25 14:46:11,138 [WARNING] django.request: Not Found: /work-mocks/doe-time-manager/doe-reports.shtml/
+2011-11-25 14:48:41,530 [WARNING] django.request: Not Found: /playground/protovis/jsdoc/symbols/src/src_mark_Area.js.html/
+2011-11-25 14:50:31,369 [WARNING] django.request: Not Found: /work-mocks/plans-for-you/
+2011-11-25 14:51:32,223 [WARNING] django.request: Not Found: /work-mocks/my-plans/
+2011-11-25 14:53:07,434 [WARNING] django.request: Not Found: /work-mocks/prospects-on-the-web/
+2011-11-25 14:55:49,414 [WARNING] django.request: Not Found: /work-mocks/pea-templates/
+2011-11-25 14:56:38,382 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 15:01:59,134 [WARNING] django.request: Not Found: /work-mocks/on-the-fly-form-submit/
+2011-11-25 15:12:02,533 [WARNING] django.request: Not Found: /work-mocks/swap-pending-message/
+2011-11-25 15:12:57,069 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 15:15:23,364 [WARNING] django.request: Not Found: /work-mocks/energywise/
+2011-11-25 15:19:20,426 [WARNING] django.request: Not Found: /work-mocks/plans-for-you/layer-behavior/sb/BUILD/
+2011-11-25 15:26:55,309 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 15:41:46,486 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 15:56:33,657 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 16:11:37,352 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 16:13:37,630 [WARNING] django.request: Not Found: /present.modal/
+2011-11-25 16:26:26,373 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 16:42:56,627 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 16:56:37,486 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 17:03:01,108 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-25 17:12:36,783 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 17:26:42,023 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 17:41:34,689 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 17:56:28,254 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 18:11:36,809 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 18:26:15,771 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-25 18:26:41,356 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 18:42:33,170 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 18:56:26,553 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 19:12:30,745 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 19:26:36,781 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 19:31:02,803 [WARNING] django.request: Not Found: /acrotime/demorequest.php/
+2011-11-25 19:41:37,531 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 19:56:30,464 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 20:00:21,592 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-25 20:01:08,982 [WARNING] django.request: Not Found: /work-mocks/mobile-pilot-iphone/
+2011-11-25 20:11:34,295 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 20:26:38,502 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 20:42:35,757 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 20:56:38,063 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 21:11:24,769 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-25 21:12:42,339 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 21:26:36,741 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 21:41:36,564 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 21:56:37,185 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 22:11:35,919 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 22:12:17,547 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-25 22:26:28,237 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 22:42:35,126 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 22:56:27,394 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 22:56:52,364 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-25 23:12:41,350 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 23:26:37,860 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 23:41:37,855 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-25 23:56:28,401 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 00:10:05,154 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 00:12:30,257 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 00:26:30,690 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 00:41:05,604 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 00:42:34,219 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 00:56:34,822 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 01:12:38,164 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 01:13:28,373 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 01:26:04,137 [WARNING] django.request: Not Found: /acrotime/form-1.php/
+2011-11-26 01:26:33,027 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 01:30:40,717 [WARNING] django.request: Not Found: /playground/js-loader-comparison/
+2011-11-26 01:38:35,893 [WARNING] django.request: Not Found: /work-mocks/wm-email-template-1/
+2011-11-26 01:41:30,787 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 01:44:01,326 [WARNING] django.request: Not Found: /jDoc/
+2011-11-26 01:46:51,500 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 01:51:56,140 [WARNING] django.request: Not Found: /gdgs/
+2011-11-26 01:55:40,501 [WARNING] django.request: Not Found: /playground/js-loader-comparison/libs/labjs/
+2011-11-26 01:55:44,150 [WARNING] django.request: Not Found: /playground/protovis/examples/crimea/crimea.html/
+2011-11-26 01:56:36,944 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 02:00:21,619 [WARNING] django.request: Not Found: /redtheme/contact.php/
+2011-11-26 02:06:45,061 [WARNING] django.request: Not Found: /ui/
+2011-11-26 02:11:35,387 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 02:11:54,366 [WARNING] django.request: Not Found: /ui/prototypes/
+2011-11-26 02:12:51,946 [WARNING] django.request: Not Found: /ui/prototypes/ploud-ui/
+2011-11-26 02:17:56,933 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 02:22:40,360 [WARNING] django.request: Not Found: /work-mocks/mobile-pilot-iphone/
+2011-11-26 02:26:30,878 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 02:42:26,266 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 02:49:38,924 [WARNING] django.request: Not Found: /work-mocks/pea-templates/index-en-enroll.html/
+2011-11-26 02:49:56,109 [WARNING] django.request: Not Found: /work-mocks/weekly-summary-email/exacttarget-flat-template.html/
+2011-11-26 02:56:26,213 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 03:00:20,187 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 03:04:41,231 [WARNING] django.request: Not Found: /work-mocks/weekly-summary-email/exacttarget-tou-template (one-week).html
+2011-11-26 03:13:06,650 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 03:26:41,314 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 03:29:02,509 [WARNING] django.request: Not Found: /work-mocks/wm-diversion-tracker/
+2011-11-26 03:37:41,205 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 03:41:43,733 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 03:44:53,226 [WARNING] django.request: Not Found: /wp-content/uploads/2007/08/513nw-tlfil.jpg/
+2011-11-26 03:44:54,727 [WARNING] django.request: Not Found: /wp-content/uploads/2007/08/book.jpg/
+2011-11-26 03:44:56,043 [WARNING] django.request: Not Found: /wp-content/uploads/2007/08/35d2gb41.jpg/
+2011-11-26 03:56:31,095 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 04:06:00,355 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 04:09:41,191 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 04:11:32,660 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 04:20:15,136 [WARNING] django.request: Not Found: /mockup07/
+2011-11-26 04:20:30,658 [WARNING] django.request: Not Found: /web-cv/
+2011-11-26 04:20:48,823 [WARNING] django.request: Not Found: /work-mocks/
+2011-11-26 04:21:44,311 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 04:21:44,435 [WARNING] django.request: Not Found: /2008/02/24/looking-for-spinoza-starting/
+2011-11-26 04:26:43,180 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 04:40:44,667 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 04:42:42,876 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 04:56:33,174 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 05:12:19,984 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 05:12:30,271 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 05:26:38,094 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 05:41:33,665 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 05:43:51,084 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 05:56:28,613 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 06:12:29,215 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 06:16:13,540 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 06:26:25,702 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 06:33:21,034 [WARNING] django.request: Not Found: /wp-content/uploads/2007/08/folder.jpg/
+2011-11-26 06:42:32,398 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 06:56:47,355 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 07:05:03,098 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 07:12:37,495 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 07:16:23,827 [WARNING] django.request: Not Found: /ui/designs/
+2011-11-26 07:18:44,660 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:18:49,233 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:18:51,423 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:18:55,141 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:19:02,232 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:19:04,321 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:19:49,295 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:26:37,764 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 07:30:24,737 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:31:06,086 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:31:59,574 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:32:00,910 [WARNING] django.request: Not Found: /_assets/cms_page_media/1/300[1]
+2011-11-26 07:32:01,299 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:32:14,261 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:32:21,091 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:32:30,812 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:32:32,008 [WARNING] django.request: Not Found: /_assets/cms_page_media/1/kitteh.jpg/
+2011-11-26 07:32:32,282 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:32:45,724 [WARNING] django.request: Not Found: /_assets/cms_page_media/1/kitteh.jpg/
+2011-11-26 07:32:47,548 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:32:55,463 [WARNING] django.request: Not Found: /_assets/cms_page_media/1/kitteh.jpg/
+2011-11-26 07:32:56,101 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:33:05,821 [WARNING] django.request: Not Found: /_assets/cms_page_media/1/kitteh.jpg/
+2011-11-26 07:33:06,021 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:33:08,651 [WARNING] django.request: Not Found: /_assets/cms_page_media/1/kitteh.jpg/
+2011-11-26 07:33:08,817 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 07:34:45,414 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 07:41:38,383 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 07:56:29,142 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 08:03:58,891 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 08:11:27,969 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 08:26:31,254 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 08:35:37,006 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 08:42:26,514 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 08:56:28,173 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 09:08:46,124 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 09:08:49,721 [WARNING] django.request: Not Found: /api/Line.html/
+2011-11-26 09:12:33,671 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 09:26:37,878 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 09:36:49,450 [WARNING] django.request: Not Found: /work-mocks/prospects-on-the-web/images/pc-intro-bg-gradient.png/
+2011-11-26 09:38:44,544 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-header-nods.gif/
+2011-11-26 09:41:04,357 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/main-navigation-sprite.png/
+2011-11-26 09:41:25,911 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 09:41:36,806 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 09:42:46,575 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-image-header.png/
+2011-11-26 09:44:41,051 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-test-promo-image.png/
+2011-11-26 09:46:33,408 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/header_title_large_business.png/
+2011-11-26 09:48:17,261 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-cinematic-header.png/
+2011-11-26 09:49:59,517 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-page-container-bg.png/
+2011-11-26 09:51:45,614 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-save-energy-header.png/
+2011-11-26 09:53:30,307 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-home-page-header-bg.png/
+2011-11-26 09:55:21,602 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-cinematic-header-nods.gif/
+2011-11-26 09:56:28,998 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 09:56:51,039 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-page-container-footer.png/
+2011-11-26 09:58:44,275 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/main-navigation-sprite-energywise.png/
+2011-11-26 10:00:25,362 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-page-container-bg-nods.gif/
+2011-11-26 10:00:48,981 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 10:02:02,467 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-home-page-header-bg-nods.gif/
+2011-11-26 10:03:30,722 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-cinematic-page-container-bg.png/
+2011-11-26 10:05:17,076 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-cinematic-page-container-footer.png/
+2011-11-26 10:06:48,535 [WARNING] django.request: Not Found: /work-mocks/energywise/resource-images/energywise-cinematic-page-container-bg-nods.gif/
+2011-11-26 10:11:29,003 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 10:11:44,374 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 10:14:21,913 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 10:23:55,424 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 10:26:32,790 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 10:42:36,192 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 10:56:34,111 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 11:00:46,267 [WARNING] django.request: Not Found: /getElementsByAttribute/
+2011-11-26 11:12:56,081 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 11:13:28,196 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:13:33,144 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:13:36,920 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:14:20,310 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:14:23,816 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:14:30,988 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:22:49,870 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 11:24:45,751 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:26:41,008 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 11:35:25,585 [WARNING] django.request: Not Found: /robots.txt/
+2011-11-26 11:39:21,503 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:41:41,210 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+2011-11-26 11:51:28,044 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:51:48,526 [WARNING] django.request: Not Found: /
+2011-11-26 11:51:50,592 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:51:53,660 [WARNING] django.request: Not Found: /
+2011-11-26 11:51:56,831 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:52:00,307 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:52:02,273 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:52:08,559 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:52:28,829 [WARNING] django.request: Not Found: /favicon.ico/
