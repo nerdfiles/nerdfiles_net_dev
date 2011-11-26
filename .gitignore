@@ -6,3 +6,4 @@ deploy/*
 tmp/*
 *.db-hold
 *.db
+*.swp
