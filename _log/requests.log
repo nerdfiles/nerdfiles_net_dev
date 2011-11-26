@@ -15422,6 +15422,7 @@ TemplateSyntaxError: Invalid block tag: 'addtoblock', expected 'endblock' or 'en
 2011-11-25 09:42:03,736 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
 2011-11-25 09:52:57,902 [WARNING] django.request: Not Found: /robots.txt/
 2011-11-25 09:56:37,320 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
+<<<<<<< HEAD
 2011-11-25 12:47:04,851 [WARNING] django.request: Not Found: /robots.txt/
 2011-11-25 12:47:04,994 [WARNING] django.request: Not Found: /hash-test/
 2011-11-25 12:48:38,036 [ERROR] django.request: Internal Server Error: /dashboard/cms/page/4/change_template/
@@ -16749,3 +16750,12 @@ TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
 2011-11-26 11:52:02,273 [WARNING] django.request: Not Found: /favicon.ico/
 2011-11-26 11:52:08,559 [WARNING] django.request: Not Found: /favicon.ico/
 2011-11-26 11:52:28,829 [WARNING] django.request: Not Found: /favicon.ico/
+=======
+2011-11-26 11:24:06,488 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:17,341 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:19,249 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:21,406 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:25,469 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:31,015 [WARNING] django.request: Not Found: /favicon.ico/
+2011-11-26 11:24:36,755 [WARNING] django.request: Not Found: /favicon.ico/
+>>>>>>> 50d5913e4f7729e7fcc01dd363f4fdceae07e610
