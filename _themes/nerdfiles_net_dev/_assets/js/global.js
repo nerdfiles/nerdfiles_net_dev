@@ -12,6 +12,8 @@
 				.weekly_artists();
 	    */
 
+    $('a.external').attr('target', '_blank');
+
 	});
 
 })(window, document, jQuery);
