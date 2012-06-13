@@ -63,8 +63,43 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* test */
+/* silent scrollbars */
 /* line 5, ../sass/screen.scss */
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+  -webkit-border-radius: 0;
+}
+
+/* line 8, ../sass/screen.scss */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* line 11, ../sass/screen.scss */
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #999;
+  -webkit-border-radius: 4px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 2px solid #fff;
+}
+
+/* line 18, ../sass/screen.scss */
+::-webkit-scrollbar-thumb:hover {
+  height: 50px;
+  background-color: #9f9f9f;
+  -webkit-border-radius: 4px;
+}
+
+/* line 22, ../sass/screen.scss */
+:-webkit-scrollbar {
+  width: 16px;
+}
+
+/* test */
+/* line 26, ../sass/screen.scss */
 body {
   background: rgba(230, 230, 230, 0.6);
 }
