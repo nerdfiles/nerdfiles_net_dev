@@ -16760,6 +16760,7 @@ TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
 2011-11-26 11:24:36,755 [WARNING] django.request: Not Found: /favicon.ico/
 >>>>>>> 50d5913e4f7729e7fcc01dd363f4fdceae07e610
 <<<<<<< HEAD
+<<<<<<< HEAD
 2011-11-26 12:00:53,443 [WARNING] django.request: Not Found: /favicon.ico/
 2011-11-26 12:01:34,929 [WARNING] django.request: Not Found: /favicon.ico/
 2011-11-26 12:01:40,699 [WARNING] django.request: Not Found: /favicon.ico/
@@ -16773,6 +16774,8 @@ TemplateSyntaxError: Invalid block tag: 'crsf_token', expected 'endplaceholder'
 2011-11-26 13:51:17,973 [WARNING] django.request: Not Found: /favicon.ico/
 2011-11-26 13:51:24,516 [WARNING] django.request: Not Found: /favicon.ico/
 =======
+=======
+>>>>>>> 7740f42bb7ac82fd779f8830b9c9e6c56b22361f
 2011-11-30 19:56:29,825 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
 2011-11-30 20:11:45,937 [WARNING] django.request: Not Found: /playground/js-loader-comparison/1_labjs.html/
 2011-11-30 20:17:11,764 [WARNING] django.request: Not Found: /robots.txt/
@@ -22001,4 +22004,7 @@ UnboundLocalError: local variable 'domain' referenced before assignment
 2011-12-25 21:54:17,063 [WARNING] django.request: Not Found: /favicon.ico/
 2011-12-25 21:54:19,504 [WARNING] django.request: Not Found: /favicon.ico/
 2011-12-25 21:55:01,097 [WARNING] django.request: Not Found: /favicon.ico/
+<<<<<<< HEAD
+>>>>>>> 7740f42bb7ac82fd779f8830b9c9e6c56b22361f
+=======
 >>>>>>> 7740f42bb7ac82fd779f8830b9c9e6c56b22361f

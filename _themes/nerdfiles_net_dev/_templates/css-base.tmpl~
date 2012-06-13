@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+<link  
+  href="{{ ASSETS_URL }}css/compass/stylesheets/print.css" 
+  media="print" 
+  rel="stylesheet" />
+
+<link  
+  href="{{ ASSETS_URL }}css/compass/stylesheets/screen.css" 
+  media="screen" 
+  rel="stylesheet" />
+
+=======
 <style>
   body {
     font-family: "Raleway", sans-serif;
@@ -31,3 +43,4 @@
   body.base blockquote cite { font-size: 16px; }
   body.base blockquote p::before { margin: 0 .5em 0 0; content: "❝ "; display: inline-block; }
 </style>
+>>>>>>> 7740f42bb7ac82fd779f8830b9c9e6c56b22361f
