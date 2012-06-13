@@ -25,7 +25,14 @@
   body.base #main-content h1 { margin: 0; padding: 0; border-top: none; }
   body.base #main-content header { }
   body.base #main-content { border-bottom: 1px #999 dashed; }
-  a { padding: 0 10px; text-decoration: none; display: inline-block; *zoom: 1; *display: inline; border: 1px #999 dashed; }
+  a { 
+    font-family: 'Cedarville Cursive', cursive;
+    padding: 0 10px; 
+    text-decoration: none; 
+    display: inline-block; 
+    *zoom: 1; 
+    *display: inline; 
+    border: 1px #999 dashed; }
   a.external::after { content: ' ⤴'; }
   body.base blockquote { box-shadow: 0 0 .3em #ccc; padding: 20px; }
   body.base blockquote p { display: inline-block; margin: 0; }
