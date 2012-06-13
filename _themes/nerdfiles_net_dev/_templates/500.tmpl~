@@ -1,0 +1,7 @@
+{% extends 'tmpl-base.tmpl' %}
+
+{% block main_content %}
+  <p>quote the server, 404</p>
+{% endblock %}
+
+
