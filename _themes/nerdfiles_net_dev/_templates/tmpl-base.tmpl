@@ -52,8 +52,14 @@
 
 <div class="container">
 
+<nav id="site-access">
+  <ul>
+    <li><a href="#main-content">Skip to content</a></li>
+  </ul>
+</nav>
+
 <header>
-	<h1>nerdfiles.net</h1>
+	<h1><a href="http://nerdfiles.net">nerdfiles.net</a></h1>
 </header>
 
 {% block main_content %}
@@ -115,6 +121,8 @@
 {% endblock %}
 
 </div><!-- End .container -->
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/sopa/1.0/stopcensorship.js"></script>
 
 {% render_block "js" %}
 
