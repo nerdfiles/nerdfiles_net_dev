@@ -22008,3 +22008,5 @@ UnboundLocalError: local variable 'domain' referenced before assignment
 >>>>>>> 7740f42bb7ac82fd779f8830b9c9e6c56b22361f
 =======
 >>>>>>> 7740f42bb7ac82fd779f8830b9c9e6c56b22361f
+2012-06-15 18:33:06,521 [WARNING] django.request: Not Found: /favicon.ico/
+2012-06-15 18:33:06,594 [WARNING] django.request: Not Found: /favicon.ico/
