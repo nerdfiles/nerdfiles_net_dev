@@ -161,7 +161,7 @@ body.base .container {
 body.base header h1 {
   text-align: right;
   font-size: 2em;
-  border-bottom: 2px #111 solid;
+  border-bottom: 4px #111 solid;
   line-height: 1;
   margin: 0 0 .5em;
   padding: 25px 0 25px;
