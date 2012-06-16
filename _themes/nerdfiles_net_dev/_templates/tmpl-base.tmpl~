@@ -1,4 +1,4 @@
-{% load cms_tags menu_tags sekizai_tags lastfm_widget %}
+{% load cms_tags menu_tags sekizai_tags %}
 
 <!DOCTYPE HTML>
 
