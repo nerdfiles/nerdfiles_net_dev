@@ -27,7 +27,8 @@ body { background: rgba(230,230,230,.6); }
 
 /* Base */
 
-p { margin: 0 0 1em; }
+p, 
+ul, ol{ margin: 0 0 1em; }
 
 body {
   text-rendering: optimizeLegibility;

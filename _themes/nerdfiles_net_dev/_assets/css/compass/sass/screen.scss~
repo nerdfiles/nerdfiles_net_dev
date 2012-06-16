@@ -27,6 +27,9 @@ body { background: rgba(230,230,230,.6); }
 
 /* Base */
 
+p,
+ul,ol{ margin: 0 0 1em; }
+
 body {
   text-rendering: optimizeLegibility;
   font-family: "Raleway", sans-serif;
