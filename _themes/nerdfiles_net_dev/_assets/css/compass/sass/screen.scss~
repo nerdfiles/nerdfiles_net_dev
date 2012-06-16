@@ -62,7 +62,7 @@ body.base .container {
   height: 20px !important; 
   top: auto !important; 
   position: fixed !important; }*/
-body.base h1 { 
+body.base header h1 { 
   text-align: right; 
   font-size: 2em; 
   //border-top: 1px #999 dashed; 
