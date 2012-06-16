@@ -37,9 +37,9 @@ urlpatterns = patterns('',
 # == LOCAL ======================================== #
 
 urlpatterns = patterns('',
-  url(r'^'+settings.ASSETS_URL+'(?P<path>.*)$', 'django.views.static.serve',
+  url(r'^_assets(?P<path>.*)$', 'django.views.static.serve',
   {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-  url(r'^'+settings.STATIC_URL+'(?P<path>.*)$', 'django.views.static.serve',
+  url(r'^_static(?P<path>.*)$', 'django.views.static.serve',
   {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
   url(r'', include('django.contrib.staticfiles.urls')),
 ) + urlpatterns
