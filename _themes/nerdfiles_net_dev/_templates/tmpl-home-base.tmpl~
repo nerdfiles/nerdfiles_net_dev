@@ -1,6 +1,2 @@
 {% extends 'tmpl-base.tmpl' %}
 {% load cms_tags menu_tags sekizai_tags lastfm_widget %}
-<<<<<<< HEAD
-=======
-
->>>>>>> 50d5913e4f7729e7fcc01dd363f4fdceae07e610
