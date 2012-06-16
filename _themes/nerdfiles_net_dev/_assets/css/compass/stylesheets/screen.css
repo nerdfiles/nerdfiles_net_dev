@@ -114,7 +114,7 @@ ul, ol {
 
 /* line 34, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
-  margin: 0 0 1em;
+  margin: 0 0 .5em;
 }
 
 /* line 37, ../sass/screen.scss */
