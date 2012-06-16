@@ -1,8 +1,6 @@
 {% extends 'tmpl-base.tmpl' %}
 {% load cms_tags menu_tags sekizai_tags lastfm_widget %}
 
-{% block css %}
-{% addtoblock "css" %}
-{% include "css-home.tmpl" %}
-{% endaddtoblock %}
+{% block main_content %}
+{{ block.super }}
 {% endblock %}
