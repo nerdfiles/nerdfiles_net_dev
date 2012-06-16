@@ -18,7 +18,7 @@ def site_info(request):
 
   return { 
     'SITE_URL': 'http://' + domain + '/',
-    'ASSETS_URL': 'http://' + domain + '/'+settings.ASSETS_URL,
+    'ASSETS_URL': 'http://' + domain + settings.ASSETS_URL,
   }
 
 def google_analytics(request):
