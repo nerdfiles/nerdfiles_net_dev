@@ -107,6 +107,11 @@ body {
 
 /* Base */
 /* line 30, ../sass/screen.scss */
+p {
+  margin: 0 0 1em;
+}
+
+/* line 32, ../sass/screen.scss */
 body {
   text-rendering: optimizeLegibility;
   font-family: "Raleway", sans-serif;
@@ -116,7 +121,7 @@ body {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 #site-access ul {
   -moz-transform: rotate(10deg);
   -o-transform: rotate(10deg);
@@ -130,12 +135,12 @@ body {
   padding: 0;
 }
 
-/* line 47, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 body.base {
   padding: 100px 0;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 52, ../sass/screen.scss */
 body.base .container {
   margin: 0 auto 30px;
   width: 720px;
@@ -146,7 +151,7 @@ body.base .container {
   height: 20px !important; 
   top: auto !important; 
   position: fixed !important; }*/
-/* line 58, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 body.base h1 {
   text-align: right;
   font-size: 2em;
@@ -156,19 +161,19 @@ body.base h1 {
   padding: 25px 0 25px;
 }
 
-/* line 66, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 body.base #main-content h1 {
   margin: 0;
   padding: 0;
   border-top: none;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 body.base #main-content h2 {
   font-size: 1.5em;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 a {
   font-family: 'Cedarville Cursive', cursive;
   padding: 0 10px;
@@ -180,29 +185,29 @@ a {
   border: 1px #999 dashed;
 }
 
-/* line 81, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 a.external::after {
   content: ' ⤴';
 }
 
-/* line 82, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 body.base blockquote {
   box-shadow: 0 0 .3em #ccc;
   padding: 20px;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 body.base blockquote p {
   display: inline-block;
   margin: 0;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 body.base blockquote cite {
   font-size: 16px;
 }
 
-/* line 85, ../sass/screen.scss */
+/* line 87, ../sass/screen.scss */
 body.base blockquote p::before {
   margin: 0 .5em 0 0;
   content: "❝ ";
