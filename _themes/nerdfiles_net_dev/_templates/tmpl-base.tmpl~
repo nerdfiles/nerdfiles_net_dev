@@ -122,7 +122,7 @@
 
 </div><!-- End .container -->
 
-<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/sopa/1.0/stopcensorship.js"></script>
+<!--script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/sopa/1.0/stopcensorship.js"></script-->
 
 {% render_block "js" %}
 
