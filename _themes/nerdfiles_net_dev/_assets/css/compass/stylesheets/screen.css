@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 17, ../../../../../../../../.rvm/gems/ruby-1.9.3-p125/gems/compass-0.11.7/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -102,4 +103,103 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* line 26, ../sass/screen.scss */
 body {
   background: rgba(230, 230, 230, 0.6);
+}
+
+/* Base */
+/* line 30, ../sass/screen.scss */
+body {
+  text-rendering: optimizeLegibility;
+  font-family: "Raleway", sans-serif;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 2em;
+  line-height: 1.7;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
+}
+
+/* line 41, ../sass/screen.scss */
+#site-access ul {
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 47, ../sass/screen.scss */
+body.base {
+  padding: 100px 0;
+}
+
+/* line 50, ../sass/screen.scss */
+body.base .container {
+  margin: 0 auto 30px;
+  width: 720px;
+}
+
+/*body.base div:nth-child(4) { 
+  bottom: 0 !important; 
+  height: 20px !important; 
+  top: auto !important; 
+  position: fixed !important; }*/
+/* line 58, ../sass/screen.scss */
+body.base h1 {
+  text-align: right;
+  font-size: 2em;
+  border-bottom: 2px #111 solid;
+  line-height: 1;
+  margin: 0 0 0;
+  padding: 25px 0 25px;
+}
+
+/* line 66, ../sass/screen.scss */
+body.base #main-content h1 {
+  margin: 0;
+  padding: 0;
+  border-top: none;
+}
+
+/* line 71, ../sass/screen.scss */
+a {
+  font-family: 'Cedarville Cursive', cursive;
+  padding: 0 10px;
+  text-decoration: none;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  margin: 0 0 .1em 0;
+  border: 1px #999 dashed;
+}
+
+/* line 80, ../sass/screen.scss */
+a.external::after {
+  content: ' ⤴';
+}
+
+/* line 84, ../sass/screen.scss */
+body.base blockquote {
+  box-shadow: 0 0 .3em #ccc;
+  padding: 20px;
+}
+
+/* line 85, ../sass/screen.scss */
+body.base blockquote p {
+  display: inline-block;
+  margin: 0;
+}
+
+/* line 86, ../sass/screen.scss */
+body.base blockquote cite {
+  font-size: 16px;
+}
+
+/* line 87, ../sass/screen.scss */
+body.base blockquote p::before {
+  margin: 0 .5em 0 0;
+  content: "❝ ";
+  display: inline-block;
 }

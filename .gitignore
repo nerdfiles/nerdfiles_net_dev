@@ -8,3 +8,5 @@ tmp/*
 *.db-hold
 *.db
 *.swp
+*.py~
+*.log

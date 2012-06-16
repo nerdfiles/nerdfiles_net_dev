@@ -1,32 +1,3 @@
-@import "compass/reset";
-
-/* silent scrollbars */
-
-::-webkit-scrollbar-track-piece {
-  background-color: #fff;
-  -webkit-border-radius: 0; }
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px; }
-::-webkit-scrollbar-thumb {
-  height: 50px;
-  background-color: #999;
-  -webkit-border-radius: 4px;
-  outline: 2px solid #fff;
-  outline-offset: -2px;
-  border: 2px solid #fff; }
-::-webkit-scrollbar-thumb:hover {
-  height: 50px;
-  background-color: #9f9f9f;
-  -webkit-border-radius: 4px; }
-:-webkit-scrollbar {  width: 16px }
-
-/* test */
-
-body { background: rgba(230,230,230,.6); }
-
-/* Base */
-
 body {
   text-rendering: optimizeLegibility;
   font-family: "Raleway", sans-serif;
@@ -82,5 +53,4 @@ body.base blockquote { box-shadow: 0 0 .3em #ccc; padding: 20px; }
 body.base blockquote p { display: inline-block; margin: 0; }
 body.base blockquote cite { font-size: 16px; }
 body.base blockquote p::before { margin: 0 .5em 0 0; content: "❝ "; display: inline-block; }
-
 
