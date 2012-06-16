@@ -68,9 +68,9 @@ body.base header h1 {
   //border-top: 1px #999 dashed; 
   border-bottom: 2px #111 solid; 
   line-height: 1; 
-  margin: 0 0 0;
+  margin: 0 0 .5em;
   padding: 25px 0 25px; }
-body.base #main-content h1 { margin: 0; padding: 0; border-top: none; }
+body.base #main-content h1 { padding: 0; border-top: none; }
 body.base #main-content h2 { font-size: 1.5em; }
 body.base #main-content header { }
 body.base #main-content { 
