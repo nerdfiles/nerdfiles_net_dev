@@ -27,6 +27,13 @@ body { background: rgba(230,230,230,.6); }
 
 /* Base */
 
+p, 
+ul, ol { 
+  margin: 0 0 1em; }
+
+h1,h2,h3,h4,h5,h6 { 
+  margin: 0 0 .5em; }
+
 body {
   text-rendering: optimizeLegibility;
   font-family: "Raleway", sans-serif;
@@ -55,7 +62,7 @@ body.base .container {
   height: 20px !important; 
   top: auto !important; 
   position: fixed !important; }*/
-body.base h1 { 
+body.base header h1 { 
   text-align: right; 
   font-size: 2em; 
   //border-top: 1px #999 dashed; 
@@ -64,6 +71,7 @@ body.base h1 {
   margin: 0 0 0;
   padding: 25px 0 25px; }
 body.base #main-content h1 { margin: 0; padding: 0; border-top: none; }
+body.base #main-content h2 { font-size: 1.5em; }
 body.base #main-content header { }
 body.base #main-content { 
   //border-bottom: 1px #999 dashed; 
