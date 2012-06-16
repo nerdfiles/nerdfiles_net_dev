@@ -163,7 +163,12 @@ body.base #main-content h1 {
   border-top: none;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 67, ../sass/screen.scss */
+body.base #main-content h2 {
+  font-size: 1.5em;
+}
+
+/* line 72, ../sass/screen.scss */
 a {
   font-family: 'Cedarville Cursive', cursive;
   padding: 0 10px;
@@ -175,29 +180,29 @@ a {
   border: 1px #999 dashed;
 }
 
-/* line 80, ../sass/screen.scss */
+/* line 81, ../sass/screen.scss */
 a.external::after {
   content: ' ⤴';
 }
 
-/* line 81, ../sass/screen.scss */
+/* line 82, ../sass/screen.scss */
 body.base blockquote {
   box-shadow: 0 0 .3em #ccc;
   padding: 20px;
 }
 
-/* line 82, ../sass/screen.scss */
+/* line 83, ../sass/screen.scss */
 body.base blockquote p {
   display: inline-block;
   margin: 0;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 body.base blockquote cite {
   font-size: 16px;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 85, ../sass/screen.scss */
 body.base blockquote p::before {
   margin: 0 .5em 0 0;
   content: "❝ ";
