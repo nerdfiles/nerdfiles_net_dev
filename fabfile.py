@@ -8,9 +8,6 @@ DEBUG = settings.DEBUG
 
 # fuck off
 
-if DEBUG == False:
-  DEBUG = True
-
 env.user = 'nerdfiles'
 env.root = '/home/nerdfiles/webapps/django/'
 env.site = 'package'
