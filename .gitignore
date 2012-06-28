@@ -9,3 +9,5 @@ tmp/*
 *.swp
 *.py~
 *.log
+*.markdown~
+*.gitignore~
