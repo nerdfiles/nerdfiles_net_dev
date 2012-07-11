@@ -11,7 +11,7 @@ from django.contrib.sites.models import Site
 def site_info(request):
   domain = Site.objects.get_current().domain
 
-  if domain != 'example.com':
+  if domain == 'example.com':
     domain = 'localhost:8000'
 
   if settings.LOCAL_DEVELOPMENT: 
