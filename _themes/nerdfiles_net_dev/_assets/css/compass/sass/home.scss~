@@ -1,56 +1,14 @@
-body {
-  text-rendering: optimizeLegibility;
-  font-family: "Raleway", sans-serif;
-  font-family: 'Cedarville Cursive', cursive;
-  font-size: 2em;
-  line-height: 1.7;
-  //text-shadow: 0 0 1px #e0e0e0;
-  //background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAIElEQVQIHWNMrLzlw4ADsIDE57WpbsEmz4RNECY2EJIA5doEDY8lKVEAAAAASUVORK5CYII=);
-  //background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALklEQVQYGWNMrLzlw4ADPN3y8jlcCqTw////DIQwE1wHAcaQUIgSBHg8RH3PAAA6uSXJSGI7ZwAAAABJRU5ErkJggg==);
-  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
-}
-#site-access ul { 
-  -moz-transform:rotate(10deg);
-  -o-transform:rotate(10deg);
-  -ms-transform:rotate(10deg);
-  -webkit-transform:rotate(10deg);
-  position: absolute; top: 40px; left: 30px; list-style: none; margin: 0; padding: 0; }
-body.base { 
-  padding: 100px 0;
-}
-body.base .container { 
-  margin: 0 auto 30px; 
-  width: 720px; }
-/*body.base div:nth-child(4) { 
-  bottom: 0 !important; 
-  height: 20px !important; 
-  top: auto !important; 
-  position: fixed !important; }*/
-body.base h1 { 
-  text-align: right; 
-  font-size: 2em; 
-  //border-top: 1px #999 dashed; 
-  border-bottom: 2px #111 solid; 
-  line-height: 1; 
-  margin: 0 0 0;
-  padding: 25px 0 25px; }
-body.base #main-content h1 { margin: 0; padding: 0; border-top: none; }
-body.base #main-content header { }
-body.base #main-content { 
-  //border-bottom: 1px #999 dashed; 
-}
-a { 
-  font-family: 'Cedarville Cursive', cursive;
-  padding: 0 10px; 
-  text-decoration: none; 
-  display: inline-block; 
-  *zoom: 1; 
-  *display: inline;
-  margin: 0 0 .1em 0;
-  border: 1px #999 dashed; }
-a.external::after { content: ' ⤴'; }
-body.base blockquote { box-shadow: 0 0 .3em #ccc; padding: 20px; }
-body.base blockquote p { display: inline-block; margin: 0; }
-body.base blockquote cite { font-size: 16px; }
-body.base blockquote p::before { margin: 0 .5em 0 0; content: "❝ "; display: inline-block; }
+ul, ol { 
+  li { 
+    margin: 0 0 1.1em; } }
 
+ol { 
+  border: 3px #000 solid;
+  padding: .5em .5em 0 .5em;
+  li { color: #999; }
+  li:hover { color: #000; }
+}
+
+footer { 
+  border-bottom: 3px #000 solid;
+}
