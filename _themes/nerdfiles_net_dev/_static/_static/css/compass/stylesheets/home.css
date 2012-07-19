@@ -5,7 +5,6 @@ ul li, ol li {
 
 /* line 5, ../sass/home.scss */
 ol {
-  border: 2px #000 solid;
   padding: .5em .5em 0 .5em;
 }
 /* line 8, ../sass/home.scss */
