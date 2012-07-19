@@ -83,6 +83,7 @@ a {
   *zoom: 1; 
   *display: inline;
   margin: 0 0 .1em 0;
+  @include border-radius(10px, 10px);
   border: 1px #999 dashed; }
 a.external::after { content: ' ⤴'; }
 body.base blockquote { box-shadow: 0 0 .3em #ccc; padding: 20px; }
