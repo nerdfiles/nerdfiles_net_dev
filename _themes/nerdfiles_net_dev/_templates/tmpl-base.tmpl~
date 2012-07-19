@@ -66,13 +66,12 @@
 <section>
     <article id="main-content">
 
-        <section>
+        <!--section>
           <header>
             <h1>
-              <!-- !!! -->
             </h1>
           </header>
-        </section>
+        </section-->
     
         <section>
         {% placeholder "Main Content" or %}

@@ -32,6 +32,12 @@
 {% endaddtoblock %}
 {% endblock %}
 
+{% block landmine %}
+{% addtoblock "landmine" %}
+{% include "js-landmine.tmpl" %}
+{% endaddtoblock %}
+{% endblock %}
+
 <html lang="en">
 
 <head>
@@ -126,6 +132,8 @@
 {% render_block "js" %}
 
 {% render_block "analytics" %}
+
+{% render_block "landmine" %}
 
 </body>
 
