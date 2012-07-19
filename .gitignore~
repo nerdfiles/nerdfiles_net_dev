@@ -1,0 +1,13 @@
+settings.py
+_log/*
+*.pyc
+*.swo
+deploy/*
+tmp/*
+*.db-hold
+*.db
+*.swp
+*.py~
+*.log
+*.markdown~
+.gitignore~

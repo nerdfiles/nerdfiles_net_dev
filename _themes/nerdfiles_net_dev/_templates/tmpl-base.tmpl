@@ -11,6 +11,20 @@
 {% block css %}
 {% addtoblock "css" %}
 {% include "css-base.tmpl" %}
+<<<<<<< HEAD
+{% endaddtoblock %}
+{% endblock %}
+
+{% block js %}
+{% addtoblock "js" %}
+{% include "js-base.tmpl" %}
+=======
+{% endaddtoblock %}
+{% endblock %}
+
+{% block scriptloader %}
+{% addtoblock "scriptloader" %}
+{% include "js-scriptloader.tmpl" %}
 {% endaddtoblock %}
 {% endblock %}
 
@@ -20,12 +34,26 @@
 {% endaddtoblock %}
 {% endblock %}
 
+{% block analytics %}
+{% addtoblock "analytics" %}
+{% include "js-analytics.tmpl" %}
+{% endaddtoblock %}
+{% endblock %}
+
+{% block landmine %}
+{% addtoblock "landmine" %}
+{% include "js-landmine.tmpl" %}
+>>>>>>> dev
+{% endaddtoblock %}
+{% endblock %}
+
 <html lang="en">
 
 <head>
 
 <meta charset="utf-8" />
 
+<<<<<<< HEAD
 <title>/-;</title>
 
 {% render_block "font" %}
@@ -41,6 +69,99 @@
 
 {% render_block "js" %}
 
+=======
+<title>nerdfiles.net</title>
+
+{% render_block "font" %}
+{% render_block "css" %}
+{% render_block "scriptloader" %}
+
+</head>
+
+<body class="nerdfiles-net {% block body_class %}base{% endblock %}">
+
+{% cms_toolbar %}
+
+<div class="container">
+
+<nav id="site-access">
+  <ul>
+    <li><a href="#main-content">Skip to content</a></li>
+  </ul>
+</nav>
+
+<header>
+	<h1><a href="http://nerdfiles.net">nerdfiles.net</a></h1>
+</header>
+
+{% block main_content %}
+<section>
+    <article id="main-content">
+
+        <!--section>
+          <header>
+            <h1>
+            </h1>
+          </header>
+        </section-->
+    
+        <section>
+        {% placeholder "Main Content" or %}
+          <p>blugggh.</p>
+        {% endplaceholder %}
+        </section>
+
+    </article>
+</section>
+{% endblock %}
+
+{% block aside_content %}
+<!--
+{# 
+  @note since customarily a section with multiple 
+        modules, placeholders should go inside .inner.
+#}
+-->
+<section>
+  <!--aside>
+  {# placeholder "Aside Content" or #}
+
+		<section class="mod mod-lastfm">
+			<header>
+				<h1>This Week</h1>
+			</header>
+			<div class="inner">
+
+				<div class="link">
+					<a href="http://www.last.fm/user/wittysense/">_</a>
+				</div>
+			</div>
+		</section>
+
+	{# endplaceholder #}
+	</aside-->
+</section>
+{% endblock %}
+
+{% block footer %}
+<footer>
+{% placeholder "Footer" or %}
+	<p>...</p>
+{% endplaceholder %}
+</footer>
+{% endblock %}
+
+</div><!-- End .container -->
+
+<!--script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/sopa/1.0/stopcensorship.js"></script-->
+
+{% render_block "js" %}
+
+{% render_block "analytics" %}
+
+{% render_block "landmine" %}
+
+>>>>>>> dev
 </body>
 
 </html>

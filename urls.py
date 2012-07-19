@@ -24,6 +24,12 @@ def rut_roh(request):
 
 urlpatterns = patterns('',
   (r'^rut-rot/$', rut_roh),
+<<<<<<< HEAD
+=======
+
+  #url(r'lastfm/', 'lastfm.views.lastfm_data', name='lastfm'),
+
+>>>>>>> dev
   # == admin dashboard == #
   url(r'^dashboard/', include(admin.site.urls)),
   url(r'^dashboard/doc/', include('django.contrib.admindocs.urls')),  
@@ -33,12 +39,22 @@ urlpatterns = patterns('',
 
 # == LOCAL ======================================== #
 
+<<<<<<< HEAD
 if settings.DEBUG:
   urlpatterns = patterns('',
     url(r'^'+settings.ASSETS_URL+'(?P<path>.*)$', 'django.views.static.serve',
     {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
     url(r'', include('django.contrib.staticfiles.urls')),
   ) + urlpatterns
+=======
+urlpatterns = patterns('',
+  url(r'^_assets(?P<path>.*)$', 'django.views.static.serve',
+  {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+  url(r'^_static(?P<path>.*)$', 'django.views.static.serve',
+  {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
+  url(r'', include('django.contrib.staticfiles.urls')),
+) + urlpatterns
+>>>>>>> dev
 
 handler404 = 'views.error_404'
 handler500 = 'views.error_500'

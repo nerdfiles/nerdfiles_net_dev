@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 _assets/css-lib/*
 _assets/css-lib/gdgs/*
 _assets/js-lib/
@@ -15,10 +16,23 @@ _log/*
 urls.py
 _log/*
 >>>>>>> dev
+=======
+>>>>>>> dev
 settings.py
-urls.py
-*.db
+_log/*
 *.pyc
+*.swo
+deploy/*
+tmp/*
+*.db-hold
+*.db
 *.swp
+<<<<<<< HEAD
 *.sqlite
 *.db
+=======
+*.py~
+*.log
+*.markdown~
+*.gitignore~
+>>>>>>> dev
