@@ -215,3 +215,8 @@ body.base blockquote p::before {
   content: "❝ ";
   display: inline-block;
 }
+
+/* line 95, ../sass/screen.scss */
+.personalfunding {
+  padding: 10px 0 0;
+}
