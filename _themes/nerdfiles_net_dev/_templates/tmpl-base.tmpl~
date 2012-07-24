@@ -120,10 +120,12 @@
 
 {% block personalfunding %}
 <section>
+  <p>Oh, and
   <iframe 
     style="border: 0; margin: 0; padding: 0;"
     src="https://www.gittip.com/nerdfiles/widget.html" 
-    width="48pt" height="20pt"></iframe>
+    width="48pt" height="20pt"></iframe>.
+  </p>
 </section>
 {% endblock %}
 
