@@ -118,6 +118,14 @@
 </section>
 {% endblock %}
 
+{% block footer %}
+<footer>
+{% placeholder "Footer" or %}
+	<p>...</p>
+{% endplaceholder %}
+</footer>
+{% endblock %}
+
 {% block personalfunding %}
 <section>
   <p>Oh, and
@@ -127,14 +135,6 @@
     width="48pt" height="20pt"></iframe>.
   </p>
 </section>
-{% endblock %}
-
-{% block footer %}
-<footer>
-{% placeholder "Footer" or %}
-	<p>...</p>
-{% endplaceholder %}
-</footer>
 {% endblock %}
 
 </div><!-- End .container -->
