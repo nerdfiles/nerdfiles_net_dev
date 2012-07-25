@@ -97,10 +97,16 @@ body.base blockquote p::before { margin: 0 .5em 0 0; content: "❝ "; display: i
 }//.personalfunding
 
 #hyLiteDlg {
-  top: 0 !important;
+  top: 10px !important;
   background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC) !important;
   br {
     position: absolute !important;
     display: none !important; }
+  #StopCensorshipStates { }
+  .senator_info { 
+    br { 
+      display: block !important;
+    }
+  }//.senator_info
 }//#hyLiteDlg
 
