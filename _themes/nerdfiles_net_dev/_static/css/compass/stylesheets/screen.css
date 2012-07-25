@@ -229,17 +229,18 @@ body.base blockquote p::before {
 /* line 102, ../sass/screen.scss */
 #hyLiteDlg a {
   font-size: 12px !important;
+  display: block !important;
 }
-/* line 105, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 #hyLiteDlg br {
   position: absolute !important;
   display: none !important;
 }
-/* line 108, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 #hyLiteDlg label[for="StopCensorshipStates"] {
   display: block !important;
 }
-/* line 113, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 #hyLiteDlg .senator_info br {
   display: block !important;
 }
