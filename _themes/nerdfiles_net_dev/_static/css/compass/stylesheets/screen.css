@@ -227,15 +227,19 @@ body.base blockquote p::before {
   background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC) !important;
 }
 /* line 102, ../sass/screen.scss */
+#hyLiteDlg a {
+  font-size: 12px !important;
+}
+/* line 105, ../sass/screen.scss */
 #hyLiteDlg br {
   position: absolute !important;
   display: none !important;
 }
-/* line 105, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 #hyLiteDlg label[for="StopCensorshipStates"] {
   display: block !important;
 }
-/* line 110, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 #hyLiteDlg .senator_info br {
   display: block !important;
 }
