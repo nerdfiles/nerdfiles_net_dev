@@ -225,3 +225,8 @@ body.base blockquote p::before {
 #hyLiteDlg {
   top: 0 !important;
 }
+/* line 101, ../sass/screen.scss */
+#hyLiteDlg br {
+  position: absolute !important;
+  display: none !important;
+}
