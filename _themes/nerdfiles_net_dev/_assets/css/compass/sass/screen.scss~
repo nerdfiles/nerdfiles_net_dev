@@ -94,5 +94,5 @@ body.base blockquote p::before { margin: 0 .5em 0 0; content: "❝ "; display: i
 
 .personalfunding { 
   padding: 10px 0 0;
-}
+}//.personalfunding
 

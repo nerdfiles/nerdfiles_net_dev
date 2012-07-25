@@ -220,3 +220,8 @@ body.base blockquote p::before {
 .personalfunding {
   padding: 10px 0 0;
 }
+
+/* line 99, ../sass/screen.scss */
+#hyLiteDlg {
+  top: 0 !important;
+}
