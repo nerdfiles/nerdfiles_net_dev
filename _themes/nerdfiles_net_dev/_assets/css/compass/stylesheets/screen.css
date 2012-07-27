@@ -246,8 +246,3 @@ body.base blockquote p::before {
 #hyLiteDlg .senator_info br {
   display: block !important;
 }
-
-/* line 120, ../sass/screen.scss */
-.test {
-  background: orange;
-}
