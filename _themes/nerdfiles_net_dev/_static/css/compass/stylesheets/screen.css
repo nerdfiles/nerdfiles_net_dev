@@ -215,3 +215,32 @@ body.base blockquote p::before {
   content: "❝ ";
   display: inline-block;
 }
+
+/* line 95, ../sass/screen.scss */
+.personalfunding {
+  padding: 10px 0 0;
+}
+
+/* line 99, ../sass/screen.scss */
+#hyLiteDlg {
+  top: 10px !important;
+  background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC) !important;
+}
+/* line 102, ../sass/screen.scss */
+#hyLiteDlg a {
+  font-size: 16px !important;
+  font-family: sans-serif, Helvetica, Arial !important;
+  display: block !important;
+}
+/* line 107, ../sass/screen.scss */
+#hyLiteDlg br {
+  display: none !important;
+}
+/* line 109, ../sass/screen.scss */
+#hyLiteDlg label[for="StopCensorshipStates"] {
+  display: block !important;
+}
+/* line 114, ../sass/screen.scss */
+#hyLiteDlg .senator_info br {
+  display: block !important;
+}
