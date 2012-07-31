@@ -19,6 +19,9 @@ _log/*
 =======
 >>>>>>> dev
 settings.py
+.sass-cache
+.sass-cache/*
+*.scssc
 _log/*
 *.pyc
 *.swo
