@@ -11,7 +11,7 @@ import os
 # == DEBUG == #
 
 LOCAL_DEVELOPMENT = True
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 

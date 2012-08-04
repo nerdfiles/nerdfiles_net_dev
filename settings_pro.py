@@ -214,7 +214,6 @@ INSTALLED_APPS = (
   'cms',
   'menus',
   'mptt',
-  'south',
   'cms.plugins.text',
   'cms.plugins.picture',
   'cms.plugins.link',
@@ -237,7 +236,11 @@ INSTALLED_APPS = (
   'django.contrib.admin',
   'django.contrib.admindocs',
 
+  'analytical',
+
 )
+
+GOOGLE_ANALYTICS_PROPERTY_ID = 'UA-1234567-8'
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 

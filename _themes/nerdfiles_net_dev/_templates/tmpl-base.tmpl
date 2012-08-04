@@ -1,4 +1,4 @@
-{% load cms_tags menu_tags sekizai_tags %}
+{% load analytical cms_tags menu_tags sekizai_tags %}
 
 <!DOCTYPE HTML>
 
@@ -41,7 +41,7 @@
 <html lang="en">
 
 <head>
-
+{% analytical_head_top %}
 <meta charset="utf-8" />
 
 <title>nerdfiles.net</title>
@@ -51,10 +51,11 @@
 {% render_block "scriptloader" %}
 {% render_block "landmine" %}
 
+{% analytical_head_bottom %}
 </head>
 
 <body class="nerdfiles-net {% block body_class %}base{% endblock %}">
-
+{% analytical_body_top %}
 {% cms_toolbar %}
 
 <div class="container">
@@ -145,6 +146,7 @@
 
 {% render_block "analytics" %}
 
+{% analytical_body_bottom %}
 </body>
 
 </html>

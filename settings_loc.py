@@ -10,10 +10,12 @@ VENV_ROOT = os.path.join('Users','nerdfiles','.virtualenvs','nerdfiles_net_dev')
 
 # == SETTINGS: OVERRIDES ======================================= #
 
+'''
 try:
   from settings_dev import *
 except ImportError:
   pass
+'''
 
 
 # == DEBUG == #
