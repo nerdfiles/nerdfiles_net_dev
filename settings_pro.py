@@ -216,7 +216,6 @@ INSTALLED_APPS = (
   'cms',
   'menus',
   'mptt',
-  'south',
   'cms.plugins.text',
   'cms.plugins.picture',
   'cms.plugins.link',
