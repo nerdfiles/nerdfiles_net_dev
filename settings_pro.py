@@ -201,6 +201,8 @@ MIDDLEWARE_CLASSES = (
 
 INSTALLED_APPS = (
 
+  'south',
+
   # == core == #
   'django.contrib.admin',
   'django.contrib.auth',
@@ -222,7 +224,6 @@ INSTALLED_APPS = (
   'cms.plugins.snippet',
   'cms.plugins.googlemap',
   'sekizai',
-  'south',
  
   # == apps == #
   'notification',
