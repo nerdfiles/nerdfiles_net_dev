@@ -226,12 +226,13 @@ INSTALLED_APPS = (
  
   # == apps == #
   'notification',
-  #'lastfm',
+  'lastfm',
+  'south',
   'django_extensions',
 
   # == custom/nerdfiles_net_dev == #
   
-  #'nerdfiles_net_dev',
+  'nerdfiles_net_dev',
   
   # == admin == #
   'django.contrib.admin',
