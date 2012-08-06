@@ -1,23 +1,10 @@
-<<<<<<< HEAD
 _assets/css-lib/*
 _assets/css-lib/gdgs/*
-_assets/js-lib/
+_assetst /js-lib/
 .gitignore~
-<<<<<<< HEAD
-<<<<<<< HEAD
 .gitignore
-=======
 *.db
 urls.py
-_log/*
->>>>>>> dev
-=======
-*.db
-urls.py
-_log/*
->>>>>>> dev
-=======
->>>>>>> dev
 settings.py
 .sass-cache
 .sass-cache/*
@@ -30,16 +17,10 @@ tmp/*
 *.db-hold
 *.db
 *.swp
-<<<<<<< HEAD
 *.sqlite
 *.db
-=======
 *.py~
 *.log
 *.markdown~
 *.gitignore~
-<<<<<<< HEAD
->>>>>>> dev
-=======
 settings_loc.py
->>>>>>> dev
