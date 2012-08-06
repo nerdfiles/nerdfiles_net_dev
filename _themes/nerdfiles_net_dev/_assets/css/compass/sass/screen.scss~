@@ -105,7 +105,6 @@ body.base blockquote p::before { margin: 0 .5em 0 0; content: "❝ "; display: i
     display: block !important;
   }//a
   br {
-    position: absolute !important;
     display: none !important; }
   label[for="StopCensorshipStates"] {
     display: block !important;
@@ -117,4 +116,26 @@ body.base blockquote p::before { margin: 0 .5em 0 0; content: "❝ "; display: i
     }
   }//.senator_info
 }//#hyLiteDlg
+
+/**
+ * SoundCloud
+ *
+ * Some kind of module for SoundCloud?
+ */
+
+/**
+ * Kippt
+ */
+
+/**
+ * Flickr
+ */
+
+/**
+ * github
+ */
+
+/**
+ * last.fm
+ */
 
