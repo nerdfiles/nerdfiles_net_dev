@@ -22,18 +22,10 @@ TEMPLATE_DEBUG = DEBUG
   @note If using local settings, this will be overridden.
 """
 
-DATABASE_ENGINE = 'django.db.backends.sqlite3'
-DATABASE_NAME = 'dev.db'
-DATABASE_USER = ''
-DATABASE_PASSWORD = ''
-DATABASE_HOST = ''
-DATABASE_PORT = ''
-
-'''
 DATABASE_ENGINE = 'django.db.backends.postgresql_psycopg2'
 DATABASE_NAME = 'nerdfiles_website'
 DATABASE_USER = 'nerdfiles'
 DATABASE_PASSWORD = 'cbc8416e'
-'''
-
+DATABASE_HOST = ''
+DATABASE_PORT = ''
 
