@@ -21,6 +21,6 @@ DATABASE_ENGINE = 'django.db.backends.postgresql_psycopg2'
 DATABASE_NAME = 'nerdfiles_website'
 DATABASE_USER = 'nerdfiles'
 DATABASE_PASSWORD = 'f0xf0x0!6'
-DATABASE_HOST = 'web204'
-DATABASE_PORT = ''
+#DATABASE_HOST = 'web204'
+#DATABASE_PORT = ''
 
