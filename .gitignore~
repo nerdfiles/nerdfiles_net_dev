@@ -1,4 +1,7 @@
 settings.py
+.sass-cache
+.sass-cache/*
+*.scssc
 _log/*
 *.pyc
 *.swo
@@ -10,4 +13,4 @@ tmp/*
 *.py~
 *.log
 *.markdown~
-.gitignore~
+*.gitignore~

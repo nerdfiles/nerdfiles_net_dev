@@ -38,4 +38,8 @@ tmp/*
 *.log
 *.markdown~
 *.gitignore~
+<<<<<<< HEAD
+>>>>>>> dev
+=======
+settings_loc.py
 >>>>>>> dev
