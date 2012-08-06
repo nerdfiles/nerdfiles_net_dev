@@ -23,9 +23,9 @@ TEMPLATE_DEBUG = DEBUG
 """
 
 DATABASE_ENGINE = 'django.db.backends.postgresql_psycopg2'
-DATABASE_NAME = 'nerdfiles_website.db'
+DATABASE_NAME = 'nerdfiles_website'
 DATABASE_USER = 'nerdfiles'
 DATABASE_PASSWORD = 'cbc8416e'
-DATABASE_HOST = 'web204.webfaction.com'
-#DATABASE_PORT = ''
+DATABASE_HOST = 'web204'
+DATABASE_PORT = ''
 
