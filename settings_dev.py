@@ -22,5 +22,5 @@ DATABASE_NAME = 'nerdfiles_website'
 DATABASE_USER = 'nerdfiles'
 DATABASE_PASSWORD = 'f0xf0x0!6'
 #DATABASE_HOST = 'localhost'
-#DATABASE_PORT = ''
+DATABASE_PORT = '5432'
 
