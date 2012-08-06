@@ -10,7 +10,7 @@ import os
 
 # == DEBUG == #
 
-LOCAL_DEVELOPMENT = True
+LOCAL_DEVELOPMENT = False
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
