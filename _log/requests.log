@@ -1215,3 +1215,87 @@ DatabaseError: no such table: django_session
 2011-11-17 00:41:20,092 [WARNING] django.request: Not Found: /favicon.ico/
 2011-11-17 00:41:35,409 [WARNING] django.request: Not Found: /favicon.ico/
 2011-11-17 00:41:40,330 [WARNING] django.request: Not Found: /favicon.ico/
+2012-08-06 16:13:58,571 [ERROR] django.request: Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/cms/middleware/user.py", line 11, in process_request
+    set_current_user(getattr(request, 'user', None))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/auth/middleware.py", line 9, in __get__
+    request._cached_user = get_user(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/auth/__init__.py", line 107, in get_user
+    user_id = request.session[SESSION_KEY]
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/sessions/backends/base.py", line 47, in __getitem__
+    return self._session[key]
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/sessions/backends/base.py", line 195, in _get_session
+    self._session_cache = self.load()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/contrib/sessions/backends/db.py", line 20, in load
+    expire_date__gt=datetime.datetime.now()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/manager.py", line 132, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/query.py", line 341, in get
+    clone = self.filter(*args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/query.py", line 550, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/query.py", line 568, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/sql/query.py", line 1194, in add_q
+    can_reuse=used_aliases, force_having=force_having)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/sql/query.py", line 1069, in add_filter
+    negate=negate, process_extras=process_extras)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/sql/query.py", line 1248, in setup_joins
+    field, model, direct, m2m = opts.get_field_by_name(name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/options.py", line 307, in get_field_by_name
+    cache = self.init_name_map()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/options.py", line 337, in init_name_map
+    for f, model in self.get_all_related_m2m_objects_with_model():
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/options.py", line 414, in get_all_related_m2m_objects_with_model
+    cache = self._fill_related_many_to_many_cache()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/options.py", line 428, in _fill_related_many_to_many_cache
+    for klass in get_models():
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/loading.py", line 167, in get_models
+    self._populate()
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/loading.py", line 61, in _populate
+    self.load_app(app_name, True)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/db/models/loading.py", line 76, in load_app
+    app_module = import_module(app_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/lastfm/__init__.py", line 7, in <module>
+    from album import Album
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/lastfm/album.py", line 207, in <module>
+    from api import Api
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/lastfm/api.py", line 295, in <module>
+    from artist import Artist
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/lastfm/artist.py", line 415, in <module>
+    from event import Event
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/lastfm/event.py", line 203, in <module>
+    from geo import Venue, Location, Country
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/lastfm/geo.py", line 324, in <module>
+    from track import Track
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/lastfm/track.py", line 289, in <module>
+    from tag import Tag
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/lastfm/tag.py", line 248, in <module>
+    from playlist import Playlist
+  File "/home/nerdfiles/.virtualenvs/django_nerdfiles_net/lib/python2.7/site-packages/lastfm/playlist.py", line 65, in <module>
+    raise LastfmError("Install ElementTree package for using python-lastfm")
+NameError: name 'LastfmError' is not defined
+2012-08-06 16:18:30,737 [ERROR] django.request: Internal Server Error: /robots.txt
+Traceback (most recent call last):
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/handlers/base.py", line 89, in get_response
+    response = middleware_method(request)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/middleware/common.py", line 67, in process_request
+    if (not _is_valid_path(request.path_info, urlconf) and
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/middleware/common.py", line 154, in _is_valid_path
+    urlresolvers.resolve(path, urlconf)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 342, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 250, in resolve
+    for pattern in self.url_patterns:
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 279, in _get_url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/core/urlresolvers.py", line 274, in _get_urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/home/nerdfiles/webapps/django/lib/python2.7/django/utils/importlib.py", line 35, in import_module
+    __import__(name)
+ImportError: No module named nerdfiles_net_dev.urls
