@@ -47,7 +47,7 @@ _ = lambda s: s
 # == VENV ======================================== #
 
 # VENV_ROOT = os.path.join('Users','nerdfiles','.virtualenvs','nerdfiles_net_dev')
-# VENV_ROOT = os.path.join('')
+VENV_ROOT = os.path.join('home', 'nerdfiles', '.virtualenvs', 'django_nerdfiles_net')
 #
 # @note Not sure where wf sets this. $ $HOME/virtualenv most likely.
 
@@ -191,7 +191,10 @@ MIDDLEWARE_CLASSES = (
   'cms.middleware.page.CurrentPageMiddleware',
   'cms.middleware.user.CurrentUserMiddleware',
   'cms.middleware.toolbar.ToolbarMiddleware',
-    
+
+  'django.middleware.cache.UpdateCacheMiddleware',
+  'django.middleware.common.CommonMiddleware',
+  'django.middleware.cache.FetchFromCacheMiddleware',    
   #'djangologging.middleware.LoggingMiddleware',
   #'djangologging.middleware.SuppressLoggingOnAjaxRequestsMiddleware',
 )
@@ -402,14 +405,12 @@ CACHE_TIMEOUT = 60*30
 CACHE_PREFIX = "Z"
 
 
-# == DEBUG == #
-
-LOCAL_DEVELOPMENT = False
-DEBUG = False
-TEMPLATE_DEBUG = DEBUG
-
-
 # == SETTINGS: OVERRIDES ======================================= #
+
+try:
+  from settings_dev import *
+except ImportError:
+  pass
 
 try:
   from settings_loc import *
