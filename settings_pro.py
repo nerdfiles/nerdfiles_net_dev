@@ -411,7 +411,7 @@ TEMPLATE_DEBUG = DEBUG
 # == SETTINGS: OVERRIDES ======================================= #
 
 try:
-  from settings_loc import *
+  from settings_dev import *
 except ImportError:
   pass
 
