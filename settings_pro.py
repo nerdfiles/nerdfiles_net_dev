@@ -201,7 +201,7 @@ MIDDLEWARE_CLASSES = (
 
 INSTALLED_APPS = (
 
-  'south',
+  #'south',
 
   # == core == #
   'django.contrib.admin',
