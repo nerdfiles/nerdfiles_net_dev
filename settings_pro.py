@@ -100,7 +100,10 @@ USE_L10N = True
 
 # == URLCONF ======================================= #
 
-ROOT_URLCONF = 'nerdfiles_net_dev.urls'
+if LOCAL_DEVELOPMENT:
+  ROOT_URLCONF = 'nerdfiles_net_dev.urls'
+else:
+  ROOT_URLCONF = 'nerdfiles_net.urls'
 
 
 # == URL ======================================= #
