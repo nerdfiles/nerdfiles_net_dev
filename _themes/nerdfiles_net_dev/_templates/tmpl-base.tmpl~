@@ -44,23 +44,11 @@
 {% analytical_head_top %}
 <meta charset="utf-8" />
 
-<title>/-;</title>
-
-{% render_block "font" %}
-{% render_block "css" %}
-
-</head>
-
-<body class="">
-
-{% render_block "js" %}
-
 <title>nerdfiles.net</title>
 
 {% render_block "font" %}
 {% render_block "css" %}
 {% render_block "scriptloader" %}
-{% render_block "landmine" %}
 
 {% analytical_head_bottom %}
 </head>
