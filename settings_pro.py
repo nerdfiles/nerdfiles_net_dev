@@ -69,7 +69,7 @@ MANAGERS = ADMINS
 
 TIME_ZONE = 'America/Chicago'
 
-SITE_ID = 1
+SITE_ID = 2
 
 INTERNAL_IPS = ('127.0.0.1',)
 
