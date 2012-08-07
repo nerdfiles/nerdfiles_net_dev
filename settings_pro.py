@@ -230,10 +230,6 @@ INSTALLED_APPS = (
   'south',
   'django_extensions',
 
-  # == custom/nerdfiles_net_dev == #
-  
-  'nerdfiles_net_dev',
-  
   # == admin == #
   'django.contrib.admin',
   'django.contrib.admindocs',
@@ -421,3 +417,7 @@ try:
 except ImportError:
   pass
 
+if LOCAL_DEVELOPMENT:
+  INSTALLED_APPS += ('nerdfiles_net_dev',)
+else: 
+  INSTALLED_APPS += ('nerdfiles_net',)
