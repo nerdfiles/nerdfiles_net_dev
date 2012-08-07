@@ -416,4 +416,8 @@ try:
 except ImportError:
   pass
 
+try:
+  from settings_loc import *
+except ImportError:
+  pass
 

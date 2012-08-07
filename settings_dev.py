@@ -4,7 +4,7 @@ import os
 
 # == VENV ======================================== #
 
-# VENV_ROOT = os.path.join('','nerdfiles','.virtualenvs','nerdfiles_net_dev')
+VENV_ROOT = os.path.join('home','nerdfiles','.virtualenvs','nerdfiles_net_dev')
 # VENV_ROOT = os.path.join('')
 
 
