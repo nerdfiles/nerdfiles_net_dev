@@ -1,3 +1,10 @@
+_assets/css-lib/*
+_assets/css-lib/gdgs/*
+_assetst /js-lib/
+.gitignore~
+.gitignore
+*.db
+urls.py
 settings.py
 .sass-cache
 .sass-cache/*
@@ -10,7 +17,10 @@ tmp/*
 *.db-hold
 *.db
 *.swp
+*.sqlite
+*.db
 *.py~
 *.log
 *.markdown~
 *.gitignore~
+settings_loc.py
