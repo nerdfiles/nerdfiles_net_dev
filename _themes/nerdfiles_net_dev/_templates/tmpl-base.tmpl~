@@ -11,26 +11,18 @@
 {% block css %}
 {% addtoblock "css" %}
 {% include "css-base.tmpl" %}
-<<<<<<< HEAD
 {% endaddtoblock %}
 {% endblock %}
 
 {% block js %}
 {% addtoblock "js" %}
 {% include "js-base.tmpl" %}
-=======
 {% endaddtoblock %}
 {% endblock %}
 
 {% block scriptloader %}
 {% addtoblock "scriptloader" %}
 {% include "js-scriptloader.tmpl" %}
-{% endaddtoblock %}
-{% endblock %}
-
-{% block js %}
-{% addtoblock "js" %}
-{% include "js-base.tmpl" %}
 {% endaddtoblock %}
 {% endblock %}
 
@@ -43,7 +35,6 @@
 {% block landmine %}
 {% addtoblock "landmine" %}
 {% include "js-landmine.tmpl" %}
->>>>>>> dev
 {% endaddtoblock %}
 {% endblock %}
 
@@ -53,7 +44,6 @@
 {% analytical_head_top %}
 <meta charset="utf-8" />
 
-<<<<<<< HEAD
 <title>/-;</title>
 
 {% render_block "font" %}
@@ -63,13 +53,8 @@
 
 <body class="">
 
-<div class="container">
-<p>Fucken.</p>
-</div>
-
 {% render_block "js" %}
 
-=======
 <title>nerdfiles.net</title>
 
 {% render_block "font" %}
@@ -172,16 +157,9 @@
 
 {% render_block "analytics" %}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 {% render_block "landmine" %}
 
->>>>>>> dev
-=======
->>>>>>> dev
-=======
 {% analytical_body_bottom %}
->>>>>>> dev
 </body>
 
 </html>
