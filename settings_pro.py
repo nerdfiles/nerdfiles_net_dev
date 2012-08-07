@@ -100,10 +100,7 @@ USE_L10N = True
 
 # == URLCONF ======================================= #
 
-if LOCAL_DEVELOPMENT:
-  ROOT_URLCONF = 'nerdfiles_net_dev.urls'
-else:
-  ROOT_URLCONF = 'nerdfiles_net.urls'
+ROOT_URLCONF = 'nerdfiles_net.urls'
 
 
 # == URL ======================================= #
@@ -420,7 +417,4 @@ try:
 except ImportError:
   pass
 
-if LOCAL_DEVELOPMENT:
-  INSTALLED_APPS += ('nerdfiles_net_dev',)
-else: 
-  INSTALLED_APPS += ('nerdfiles_net',)
+INSTALLED_APPS += ('nerdfiles_net',)
