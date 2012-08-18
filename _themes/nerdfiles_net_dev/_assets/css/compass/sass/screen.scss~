@@ -63,13 +63,17 @@ body.base .container {
   height: 20px !important; 
   top: auto !important; 
   position: fixed !important; }*/
+body.base header {
+  border-bottom: 4px #111 solid; 
+  margin: 0 0 .5em;
+  text-align: right;
+}
+
 body.base header h1 { 
-  text-align: right; 
+  display: inline-block;
   font-size: 2em; 
   //border-top: 1px #999 dashed; 
-  border-bottom: 4px #111 solid; 
   line-height: 1; 
-  margin: 0 0 .5em;
   padding: 25px 0 25px; }
 body.base #main-content h2 { font-size: 1.5em; }
 body.base #main-content header { }
@@ -84,8 +88,8 @@ a {
   *zoom: 1; 
   *display: inline;
   margin: 0 0 .1em 0;
-  @include border-radius(10px, 10px);
-  border: 1px #999 dashed; }
+  //@include border-radius(10px, 10px);
+  border-bottom: 1px #999 dashed; }
 a.external::after { content: ' ⤴'; }
 body.base blockquote { box-shadow: 0 0 .3em #ccc; padding: 20px; }
 body.base blockquote p { display: inline-block; margin: 0; }
@@ -139,13 +143,30 @@ body.base blockquote p::before { margin: 0 .5em 0 0; content: "❝ "; display: i
  * last.fm
  */
 
-.activities { 
+ul.activities {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
   li { 
-    &.lastfm {
-
-      background: url('../../img-ui/ui-icon-headphones.png')
     
+    a {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      border: none;
+      text: {
+        indent: -9999px;
+      }
+    }
+
+    &.lastfm {
+      background: url('../../../img-ui/ui-icon-headphones.png') no-repeat;
+      a { 
+        padding: 0;
+        margin: 0;
+      }
     }//.lastfm
+
   }
 }//.activities
 
