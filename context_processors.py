@@ -5,7 +5,7 @@
 from django.conf import settings
 from django.contrib.sites.models import Site
 from lastfm import views
-from views import *
+from lastfm.views import *
 from pprint import pprint
 from StringIO import StringIO
 from django.utils.safestring import SafeString
@@ -18,7 +18,6 @@ import simplejson
 def lastfm(request):
   lfm_data = views.lastfm_data(request)
   lfm_data = lfm_data.content
-  print json.loads(lfm_data)
   return {
     'rt': json.loads(lfm_data)
   }
