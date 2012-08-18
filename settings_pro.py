@@ -403,4 +403,6 @@ try:
 except ImportError:
   pass
 
-INSTALLED_APPS += ('nerdfiles_net',)
+if not LOCAL_DEVELOPMENT:
+  INSTALLED_APPS += ('nerdfiles_net',)
+
