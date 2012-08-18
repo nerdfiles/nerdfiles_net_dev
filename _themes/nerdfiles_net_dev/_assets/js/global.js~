@@ -37,4 +37,3 @@
 	});
 
 })(window, document, jQuery);
-

@@ -72,6 +72,13 @@
       <a 
         href="http://www.last.fm/user/wittysense"
         title="
+          #RECENTLY PLAYED TRACKS
+          {% for bob in rt %}
+               {{ forloop.counter }}. {{ bob.title }}             
+                   &#9656; {{ bob.url|cut:"www." }}{% if not forloop.last %}{% endif %}          
+          {% empty %}
+          Must be trapped in a well or something...
+          {% endfor %}
         "
       >
         Recently Listened Tracks
@@ -79,7 +86,14 @@
     </li>
 
   </ul>
-	<h1><a href="http://nerdfiles.net">nerdfiles.net</a></h1>
+	<h1>
+    <a 
+      href="http://nerdfiles.net"
+      title="It's about time someone take things scificially."
+    >
+      nerdfiles.net
+    </a>
+  </h1>
 </header>
 
 {% block main_content %}

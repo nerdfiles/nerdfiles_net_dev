@@ -8,17 +8,19 @@ from lastfm import views
 from views import *
 from pprint import pprint
 from StringIO import StringIO
+from django.utils.safestring import SafeString
 import json
+import simplejson
 
 
 # == CONTEXT PROCESSORS ======================================== #
 
 def lastfm(request):
   lfm_data = views.lastfm_data(request)
-
-  print lfm_data.content
+  lfm_data = lfm_data.content
+  print json.loads(lfm_data)
   return {
-    'RECENTTRACK': lfm_data
+    'rt': json.loads(lfm_data)
   }
 
 def site_info(request):
