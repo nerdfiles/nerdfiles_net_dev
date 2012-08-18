@@ -1,10 +1,5 @@
 # nerdfiles.net
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-Blugggh.
-=======
-=======
 Let's call it something like "the living journal." The basic idea was tossed about in "The Weedy Florilegium." 
 
 Basically, it is a hypermedia web application which presents a simple "page" analogy to the media device. Any object that the owner (agent) of the page touches may be repesented by an API that exists on the web. Any consumer (agent) that touches the page in some determinate way may invoke an opportunistic API that has potential.
@@ -19,7 +14,6 @@ The webpage presented is a simple lined-paper presentation. With simple or organ
 
 If a user clicks on anything, even the page itself, a feedback (recursive callback) system should exist to, along privacy settings (CLAIMS <-> MODIFY; LIBERTIES <-> READ >> .responsibility), train the artificial neural network for selection of multiply realizable meme structures (media device as a mode of perception) instantiated over the brain of that system and neighboring systems.
 
->>>>>>> dev
 ## Todo
 
 1. Develop Fabric workflows
@@ -31,4 +25,3 @@ If a user clicks on anything, even the page itself, a feedback (recursive callba
 ## Project Details
 
 1. Dev (nerdfiles@gmail.com)
->>>>>>> dev

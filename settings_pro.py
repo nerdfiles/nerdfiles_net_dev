@@ -13,7 +13,7 @@
   @project          nerdfiles_net_dev
   @contributor      Aaron Alexander (nerdfiles@gmail.com)
   @datetime         11.4.2011.11.56.a
-  @devlogin         admin/admin
+  @devlogin         nerdfiles/admin
 """
 
 # == IMPORTS ======================================= #
@@ -405,4 +405,7 @@ except ImportError:
 
 if not LOCAL_DEVELOPMENT:
   INSTALLED_APPS += ('nerdfiles_net',)
+
+if LOCAL_DEVELOPMENT:
+  SITE_ID = 1
 
