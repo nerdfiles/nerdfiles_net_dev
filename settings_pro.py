@@ -264,19 +264,6 @@ CMS_TEMPLATES = (
 )
 
 
-# == APP: LASTFM ======================================= #
-
-LASTFM_USER = 'wittysense'
-LASTFM_API_KEY = '4c84847605bf2fd159d3aa5277ef2f32'
-# Available types: recent_tracks, weekly_top_artists, top_artists
-LASTFM_CHART_TYPE = 'weekly_top_artists'
-LASTFM_WIDGET_TITLE = 'This Week'
-LASTFM_NUM_IMAGES = '5'
-LASTFM_TOP_ARTISTS_PERIOD = '7day'
-# Available sizes: small, medium, large, extralarge
-LASTFM_IMG_SIZE = 'medium'
-
-
 # == APP: DEBUG TOOLBAR ======================================= #
 """
   @see http://pypi.python.org/pypi/django-debug-toolbar/
