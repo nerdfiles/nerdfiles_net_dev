@@ -4,9 +4,22 @@
 
 from django.conf import settings
 from django.contrib.sites.models import Site
+from lastfm import views
+from views import *
+from pprint import pprint
+from StringIO import StringIO
+import json
 
 
 # == CONTEXT PROCESSORS ======================================== #
+
+def lastfm(request):
+  lfm_data = views.lastfm_data(request)
+
+  print lfm_data.content
+  return {
+    'RECENTTRACK': lfm_data
+  }
 
 def site_info(request):
   domain = Site.objects.get_current().domain

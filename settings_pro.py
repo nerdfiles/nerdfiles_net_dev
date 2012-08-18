@@ -175,6 +175,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
   'cms.context_processors.media',
   'sekizai.context_processors.sekizai',
   'context_processors.site_info',
+  'context_processors.lastfm',
 )
 
 

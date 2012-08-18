@@ -1,4 +1,4 @@
-{% load analytical cms_tags menu_tags sekizai_tags %}
+{% load analytical cms_tags menu_tags sekizai_tags lastfm_widget %}
 
 <!DOCTYPE HTML>
 
@@ -68,10 +68,14 @@
 <header>
   <ul class="activities">
 
-    <li>
+    <li class="lastfm">
       <a 
         href="http://www.last.fm/user/wittysense"
-        title=""
+        title="
+          {% for a in RECENTTRACK %}
+            {{ a }}
+          {% endfor %}
+        "
       >
         Recently Listened Tracks
       </a>

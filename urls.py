@@ -25,7 +25,7 @@ def rut_roh(request):
 urlpatterns = patterns('',
   (r'^rut-rot/$', rut_roh),
   
-  #url(r'lastfm/', 'lastfm.views.lastfm_data', name='lastfm'),
+  url(r'lastfm/', 'lastfm.views.lastfm_data', name='lastfm'),
 
   # == admin dashboard == #
   url(r'^dashboard/', include(admin.site.urls)),

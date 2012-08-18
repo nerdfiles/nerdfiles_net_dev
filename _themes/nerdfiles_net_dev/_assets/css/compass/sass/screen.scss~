@@ -147,15 +147,16 @@ ul.activities {
   margin: 0;
   padding: 0;
   display: inline-block;
+  text-align: left;
   li { 
     
     a {
-      display: inline-block;
-      width: 48px;
-      height: 48px;
+      //display: inline-block;
+      //width: 48px;
+      //height: 48px;
       border: none;
       text: {
-        indent: -9999px;
+        //indent: -9999px;
       }
     }
 
