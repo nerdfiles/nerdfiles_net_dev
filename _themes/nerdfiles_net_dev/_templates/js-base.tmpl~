@@ -1,5 +1,3 @@
-{% load lastfm_widget %}
-
 <!-- == BEHAVIOR: {% block jsmode %}BASE{% endblock %} ======================================= -->
 
 {% block before_script %}{% endblock %}
