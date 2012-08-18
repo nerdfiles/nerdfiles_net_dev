@@ -4,14 +4,6 @@
 
 	$(function() {
 	
-        // lastfm hookup test
-        /*
-		$('.mod-lastfm .inner')
-			.djangoLastFM()
-			.data('djangoLastFM')
-				.weekly_artists();
-	    */
-
     // wierd scroll-y links
     
     $("a[href^='#']").bind('click', function(e) {
@@ -45,3 +37,4 @@
 	});
 
 })(window, document, jQuery);
+
