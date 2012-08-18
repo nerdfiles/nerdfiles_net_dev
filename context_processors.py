@@ -10,7 +10,6 @@ from pprint import pprint
 from StringIO import StringIO
 from django.utils.safestring import SafeString
 import json
-import simplejson
 
 
 # == CONTEXT PROCESSORS ======================================== #
