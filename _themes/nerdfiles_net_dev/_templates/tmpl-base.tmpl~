@@ -66,6 +66,18 @@
 </nav>
 
 <header>
+  <ul class="activities">
+
+    <li>
+      <a 
+        href="http://www.last.fm/user/wittysense"
+        title=""
+      >
+        Recently Listened Tracks
+      </a>
+    </li>
+
+  </ul>
 	<h1><a href="http://nerdfiles.net">nerdfiles.net</a></h1>
 </header>
 
@@ -88,6 +100,9 @@
 
     </article>
 </section>
+{% endblock %}
+
+{% block disqus %}
 {% endblock %}
 
 {% block aside_content %}

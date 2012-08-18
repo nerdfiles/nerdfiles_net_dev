@@ -139,6 +139,16 @@ body.base blockquote p::before { margin: 0 .5em 0 0; content: "❝ "; display: i
  * last.fm
  */
 
+.activities { 
+  li { 
+    &.lastfm {
+
+      background: url('../../img-ui/ui-icon-headphones.png')
+    
+    }//.lastfm
+  }
+}//.activities
+
 /**
  * disqus
  */

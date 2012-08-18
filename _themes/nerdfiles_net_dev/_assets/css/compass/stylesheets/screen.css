@@ -262,6 +262,11 @@ body.base blockquote p::before {
 /**
  * last.fm
  */
+/* line 144, ../sass/screen.scss */
+.activities li.lastfm {
+  background: url("../../img-ui/ui-icon-headphones.png");
+}
+
 /**
  * disqus
  */
