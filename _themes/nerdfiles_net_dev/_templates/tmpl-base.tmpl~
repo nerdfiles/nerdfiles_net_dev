@@ -44,6 +44,12 @@
 {% analytical_head_top %}
 <meta charset="utf-8" />
 
+<link rel="dns-prefetch" href="//code.jquery.com" />
+<link rel="dns-prefetch" href="//gittip.com" />
+<link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+<link rel+"dns-prefetch" href="//nerdfilesdotnet.disqus.com" />
+
 <title>nerdfiles.net</title>
 
 {% render_block "font" %}
@@ -79,8 +85,7 @@
           {% empty %}
           Must be trapped in a well or something...
           {% endfor %}
-        "
-      >
+        ">
         Recently Listened Tracks
       </a>
     </li>
@@ -89,8 +94,7 @@
 	<h1>
     <a 
       href="http://nerdfiles.net"
-      title="It's about time someone take things scificially."
-    >
+      title="It's about time someone take things scificially.">
       nerdfiles.net
     </a>
   </h1>
