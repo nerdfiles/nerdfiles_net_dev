@@ -6,7 +6,7 @@ import settings
 
 DEBUG = settings.DEBUG
 
-# fuck off
+# env
 
 env.user = 'nerdfiles'
 env.root = '/home/nerdfiles/webapps/django/'
