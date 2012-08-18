@@ -3,8 +3,8 @@
 # == ALBUM ======================================= #
 
 """
-  ARTIST_NAME - ABLUM_NAME
-  LINK
+  A Lily - Wake:Sleep
+  
 """
 
 # == PROJECT ======================================= #
