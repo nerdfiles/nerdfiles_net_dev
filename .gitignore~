@@ -4,7 +4,6 @@ _assetst /js-lib/
 .gitignore~
 .gitignore
 *.db
-urls.py
 settings.py
 .sass-cache
 .sass-cache/*

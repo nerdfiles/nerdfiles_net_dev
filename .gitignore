@@ -23,3 +23,4 @@ tmp/*
 *.markdown~
 *.gitignore~
 settings_loc.py
+settings_dev.py
