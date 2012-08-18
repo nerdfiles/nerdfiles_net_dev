@@ -78,7 +78,6 @@ if LOCAL_DEVELOPMENT:
 else:
   HOSTNAME = 'http://nerdfiles.net'
 
-SECRET_KEY = 'h35nfv4bn6klt-1@dkyknvc*-h@$n7fm92$^9kc6^^6ito*jd4'
 
 
 # == LANGUAGE ======================================= #
