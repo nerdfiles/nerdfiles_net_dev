@@ -7,7 +7,7 @@ from django.conf.urls.defaults import *
 from django.core.urlresolvers import reverse
 from django import http
 from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render_to_response, get_object_or_404, get_list_or_404
+from django.shortcuts import render_to_response, get_object_or_404, get_list_or_404, redirect
 from django.template import loader, Context
 from django.template.context import RequestContext
 from django.views.generic.simple import direct_to_template
@@ -24,8 +24,11 @@ import logging
 
 
 def render_response(request, *args, **kwargs):
-    kwargs['context_instance'] = RequestContext(request)
-    return render_to_response(*args, **kwargs)
+  kwargs['context_instance'] = RequestContext(request)
+  return render_to_response(*args, **kwargs)
+
+def tumblr_redirect(self):
+  return redirect('http://wittysense.tumblr.com/')
 
 def error_404(request):
   return render_response(request, '404.tmpl')
