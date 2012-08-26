@@ -145,7 +145,7 @@ else:
 # == STATIC ======================================= #
 
 STATICFILES_DIRS = (
-  ("_static", os.path.join(PROJECT_ROOT, "_themes", THEME, "_assets")),
+  #("_static", os.path.join(PROJECT_ROOT, "_themes", THEME, "_assets")),
 )
 
 STATICFILES_FINDERS = (
