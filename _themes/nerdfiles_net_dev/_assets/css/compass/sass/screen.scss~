@@ -46,6 +46,12 @@ body {
   //background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALklEQVQYGWNMrLzlw4ADPN3y8jlcCqTw////DIQwE1wHAcaQUIgSBHg8RH3PAAA6uSXJSGI7ZwAAAABJRU5ErkJggg==);
   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
 }
+
+hr {
+  border: none; 
+  border-top: 3px #ccc dashed;
+}
+
 #site-access ul { 
   -moz-transform:rotate(10deg);
   -o-transform:rotate(10deg);
@@ -151,12 +157,12 @@ ul.activities {
   li { 
     
     a {
-      //display: inline-block;
-      //width: 48px;
-      //height: 48px;
+      display: inline-block;
+      width: 48px;
+      height: 48px;
       border: none;
       text: {
-        //indent: -9999px;
+        indent: -9999px;
       }
     }
 
