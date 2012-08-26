@@ -129,8 +129,8 @@ body {
 
 /* line 50, ../sass/screen.scss */
 hr {
-  border: none;
-  border-top: 3px #ccc dashed;
+  border: none !important;
+  border-top: 3px #ccc dashed !important;
 }
 
 /* line 55, ../sass/screen.scss */
