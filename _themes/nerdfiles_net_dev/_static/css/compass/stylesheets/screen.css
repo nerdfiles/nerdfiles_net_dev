@@ -127,7 +127,13 @@ body {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
 }
 
-/* line 49, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
+hr {
+  border: none !important;
+  border-top: 3px #ccc dashed !important;
+}
+
+/* line 55, ../sass/screen.scss */
 #site-access ul {
   -moz-transform: rotate(10deg);
   -o-transform: rotate(10deg);
@@ -141,12 +147,12 @@ body {
   padding: 0;
 }
 
-/* line 55, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
 body.base {
   padding: 100px 0;
 }
 
-/* line 58, ../sass/screen.scss */
+/* line 64, ../sass/screen.scss */
 body.base .container {
   margin: 0 auto 30px;
   width: 720px;
@@ -157,14 +163,14 @@ body.base .container {
   height: 20px !important; 
   top: auto !important; 
   position: fixed !important; }*/
-/* line 66, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 body.base header {
   border-bottom: 4px #111 solid;
   margin: 0 0 .5em;
   text-align: right;
 }
 
-/* line 72, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 body.base header h1 {
   display: inline-block;
   font-size: 2em;
@@ -172,12 +178,12 @@ body.base header h1 {
   padding: 25px 0 25px;
 }
 
-/* line 78, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 body.base #main-content h2 {
   font-size: 1.5em;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 a {
   font-family: 'Cedarville Cursive', cursive;
   padding: 0 10px;
@@ -189,60 +195,60 @@ a {
   border-bottom: 1px #999 dashed;
 }
 
-/* line 93, ../sass/screen.scss */
+/* line 99, ../sass/screen.scss */
 a.external::after {
   content: ' ⤴';
 }
 
-/* line 94, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 body.base blockquote {
   box-shadow: 0 0 .3em #ccc;
   padding: 20px;
 }
 
-/* line 95, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 body.base blockquote p {
   display: inline-block;
   margin: 0;
 }
 
-/* line 96, ../sass/screen.scss */
+/* line 102, ../sass/screen.scss */
 body.base blockquote cite {
   font-size: 16px;
 }
 
-/* line 97, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 body.base blockquote p::before {
   margin: 0 .5em 0 0;
   content: "❝ ";
   display: inline-block;
 }
 
-/* line 99, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 .personalfunding {
   padding: 10px 0 0;
 }
 
-/* line 103, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 #hyLiteDlg {
   top: 10px !important;
   background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC) !important;
 }
-/* line 106, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
 #hyLiteDlg a {
   font-size: 16px !important;
   font-family: sans-serif, Helvetica, Arial !important;
   display: block !important;
 }
-/* line 111, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 #hyLiteDlg br {
   display: none !important;
 }
-/* line 113, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 #hyLiteDlg label[for="StopCensorshipStates"] {
   display: block !important;
 }
-/* line 118, ../sass/screen.scss */
+/* line 124, ../sass/screen.scss */
 #hyLiteDlg .senator_info br {
   display: block !important;
 }
@@ -264,14 +270,14 @@ body.base blockquote p::before {
 /**
  * last.fm
  */
-/* line 146, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 ul.activities {
   margin: 0;
   padding: 0;
   display: inline-block;
   text-align: left;
 }
-/* line 153, ../sass/screen.scss */
+/* line 159, ../sass/screen.scss */
 ul.activities li a {
   display: inline-block;
   width: 48px;
@@ -279,11 +285,11 @@ ul.activities li a {
   border: none;
   text-indent: -9999px;
 }
-/* line 163, ../sass/screen.scss */
+/* line 169, ../sass/screen.scss */
 ul.activities li.lastfm {
   background: url("../../../img-ui/ui-icon-headphones.png") no-repeat;
 }
-/* line 165, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 ul.activities li.lastfm a {
   padding: 0;
   margin: 0;
