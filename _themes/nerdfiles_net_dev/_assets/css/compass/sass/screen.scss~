@@ -108,7 +108,7 @@ body.base {
     margin: 0 0 .1em 0;
     //@include border-radius(10px, 10px);
     border-bottom: 1px #999 dashed; }
-  a[rel="external"]:after { content: ' ⤴'; }
+  a[rel="external"]::after { content: ' ⤴'; }
 
   #hyLiteDlg {
     top: 10px !important;

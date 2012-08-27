@@ -142,67 +142,7 @@ body {
 }
 
 /* line 58, ../sass/screen.scss */
-body.base {
-  padding: 100px 0;
-  /*body.base div:nth-child(4) { 
-    bottom: 0 !important; 
-    height: 20px !important; 
-    top: auto !important; 
-    position: fixed !important; }*/
-}
-/* line 61, ../sass/screen.scss */
-body.base hr {
-  border: none !important;
-  border-top: 3px #ccc dashed !important;
-}
-/* line 66, ../sass/screen.scss */
-body.base .container {
-  margin: 0 auto 30px;
-  width: 720px;
-}
-/* line 74, ../sass/screen.scss */
-body.base header {
-  border-bottom: 4px #111 solid;
-  margin: 0 0 .5em;
-  text-align: right;
-}
-/* line 80, ../sass/screen.scss */
-body.base header h1 {
-  display: inline-block;
-  font-size: 2em;
-  line-height: 1;
-  padding: 25px 0 25px;
-}
-/* line 86, ../sass/screen.scss */
-body.base #main-content h2 {
-  font-size: 1.5em;
-}
-/* line 91, ../sass/screen.scss */
-body.base blockquote {
-  box-shadow: 0 0 .3em #ccc;
-  padding: 20px;
-}
-/* line 92, ../sass/screen.scss */
-body.base blockquote p {
-  display: inline-block;
-  margin: 0;
-}
-/* line 93, ../sass/screen.scss */
-body.base blockquote cite {
-  font-size: 16px;
-}
-/* line 94, ../sass/screen.scss */
-body.base blockquote p::before {
-  margin: 0 .5em 0 0;
-  content: "❝ ";
-  display: inline-block;
-}
-/* line 96, ../sass/screen.scss */
-body.base .personalfunding {
-  padding: 10px 0 0;
-}
-/* line 101, ../sass/screen.scss */
-body.base a {
+a {
   font-family: 'Cedarville Cursive', cursive;
   padding: 0 10px;
   text-decoration: none;
@@ -212,9 +152,71 @@ body.base a {
   margin: 0 0 .1em 0;
   border-bottom: 1px #999 dashed;
 }
-/* line 111, ../sass/screen.scss */
-body.base a[rel="external"]::after {
+
+/* line 68, ../sass/screen.scss */
+a[rel="external"]::after {
   content: ' ⤴';
+}
+
+/* line 71, ../sass/screen.scss */
+body.base {
+  padding: 100px 0;
+  /*body.base div:nth-child(4) { 
+    bottom: 0 !important; 
+    height: 20px !important; 
+    top: auto !important; 
+    position: fixed !important; }*/
+}
+/* line 74, ../sass/screen.scss */
+body.base hr {
+  border: none !important;
+  border-top: 3px #ccc dashed !important;
+}
+/* line 79, ../sass/screen.scss */
+body.base .container {
+  margin: 0 auto 30px;
+  width: 720px;
+}
+/* line 87, ../sass/screen.scss */
+body.base header {
+  border-bottom: 4px #111 solid;
+  margin: 0 0 .5em;
+  text-align: right;
+}
+/* line 93, ../sass/screen.scss */
+body.base header h1 {
+  display: inline-block;
+  font-size: 2em;
+  line-height: 1;
+  padding: 25px 0 25px;
+}
+/* line 99, ../sass/screen.scss */
+body.base #main-content h2 {
+  font-size: 1.5em;
+}
+/* line 104, ../sass/screen.scss */
+body.base blockquote {
+  box-shadow: 0 0 .3em #ccc;
+  padding: 20px;
+}
+/* line 105, ../sass/screen.scss */
+body.base blockquote p {
+  display: inline-block;
+  margin: 0;
+}
+/* line 106, ../sass/screen.scss */
+body.base blockquote cite {
+  font-size: 16px;
+}
+/* line 107, ../sass/screen.scss */
+body.base blockquote p::before {
+  margin: 0 .5em 0 0;
+  content: "❝ ";
+  display: inline-block;
+}
+/* line 109, ../sass/screen.scss */
+body.base .personalfunding {
+  padding: 10px 0 0;
 }
 /* line 113, ../sass/screen.scss */
 body.base #hyLiteDlg {

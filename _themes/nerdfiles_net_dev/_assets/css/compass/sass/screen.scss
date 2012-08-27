@@ -55,6 +55,19 @@ body {
   -webkit-transform:rotate(10deg);
   position: absolute; top: 40px; left: 30px; list-style: none; margin: 0; padding: 0; }
 
+a { 
+  font-family: 'Cedarville Cursive', cursive;
+  padding: 0 10px; 
+  text-decoration: none; 
+  display: inline-block; 
+  *zoom: 1; 
+  *display: inline;
+  margin: 0 0 .1em 0;
+  //@include border-radius(10px, 10px);
+  border-bottom: 1px #999 dashed; }
+a[rel="external"]::after { content: ' ⤴'; }
+
+
 body.base { 
   padding: 100px 0;
 
@@ -96,19 +109,6 @@ body.base {
   .personalfunding { 
     padding: 10px 0 0;
   }//.personalfunding
-
-
-  a { 
-    font-family: 'Cedarville Cursive', cursive;
-    padding: 0 10px; 
-    text-decoration: none; 
-    display: inline-block; 
-    *zoom: 1; 
-    *display: inline;
-    margin: 0 0 .1em 0;
-    //@include border-radius(10px, 10px);
-    border-bottom: 1px #999 dashed; }
-  a[rel="external"]::after { content: ' ⤴'; }
 
   #hyLiteDlg {
     top: 10px !important;
