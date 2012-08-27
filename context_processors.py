@@ -23,17 +23,17 @@ def lastfm(request):
 
 def site_info(request):
   domain = Site.objects.get_current().domain
+  http_host = request.META.get('HTTP_HOST')
 
   if domain == 'example.com':
-    domain = 'localhost:8000'
+    domain = http_host
 
   if settings.LOCAL_DEVELOPMENT: 
-    domain = 'localhost:8001'
+    #domain = 'localhost:8001'
     settings.ASSETS_URL = '/_assets/'
 
-  http_host = request.META.get('HTTP_HOST', '')
-
   return { 
+    'LOCAL': settings.LOCAL_DEVELOPMENT,
     'SITE_URL': 'http://' + domain + '/',
     'ASSETS_URL': 'http://' + domain + settings.ASSETS_URL,
   }

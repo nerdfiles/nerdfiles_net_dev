@@ -51,7 +51,7 @@
 <link rel="dns-prefetch" href="//nerdfilesdotnet.disqus.com" />
 <link rel="dns-prefetch" href="//ajax.cloudflare.com" />
 
-<title>nerdfiles.net</title>
+<title>{% page_attribute "page_title" %} nerdfiles.net</title>
 
 {% render_block "font" %}
 {% render_block "css" %}
@@ -79,12 +79,12 @@
       <a 
         href="http://www.last.fm/user/wittysense"
         title="
-          #RECENTLY PLAYED TRACKS
+          #RECENTLY PLAYED TRACKS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {% for bob in rt %}
-               {{ forloop.counter }}. {{ bob.title }}             
-                   &#9656; {{ bob.url|cut:"www." }}{% if not forloop.last %}{% endif %}          
+               {{ forloop.counter }}. {{ bob.title }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   &#9656; {{ bob.url|cut:"www." }}{% if not forloop.last %}{% endif %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {% empty %}
-          Must be trapped in a well or something...
+          Must be trapped in a well or something...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {% endfor %}
         ">
         Recently Listened Tracks
@@ -100,6 +100,22 @@
     </a>
   </h1>
 </header>
+
+<section class="important">
+  <div class="ui widget kippt">
+    <p>Hey, go read 
+      <a 
+        href="#[kippt_link]" 
+        title="[kippt_desc]" 
+      >this</a> 
+      and 
+      <a 
+        href="#[kippt_link]" 
+        title="[kippt_desc]" 
+      >this</a>.
+    </p>
+  </div>
+</section>
 
 {% block main_content %}
 <section>
@@ -162,7 +178,8 @@
 {% endblock %}
 
 {% block personalfunding %}
-<section class="personalfunding">
+{% if DEBUG %}
+<section class="personalfunding debug-{{ DEBUG }}">
   <p>Oh, and
   <iframe 
     style="border: 0; margin: 0; padding: 0;"
@@ -170,6 +187,7 @@
     width="48pt" height="20pt"></iframe>.
   </p>
 </section>
+{% endif %}
 {% endblock %}
 
 </div><!-- End .container -->
