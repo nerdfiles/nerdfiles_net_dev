@@ -1,0 +1,31 @@
+{# load cache #}
+
+<section class="important">
+  <div class="ui widget kippt">
+    {% if imp_feed %}
+    <p>Hey, go read 
+      {% for item in imp_feed.entries %}
+
+        {% if forloop.first %}
+          <a 
+            href="{{ item.link }}" 
+            title="{{ item.title }}" 
+            rel="external" 
+          >this</a> and 
+        {% endif %}
+
+        {% if forloop.last %}
+        <a 
+          href="{{ item.link }}" 
+          title="{{ item.title }}" 
+          rel="external" 
+        >this</a>.
+        {% endif %}
+
+      {% endfor %}
+    </p>
+    {% endif %}
+  </div>
+</section>
+
+

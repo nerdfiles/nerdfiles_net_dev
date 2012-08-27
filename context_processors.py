@@ -13,7 +13,7 @@ import json
 from datetime import datetime
 from django.core.cache import cache
 import twitter
-from kippt import kippt_wrapper
+#from kippt import kippt_wrapper
 import feedparser
 
 
@@ -24,7 +24,6 @@ def kippt_rss(request):
   TIMEOUT = 86400*5 # wait a week
 
   imp_feed = cache.get('imp_feed')
-  pprint(imp_feed)
   if imp_feed:
     return {
       "imp_feed": imp_feed
@@ -35,7 +34,6 @@ def kippt_rss(request):
     imp_feed,
     TIMEOUT
   )
-
   return {
     "imp_feed": imp_feed
   }
