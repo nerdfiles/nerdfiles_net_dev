@@ -176,6 +176,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
   'sekizai.context_processors.sekizai',
   'context_processors.site_info',
   'context_processors.lastfm',
+  'context_processors.latest_tweet',
+  'context_processors.kippt_saves',
 )
 
 
@@ -390,6 +392,9 @@ CACHE_PREFIX = "Z"
 LOCAL_DEVELOPMENT = False
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
+
+TWITTER_USER = "filesofnerds"
+TWITTER_TIMEOUT = 3600
 
 
 # == SETTINGS: OVERRIDES ======================================= #

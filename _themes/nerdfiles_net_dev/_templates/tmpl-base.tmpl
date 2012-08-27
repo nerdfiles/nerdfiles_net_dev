@@ -103,17 +103,34 @@
 
 <section class="important">
   <div class="ui widget kippt">
+    {% if tweet %}
+    <!--p>{{ tweet.text }}</p-->
+    {% endif %}
+    {% if kippt_saves %}
     <p>Hey, go read 
-      <a 
-        href="#[kippt_link]" 
-        title="[kippt_desc]" 
-      >this</a> 
-      and 
-      <a 
-        href="#[kippt_link]" 
-        title="[kippt_desc]" 
-      >this</a>.
+      {% if kippt_saves %}
+        {% for save in kippt_saves %}
+          
+          {% if forloop.first %}
+            <a 
+              href="{{ save.url }}" 
+              title="{{ save.title }}" 
+              rel="external" 
+            >this</a> and 
+          {% endif %}
+
+          {% if forloop.last %}
+          <a 
+            href="{{ save.url }}" 
+            title="{{ save.title }}" 
+            rel="external" 
+          >this</a>.
+          {% endif %}
+
+        {% endfor %}
+      {% endif %}
     </p>
+    {% endif %}
   </div>
 </section>
 
@@ -178,16 +195,16 @@
 {% endblock %}
 
 {% block personalfunding %}
-{% if DEBUG %}
-<section class="personalfunding debug-{{ DEBUG }}">
-  <p>Oh, and
-  <iframe 
-    style="border: 0; margin: 0; padding: 0;"
-    src="https://www.gittip.com/nerdfiles/widget.html" 
-    width="48pt" height="20pt"></iframe>.
-  </p>
-</section>
-{% endif %}
+  {% if not LOCAL %}
+  <section class="personalfunding debug-{{ DEBUG }}">
+    <p>Oh, and
+    <iframe 
+      style="border: 0; margin: 0; padding: 0;"
+      src="https://www.gittip.com/nerdfiles/widget.html" 
+      width="48pt" height="20pt"></iframe>.
+    </p>
+  </section>
+  {% endif %}
 {% endblock %}
 
 </div><!-- End .container -->

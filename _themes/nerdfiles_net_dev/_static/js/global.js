@@ -32,7 +32,7 @@
           
     });
 
-    $('a.external').attr('target', '_blank');
+    $('a[rel="external"]').attr('target', '_blank');
 
 	});
 

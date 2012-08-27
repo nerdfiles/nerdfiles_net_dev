@@ -32,7 +32,14 @@
           
     });
 
-    $('a.external').attr('target', '_blank');
+    $('a[rel="external"]').on('click', function(e) {
+      e.preventDefault();
+      var $a = $(this);
+      window.open(
+        $a.prop('href'), 
+        $a.prop('title')
+      );
+    });
 
 	});
 

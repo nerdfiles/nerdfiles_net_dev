@@ -213,7 +213,7 @@ body.base a {
   border-bottom: 1px #999 dashed;
 }
 /* line 111, ../sass/screen.scss */
-body.base a.external::after {
+body.base a[rel="external"]::after {
   content: ' ⤴';
 }
 /* line 113, ../sass/screen.scss */

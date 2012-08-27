@@ -108,7 +108,7 @@ body.base {
     margin: 0 0 .1em 0;
     //@include border-radius(10px, 10px);
     border-bottom: 1px #999 dashed; }
-  a.external::after { content: ' ⤴'; }
+  a[rel="external"]:after { content: ' ⤴'; }
 
   #hyLiteDlg {
     top: 10px !important;
@@ -157,6 +157,7 @@ section.important {
         content: "⏧";
       }
       & > *:first-child:after {
+        display: block;
         line-height: .7;
         font: {
           size: 3em;

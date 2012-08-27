@@ -65,19 +65,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* silent scrollbars */
-/* line 6, ../sass/screen.scss */
+/* line 7, ../sass/screen.scss */
 ::-webkit-scrollbar-track-piece {
   background-color: #fff;
   -webkit-border-radius: 0;
 }
 
-/* line 9, ../sass/screen.scss */
+/* line 10, ../sass/screen.scss */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-/* line 12, ../sass/screen.scss */
+/* line 13, ../sass/screen.scss */
 ::-webkit-scrollbar-thumb {
   height: 50px;
   background-color: #999;
@@ -87,37 +87,37 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   border: 2px solid #fff;
 }
 
-/* line 19, ../sass/screen.scss */
+/* line 20, ../sass/screen.scss */
 ::-webkit-scrollbar-thumb:hover {
   height: 50px;
   background-color: #9f9f9f;
   -webkit-border-radius: 4px;
 }
 
-/* line 23, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 :-webkit-scrollbar {
   width: 16px;
 }
 
 /* test */
-/* line 27, ../sass/screen.scss */
+/* line 28, ../sass/screen.scss */
 body {
   background: rgba(230, 230, 230, 0.6);
 }
 
 /* Base */
-/* line 32, ../sass/screen.scss */
+/* line 33, ../sass/screen.scss */
 p,
 ul, ol {
   margin: 0 0 1em;
 }
 
-/* line 35, ../sass/screen.scss */
+/* line 36, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 .5em;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 body {
   text-rendering: optimizeLegibility;
   font-family: "Raleway", sans-serif;
@@ -127,13 +127,7 @@ body {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
 }
 
-/* line 50, ../sass/screen.scss */
-hr {
-  border: none !important;
-  border-top: 3px #ccc dashed !important;
-}
-
-/* line 55, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 #site-access ul {
   -moz-transform: rotate(10deg);
   -o-transform: rotate(10deg);
@@ -147,44 +141,68 @@ hr {
   padding: 0;
 }
 
-/* line 61, ../sass/screen.scss */
+/* line 58, ../sass/screen.scss */
 body.base {
   padding: 100px 0;
+  /*body.base div:nth-child(4) { 
+    bottom: 0 !important; 
+    height: 20px !important; 
+    top: auto !important; 
+    position: fixed !important; }*/
 }
-
-/* line 64, ../sass/screen.scss */
+/* line 61, ../sass/screen.scss */
+body.base hr {
+  border: none !important;
+  border-top: 3px #ccc dashed !important;
+}
+/* line 66, ../sass/screen.scss */
 body.base .container {
   margin: 0 auto 30px;
   width: 720px;
 }
-
-/*body.base div:nth-child(4) { 
-  bottom: 0 !important; 
-  height: 20px !important; 
-  top: auto !important; 
-  position: fixed !important; }*/
-/* line 72, ../sass/screen.scss */
+/* line 74, ../sass/screen.scss */
 body.base header {
   border-bottom: 4px #111 solid;
   margin: 0 0 .5em;
   text-align: right;
 }
-
-/* line 78, ../sass/screen.scss */
+/* line 80, ../sass/screen.scss */
 body.base header h1 {
   display: inline-block;
   font-size: 2em;
   line-height: 1;
   padding: 25px 0 25px;
 }
-
-/* line 84, ../sass/screen.scss */
+/* line 86, ../sass/screen.scss */
 body.base #main-content h2 {
   font-size: 1.5em;
 }
-
-/* line 89, ../sass/screen.scss */
-a {
+/* line 91, ../sass/screen.scss */
+body.base blockquote {
+  box-shadow: 0 0 .3em #ccc;
+  padding: 20px;
+}
+/* line 92, ../sass/screen.scss */
+body.base blockquote p {
+  display: inline-block;
+  margin: 0;
+}
+/* line 93, ../sass/screen.scss */
+body.base blockquote cite {
+  font-size: 16px;
+}
+/* line 94, ../sass/screen.scss */
+body.base blockquote p::before {
+  margin: 0 .5em 0 0;
+  content: "❝ ";
+  display: inline-block;
+}
+/* line 96, ../sass/screen.scss */
+body.base .personalfunding {
+  padding: 10px 0 0;
+}
+/* line 101, ../sass/screen.scss */
+body.base a {
   font-family: 'Cedarville Cursive', cursive;
   padding: 0 10px;
   text-decoration: none;
@@ -194,63 +212,76 @@ a {
   margin: 0 0 .1em 0;
   border-bottom: 1px #999 dashed;
 }
-
-/* line 99, ../sass/screen.scss */
-a.external::after {
+/* line 111, ../sass/screen.scss */
+body.base a[rel="external"]:after {
   content: ' ⤴';
 }
-
-/* line 100, ../sass/screen.scss */
-body.base blockquote {
-  box-shadow: 0 0 .3em #ccc;
-  padding: 20px;
-}
-
-/* line 101, ../sass/screen.scss */
-body.base blockquote p {
-  display: inline-block;
-  margin: 0;
-}
-
-/* line 102, ../sass/screen.scss */
-body.base blockquote cite {
-  font-size: 16px;
-}
-
-/* line 103, ../sass/screen.scss */
-body.base blockquote p::before {
-  margin: 0 .5em 0 0;
-  content: "❝ ";
-  display: inline-block;
-}
-
-/* line 105, ../sass/screen.scss */
-.personalfunding {
-  padding: 10px 0 0;
-}
-
-/* line 109, ../sass/screen.scss */
-#hyLiteDlg {
+/* line 113, ../sass/screen.scss */
+body.base #hyLiteDlg {
   top: 10px !important;
   background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC) !important;
 }
-/* line 112, ../sass/screen.scss */
-#hyLiteDlg a {
+/* line 116, ../sass/screen.scss */
+body.base #hyLiteDlg a {
   font-size: 16px !important;
   font-family: sans-serif, Helvetica, Arial !important;
   display: block !important;
 }
-/* line 117, ../sass/screen.scss */
-#hyLiteDlg br {
+/* line 121, ../sass/screen.scss */
+body.base #hyLiteDlg br {
   display: none !important;
 }
-/* line 119, ../sass/screen.scss */
-#hyLiteDlg label[for="StopCensorshipStates"] {
+/* line 123, ../sass/screen.scss */
+body.base #hyLiteDlg label[for="StopCensorshipStates"] {
   display: block !important;
 }
-/* line 124, ../sass/screen.scss */
-#hyLiteDlg .senator_info br {
+/* line 128, ../sass/screen.scss */
+body.base #hyLiteDlg .senator_info br {
   display: block !important;
+}
+
+/* line 136, ../sass/screen.scss */
+.debug-False {
+  display: none !important;
+}
+
+/* line 142, ../sass/screen.scss */
+section.important .ui.kippt {
+  text-align: center;
+}
+/* line 145, ../sass/screen.scss */
+section.important .ui.widget {
+  padding: 10px 0 20px;
+}
+/* line 148, ../sass/screen.scss */
+section.important .ui.widget > *:first-child:before {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  margin: 0 20px 0 0;
+  line-height: 0;
+  font-size: 3em;
+  position: relative;
+  top: -0.1em;
+  content: "⏧";
+}
+/* line 159, ../sass/screen.scss */
+section.important .ui.widget > *:first-child:after {
+  display: block;
+  line-height: .7;
+  font-size: 3em;
+  content: "⌇";
+  position: relative;
+  color: #ccc;
+  opacity: .7;
+  top: 15px;
+}
+/* line 171, ../sass/screen.scss */
+section.important .ui.widget p {
+  margin: 0;
 }
 
 /**
@@ -270,14 +301,14 @@ body.base blockquote p::before {
 /**
  * last.fm
  */
-/* line 152, ../sass/screen.scss */
+/* line 200, ../sass/screen.scss */
 ul.activities {
   margin: 0;
   padding: 0;
   display: inline-block;
   text-align: left;
 }
-/* line 159, ../sass/screen.scss */
+/* line 207, ../sass/screen.scss */
 ul.activities li a {
   display: inline-block;
   width: 48px;
@@ -285,11 +316,11 @@ ul.activities li a {
   border: none;
   text-indent: -9999px;
 }
-/* line 169, ../sass/screen.scss */
+/* line 217, ../sass/screen.scss */
 ul.activities li.lastfm {
   background: url("../../../img-ui/ui-icon-headphones.png") no-repeat;
 }
-/* line 171, ../sass/screen.scss */
+/* line 219, ../sass/screen.scss */
 ul.activities li.lastfm a {
   padding: 0;
   margin: 0;
