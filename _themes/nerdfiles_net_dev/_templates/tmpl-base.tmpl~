@@ -126,6 +126,7 @@
             rel="external" 
           >this</a>.
           {% endif %}
+
         {% endfor %}
       {% endif %}
     </p>

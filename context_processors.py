@@ -33,13 +33,14 @@ def kippt_saves(request):
     kippt_saves, 
     settings.KIPPT_TIMEOUT
   )
+
   return {
     "kippt_saves": kippt_saves[1],
     "kippt_authed": k.checkAuth()
   }
 
 def latest_tweet(request):
-  tweet = cache.get( 'tweet' )
+  tweet = cache.get('tweet')
 
   if tweet:
     return {
@@ -48,7 +49,11 @@ def latest_tweet(request):
 
   tweet = twitter.Api().GetUserTimeline( settings.TWITTER_USER )[0]
   tweet.date = datetime.strptime( tweet.created_at, "%a %b %d %H:%M:%S +0000 %Y" )
-  cache.set( 'tweet', tweet, settings.TWITTER_TIMEOUT )
+  cache.set( 
+    'tweet', 
+    tweet, 
+    settings.TWITTER_TIMEOUT 
+  )
 
   return {
     "tweet": tweet
