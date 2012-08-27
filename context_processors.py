@@ -19,9 +19,13 @@ from kippt import kippt_wrapper
 # == CONTEXT PROCESSORS ======================================== #
 
 def kippt_saves(request):
-  k = kippt_wrapper.user('%s' % settings.KIPPT_API_USER,'%s' % settings.KIPPT_API_TOKEN)
+  k = kippt_wrapper.user(
+                      '%s' % settings.KIPPT_API_USER, 
+                      '%s' % settings.KIPPT_API_TOKEN, 
+                      )
+
   TIMEOUT = settings.KIPPT_TIMEOUT
-  TIMEOUT = 86400*5 # wait a day
+  TIMEOUT = 86400*5 # wait a week
 
   kippt_saves = cache.get('kippt_saves')
   if kippt_saves:
@@ -32,12 +36,12 @@ def kippt_saves(request):
   kippt_saves = k.search('#!', limit=2)
   cache.set(
     'kippt_saves', 
-    kippt_saves, 
+    kippt_saves[1], 
     TIMEOUT
   )
 
   return {
-    "kippt_saves": kippt_saves[1],
+    "kippt_saves": kippt_saves,
   }
 
 def latest_tweet(request):
