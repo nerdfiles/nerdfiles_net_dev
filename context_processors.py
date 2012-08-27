@@ -20,6 +20,8 @@ from kippt import kippt_wrapper
 
 def kippt_saves(request):
   k = kippt_wrapper.user('%s' % settings.KIPPT_API_USER,'%s' % settings.KIPPT_API_TOKEN)
+  TIMEOUT = settings.KIPPT_TIMEOUT
+  TIMEOUT = 86400 # wait a day
 
   kippt_saves = cache.get('kippt_saves')
   if kippt_saves:
@@ -31,12 +33,11 @@ def kippt_saves(request):
   cache.set(
     'kippt_saves', 
     kippt_saves, 
-    settings.KIPPT_TIMEOUT
+    TIMEOUT
   )
 
   return {
     "kippt_saves": kippt_saves[1],
-    "kippt_authed": k.checkAuth()
   }
 
 def latest_tweet(request):
