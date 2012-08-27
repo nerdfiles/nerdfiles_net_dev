@@ -24,8 +24,6 @@ def kippt_saves(request):
                       '%s' % settings.KIPPT_API_TOKEN, 
                       )
 
-  pprint(k.getLists())
-
   TIMEOUT = settings.KIPPT_TIMEOUT
   TIMEOUT = 86400*5 # wait a week
 
@@ -38,12 +36,12 @@ def kippt_saves(request):
   kippt_saves = k.search('#!', limit=2)
   cache.set(
     'kippt_saves', 
-    kippt_saves[1], 
+    kippt_saves, 
     TIMEOUT
   )
 
   return {
-    "kippt_saves": kippt_saves,
+    "kippt_saves": kippt_saves[1],
   }
 
 def latest_tweet(request):
