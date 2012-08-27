@@ -393,9 +393,6 @@ LOCAL_DEVELOPMENT = False
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
-TWITTER_USER = "filesofnerds"
-TWITTER_TIMEOUT = 3600
-
 
 # == SETTINGS: OVERRIDES ======================================= #
 
