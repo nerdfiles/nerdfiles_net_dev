@@ -101,7 +101,7 @@
   </h1>
 </header>
 
-{% cache 86400 kippt %}
+{% cache 86400*5 kippt %}
 <section class="important">
   <div class="ui widget kippt">
     {# if tweet #}
