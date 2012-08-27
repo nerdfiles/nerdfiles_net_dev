@@ -103,9 +103,9 @@
 
 <section class="important">
   <div class="ui widget kippt">
-    {% if tweet %}
+    {# if tweet #}
     <!--p>{{ tweet.text }}</p-->
-    {% endif %}
+    {# endif #}
     {% if kippt_saves %}
     <p>Hey, go read 
       {% if kippt_saves %}

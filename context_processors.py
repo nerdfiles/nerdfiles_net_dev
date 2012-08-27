@@ -24,6 +24,8 @@ def kippt_saves(request):
                       '%s' % settings.KIPPT_API_TOKEN, 
                       )
 
+  pprint(k.getLists())
+
   TIMEOUT = settings.KIPPT_TIMEOUT
   TIMEOUT = 86400*5 # wait a week
 
