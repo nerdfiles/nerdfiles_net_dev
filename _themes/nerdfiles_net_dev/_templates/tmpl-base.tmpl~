@@ -1,4 +1,4 @@
-{% load analytical cms_tags menu_tags sekizai_tags lastfm_widget %}
+{% load analytical cache cms_tags menu_tags sekizai_tags lastfm_widget %}
 
 <!DOCTYPE HTML>
 
@@ -101,6 +101,7 @@
   </h1>
 </header>
 
+{% cache 86400 kippt %}
 <section class="important">
   <div class="ui widget kippt">
     {# if tweet #}
@@ -133,6 +134,7 @@
     {% endif %}
   </div>
 </section>
+{% endcache %}
 
 {% block main_content %}
 <section>
