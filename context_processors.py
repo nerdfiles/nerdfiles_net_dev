@@ -21,7 +21,7 @@ from kippt import kippt_wrapper
 def kippt_saves(request):
   k = kippt_wrapper.user('%s' % settings.KIPPT_API_USER,'%s' % settings.KIPPT_API_TOKEN)
   TIMEOUT = settings.KIPPT_TIMEOUT
-  TIMEOUT = 86400 # wait a day
+  TIMEOUT = 86400*5 # wait a day
 
   kippt_saves = cache.get('kippt_saves')
   if kippt_saves:
