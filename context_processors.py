@@ -14,19 +14,33 @@ from datetime import datetime
 from django.core.cache import cache
 import twitter
 from kippt import kippt_wrapper
+import feedparser
 
 
 # == CONTEXT PROCESSORS ======================================== #
 
-def kippt_saves(request):
-  k = kippt_wrapper.user(
-                      '%s' % settings.KIPPT_API_USER, 
-                      '%s' % settings.KIPPT_API_TOKEN, 
-                      )
+def kippt_rss(request):
+  d = feedparser.parse('https://kippt.com/nerdfiles/important/feed')
+  pprint(d.feed)
 
   TIMEOUT = settings.KIPPT_TIMEOUT
   TIMEOUT = 86400*5 # wait a week
 
+def kippt_saves(request):
+  #k = kippt_wrapper.user(
+  #                    '%s' % settings.KIPPT_API_USER, 
+  #                    '%s' % settings.KIPPT_API_TOKEN, 
+  #                    )
+  #pprint(k.getList(134737)) !important
+  #pprint(dir(k.getList(134737)))
+  #print k.getList(134737).items()
+  d = feedparser.parse('https://kippt.com/nerdfiles/important/feed')
+  pprint(d.feed)
+
+  TIMEOUT = settings.KIPPT_TIMEOUT
+  TIMEOUT = 86400*5 # wait a week
+
+  '''
   kippt_saves = cache.get('kippt_saves')
   if kippt_saves:
     return {
@@ -43,6 +57,8 @@ def kippt_saves(request):
   return {
     "kippt_saves": kippt_saves[1],
   }
+  '''
+  pprint(d.feed)
 
 def latest_tweet(request):
   tweet = cache.get('tweet')
