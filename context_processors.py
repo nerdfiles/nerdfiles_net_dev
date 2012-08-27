@@ -20,12 +20,28 @@ import feedparser
 # == CONTEXT PROCESSORS ======================================== #
 
 def kippt_rss(request):
-  d = feedparser.parse('https://kippt.com/nerdfiles/important/feed')
-  pprint(d.feed)
-
   TIMEOUT = settings.KIPPT_TIMEOUT
   TIMEOUT = 86400*5 # wait a week
 
+  imp_feed = cache.get('imp_feed')
+  pprint(imp_feed)
+  if imp_feed:
+    return {
+      "imp_feed": imp_feed
+    }
+  imp_feed = feedparser.parse('https://kippt.com/nerdfiles/important/feed')
+  cache.set(
+    "imp_feed",
+    imp_feed,
+    TIMEOUT
+  )
+
+  return {
+    "imp_feed": imp_feed
+  }
+
+
+'''
 def kippt_saves(request):
   #k = kippt_wrapper.user(
   #                    '%s' % settings.KIPPT_API_USER, 
@@ -40,7 +56,6 @@ def kippt_saves(request):
   TIMEOUT = settings.KIPPT_TIMEOUT
   TIMEOUT = 86400*5 # wait a week
 
-  '''
   kippt_saves = cache.get('kippt_saves')
   if kippt_saves:
     return {
@@ -57,8 +72,8 @@ def kippt_saves(request):
   return {
     "kippt_saves": kippt_saves[1],
   }
-  '''
   pprint(d.feed)
+'''
 
 def latest_tweet(request):
   tweet = cache.get('tweet')

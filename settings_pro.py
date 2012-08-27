@@ -175,8 +175,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
   'cms.context_processors.media',
   'sekizai.context_processors.sekizai',
   'context_processors.site_info',
-  'context_processors.lastfm',
+  #'context_processors.lastfm',
   #'context_processors.latest_tweet',
+  #'context_processors.kippt_saves',
   'context_processors.kippt_rss',
 )
 
@@ -184,19 +185,19 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # == MIDDLEWARE CLASSES ======================================= #
 
 MIDDLEWARE_CLASSES = (
+  'django.middleware.cache.UpdateCacheMiddleware',
+  'django.middleware.common.CommonMiddleware',
+  'django.middleware.cache.FetchFromCacheMiddleware',
   'django.middleware.common.CommonMiddleware',
   'django.contrib.sessions.middleware.SessionMiddleware',
   'django.middleware.csrf.CsrfViewMiddleware',
   'django.contrib.auth.middleware.AuthenticationMiddleware',
   'django.contrib.messages.middleware.MessageMiddleware',
-  'django.middleware.cache.UpdateCacheMiddleware',
-  'django.middleware.common.CommonMiddleware',
-  'django.middleware.cache.FetchFromCacheMiddleware',
   #'cms.middleware.multilingual.MultilingualURLMiddleware',
   'cms.middleware.page.CurrentPageMiddleware',
   'cms.middleware.user.CurrentUserMiddleware',
   'cms.middleware.toolbar.ToolbarMiddleware',
-    
+   
   #'djangologging.middleware.LoggingMiddleware',
   #'djangologging.middleware.SuppressLoggingOnAjaxRequestsMiddleware',
 )
@@ -386,7 +387,7 @@ CACHES = {
 }
 
 CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
-CACHE_TIMEOUT = 60*30
+CACHE_TIMEOUT = 60*30*6 # 3 hours
 CACHE_PREFIX = "Z"
 
 
