@@ -1,5 +1,6 @@
-{# load cache #}
+{% load cache %}
 
+{% cache 43200 kippt %}
 <section class="important">
   <div class="ui widget kippt">
     {% if imp_feed %}
@@ -29,5 +30,6 @@
     {% endif %}
   </div>
 </section>
+{% endcache %}
 
 
