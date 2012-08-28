@@ -167,17 +167,20 @@ TEMPLATE_LOADERS = (
 # == TEMPLATE LOADERS ======================================= #
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-  #'django.core.context_processors.auth',
-  'context_processors.site_info',
-  'django.contrib.auth.context_processors.auth',
+  'django.core.context_processors.auth',
+  #'django.contrib.auth.context_processors.auth',
   'django.core.context_processors.i18n',
   'django.core.context_processors.request',
   'django.core.context_processors.media',
   'django.core.context_processors.static',
-  'context_processors.kippt_rss',
-  'context_processors.lastfm',
+
   'cms.context_processors.media',
   'sekizai.context_processors.sekizai',
+  
+  'context_processors.site_info',
+  'context_processors.lastfm',
+  'context_processors.kippt_rss',
+
   #'context_processors.latest_tweet',
   #'context_processors.kippt_saves',
 )
@@ -186,19 +189,23 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 # == MIDDLEWARE CLASSES ======================================= #
 
 MIDDLEWARE_CLASSES = (
-  'django.middleware.cache.UpdateCacheMiddleware',
+
   'django.middleware.common.CommonMiddleware',
-  'django.middleware.cache.FetchFromCacheMiddleware',
-  'django.middleware.common.CommonMiddleware',
-  'cms.middleware.page.CurrentPageMiddleware',
-  'cms.middleware.user.CurrentUserMiddleware',
-  'cms.middleware.toolbar.ToolbarMiddleware',
+
   'django.contrib.sessions.middleware.SessionMiddleware',
   'django.middleware.csrf.CsrfViewMiddleware',
   'django.contrib.auth.middleware.AuthenticationMiddleware',
   'django.contrib.messages.middleware.MessageMiddleware',
+
+  'cms.middleware.page.CurrentPageMiddleware',
+  'cms.middleware.user.CurrentUserMiddleware',
+  'cms.middleware.toolbar.ToolbarMiddleware',
+
+  'django.middleware.cache.UpdateCacheMiddleware',
+  'django.middleware.common.CommonMiddleware',
+  'django.middleware.cache.FetchFromCacheMiddleware',
+
   #'cms.middleware.multilingual.MultilingualURLMiddleware',
-  
   #'djangologging.middleware.LoggingMiddleware',
   #'djangologging.middleware.SuppressLoggingOnAjaxRequestsMiddleware',
 )
