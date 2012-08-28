@@ -26,8 +26,8 @@ urlpatterns = patterns('',
   url(r'^rut-rot/$', rut_roh),
 
   url(r'^dashboard/cache/', include('django_memcached.urls')),
-  url(r'^lastfm/', 'lastfm.views.lastfm_data', name='lastfm'),
-  url(r'^tumblr/', 'views.tumblr_redirect', name='tumblr'),
+  url(r'lastfm/', 'lastfm.views.lastfm_data', name='lastfm'),
+  url(r'tumblr/', 'views.tumblr_redirect', name='tumblr'),
 
   # == admin dashboard == #
   url(r'^dashboard/', include(admin.site.urls)),
