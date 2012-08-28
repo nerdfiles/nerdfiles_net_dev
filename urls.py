@@ -23,14 +23,6 @@ def rut_roh(request):
 # == URLPATTERNS ======================================== #
 
 urlpatterns = patterns('',
-  url(r'^_assets(?P<path>.*)$', 'django.views.static.serve',
-  {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-  url(r'^_static(?P<path>.*)$', 'django.views.static.serve',
-  {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
-  url(r'', include('django.contrib.staticfiles.urls')),
-)
-
-urlpatterns = patterns('',
   url(r'^rut-rot/$', rut_roh),
 
   # == admin dashboard == #
@@ -42,6 +34,14 @@ urlpatterns = patterns('',
   url(r'lastfm/', 'lastfm.views.lastfm_data', name='lastfm'),
   url(r'tumblr/', 'views.tumblr_redirect', name='tumblr'),
 
+)
+
+urlpatterns = patterns('',
+  url(r'^_assets(?P<path>.*)$', 'django.views.static.serve',
+  {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+  url(r'^_static(?P<path>.*)$', 'django.views.static.serve',
+  {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
+  url(r'', include('django.contrib.staticfiles.urls')),
 ) + urlpatterns
 
 
