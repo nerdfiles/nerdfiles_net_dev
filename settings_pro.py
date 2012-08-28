@@ -223,8 +223,8 @@ INSTALLED_APPS = (
   #'south',
 
   # == core == #
-  'django.contrib.admin',
   'django.contrib.auth',
+  'django.contrib.admin',
   'django.contrib.contenttypes',
   'django.contrib.sessions',
   'django.contrib.sites',
