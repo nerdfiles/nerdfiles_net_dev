@@ -1,24 +1,28 @@
+/**
+ * @requires:	Classy, jQuery
+ *
+ * assign Class and CMS namespace */
+ var CMS = CMS || {};
+     CMS.Class = CMS.Class || Class.$noConflict();
+     CMS.API = CMS.API || {};
+
+(function ($) {
 /*##################################################|*/
 /* #CMS.BASE# */
-CMS.$(document).ready(function ($) {
-	// assign correct jquery to $ namespace
-	$ = CMS.$ || $;
-
-	/*!
-	 * Adds security methods to api namespace
+jQuery(document).ready(function ($) {
+	/**
+	 * Security
+	 * @version: 1.0.0
+	 * @description: Adds security layer to CMS namespace
 	 * @public_methods:
 	 *	- CMS.API.Security.csrf();
-	 * @compatibility: IE >= 7, FF >= 3, Safari >= 4, Chrome > =4, Opera >= 10
+	 * @compatibility: IE >= 6, FF >= 2, Safari >= 4, Chrome > =4, Opera >= 10
 	 */
 	CMS.API.Security = {
-
+	
 		csrf: function () {
 			$.ajaxSetup({
 				beforeSend: function (xhr, settings) {
-					if (typeof(settings.csrfTokenSet) != undefined && settings.csrfTokenSet) {
-						// CSRF token has already been set elsewhere so we won't touch it.
-						return true; 
-					} 
 					// get cookies without jquery.cookie.js
 					function getCookie(name) {
 						var cookieValue = null;
@@ -44,7 +48,6 @@ CMS.$(document).ready(function ($) {
 					if(!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url)) || base_doc_url == base_settings_url) {
 						// Only send the token to relative URLs i.e. locally.
 						xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
-						settings.csrfTokenSet = true;
 					}
 				}
 			});
@@ -53,8 +56,10 @@ CMS.$(document).ready(function ($) {
 	
 	};
 	
-	/*!
-	 * Adds helper methods to api namespace
+	/**
+	 * Helpers
+	 * @version: 1.0.0
+	 * @description: Adds helper methods to be invoked
 	 * @public_methods:
 	 *	- CMS.API.Helpers.reloadBrowser();
 	 *	- CMS.API.Helpers.getUrl(urlString);
@@ -123,3 +128,5 @@ CMS.$(document).ready(function ($) {
 	};
 
 });
+
+})(jQuery);

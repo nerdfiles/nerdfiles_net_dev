@@ -1,11 +1,16 @@
+(function ($) {
+/**
+ * @requires:	Classy, jQuery, jQuery.cookie
+ */
+
 /*##################################################|*/
 /* #CMS.TOOLBAR# */
-CMS.$(document).ready(function ($) {
-	// assign correct jquery to $ namespace
-	$ = CMS.$ || $;
+jQuery(document).ready(function ($) {
 
-	/*!
+	/**
 	 * Toolbar
+	 * @version: 1.0.0
+	 * @description: Implements and controls toolbar
 	 * @public_methods:
 	 *	- CMS.API.Toolbar.toggleToolbar();
 	 *	- CMS.API.Toolbar.registerItem(obj);
@@ -30,7 +35,7 @@ CMS.$(document).ready(function ($) {
 			// save reference to this class
 			var that = this;
 			// check if only one element is given
-			if($(container).length > 2) { throw new Error('Toolbar Error: one element expected, multiple elements given.'); }
+			if($(container).length > 2) { throw new Error('Toolbar Error: one element expected, multiple elements given.'); return false; }
 			// merge passed argument options with internal options
 			this.options = $.extend(this.options, options);
 
@@ -198,12 +203,6 @@ CMS.$(document).ready(function ($) {
 		_registerAnchor: function (obj) {
 			// take a copy of the template, append it, remove it, copy html. required because of how jquery works.
 			var template = this._processTemplate('#cms_toolbar-item_anchor', obj);
-			// fixes href issue on ie7
-			template.find('a').bind('click', function (e) {
-				e.preventDefault();
-				// redirect to correct url
-				window.location.href = obj.url;
-			});
 			// append item
 			this._injectItem(template, obj.dir, obj.order);
 		},
@@ -295,8 +294,6 @@ CMS.$(document).ready(function ($) {
 			$(obj.items).each(function (index, value) {
 				// add icon if available
 				var icon_styles = value.icon ? ' class="cms_toolbar_icon cms_toolbar_icon-enabled" style="background-image:url('+value.icon+');"' : '';
-				// add ie 7 and below fix to urls
-				if($.browser.msie && $.browser.version <= 7) value.url = value.url.replace('/', '');
 				// replace attributes
 				tmp += list.replace('[list_title]', value.title)
 						   .replace('[list_url]', value.url)
@@ -450,3 +447,5 @@ CMS.$(document).ready(function ($) {
 
 	});
 });
+
+})(jQuery);

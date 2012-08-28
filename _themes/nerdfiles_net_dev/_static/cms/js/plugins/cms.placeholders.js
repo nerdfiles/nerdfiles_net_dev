@@ -1,11 +1,15 @@
+(function ($) {
+/**
+ * @requires:	Classy, jQuery, jQuery.ui.core, jQuery.ui.draggable, jQuery.ui.droppable
+ */
+
 /*##################################################|*/
 /* #CMS.PLACEHOLDERS# */
-CMS.$(document).ready(function ($) {
-	// assign correct jquery to $ namespace
-	$ = CMS.$ || $;
-
-	/*!
+jQuery(document).ready(function ($) {
+	/**
 	 * Placeholders
+	 * @version: 1.0.0
+	 * @description: Handles placeholders when in editmode and adds "lightbox" to toolbar
 	 * @public_methods:
 	 *	- CMS.API.Placeholder.addPlugin(obj, url);
 	 *	- CMS.API.Placeholder.editPlugin(placeholder_id, plugin_id);
@@ -28,6 +32,8 @@ CMS.$(document).ready(function ($) {
 		},
 
 		initialize: function (container, options) {
+			// save reference to this class
+			var that = this;
 			// merge argument options with internal options
 			this.options = $.extend(this.options, options);
 			
@@ -141,7 +147,7 @@ CMS.$(document).ready(function ($) {
 						if (needs_collapsing && ! CMS.API.Toolbar.isToolbarHidden()){
 							CMS.API.Toolbar.toggleToolbar();
 						}
-					});
+					})
 				var cancel = $(this).contents().find('input[name^="_cancel"]');
 					cancel.bind('click', function (e) {
 						e.preventDefault();
@@ -317,10 +323,10 @@ CMS.$(document).ready(function ($) {
 				var els = $('.cms_placeholder[class$="cms_placeholder::' + slot + '"]');
 				var length = els.length;
 
-				if(length === 0) {
+				if(els.length === 0) {
 					plugin.insertAfter($('.cms_placeholder-bar[class$="cms_placeholder_slot::' + slot + '"]'));
 				} else {
-					plugin.insertAfter($(els.toArray()[length-1]));
+					plugin.insertAfter($(els.toArray()[els.length-1]));
 				}
 
 				// close overlay
@@ -466,7 +472,7 @@ CMS.$(document).ready(function ($) {
 			// change data information
 			this.dim.data('dimmed', false);
 			// hide dim
-			this.dim.css('opacity', 0.6).stop().fadeOut();
+			this.dim.css('opcaity', 0.6).stop().fadeOut();
 			// remove dim event
 			this.dim.unbind('click');
 		}
@@ -592,3 +598,5 @@ CMS.$(document).ready(function ($) {
 	});
 
 });
+
+})(jQuery);
