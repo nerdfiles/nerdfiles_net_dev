@@ -23,28 +23,29 @@ def rut_roh(request):
 # == URLPATTERNS ======================================== #
 
 urlpatterns = patterns('',
-  url(r'^rut-rot/$', rut_roh),
-
-  # == admin dashboard == #
-  url(r'^dashboard/', include(admin.site.urls)),
-  url(r'^dashboard/doc/', include('django.contrib.admindocs.urls')),  
-  url(r'^', include('cms.urls')),
-
-  url(r'lastfm/', 'lastfm.views.lastfm_data', name='lastfm'),
-  url(r'tumblr/', 'views.tumblr_redirect', name='tumblr'),
-
-)
-
-
-# == LOCAL ======================================== #
-
-urlpatterns = patterns('',
   url(r'^_assets(?P<path>.*)$', 'django.views.static.serve',
   {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
   url(r'^_static(?P<path>.*)$', 'django.views.static.serve',
   {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
   url(r'', include('django.contrib.staticfiles.urls')),
+)
+
+urlpatterns = patterns('',
+  url(r'^rut-rot/$', rut_roh),
+
+  # == admin dashboard == #
+  url(r'^dashboard/', include(admin.site.urls)),
+  url(r'^dashboard/doc/', include('django.contrib.admindocs.urls')),  
+
+  url(r'^', include('cms.urls')),
+
+  url(r'lastfm/', 'lastfm.views.lastfm_data', name='lastfm'),
+  url(r'tumblr/', 'views.tumblr_redirect', name='tumblr'),
+
 ) + urlpatterns
+
+
+# == LOCAL ======================================== #
 
 handler404 = 'views.error_404'
 handler500 = 'views.error_500'

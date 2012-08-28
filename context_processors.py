@@ -94,8 +94,23 @@ def latest_tweet(request):
   }
 
 def lastfm(request):
+  lfm_data = cache.get('lfm_data')
+
+  TIMEOUT = 1800
+
+  if lfm_data:
+    return {
+      "lfm_data": lfm_data
+    }
+
   lfm_data = views.lastfm_data(request)
   lfm_data = lfm_data.content
+  cache.set(
+    "lfm_data",
+    lfm_data,
+    TIMEOUT
+  )
+
   return {
     'rt': json.loads(lfm_data)
   }
