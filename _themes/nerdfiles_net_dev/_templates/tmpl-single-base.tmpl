@@ -7,6 +7,10 @@
 {% endaddtoblock %}
 {% endblock %}
 
+{% block kippt %}
+{{ block.super }}
+{% endblock %}
+
 {% block disqus %}
 {% addtoblock "disqus" %}
 {% include "js-disqus.tmpl" %}

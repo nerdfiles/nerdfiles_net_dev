@@ -40,7 +40,6 @@
 
 {% block kippt %}
 {% addtoblock "kippt" %}
-{% include "kippt.tmpl" %}
 {% endaddtoblock %}
 {% endblock %}
 
@@ -68,9 +67,9 @@
 
 <body class="nerdfiles-net {% block body_class %}base{% endblock %}">
 
-{% cms_toolbar %}
-
 {% analytical_body_top %}
+
+{% cms_toolbar %}
 
 <div class="container">
 
@@ -172,21 +171,9 @@
 {% endblock %}
 
 {% block personalfunding %}
-  {% if not LOCAL %}
-  <section class="personalfunding debug-{{ DEBUG }}">
-    <p>Oh, and
-    <iframe 
-      style="border: 0; margin: 0; padding: 0;"
-      src="https://www.gittip.com/nerdfiles/widget.html" 
-      width="48pt" height="20pt"></iframe>.
-    </p>
-  </section>
-  {% endif %}
 {% endblock %}
 
 </div><!-- End .container -->
-
-<!--script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/sopa/1.0/stopcensorship.js"></script-->
 
 {% render_block "js" %}
 

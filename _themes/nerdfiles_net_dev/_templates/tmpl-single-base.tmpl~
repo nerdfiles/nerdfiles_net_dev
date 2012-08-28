@@ -7,6 +7,15 @@
 {% endaddtoblock %}
 {% endblock %}
 
+{% block kippt %}
+{% endblock %}
+
+{% block disqus %}
+{% addtoblock "disqus" %}
+{% include "js-disqus.tmpl" %}
+{% endaddtoblock %}
+{% endblock %}
+
 {% block footer %}
 <footer>
 {% placeholder "Footer" or %}

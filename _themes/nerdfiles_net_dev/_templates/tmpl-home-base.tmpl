@@ -7,4 +7,23 @@
 {% endaddtoblock %}
 {% endblock %}
 
+{% block kippt %}
+{% addtoblock "kippt" %}
+{% include "kippt.tmpl" %}
+{% endaddtoblock %}
+{% endblock %}
+
 {% block body_class %}base home{% endblock %}
+
+{% block personalfunding %}
+  {% if not LOCAL %}
+  <section class="personalfunding debug-{{ DEBUG }}">
+    <p>Oh, and
+    <iframe 
+      style="border: 0; margin: 0; padding: 0;"
+      src="https://www.gittip.com/nerdfiles/widget.html" 
+      width="48pt" height="20pt"></iframe>
+    </p>
+  </section>
+  {% endif %}
+{% endblock %}

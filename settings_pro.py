@@ -248,6 +248,7 @@ INSTALLED_APPS = (
   'lastfm',
   'south',
   'django_extensions',
+  'django_memcached',
 
   # == admin == #
   'django.contrib.admin',
@@ -270,13 +271,17 @@ CMS_TEMPLATES = (
   
   # standards
   ('tmpl-base.tmpl', 'Template: Base'),
-  ('tmpl-home-base.tmpl', 'Template: Homepage'),
+
+  # home
+  ('tmpl-home-base.tmpl', 'Template: Homepage (landing)'),
   
   # pages
   ('tmpl-single-base.tmpl', 'Single Template: Base'), # presentation of generic single content
   
   # forms
   ('tmpl-form-base.tmpl', 'Form Template: Base'),
+  ('tmpl-form-hello.tmpl', 'Form Template: Hello (contact)'),
+  ('tmpl-form-locate.tmpl', 'Form Template: Locate (wtf iz dis?)'),
   
   # aggregates
   ('tmpl-list-base.tmpl', 'List Template: Base'),

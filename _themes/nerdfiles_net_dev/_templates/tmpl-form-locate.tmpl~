@@ -1,5 +1,5 @@
 {% extends 'tmpl-form-base.tmpl' %}
-{% load cms_tags menu_tags sekizai_tags lastfm_widget %}
+{% load cms_tags menu_tags sekizai_tags %}
 
 {% block main_content %}
 <section>
