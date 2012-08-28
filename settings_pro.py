@@ -202,8 +202,8 @@ MIDDLEWARE_CLASSES = (
   'django.contrib.auth.middleware.AuthenticationMiddleware',
   'django.contrib.messages.middleware.MessageMiddleware',
 
-  'cms.middleware.page.CurrentPageMiddleware',
   'cms.middleware.user.CurrentUserMiddleware',
+  'cms.middleware.page.CurrentPageMiddleware',
   'cms.middleware.toolbar.ToolbarMiddleware',
 
   'django.middleware.cache.UpdateCacheMiddleware',
