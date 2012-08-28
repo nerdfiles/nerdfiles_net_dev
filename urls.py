@@ -23,16 +23,14 @@ def rut_roh(request):
 # == URLPATTERNS ======================================== #
 
 urlpatterns = patterns('',
-  (r'^rut-rot/$', rut_roh),
-  
-  url(r'lastfm/', 'lastfm.views.lastfm_data', name='lastfm'),
-
-  url(r'tumblr/', 'views.tumblr_redirect', name='tumblr'),
+  url(r'^rut-rot/$', rut_roh),
 
   # == admin dashboard == #
   url(r'^dashboard/', include(admin.site.urls)),
   url(r'^dashboard/doc/', include('django.contrib.admindocs.urls')),  
   url(r'^', include('cms.urls')),
+  url(r'lastfm/', 'lastfm.views.lastfm_data', name='lastfm'),
+  url(r'tumblr/', 'views.tumblr_redirect', name='tumblr'),
 )
 
 
