@@ -27,7 +27,7 @@ def render_response(request, *args, **kwargs):
   kwargs['context_instance'] = RequestContext(request)
   return render_to_response(*args, **kwargs)
 
-def tumblr_redirect(self):
+def tumblr_redirect(request):
   return redirect('http://wittysense.tumblr.com/')
 
 def error_404(request):
