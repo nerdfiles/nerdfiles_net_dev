@@ -33,12 +33,22 @@
     });
 
     $('a[rel="external"]').on('click', function(e) {
+
       e.preventDefault();
+      
       var $a = $(this);
+
+      $a.attr(
+        'target', 
+        '_blank'
+      );
+
+      /*
       window.open(
         $a.prop('href'), 
         $a.prop('title')
       );
+      */
     });
 
 	});
