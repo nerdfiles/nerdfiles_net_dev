@@ -67,8 +67,10 @@
 </head>
 
 <body class="nerdfiles-net {% block body_class %}base{% endblock %}">
-{% analytical_body_top %}
+
 {% cms_toolbar %}
+
+{% analytical_body_top %}
 
 <div class="container">
 
