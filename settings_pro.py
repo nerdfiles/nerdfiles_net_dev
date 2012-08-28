@@ -167,8 +167,8 @@ TEMPLATE_LOADERS = (
 # == TEMPLATE LOADERS ======================================= #
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-  #'django.core.context_processors.auth',
-  'django.contrib.auth.context_processors.auth',
+  'django.core.context_processors.auth',
+  #'django.contrib.auth.context_processors.auth',
   'django.core.context_processors.i18n',
   'django.core.context_processors.request',
   'django.core.context_processors.media',
@@ -190,11 +190,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 MIDDLEWARE_CLASSES = (
 
+  'django.contrib.auth.middleware.AuthenticationMiddleware',
   'django.middleware.common.CommonMiddleware',
-
   'django.contrib.sessions.middleware.SessionMiddleware',
   'django.middleware.csrf.CsrfViewMiddleware',
-  'django.contrib.auth.middleware.AuthenticationMiddleware',
   'django.contrib.messages.middleware.MessageMiddleware',
 
   'cms.middleware.page.CurrentPageMiddleware',
