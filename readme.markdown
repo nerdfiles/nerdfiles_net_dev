@@ -25,3 +25,9 @@ If a user clicks on anything, even the page itself, a feedback (recursive callba
 ## Project Details
 
 1. Dev (nerdfiles@gmail.com)
+
+## Deps
+
+1. https://github.com/rafaelp/css_browser_selector
+2. https://github.com/benschwarz/metaquery/
+

@@ -32,6 +32,12 @@
 {% endaddtoblock %}
 {% endblock %}
 
+{% block media %}
+{% addtoblock "mediaquery" %}
+{% include "media-base.tmpl" %}
+{% endaddtoblock %}
+{% endblock %}
+
 {% block landmine %}
 {% addtoblock "landmine" %}
 {% include "js-landmine.tmpl" %}
@@ -57,7 +63,11 @@
 <title>{% page_attribute "page_title" %} &#9679; nerdfiles.net</title>
 
 {% render_block "font" %}
+
 {% render_block "css" %}
+
+{% render_block "mediaquery" %}
+
 {% render_block "scriptloader" %}
 
 {% analytical_head_bottom %}
