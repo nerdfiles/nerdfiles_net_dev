@@ -15,13 +15,18 @@ from django.core.cache import cache
 import twitter
 #from kippt import kippt_wrapper
 import feedparser
-
+import customfeed
 
 # == CONTEXT PROCESSORS ======================================== #
 
 def kippt_rss(request):
   TIMEOUT = settings.KIPPT_TIMEOUT
-  TIMEOUT = 86400*5 # wait a week
+  TIMEOUT = 15 # wait 30 seconds
+
+  '''
+    sort this somehow 
+    @nerdfiles
+  ''' 
 
   imp_feed = cache.get('imp_feed')
   if imp_feed:
@@ -29,6 +34,18 @@ def kippt_rss(request):
       "imp_feed": imp_feed
     }
   imp_feed = feedparser.parse('https://kippt.com/nerdfiles/important/feed')
+  
+  #hit_list = ['https://kippt.com/nerdfiles/important/feed']
+  #future_calls = [__future__(feedparser.parse,rss_url) for rss_url in hit_list]
+  #feeds = [future_obj() for future_obj in future_calls]
+
+  #entries = []
+  #for feed in feeds:
+  #  entries.extend( feed['items'] )
+
+  #sorted_entries = sorted(entries, key=lambda entry: entry["date_parsed"])
+  #sorted_entries.reversed()
+
   cache.set(
     "imp_feed",
     imp_feed,
@@ -112,7 +129,7 @@ def lastfm(request):
   )
 
   return {
-    'rt': json.loads(lfm_data)
+    'rt': lfm_data
   }
 
 def site_info(request):
