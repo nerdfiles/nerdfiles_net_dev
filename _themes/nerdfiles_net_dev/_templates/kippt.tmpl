@@ -3,31 +3,37 @@
 {% cache 43200 kippt %}
 <section class="important">
   <div class="ui widget kippt">
+
     {% if imp_feed %}
     <p>Hey, go read 
-      {% for item in imp_feed.entries %}
 
-        {% if forloop.first %}
-          <a 
-            href="{{ item.link }}" 
-            title="{{ item.title }}" 
-            target="_blank" 
-            rel="external" 
-          >this</a> and 
-        {% endif %}
+      {% for item in imp_feed.entries|slice:":2" %}
 
-        {% if forloop.last %}
         <a 
           href="{{ item.link }}" 
           title="{{ item.title }}" 
           target="_blank" 
           rel="external" 
-        >this</a>.
+        >this</a>  
+
+        {% if forloop.first %}
+        and
         {% endif %}
 
+      {% empty %}
+
+        <a
+          href="http://kippt.com/nerdfiles/important/"
+          title="Important!"
+          target="_blank"
+          rel="external"
+        >this</a>
+
       {% endfor %}
+
     </p>
     {% endif %}
+
   </div>
 </section>
 {% endcache %}
