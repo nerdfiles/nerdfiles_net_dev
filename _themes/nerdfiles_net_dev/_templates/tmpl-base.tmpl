@@ -97,7 +97,7 @@
           #RECENTLY PLAYED TRACKS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {% for bob in rt %}
                {{ forloop.counter }}. {{ bob.title }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                   &#9656; {{ bob.url|cut:"www." }}{% if not forloop.last %}{% endif %}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   &#9656; {{ bob.url|cut:"www." }}{% if not forloop.last %}{% endif %} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {% empty %}
           Must be trapped in a well or something...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {% endfor %}
