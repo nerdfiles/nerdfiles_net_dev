@@ -14,20 +14,24 @@
           title="{{ item.title }}" 
           target="_blank" 
           rel="external" 
-        >this</a>  
+        >this</a>{% if forloop.last %}<a
+            href="http://kippt.com/nerdfiles/important"
+            title="Important!!!!!!!!!!!!@!!@#!#@@#$@!!1"
+          >!</a>
+        {% endif %}
 
         {% if forloop.first %}
         and
         {% endif %}
-
+        
       {% empty %}
 
-        <a
+        something <a
           href="http://kippt.com/nerdfiles/important/"
           title="Important!"
           target="_blank"
           rel="external"
-        >this</a>
+        >important</a>!
 
       {% endfor %}
 
