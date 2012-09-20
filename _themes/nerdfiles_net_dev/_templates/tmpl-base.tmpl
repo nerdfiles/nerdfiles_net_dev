@@ -89,7 +89,7 @@
 
 <header>
   <ul class="activities">
-
+    {% if rt %}
     <li class="lastfm">
       <a 
         href="http://www.last.fm/user/wittysense"
@@ -124,8 +124,9 @@
         </ol>
       </div><!-- @itemscope:MusicPlaylist -->
     </li>
+    {% endif %}
 
-  </ul>
+  </ul><!-- .activities -->
 	<h1>
     <a 
       href="http://nerdfiles.net"

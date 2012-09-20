@@ -89,7 +89,7 @@
 
 <header>
   <ul class="activities">
-
+    {% if rt %}
     <li class="lastfm">
       <a 
         href="http://www.last.fm/user/wittysense"
@@ -112,7 +112,7 @@
         {% for track in rt %}
           <li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
             {% if track.title %}
-            <span itemprop="byArtist">{% replace search="–" replacement="</span><span itemprop="name">" %}{{ track.title }}{% endreplace %}</span>
+            <span itemprop="byArtist">{% replace search="–" replacement="</span><span itemprop='name'>" %}{{ track.title }}{% endreplace %}</span>
             {% endif %}
             <meta content="{{ track.url|cut:"www."}}" itemprop="url" />
           </li>
@@ -124,6 +124,7 @@
         </ol>
       </div><!-- @itemscope:MusicPlaylist -->
     </li>
+    {% endif %}
 
   </ul>
 	<h1>
