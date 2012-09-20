@@ -23,6 +23,11 @@
   -webkit-border-radius: 4px; }
 :-webkit-scrollbar {  width: 16px }
 
+.accessiblyhide { 
+  position: absolute;
+  left: -9999px;
+}
+
 /* test */
 
 body { background: rgba(230,230,230,.6); }
