@@ -256,6 +256,7 @@ INSTALLED_APPS = (
 
   'analytical',
   'utils',
+  'templateaddons',
 
 )
 
