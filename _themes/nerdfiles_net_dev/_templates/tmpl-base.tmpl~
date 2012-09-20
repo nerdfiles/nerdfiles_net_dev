@@ -113,7 +113,6 @@
           <li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
             {% if track.title %}
             <span itemprop="byArtist">{% replace search="–" replacement="</span><span itemprop="name">" %}{{ track.title }}{% endreplace %}</span>
-
             {% endif %}
             <meta content="{{ track.url|cut:"www."}}" itemprop="url" />
           </li>
