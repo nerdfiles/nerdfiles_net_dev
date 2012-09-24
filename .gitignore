@@ -24,3 +24,5 @@ tmp/*
 *.gitignore~
 settings_loc.py
 settings_dev.py
+*.tmpl~
+
