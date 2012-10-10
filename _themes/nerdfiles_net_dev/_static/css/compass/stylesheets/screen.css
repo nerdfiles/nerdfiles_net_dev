@@ -105,25 +105,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: -9999px;
 }
 
+/**
+ * CSS3 Image Filter Tools
+ */
 /* test */
-/* line 33, ../sass/screen.scss */
+/* line 106, ../sass/screen.scss */
 body {
   background: rgba(230, 230, 230, 0.6);
 }
 
 /* Base */
-/* line 38, ../sass/screen.scss */
+/* line 111, ../sass/screen.scss */
 p,
 ul, ol {
   margin: 0 0 1em;
 }
 
-/* line 41, ../sass/screen.scss */
+/* line 114, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 .5em;
 }
 
-/* line 44, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 body {
   text-rendering: optimizeLegibility;
   font-family: "Raleway", sans-serif;
@@ -133,7 +136,7 @@ body {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
 }
 
-/* line 56, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 #site-access ul {
   -moz-transform: rotate(10deg);
   -o-transform: rotate(10deg);
@@ -147,7 +150,7 @@ body {
   padding: 0;
 }
 
-/* line 63, ../sass/screen.scss */
+/* line 136, ../sass/screen.scss */
 a {
   font-family: 'Cedarville Cursive', cursive;
   padding: 0 10px;
@@ -159,12 +162,12 @@ a {
   border-bottom: 1px #999 dashed;
 }
 
-/* line 73, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 a[rel="external"]::after {
   content: ' ⤴';
 }
 
-/* line 76, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 body.base {
   padding: 100px 0;
   /*body.base div:nth-child(4) { 
@@ -173,95 +176,95 @@ body.base {
     top: auto !important; 
     position: fixed !important; }*/
 }
-/* line 79, ../sass/screen.scss */
+/* line 152, ../sass/screen.scss */
 body.base hr {
   border: none !important;
   border-top: 3px #ccc dashed !important;
 }
-/* line 84, ../sass/screen.scss */
+/* line 157, ../sass/screen.scss */
 body.base .container {
   margin: 0 auto 30px;
   width: 720px;
 }
-/* line 92, ../sass/screen.scss */
+/* line 165, ../sass/screen.scss */
 body.base header {
   border-bottom: 4px #111 solid;
   margin: 0 0 .5em;
   text-align: right;
 }
-/* line 98, ../sass/screen.scss */
+/* line 171, ../sass/screen.scss */
 body.base header h1 {
   display: inline-block;
   font-size: 2em;
   line-height: 1;
   padding: 25px 0 25px;
 }
-/* line 104, ../sass/screen.scss */
+/* line 177, ../sass/screen.scss */
 body.base #main-content h2 {
   font-size: 1.5em;
 }
-/* line 109, ../sass/screen.scss */
+/* line 182, ../sass/screen.scss */
 body.base blockquote {
   box-shadow: 0 0 .3em #ccc;
   padding: 20px;
 }
-/* line 110, ../sass/screen.scss */
+/* line 183, ../sass/screen.scss */
 body.base blockquote p {
   display: inline-block;
   margin: 0;
 }
-/* line 111, ../sass/screen.scss */
+/* line 184, ../sass/screen.scss */
 body.base blockquote cite {
   font-size: 16px;
 }
-/* line 112, ../sass/screen.scss */
+/* line 185, ../sass/screen.scss */
 body.base blockquote p::before {
   margin: 0 .5em 0 0;
   content: "❝ ";
   display: inline-block;
 }
-/* line 114, ../sass/screen.scss */
+/* line 187, ../sass/screen.scss */
 body.base .personalfunding {
   padding: 10px 0 0;
 }
-/* line 118, ../sass/screen.scss */
+/* line 191, ../sass/screen.scss */
 body.base #hyLiteDlg {
   top: 10px !important;
   background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC) !important;
 }
-/* line 121, ../sass/screen.scss */
+/* line 194, ../sass/screen.scss */
 body.base #hyLiteDlg a {
   font-size: 16px !important;
   font-family: sans-serif, Helvetica, Arial !important;
   display: block !important;
 }
-/* line 126, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 body.base #hyLiteDlg br {
   display: none !important;
 }
-/* line 128, ../sass/screen.scss */
+/* line 201, ../sass/screen.scss */
 body.base #hyLiteDlg label[for="StopCensorshipStates"] {
   display: block !important;
 }
-/* line 133, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 body.base #hyLiteDlg .senator_info br {
   display: block !important;
 }
 
-/* line 141, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .debug-False {
   display: none !important;
 }
 
-/* line 147, ../sass/screen.scss */
+/* line 220, ../sass/screen.scss */
 section.important .ui.kippt {
   text-align: center;
 }
-/* line 150, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 section.important .ui.widget {
   padding: 10px 0 20px;
 }
-/* line 153, ../sass/screen.scss */
+/* line 226, ../sass/screen.scss */
 section.important .ui.widget > *:first-child:before {
   display: -moz-inline-stack;
   display: inline-block;
@@ -276,7 +279,7 @@ section.important .ui.widget > *:first-child:before {
   top: -0.1em;
   content: "⏧";
 }
-/* line 164, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 section.important .ui.widget > *:first-child:after {
   display: block;
   line-height: .7;
@@ -287,7 +290,7 @@ section.important .ui.widget > *:first-child:after {
   opacity: .7;
   top: 15px;
 }
-/* line 176, ../sass/screen.scss */
+/* line 249, ../sass/screen.scss */
 section.important .ui.widget p {
   margin: 0;
 }
@@ -309,14 +312,14 @@ section.important .ui.widget p {
 /**
  * last.fm
  */
-/* line 205, ../sass/screen.scss */
+/* line 278, ../sass/screen.scss */
 ul.activities {
   margin: 0;
   padding: 0;
   display: inline-block;
   text-align: left;
 }
-/* line 212, ../sass/screen.scss */
+/* line 285, ../sass/screen.scss */
 ul.activities li a {
   display: inline-block;
   width: 48px;
@@ -324,11 +327,11 @@ ul.activities li a {
   border: none;
   text-indent: -9999px;
 }
-/* line 222, ../sass/screen.scss */
+/* line 295, ../sass/screen.scss */
 ul.activities li.lastfm {
   background: url("../../../img-ui/ui-icon-headphones.png") no-repeat;
 }
-/* line 224, ../sass/screen.scss */
+/* line 297, ../sass/screen.scss */
 ul.activities li.lastfm a {
   padding: 0;
   margin: 0;
