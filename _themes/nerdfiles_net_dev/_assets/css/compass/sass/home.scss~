@@ -12,6 +12,7 @@ ol {
   }
   li:hover { 
     color: #000; 
+    font-size: 1.3em;
   }
 }
 

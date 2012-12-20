@@ -20,11 +20,16 @@ ol li:hover {
 }
 
 /* line 19, ../sass/home.scss */
+h2 {
+  clear: left;
+}
+
+/* line 23, ../sass/home.scss */
 footer {
   border-bottom: 4px #000 solid;
 }
 
-/* line 23, ../sass/home.scss */
+/* line 27, ../sass/home.scss */
 ol li .iconic {
   padding: 0.2em 0.5em 1em 1em;
   float: left;
