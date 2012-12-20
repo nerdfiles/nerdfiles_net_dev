@@ -223,6 +223,8 @@ section.important {
     &.widget {
       //border-bottom: 3px #ccc dashed;
       padding: 10px 0 20px;
+
+      /*
       & > *:first-child:before {
         @include inline-block;
         margin: 0 20px 0 0;
@@ -234,6 +236,8 @@ section.important {
         top: -.1em;
         content: "⏧";
       }
+      */
+
       & > *:first-child:after {
         display: block;
         line-height: .7;
