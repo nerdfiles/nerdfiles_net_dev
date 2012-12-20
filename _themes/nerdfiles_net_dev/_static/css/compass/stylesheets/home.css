@@ -20,3 +20,14 @@ ol li:hover {
 footer {
   border-bottom: 4px #000 solid;
 }
+
+/* line 16, ../sass/home.scss */
+.iconic {
+  position: relative;
+  margin-left: -1em;
+  padding-left: 1em;
+  padding-bottom: 2em;
+  float: left;
+  padding-top: .2em;
+  padding-right: .5em;
+}
