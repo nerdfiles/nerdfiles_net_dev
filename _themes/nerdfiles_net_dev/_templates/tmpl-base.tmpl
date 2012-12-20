@@ -66,6 +66,12 @@
 
 {% render_block "css" %}
 
+<link
+  rel="stylesheet" 
+  charset="utf-8" 
+  href="{{ ASSETS_URL }}font/iconic/iconic_fill/iconic_fill.css"
+/>
+
 {% render_block "mediaquery" %}
 
 {% render_block "scriptloader" %}
@@ -83,6 +89,9 @@
 
 <nav id="site-access">
   <ul>
+    <li>
+    	<span class="iconic cog"></span>
+    </li>
     <li><a href="#main-content">Skip to content</a></li>
   </ul>
 </nav>
