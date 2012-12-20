@@ -5,7 +5,10 @@ ul, ol {
 ol { 
   //border: 2px #000 solid;
   padding: .5em .5em 0 .5em;
-  li { color: #999; }
+  li { 
+    color: #999; 
+
+  }
   li:hover { color: #000; }
 }
 
@@ -13,13 +16,10 @@ footer {
   border-bottom: 4px #000 solid;
 }
 
-ol .iconic {
+ol li .iconic {
+  padding: 0.2em 0.5em 1em 1em;
+  float: left;
   position: relative;
   margin-left: -1em;
-  padding-left: 1em;
-  padding-bottom: 2em;
-  float: left;
-  padding-top: .2em;
-  padding-right: .5em;
 }
 

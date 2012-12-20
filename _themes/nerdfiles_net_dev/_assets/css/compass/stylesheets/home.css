@@ -10,24 +10,23 @@ ol {
 /* line 8, ../sass/home.scss */
 ol li {
   color: #999;
+  margin: 0px 0px .5em;
+  clear: left;
 }
-/* line 9, ../sass/home.scss */
+/* line 13, ../sass/home.scss */
 ol li:hover {
   color: #000;
 }
 
-/* line 12, ../sass/home.scss */
+/* line 16, ../sass/home.scss */
 footer {
   border-bottom: 4px #000 solid;
 }
 
-/* line 16, ../sass/home.scss */
+/* line 20, ../sass/home.scss */
 ol li .iconic {
+  padding: 0.2em 0.5em 1em 1em;
+  float: left;
   position: relative;
   margin-left: -1em;
-  padding-left: 1em;
-  padding-bottom: 2em;
-  float: left;
-  padding-top: .2em;
-  padding-right: .5em;
 }
