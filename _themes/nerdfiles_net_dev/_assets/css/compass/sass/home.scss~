@@ -7,7 +7,8 @@ ol {
   padding: .5em .5em 0 .5em;
   li { 
     color: #999; 
-
+    margin: 0px 0px .5em;
+    clear: left;
   }
   li:hover { color: #000; }
 }

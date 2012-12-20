@@ -16,14 +16,15 @@ ol li {
 /* line 13, ../sass/home.scss */
 ol li:hover {
   color: #000;
+  margin: 1.5em 0 1.5em;
 }
 
-/* line 16, ../sass/home.scss */
+/* line 19, ../sass/home.scss */
 footer {
   border-bottom: 4px #000 solid;
 }
 
-/* line 20, ../sass/home.scss */
+/* line 23, ../sass/home.scss */
 ol li .iconic {
   padding: 0.2em 0.5em 1em 1em;
   float: left;
