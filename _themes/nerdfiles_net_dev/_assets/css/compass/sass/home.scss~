@@ -10,7 +10,9 @@ ol {
     margin: 0px 0px .5em;
     clear: left;
   }
-  li:hover { color: #000; }
+  li:hover { 
+    color: #000; 
+  }
 }
 
 footer { 
