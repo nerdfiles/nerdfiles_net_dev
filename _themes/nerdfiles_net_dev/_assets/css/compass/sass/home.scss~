@@ -3,7 +3,7 @@ ul, ol {
     margin: 0 0 1.1em; } }
 
 ol { 
-  border: 2px #000 solid;
+  //border: 2px #000 solid;
   padding: .5em .5em 0 .5em;
   li { color: #999; }
   li:hover { color: #000; }
@@ -12,3 +12,14 @@ ol {
 footer { 
   border-bottom: 4px #000 solid;
 }
+
+.iconic {
+  position: relative;
+  margin-left: -1em;
+  padding-left: 1em;
+  padding-bottom: 2em;
+  float: left;
+  padding-top: .2em;
+  padding-right: .5em;
+}
+
