@@ -219,6 +219,12 @@ section.important {
   .ui {
     &.kippt { 
       text-align: center;
+
+      .iconic {
+        font-size: 2em; 
+        line-height: 1em; 
+        vertical-align: middle;
+      }
     }//widget.kippt
     &.widget {
       //border-bottom: 3px #ccc dashed;
