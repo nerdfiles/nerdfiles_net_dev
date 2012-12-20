@@ -341,6 +341,13 @@ ul.activities li.lastfm a {
   margin: 0;
 }
 
+/* line 315, ../sass/screen.scss */
+.imprint {
+  text-align: right;
+  margin: 0px 0px .5em;
+  clear: left;
+}
+
 /**
  * disqus
  */

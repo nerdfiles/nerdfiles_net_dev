@@ -16,7 +16,7 @@ ol li {
 /* line 13, ../sass/home.scss */
 ol li:hover {
   color: #000;
-  margin: 1.5em 0 1.5em;
+  font-size: 1.3em;
 }
 
 /* line 19, ../sass/home.scss */
