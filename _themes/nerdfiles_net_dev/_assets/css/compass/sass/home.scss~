@@ -13,7 +13,12 @@ ol {
   li:hover { 
     color: #000; 
     font-size: 1.3em;
+    &:
   }
+}
+
+h2 {
+  clear: left;
 }
 
 footer { 
