@@ -13,7 +13,7 @@
 {% endaddtoblock %}
 {% endblock %}
 
-{% block body_class %}base home{% endblock %}
+{% block body_class %}base home-page{% endblock %}
 
 {% block personalfunding %}
   {% if not LOCAL %}
@@ -22,7 +22,7 @@
     <iframe 
       style="border: 0; margin: 0; padding: 0;"
       src="https://www.gittip.com/nerdfiles/widget.html" 
-      width="48pt" height="20pt"></iframe>: <a rel="nofollow" href="http://shaunew.github.com/Pac-Man/">relax</a> by <a href="https://github.com/shaunew">shaunew</a>.
+      width="48pt" height="20pt"></iframe>: <a rel="nofollow" href="https://github.com/shaunew/Pac-Man">relax</a> by <a href="https://github.com/shaunew">shaunew</a>.
     </p>
   </section>
   {% endif %}
