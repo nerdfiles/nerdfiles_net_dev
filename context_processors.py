@@ -16,6 +16,7 @@ import twitter
 #from kippt import kippt_wrapper
 import feedparser
 import customfeed
+from settings import API_KEY, API_SECRET, username, password_hash
 
 # == CONTEXT PROCESSORS ======================================== #
 
@@ -111,25 +112,40 @@ def latest_tweet(request):
   }
 
 def lastfm(request):
+
+  import pylast 
+
+  network = pylast.LastFMNetwork(api_key = API_KEY, api_secret = 
+      API_SECRET, username = username, password_hash = password_hash)
+
+  user_data = network.get_user('wittysense')
+  l_tracks = user_data.get_loved_tracks(limit=5)
+  r_tracks = user_data.get_recent_tracks(limit=5)
+  loved_tracks = [l.track for l in l_tracks]
+  recent_tracks = [r.track for r in r_tracks]
+  network.enable_caching()
+
+  #cache
   lfm_data = cache.get('lfm_data')
-
   TIMEOUT = 3600*12
-
   if lfm_data:
     return {
-      "lfm_data": lfm_data
+      "rt": recent_tracks
     }
 
-  lfm_data = views.lastfm_data(request)
-  lfm_data = lfm_data.content
+  #set cache for next time
   cache.set(
     "lfm_data",
-    lfm_data,
+    recent_tracks,
     TIMEOUT
   )
 
+  #raw
+  lfm_data = recent_tracks
+
+  #load raw
   return {
-    'rt': json.loads(lfm_data)
+    'rt': recent_tracks
   }
 
 def site_info(request):
