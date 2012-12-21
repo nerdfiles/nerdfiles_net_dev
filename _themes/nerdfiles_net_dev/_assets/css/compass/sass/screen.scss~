@@ -103,7 +103,13 @@
 
 /* test */
 
-body { background: rgba(230,230,230,.6); }
+body { 
+  background: rgba(230,230,230,.6); 
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
 
 /* Base */
 
@@ -315,6 +321,7 @@ ul.activities {
 .imprint {
   text-align: right;
   font-size: .7em;
+  padding: .4em 0 0;
   margin: 0px 0px .5em;
   clear: left;
 }

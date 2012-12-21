@@ -103,7 +103,13 @@
 
 /* test */
 
-body { background: rgba(230,230,230,.6); }
+body { 
+  background: rgba(230,230,230,.6); 
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
 
 /* Base */
 
