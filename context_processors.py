@@ -22,10 +22,8 @@ from settings import API_KEY, API_SECRET, username, password_hash
 
 def kippt_rss(request):
   TIMEOUT = settings.KIPPT_TIMEOUT
-  TIMEOUT = 3600*12 # wait 30 seconds
 
   '''
-    sort this somehow 
     @nerdfiles
   ''' 
 
@@ -133,19 +131,19 @@ def lastfm(request):
       "rt": recent_tracks
     }
 
-  #set cache for next time
-  cache.set(
-    "lfm_data",
-    recent_tracks,
-    TIMEOUT
-  )
-
   #raw
   lfm_data = recent_tracks
 
+  #set cache for next time
+  cache.set(
+    "lfm_data",
+    lfm_data,
+    TIMEOUT
+  )
+
   #load raw
   return {
-    'rt': recent_tracks
+    'rt': lfm_data
   }
 
 def site_info(request):
