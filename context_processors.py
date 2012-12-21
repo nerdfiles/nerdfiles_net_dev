@@ -129,7 +129,8 @@ def lastfm(request):
   )
 
   return {
-    'rt': json.loads(lfm_data)
+    #'rt': json.loads(lfm_data)
+    'rt': False
   }
 
 def site_info(request):
