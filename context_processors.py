@@ -21,7 +21,7 @@ import customfeed
 
 def kippt_rss(request):
   TIMEOUT = settings.KIPPT_TIMEOUT
-  TIMEOUT = 15 # wait 30 seconds
+  TIMEOUT = 3600*12 # wait 30 seconds
 
   '''
     sort this somehow 
@@ -113,7 +113,7 @@ def latest_tweet(request):
 def lastfm(request):
   lfm_data = cache.get('lfm_data')
 
-  TIMEOUT = 1800
+  TIMEOUT = 3600*12
 
   if lfm_data:
     return {
