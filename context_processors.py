@@ -68,7 +68,7 @@ def kippt_rss(request):
   #pprint(d.feed)
 
   #TIMEOUT = settings.KIPPT_TIMEOUT
-  TIMEOUT = 300 # wait a week
+  TIMEOUT = 1800*36*2 # wait a while (secs)
 
   kippt_imps = cache.get('kippt_imps')
   if kippt_imps:
@@ -123,7 +123,7 @@ def lastfm(request):
 
   #cache
   lfm_data = cache.get('lfm_data')
-  TIMEOUT = 300 #secs
+  TIMEOUT = 1800*36 #secs
   if lfm_data:
     return {
       "rt": recent_tracks
