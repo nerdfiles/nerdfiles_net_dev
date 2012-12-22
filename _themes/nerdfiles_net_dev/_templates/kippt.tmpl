@@ -1,16 +1,16 @@
 {% load cache %}
 
-{% cache 43200 kippt %}
 <section class="important">
   <div class="ui widget kippt">
 
     {% if imp_feed %}
+
     <p> <span class="iconic share"></span> Hey, go read 
 
-      {% for item in imp_feed.entries|slice:":2" %}
+      {% for item in imp_feed %}
 
         <a 
-          href="{{ item.link }}" 
+          href="http://kippt.com{{ item.app_url }}" 
           title="{{ item.title }}" 
           target="_blank" 
           rel="external" 
@@ -40,6 +40,5 @@
 
   </div>
 </section>
-{% endcache %}
 
 

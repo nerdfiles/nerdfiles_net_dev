@@ -13,19 +13,19 @@ import json
 from datetime import datetime
 from django.core.cache import cache
 import twitter
-#from kippt import kippt_wrapper
+from kippt import kippt_wrapper
 import feedparser
 import customfeed
 from settings import API_KEY, API_SECRET, username, password_hash
 
 # == CONTEXT PROCESSORS ======================================== #
 
+'''
 def kippt_rss(request):
-  TIMEOUT = settings.KIPPT_TIMEOUT
+  #TIMEOUT = settings.KIPPT_TIMEOUT
+  TIMEOUT = 300 #secs
 
-  '''
-    @nerdfiles
-  ''' 
+  # @nerdfiles
 
   imp_feed = cache.get('imp_feed')
   if imp_feed:
@@ -53,41 +53,39 @@ def kippt_rss(request):
   return {
     "imp_feed": imp_feed
   }
-
-
 '''
-def kippt_saves(request):
-  #k = kippt_wrapper.user(
-  #                    '%s' % settings.KIPPT_API_USER, 
-  #                    '%s' % settings.KIPPT_API_TOKEN, 
-  #                    )
-  #pprint(k.getList(134737)) !important
+
+def kippt_rss(request):
+  k = kippt_wrapper.user(
+                      '%s' % settings.KIPPT_API_USER, 
+                      '%s' % settings.KIPPT_API_TOKEN, 
+                      )
+  #pprint(k.getList(134737))
   #pprint(dir(k.getList(134737)))
   #print k.getList(134737).items()
-  d = feedparser.parse('https://kippt.com/nerdfiles/important/feed')
-  pprint(d.feed)
+  
+  #d = feedparser.parse('https://kippt.com/nerdfiles/important/feed')
+  #pprint(d.feed)
 
-  TIMEOUT = settings.KIPPT_TIMEOUT
-  TIMEOUT = 86400*5 # wait a week
+  #TIMEOUT = settings.KIPPT_TIMEOUT
+  TIMEOUT = 300 # wait a week
 
-  kippt_saves = cache.get('kippt_saves')
-  if kippt_saves:
+  kippt_imps = cache.get('kippt_imps')
+  if kippt_imps:
     return {
-      "kippt_saves": kippt_saves[1]
+      "imp_feed": kippt_imps
     }
-    
-  kippt_saves = k.search('#!', limit=2)
+
+  kippt_imps = k.getClips(134737, 2)
   cache.set(
-    'kippt_saves', 
-    kippt_saves, 
+    'kippt_imps', 
+    kippt_imps[1], 
     TIMEOUT
   )
 
   return {
-    "kippt_saves": kippt_saves[1],
+    "imp_feed": kippt_imps[1],
   }
-  pprint(d.feed)
-'''
 
 def latest_tweet(request):
   tweet = cache.get('tweet')
@@ -125,7 +123,7 @@ def lastfm(request):
 
   #cache
   lfm_data = cache.get('lfm_data')
-  TIMEOUT = 3600*12
+  TIMEOUT = 300 #secs
   if lfm_data:
     return {
       "rt": recent_tracks
