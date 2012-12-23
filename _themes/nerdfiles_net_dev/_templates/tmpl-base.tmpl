@@ -62,7 +62,6 @@
 
 <title>{% page_attribute "page_title" %} &#9679; nerdfiles.net</title>
 
-{% cache 10800 %}
 {% render_block "font" %}
 
 {% render_block "css" %}
@@ -73,10 +72,9 @@
   href="{{ ASSETS_URL }}font/iconic/iconic_fill/iconic_fill.css"
 />
 
-{% render_block "mediaquery" %}
+{# render_block "mediaquery" #}
 
 {% render_block "scriptloader" %}
-{% endcache %}
 
 {% analytical_head_bottom %}
 </head>
@@ -95,7 +93,7 @@
   </ul>
 </nav>
 
-{% cache 3600 activities %}
+{% cache 10800 activities %}
 <header>
   <ul class="activities">
     {% if rt %}
@@ -145,9 +143,7 @@
 </header>
 {% endcache %}
 
-{% cache 10800 kippting %}
 {% render_block "kippt" %}
-{$ endcache %}
 
 {% cache 10800 main %}
 {% block main_content %}
