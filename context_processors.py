@@ -84,7 +84,8 @@ def kippt_rss(request):
   )
 
   return {
-    "imp_feed": kippt_imps[1],
+    #"imp_feed": kippt_imps[1],
+    "imp_feed": False
   }
 
 def latest_tweet(request):
@@ -115,9 +116,7 @@ def lastfm(request):
       API_SECRET, username = username, password_hash = password_hash)
 
   user_data = network.get_user('wittysense')
-  l_tracks = user_data.get_loved_tracks(limit=5)
   r_tracks = user_data.get_recent_tracks(limit=5)
-  loved_tracks = [l.track for l in l_tracks]
   recent_tracks = [r.track for r in r_tracks]
   network.enable_caching()
 
@@ -141,7 +140,8 @@ def lastfm(request):
 
   #load raw
   return {
-    'rt': lfm_data
+    #'rt': lfm_data
+    'rt': False
   }
 
 def site_info(request):

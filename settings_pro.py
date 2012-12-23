@@ -246,7 +246,7 @@ INSTALLED_APPS = (
   # == apps == #
   'notification',
   #'lastfm',
-  'south',
+  #'south',
   'django_extensions',
   'django_memcached',
 
