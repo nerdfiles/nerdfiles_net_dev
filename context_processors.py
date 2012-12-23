@@ -84,8 +84,7 @@ def kippt_rss(request):
   )
 
   return {
-    #"imp_feed": kippt_imps[1],
-    "imp_feed": False
+    "imp_feed": kippt_imps[1],
   }
 
 def latest_tweet(request):
@@ -140,8 +139,7 @@ def lastfm(request):
 
   #load raw
   return {
-    #'rt': lfm_data
-    'rt': False
+    'rt': lfm_data,
   }
 
 def site_info(request):

@@ -184,8 +184,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
   'sekizai.context_processors.sekizai',
   
   'context_processors.site_info',
-  #'context_processors.lastfm',
-  #'context_processors.kippt_rss',
+  'context_processors.lastfm',
+  'context_processors.kippt_rss',
 
   #'context_processors.latest_tweet',
   #'context_processors.kippt_saves',
@@ -407,7 +407,7 @@ CACHES = {
 }
 
 CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
-CACHE_TIMEOUT = 3600 # 3 hours
+CACHE_TIMEOUT = 10800 # 3 hours
 CACHE_PREFIX = "Z"
 
 
