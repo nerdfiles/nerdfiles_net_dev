@@ -93,6 +93,7 @@
   </ul>
 </nav>
 
+{% cache 3600 activities %}
 <header>
   <ul class="activities">
     {% if rt %}
@@ -140,9 +141,11 @@
     </a>
   </h1>
 </header>
+{% endcache %}
 
 {# render_block "kippt" #}
 
+{% cache 3600 main %}
 {% block main_content %}
 <section>
     <article id="main-content">
@@ -163,6 +166,7 @@
     </article>
 </section>
 {% endblock %}
+{% endcache %}
 
 {% block disqus %}
 {% endblock %}
@@ -195,6 +199,7 @@
 </section>
 {% endblock %}
 
+{% cache 3600 footer %}
 {% block footer %}
 <footer>
 {% placeholder "Footer" or %}
@@ -205,6 +210,7 @@
   <small>Using <a href="http://somerandomdude.com/work/iconic/">Iconic</a>.</small>
 </aside>
 {% endblock %}
+{% endcache %}
 
 {# block personalfunding #}
 {# endblock #}
