@@ -259,6 +259,7 @@ section.important {
         position: relative;
         color: #ccc;
         opacity: .7;
+        
         top: 15px;
       }
       p { 
