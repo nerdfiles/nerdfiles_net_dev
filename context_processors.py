@@ -4,18 +4,8 @@
 
 from django.conf import settings
 from django.contrib.sites.models import Site
-from lastfm import views
-from lastfm.views import *
-from pprint import pprint
-from StringIO import StringIO
-from django.utils.safestring import SafeString
-import json
-from datetime import datetime
 from django.core.cache import cache
-import twitter
 from kippt import kippt_wrapper
-import feedparser
-import customfeed
 from settings import API_KEY, API_SECRET, username, password_hash
 import pylast 
 
