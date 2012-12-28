@@ -16,11 +16,11 @@ If a user clicks on anything, even the page itself, a feedback (recursive callba
 
 ## Todo
 
-1. Develop Fabric workflows
-2. Move Fabric workflows from this project to Bristow Group project
-3. Cleanup
-4. Move CSS Optimization from Bristow to this project
-5. Move JS Optimization from Bristow to this project
+1. Convert Last.fm and Kippt context processors to Django Templates
+2. CoffeeScript: plugins.js for both last.fm and kippt.
+3. Flesh out "gesture design" for adding pages to Django CMS.
+4. Prep for tablets.
+5. (Buy a tablet.) Install tablet emulation.
 
 ## Project Details
 

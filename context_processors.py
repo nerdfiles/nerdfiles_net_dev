@@ -17,6 +17,7 @@ from kippt import kippt_wrapper
 import feedparser
 import customfeed
 from settings import API_KEY, API_SECRET, username, password_hash
+import pylast 
 
 # == CONTEXT PROCESSORS ======================================== #
 
@@ -56,18 +57,8 @@ def kippt_rss(request):
 '''
 
 def kippt_rss(request):
-  k = kippt_wrapper.user(
-                      '%s' % settings.KIPPT_API_USER, 
-                      '%s' % settings.KIPPT_API_TOKEN, 
-                      )
-  #pprint(k.getList(134737))
-  #pprint(dir(k.getList(134737)))
-  #print k.getList(134737).items()
-  
-  #d = feedparser.parse('https://kippt.com/nerdfiles/important/feed')
-  #pprint(d.feed)
+  k = kippt_wrapper.user('%s' % settings.KIPPT_API_USER, '%s' % settings.KIPPT_API_TOKEN,)
 
-  #TIMEOUT = settings.KIPPT_TIMEOUT
   TIMEOUT = 1800*36*2 # wait a while (secs)
 
   kippt_imps = cache.get('kippt_imps')
@@ -109,23 +100,22 @@ def latest_tweet(request):
 
 def lastfm(request):
 
-  import pylast 
-
-  network = pylast.LastFMNetwork(api_key = API_KEY, api_secret = 
-      API_SECRET, username = username, password_hash = password_hash)
-
-  user_data = network.get_user('wittysense')
-  r_tracks = user_data.get_recent_tracks(limit=5)
-  recent_tracks = [r.track for r in r_tracks]
-  network.enable_caching()
-
   #cache
   lfm_data = cache.get('lfm_data')
   TIMEOUT = 1800*36 #secs
   if lfm_data:
     return {
-      "rt": recent_tracks
+      "rt": lfm_data
     }
+
+  network = pylast.LastFMNetwork(api_key = API_KEY, api_secret = 
+      API_SECRET, username = username, password_hash = password_hash)
+
+  network.enable_caching()
+
+  user_data = network.get_user('wittysense')
+  r_tracks = user_data.get_recent_tracks(limit=5)
+  recent_tracks = [r.track for r in r_tracks]
 
   #raw
   lfm_data = recent_tracks
