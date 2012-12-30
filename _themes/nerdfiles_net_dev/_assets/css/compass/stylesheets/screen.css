@@ -375,6 +375,7 @@ ul.activities li.lastfm a {
  */
 /* line 273, ../sass/screen.scss */
 .m-tipjar {
+  padding-top: 20px;
   clear: both;
   display: block;
   text-align: center;

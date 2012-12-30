@@ -271,6 +271,7 @@ ul.activities {
  */
 
 .m-tipjar {
+  clear: both;
   display: block;
   text-align: center;
   .m--content {
