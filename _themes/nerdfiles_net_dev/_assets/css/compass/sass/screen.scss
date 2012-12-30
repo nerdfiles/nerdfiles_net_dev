@@ -319,12 +319,27 @@ ul.activities {
   }
 }//.activities
 
-.imprint {
+.m-imprint {
+  @include inline-block;
+  .m-widget--content {
+    @include inline-block;
+  }
   text-align: right;
   font-size: .7em;
   padding: .4em 0 0;
   margin: 0px 0px .5em;
   clear: left;
+}
+
+/**
+ * gittip
+ */
+
+.m-tipjar {
+  @include inline-block;
+  .m-wiget--content {
+    @include inline-block;
+  }
 }
 
 /**
