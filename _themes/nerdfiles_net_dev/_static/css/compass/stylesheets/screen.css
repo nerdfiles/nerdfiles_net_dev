@@ -369,11 +369,29 @@ ul.activities li.lastfm a {
   margin: 0px 0px .5em;
   clear: left;
 }
+/* line 333, ../sass/screen.scss */
+.m-imprint .m--content ul {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 335, ../sass/screen.scss */
+.m-imprint .m--content ul li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
 
 /**
  * gittip
  */
-/* line 345, ../sass/screen.scss */
+/* line 351, ../sass/screen.scss */
 .m-tipjar {
   display: -moz-inline-stack;
   display: inline-block;
@@ -382,7 +400,7 @@ ul.activities li.lastfm a {
   zoom: 1;
   *display: inline;
 }
-/* line 347, ../sass/screen.scss */
+/* line 353, ../sass/screen.scss */
 .m-tipjar .m--content {
   padding: 1em 0;
   display: -moz-inline-stack;

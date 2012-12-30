@@ -330,6 +330,12 @@ ul.activities {
   @include inline-block;
   .m--content {
     @include inline-block;
+    ul { 
+      @include inline-block;
+      li {
+        @include inline-block;
+      }
+    }
     text-align: right;
     font-size: .7em;
     padding: .4em 0 0;

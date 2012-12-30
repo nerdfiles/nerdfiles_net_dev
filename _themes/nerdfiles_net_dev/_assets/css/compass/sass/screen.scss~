@@ -330,6 +330,9 @@ ul.activities {
   @include inline-block;
   .m--content {
     @include inline-block;
+    ul { 
+      @include inline-block;
+    }
     text-align: right;
     font-size: .7em;
     padding: .4em 0 0;
@@ -345,6 +348,7 @@ ul.activities {
 .m-tipjar {
   @include inline-block;
   .m--content {
+    padding: 1em 0;
     @include inline-block;
   }
 }
