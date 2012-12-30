@@ -99,12 +99,13 @@
 
 <nav id="site-access">
   <ul>
-    <li><a href="#main-content">Skip to content</a></li>
+    <li><a href="#main-content">Skip to Content</a></li><!-- #isking -->
+    <li><a href="#drop-tip">Drop a tip?</a></li><!-- #tipjar -->
   </ul>
 </nav>
 
 {% cache 10800 activities %}
-<header>
+<header class="site-header">
   <ul class="activities">
     {% if rt %}
     <li class="lastfm">
@@ -150,7 +151,7 @@
       nerdfiles.net
     </a>
   </h1>
-</header>
+</header><!-- .site-header -->
 {% endcache %}
 
 {% render_block "kippt" %}
@@ -158,7 +159,7 @@
 {% cache 10800 main %}
 {% block main_content %}
 <section>
-    <article id="main-content">
+    <article id="main-content" role="main" class="main">
 
         <!--section>
           <header>
@@ -169,7 +170,7 @@
     
         <section>
         {% placeholder "Main Content" or %}
-          <p>blugggh.</p>
+          <p><code>.empty</code></p>
         {% endplaceholder %}
         </section>
 

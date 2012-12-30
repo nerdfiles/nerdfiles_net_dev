@@ -1,7 +1,7 @@
 @import "compass/reset";
 @import "compass/css3/border-radius";
 @import "compass/css3/inline-block";
-
+@import "utils/_image-filters";
 /* silent scrollbars */
 
 ::-webkit-scrollbar-track-piece {
@@ -35,69 +35,6 @@
 
 @function checkme() {
 
-}
-
-@mixin if-blur($amt: 4px) {
-  -o-filter: blur($amt);
-  -ms-filter: blur($amt);
-  -moz-filter: blur($amt);
-  -webkit-filter: blur($amt);
-}
-
-@mixin if-brightness($amt: 0.35) {
-  -o-filter: brightness($amt);
-  -ms-filter: brightness($amt);
-  -moz-filter: brightness($amt);
-  -webkit-filter: brightness($amt);
-}
-
-@mixin if-contrast($amt: 140%) {
-  -o-filter: contrast($amt);
-  -ms-filter: contrast($amt);
-  -moz-filter: contrast($amt);
-  -webkit-filter: contrast($amt);
-}
-
-@mixin if-grayscale($amt: 100%) {
-  -o-filter: grayscale($amt);
-  -ms-filter: grayscale($amt);
-  -moz-filter: grayscale($amt);
-  -webkit-filter: grayscale($amt);
-}
-
-@mixin if-huerotate($deg: 180deg) {
-  -o-filter: hue-rotate($deg);
-  -ms-filter: hue-rotate($deg);
-  -moz-filter: hue-rotate($deg);
-  -webkit-filter: hue-rotate($deg);
-}
-
-@mixin if-invert($amt: 100%) {
-  -o-filter: invert($amt);
-  -ms-filter: invert($amt);
-  -moz-filter: invert($amt);
-  -webkit-filter: invert($amt);
-}
-
-@mixin if-opacity($amt: 60%) {
-  -o-filter: opacity($amt);
-  -ms-filter: opacity($amt);
-  -moz-filter: opacity($amt);
-  -webkit-filter: opacity($amt);
-}
-
-@mixin if-saturate($amt: 4) {
-  -o-filter: saturate($amt);
-  -ms-filter: saturate($amt);
-  -moz-filter: saturate($amt);
-  -webkit-filter: saturate($amt);
-}
-
-@mixin if-sepia($amt: 100%) {
-  -o-filter: sepia($amt);
-  -ms-filter: sepia($amt);
-  -moz-filter: sepia($amt);
-  -webkit-filter: sepia($amt);
 }
 
 
@@ -180,9 +117,9 @@ body.base {
     //border-top: 1px #999 dashed; 
     line-height: 1; 
     padding: 25px 0 25px; }
-    #main-content h2 { font-size: 1.5em; }
-    #main-content header { }
-    #main-content { 
+    .main h2 { font-size: 1.5em; }
+    .main header { }
+    .main { 
     //border-bottom: 1px #999 dashed; 
   }
   blockquote { box-shadow: 0 0 .3em #ccc; padding: 20px; }
@@ -190,36 +127,15 @@ body.base {
   blockquote cite { font-size: 16px; }
   blockquote p::before { margin: 0 .5em 0 0; content: "❝ "; display: inline-block; }
 
-  .personalfunding { 
-    padding: 10px 0 0;
-  }//.personalfunding
-
-  #hyLiteDlg {
-    top: 10px !important;
-    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC) !important;
-    a {
-      font-size: 16px !important;
-      font-family: sans-serif, Helvetica, Arial !important;
-      display: block !important;
-    }//a
-    br {
-      display: none !important; }
-    label[for="StopCensorshipStates"] {
-      display: block !important;
-    }//label[for="StopCensorshipStates"]
-    #StopCensorshipStates { }
-    .senator_info { 
-      br { 
-        display: block !important;
-      }
-    }//.senator_info
-  }//#hyLiteDlg
-
 }//body.base
 
 .debug-False {
   display: none !important;
 }
+
+/**
+ * Important! < Kippt Feed
+ */
 
 section.important {
   .ui {
@@ -267,7 +183,8 @@ section.important {
       }
     }
   }
-}
+}//.important
+
 
 /**
  * SoundCloud
