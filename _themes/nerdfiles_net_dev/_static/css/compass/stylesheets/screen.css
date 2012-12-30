@@ -384,6 +384,7 @@ ul.activities li.lastfm a {
 }
 /* line 347, ../sass/screen.scss */
 .m-tipjar .m--content {
+  padding: 1em 0;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;

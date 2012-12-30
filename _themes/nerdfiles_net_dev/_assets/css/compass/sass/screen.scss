@@ -345,6 +345,7 @@ ul.activities {
 .m-tipjar {
   @include inline-block;
   .m--content {
+    padding: 1em 0;
     @include inline-block;
   }
 }
