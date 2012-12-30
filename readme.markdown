@@ -1,4 +1,4 @@
-# [nerdfiles.net](http://nerdfiles.net) [dash](http://nerdfiles.net/dashboard/) [github](http://github.com/nerdfiles/nerdfiles_net_dev) : [ssh](git+git@github.com:nerdfiles/nerdfiles_net_dev.git#nerdfiles_net_dev)
+# [nerdfiles.net](http://nerdfiles.net) [dash](http://nerdfiles.net/dashboard/) [github](http://github.com/nerdfiles/nerdfiles_net_dev) : [ssh](git://git+git@github.com:nerdfiles/nerdfiles_net_dev.git#nerdfiles_net_dev)
 
 Let's call it something like "the living journal." The basic idea was tossed about in "The Weedy Florilegium." 
 
