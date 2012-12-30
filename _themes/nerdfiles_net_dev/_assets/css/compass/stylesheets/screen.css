@@ -385,6 +385,7 @@ ul.activities li.lastfm a {
  */
 /* line 274, ../sass/screen.scss */
 .m-tipjar {
+  display: block;
   text-align: center;
 }
 
