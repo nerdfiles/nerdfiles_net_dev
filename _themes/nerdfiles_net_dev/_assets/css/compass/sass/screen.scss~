@@ -1,7 +1,7 @@
 @import "compass/reset";
 @import "compass/css3/border-radius";
 @import "compass/css3/inline-block";
-@import "utils/image-filters";
+@import "utils/_image-filters";
 /* silent scrollbars */
 
 ::-webkit-scrollbar-track-piece {
@@ -242,6 +242,7 @@ ul.activities {
 }
 
 .m {
+  @include inline-block;
   .m--title {
   }
   .m--content {

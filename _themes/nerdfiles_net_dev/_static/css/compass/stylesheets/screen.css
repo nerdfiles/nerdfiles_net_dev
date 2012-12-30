@@ -328,7 +328,17 @@ ul.activities li.lastfm a {
   padding-top: 20px;
 }
 
-/* line 251, ../sass/screen.scss */
+/* line 244, ../sass/screen.scss */
+.m {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 252, ../sass/screen.scss */
 .m-imprint {
   display: -moz-inline-stack;
   display: inline-block;
@@ -337,7 +347,7 @@ ul.activities li.lastfm a {
   zoom: 1;
   *display: inline;
 }
-/* line 253, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 .m-imprint .m--content {
   display: -moz-inline-stack;
   display: inline-block;
@@ -351,7 +361,7 @@ ul.activities li.lastfm a {
   margin: 0px 0px .5em;
   clear: left;
 }
-/* line 255, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 .m-imprint .m--content ul {
   display: -moz-inline-stack;
   display: inline-block;
@@ -360,7 +370,7 @@ ul.activities li.lastfm a {
   zoom: 1;
   *display: inline;
 }
-/* line 257, ../sass/screen.scss */
+/* line 258, ../sass/screen.scss */
 .m-imprint .m--content ul li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -373,7 +383,7 @@ ul.activities li.lastfm a {
 /**
  * gittip
  */
-/* line 273, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 .m-tipjar {
   text-align: center;
 }
