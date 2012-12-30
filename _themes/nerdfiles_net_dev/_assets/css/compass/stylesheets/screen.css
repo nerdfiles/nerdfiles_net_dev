@@ -346,7 +346,7 @@ ul.activities li.lastfm a {
   margin: 0;
 }
 
-/* line 322, ../sass/screen.scss */
+/* line 329, ../sass/screen.scss */
 .m-imprint {
   display: -moz-inline-stack;
   display: inline-block;
@@ -360,8 +360,8 @@ ul.activities li.lastfm a {
   margin: 0px 0px .5em;
   clear: left;
 }
-/* line 324, ../sass/screen.scss */
-.m-imprint .m-widget--content {
+/* line 331, ../sass/screen.scss */
+.m-imprint .m--content {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -373,7 +373,7 @@ ul.activities li.lastfm a {
 /**
  * gittip
  */
-/* line 338, ../sass/screen.scss */
+/* line 345, ../sass/screen.scss */
 .m-tipjar {
   display: -moz-inline-stack;
   display: inline-block;
@@ -382,8 +382,8 @@ ul.activities li.lastfm a {
   zoom: 1;
   *display: inline;
 }
-/* line 340, ../sass/screen.scss */
-.m-tipjar .m-wiget--content {
+/* line 347, ../sass/screen.scss */
+.m-tipjar .m--content {
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;

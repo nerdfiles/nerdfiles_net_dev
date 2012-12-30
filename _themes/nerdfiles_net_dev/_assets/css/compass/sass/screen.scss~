@@ -319,9 +319,17 @@ ul.activities {
   }
 }//.activities
 
+.m {
+  .m--title {
+  }
+  .m--content {
+  }
+}
+
 .m-imprint {
   @include inline-block;
-  .m-widget--content {
+  .m--content {
+    @include inline-block;
   }
   text-align: right;
   font-size: .7em;
@@ -336,7 +344,7 @@ ul.activities {
 
 .m-tipjar {
   @include inline-block;
-  .m-wiget--content {
+  .m--content {
     @include inline-block;
   }
 }
