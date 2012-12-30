@@ -89,7 +89,7 @@
 {% analytical_head_bottom %}
 </head>
 
-<body class="nerdfiles-net-{{ slug }} {% block body_class %}base{% endblock %}">
+<body class="nerdfiles-net-{% page_attribute "slug" %} {% block body_class %}base{% endblock %}">
 
 {% analytical_body_top %}
 
@@ -220,7 +220,9 @@
 
   <aside class="m m-imprint">
     <div class="m--content">
-      <small>Using <a href="http://somerandomdude.com/work/iconic/">Iconic</a>.</small>
+      <small>
+        <a href="http://lint.brihten.com/html/report?u={{ SITE_URL }}{% page_attribute "slug" %}&s=1111111">html</a> | using <a href="http://somerandomdude.com/work/iconic/">iconic</a>.
+      </small>
     </div>
   </aside><!-- .m -->
 {% endblock %}
