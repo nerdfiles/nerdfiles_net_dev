@@ -25,11 +25,6 @@ h2 {
 }
 
 /* line 23, ../sass/home.scss */
-footer {
-  border-bottom: 4px #000 solid;
-}
-
-/* line 27, ../sass/home.scss */
 ol li .iconic {
   padding: 0.2em 0.5em 1em 1em;
   float: left;

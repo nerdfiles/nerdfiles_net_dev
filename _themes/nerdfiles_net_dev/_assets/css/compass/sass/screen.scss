@@ -319,6 +319,11 @@ ul.activities {
   }
 }//.activities
 
+.site-footer { 
+  border-top: 4px #000 solid;
+  padding-top: 20px;
+}
+
 .m {
   .m--title {
   }
@@ -351,7 +356,6 @@ ul.activities {
 .m-tipjar {
   @include inline-block;
   .m--content {
-    padding: 1em 0;
     @include inline-block;
   }
 }
