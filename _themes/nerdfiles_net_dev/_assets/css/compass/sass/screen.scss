@@ -355,6 +355,7 @@ ul.activities {
 
 .m-tipjar {
   @include inline-block;
+  text-align: center;
   .m--content {
     @include inline-block;
   }

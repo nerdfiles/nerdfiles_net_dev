@@ -405,8 +405,9 @@ ul.activities li.lastfm a {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
+  text-align: center;
 }
-/* line 358, ../sass/screen.scss */
+/* line 359, ../sass/screen.scss */
 .m-tipjar .m--content {
   display: -moz-inline-stack;
   display: inline-block;
