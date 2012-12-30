@@ -324,7 +324,7 @@ ul.activities {
   }
   .m--content {
   }
-}
+}//.m
 
 .m-imprint {
   @include inline-block;

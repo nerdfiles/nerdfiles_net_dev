@@ -1,4 +1,4 @@
-# [nerdfiles.net](http://nerdfiles.net) | [dash](http://nerdfiles.net/dashboard/) [github](http://github.com/nerdfiles/nerdfiles_net_dev) | [ssh](pip://git+git@github.com:nerdfiles/nerdfiles_net_dev.git#nerdfiles_net_dev) [read-only](git://github.com/nerdfiles/nerdfiles_net_dev.git)
+#[nerdfiles.net](http://nerdfiles.net) | [dash](http://nerdfiles.net/dashboard/) [github](http://github.com/nerdfiles/nerdfiles_net_dev) | [ssh](pip://git+git@github.com:nerdfiles/nerdfiles_net_dev.git#nerdfiles_net_dev) [read-only](git://github.com/nerdfiles/nerdfiles_net_dev.git)
 
 Let's call it something like "the living journal." The basic idea was tossed about in "The Weedy Florilegium." 
 
@@ -14,13 +14,14 @@ The webpage presented is a simple lined-paper presentation. With simple or organ
 
 If a user clicks on anything, even the page itself, a feedback (recursive callback) system should exist to, along privacy settings (CLAIMS <-> MODIFY; LIBERTIES <-> READ >> .responsibility), train the artificial neural network for selection of multiply realizable meme structures (media device as a mode of perception) instantiated over the brain of that system and neighboring systems.
 
-## Todo
+##TODO
 
 1. Convert Last.fm and Kippt context processors to Django Templates
 2. CoffeeScript: plugins.js for both last.fm and kippt.
 3. Flesh out "gesture design" for adding pages to Django CMS.
 4. Prep for tablets.
 5. (Buy a tablet.) Install tablet emulation.
+6. Implement [pyjade](https://github.com/SyrusAkbary/pyjade), [jade](https://github.com/visionmedia/jade/blob/master/Readme.md)
 
 ## Project Details
 
