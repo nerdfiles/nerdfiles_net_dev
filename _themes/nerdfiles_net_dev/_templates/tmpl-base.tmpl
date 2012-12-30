@@ -209,8 +209,6 @@
 </section>
 {% endblock %}
 
-{% cache 10800 footer %}
-
 {% block footer %}
   <footer class="site-footer">
   {% placeholder "Footer" or %}
@@ -227,10 +225,8 @@
   {% endplaceholder %}
   </footer>
 
+  {% render_block "tipjar" %}
 {% endblock %}
-{% endcache %}
-
-{% render_block "tipjar" %}
 
 </div><!-- End .container -->
 
