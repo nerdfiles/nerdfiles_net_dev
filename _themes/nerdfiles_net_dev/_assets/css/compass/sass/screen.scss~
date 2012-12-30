@@ -259,7 +259,7 @@ section.important {
         position: relative;
         color: #ccc;
         opacity: .7;
-        
+        padding-top: 30px;
         top: 15px;
       }
       p { 
@@ -319,12 +319,26 @@ ul.activities {
   }
 }//.activities
 
-.imprint {
+.m-imprint {
+  @include inline-block;
+  .m-widget--content {
+  }
   text-align: right;
   font-size: .7em;
   padding: .4em 0 0;
   margin: 0px 0px .5em;
   clear: left;
+}
+
+/**
+ * gittip
+ */
+
+.m-tipjar {
+  @include inline-block;
+  .m-wiget--content {
+    @include inline-block;
+  }
 }
 
 /**

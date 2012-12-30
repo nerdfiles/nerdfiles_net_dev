@@ -38,6 +38,12 @@
 {% endaddtoblock %}
 {% endblock %}
 
+{% block tipjar %}
+{% addtoblock "tipjar" %}
+{% include "js-tipjar.tmpl" %}
+{% endaddtoblock %}
+{% endblock %}
+
 {% block landmine %}
 {% addtoblock "landmine" %}
 {% include "js-landmine.tmpl" %}
@@ -200,20 +206,23 @@
 {% endblock %}
 
 {% cache 10800 footer %}
+
 {% block footer %}
-<footer>
-{% placeholder "Footer" or %}
-	<p>...</p>
-{% endplaceholder %}
-</footer>
-<aside class="imprint">
-  <small>Using <a href="http://somerandomdude.com/work/iconic/">Iconic</a>.</small>
-</aside>
+  <footer>
+  {% placeholder "Footer" or %}
+    <p>...</p>
+  {% endplaceholder %}
+  </footer>
+
+  <aside class="m m-widget m-imprint">
+    <div class="m-widget--content">
+      <small>Using <a href="http://somerandomdude.com/work/iconic/">Iconic</a>.</small>
+    </div>
+  </aside>
 {% endblock %}
 {% endcache %}
 
-{# block personalfunding #}
-{# endblock #}
+{% render_block "tipjar" %}
 
 </div><!-- End .container -->
 
@@ -227,3 +236,4 @@
 </body>
 
 </html>
+

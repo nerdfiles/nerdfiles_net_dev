@@ -347,12 +347,49 @@ ul.activities li.lastfm a {
 }
 
 /* line 322, ../sass/screen.scss */
-.imprint {
+.m-imprint {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   text-align: right;
   font-size: .7em;
   padding: .4em 0 0;
   margin: 0px 0px .5em;
   clear: left;
+}
+/* line 324, ../sass/screen.scss */
+.m-imprint .m-widget--content {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/**
+ * gittip
+ */
+/* line 338, ../sass/screen.scss */
+.m-tipjar {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 340, ../sass/screen.scss */
+.m-tipjar .m-wiget--content {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
 }
 
 /**
