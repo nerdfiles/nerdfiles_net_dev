@@ -399,22 +399,7 @@ ul.activities li.lastfm a {
  */
 /* line 356, ../sass/screen.scss */
 .m-tipjar {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
   text-align: center;
-}
-/* line 359, ../sass/screen.scss */
-.m-tipjar .m--content {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
 }
 
 /**
