@@ -242,7 +242,6 @@ ul.activities {
 }
 
 .m {
-  @include inline-block;
   .m--title {
   }
   .m--content {
@@ -272,6 +271,7 @@ ul.activities {
  */
 
 .m-tipjar {
+  display: block;
   text-align: center;
   .m--content {
   }
