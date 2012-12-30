@@ -272,6 +272,7 @@ ul.activities {
  */
 
 .m-tipjar {
+  display: block;
   text-align: center;
   .m--content {
   }
