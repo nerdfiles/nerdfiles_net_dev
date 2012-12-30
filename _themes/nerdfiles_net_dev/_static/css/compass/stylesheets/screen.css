@@ -354,11 +354,6 @@ ul.activities li.lastfm a {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  text-align: right;
-  font-size: .7em;
-  padding: .4em 0 0;
-  margin: 0px 0px .5em;
-  clear: left;
 }
 /* line 331, ../sass/screen.scss */
 .m-imprint .m--content {
@@ -368,6 +363,11 @@ ul.activities li.lastfm a {
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
+  text-align: right;
+  font-size: .7em;
+  padding: .4em 0 0;
+  margin: 0px 0px .5em;
+  clear: left;
 }
 
 /**
