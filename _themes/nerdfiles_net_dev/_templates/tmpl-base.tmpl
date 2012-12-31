@@ -84,8 +84,6 @@
 
 {# render_block "mediaquery" #}
 
-{% render_block "scriptloader" %}
-
 {% analytical_head_bottom %}
 </head>
 
@@ -231,6 +229,8 @@
 {% render_block "tipjar" %}
 
 </div><!-- End .container -->
+
+{% render_block "scriptloader" %}
 
 {% render_block "js" %}
 
