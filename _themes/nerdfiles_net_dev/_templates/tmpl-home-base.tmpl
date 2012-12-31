@@ -15,15 +15,3 @@
 
 {% block body_class %}base home-page{% endblock %}
 
-{% block personalfunding %}
-  {% if not LOCAL %}
-  <section class="personalfunding debug-{{ DEBUG }}">
-    <p>Oh, and here's a 
-    <iframe 
-      style="border: 0; margin: 0; padding: 0;"
-      src="https://www.gittip.com/nerdfiles/widget.html" 
-      width="48pt" height="20pt"></iframe>: <a rel="nofollow" href="https://github.com/shaunew/Pac-Man">relax</a> by <a href="https://github.com/shaunew">shaunew</a>.
-    </p>
-  </section>
-  {% endif %}
-{% endblock %}
