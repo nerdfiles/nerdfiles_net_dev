@@ -93,18 +93,13 @@ body.base {
   padding: 100px 0;
 
   hr {
-    border: none !important; 
-    border-top: 3px #ccc dashed !important;
+    border: none; 
+    border-top: 3px #ccc dashed;
   }
 
   .container { 
     margin: 0 auto 30px; 
     width: 720px; }
-  /*body.base div:nth-child(4) { 
-    bottom: 0 !important; 
-    height: 20px !important; 
-    top: auto !important; 
-    position: fixed !important; }*/
   header {
     border-bottom: 4px #111 solid; 
     margin: 0 0 .5em;

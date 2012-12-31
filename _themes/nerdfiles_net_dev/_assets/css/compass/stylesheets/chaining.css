@@ -1,0 +1,45 @@
+/*
+Syntax error: Invalid CSS after "...le_TesterModule": expected "}", was ".TesterModule;"
+        on line 25 of /Users/nerdfiles/Sites/nerdfiles_net_dev/_themes/nerdfiles_net_dev/_assets/css/compass/sass/chaining.scss
+
+Backtrace:
+/Users/nerdfiles/Sites/nerdfiles_net_dev/_themes/nerdfiles_net_dev/_assets/css/compass/sass/chaining.scss:25
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/scss/parser.rb:1134:in `expected'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/scss/parser.rb:1070:in `expected'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/scss/parser.rb:1065:in `tok!'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/scss/parser.rb:522:in `block'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/scss/parser.rb:515:in `ruleset'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/scss/parser.rb:539:in `block_child'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/scss/parser.rb:532:in `block_contents'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/scss/parser.rb:70:in `stylesheet'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/scss/parser.rb:27:in `parse'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/engine.rb:342:in `_to_tree'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/engine.rb:315:in `_render'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/sass-3.2.3/lib/sass/engine.rb:262:in `render'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/compiler.rb:140:in `block (2 levels) in compile'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/compiler.rb:139:in `block in compile'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/logger.rb:45:in `red'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/compiler.rb:138:in `compile'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/compiler.rb:118:in `compile_if_required'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/compiler.rb:103:in `block (2 levels) in run'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `each'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/compiler.rb:101:in `block in run'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/compiler.rb:126:in `timed'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/compiler.rb:100:in `run'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:147:in `recompile'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/commands/watch_project.rb:68:in `perform'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/commands/base.rb:18:in `execute'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/commands/project_base.rb:19:in `execute'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/lib/compass/exec/sub_command_ui.rb:15:in `run!'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/bin/compass:30:in `block in <top (required)>'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/bin/compass:44:in `call'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/gems/compass-0.12.2/bin/compass:44:in `<top (required)>'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/bin/compass:19:in `load'
+/Users/nerdfiles/.rvm/gems/ruby-1.9.3-p125/bin/compass:19:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid CSS after \"...le_TesterModule\": expected \"}\", was \".TesterModule;\"\A         on line 25 of /Users/nerdfiles/Sites/nerdfiles_net_dev/_themes/nerdfiles_net_dev/_assets/css/compass/sass/chaining.scss"; }

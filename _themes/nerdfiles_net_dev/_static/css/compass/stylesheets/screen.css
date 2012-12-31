@@ -174,61 +174,56 @@ a[rel="external"]::after {
 /* line 92, ../sass/screen.scss */
 body.base {
   padding: 100px 0;
-  /*body.base div:nth-child(4) { 
-    bottom: 0 !important; 
-    height: 20px !important; 
-    top: auto !important; 
-    position: fixed !important; }*/
 }
 /* line 95, ../sass/screen.scss */
 body.base hr {
-  border: none !important;
-  border-top: 3px #ccc dashed !important;
+  border: none;
+  border-top: 3px #ccc dashed;
 }
 /* line 100, ../sass/screen.scss */
 body.base .container {
   margin: 0 auto 30px;
   width: 720px;
 }
-/* line 108, ../sass/screen.scss */
+/* line 103, ../sass/screen.scss */
 body.base header {
   border-bottom: 4px #111 solid;
   margin: 0 0 .5em;
   text-align: right;
 }
-/* line 114, ../sass/screen.scss */
+/* line 109, ../sass/screen.scss */
 body.base header h1 {
   display: inline-block;
   font-size: 2em;
   line-height: 1;
   padding: 25px 0 25px;
 }
-/* line 120, ../sass/screen.scss */
+/* line 115, ../sass/screen.scss */
 body.base .main h2 {
   font-size: 1.5em;
 }
-/* line 125, ../sass/screen.scss */
+/* line 120, ../sass/screen.scss */
 body.base blockquote {
   box-shadow: 0 0 .3em #ccc;
   padding: 20px;
 }
-/* line 126, ../sass/screen.scss */
+/* line 121, ../sass/screen.scss */
 body.base blockquote p {
   display: inline-block;
   margin: 0;
 }
-/* line 127, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
 body.base blockquote cite {
   font-size: 16px;
 }
-/* line 128, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 body.base blockquote p::before {
   margin: 0 .5em 0 0;
   content: "❝ ";
   display: inline-block;
 }
 
-/* line 132, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 .debug-False {
   display: none !important;
 }
@@ -236,17 +231,17 @@ body.base blockquote p::before {
 /**
  * Important! < Kippt Feed
  */
-/* line 142, ../sass/screen.scss */
+/* line 137, ../sass/screen.scss */
 section.important .ui.kippt {
   text-align: center;
 }
-/* line 144, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
 section.important .ui.kippt .iconic {
   font-size: 2em;
   line-height: 1em;
   vertical-align: middle;
 }
-/* line 150, ../sass/screen.scss */
+/* line 145, ../sass/screen.scss */
 section.important .ui.widget {
   padding: 10px 0 20px;
   /*
@@ -263,7 +258,7 @@ section.important .ui.widget {
   }
   */
 }
-/* line 168, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 section.important .ui.widget > *:first-child:after {
   display: block;
   line-height: .7;
@@ -275,7 +270,7 @@ section.important .ui.widget > *:first-child:after {
   padding-top: 30px;
   top: 15px;
 }
-/* line 181, ../sass/screen.scss */
+/* line 176, ../sass/screen.scss */
 section.important .ui.widget p {
   margin: 0;
 }
@@ -297,14 +292,14 @@ section.important .ui.widget p {
 /**
  * last.fm
  */
-/* line 211, ../sass/screen.scss */
+/* line 206, ../sass/screen.scss */
 ul.activities {
   margin: 0;
   padding: 0;
   display: inline-block;
   text-align: left;
 }
-/* line 218, ../sass/screen.scss */
+/* line 213, ../sass/screen.scss */
 ul.activities li a {
   display: inline-block;
   width: 48px;
@@ -312,23 +307,23 @@ ul.activities li a {
   border: none;
   text-indent: -9999px;
 }
-/* line 228, ../sass/screen.scss */
+/* line 223, ../sass/screen.scss */
 ul.activities li.lastfm {
   background: url("../../../img-ui/ui-icon-headphones.png") no-repeat;
 }
-/* line 230, ../sass/screen.scss */
+/* line 225, ../sass/screen.scss */
 ul.activities li.lastfm a {
   padding: 0;
   margin: 0;
 }
 
-/* line 239, ../sass/screen.scss */
+/* line 234, ../sass/screen.scss */
 .site-footer {
   border-top: 4px #000 solid;
   padding-top: 20px;
 }
 
-/* line 251, ../sass/screen.scss */
+/* line 246, ../sass/screen.scss */
 .m-imprint {
   display: -moz-inline-stack;
   display: inline-block;
@@ -337,7 +332,7 @@ ul.activities li.lastfm a {
   zoom: 1;
   *display: inline;
 }
-/* line 253, ../sass/screen.scss */
+/* line 248, ../sass/screen.scss */
 .m-imprint .m--content {
   display: -moz-inline-stack;
   display: inline-block;
@@ -351,7 +346,7 @@ ul.activities li.lastfm a {
   margin: 0px 0px .5em;
   clear: left;
 }
-/* line 255, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 .m-imprint .m--content ul {
   display: -moz-inline-stack;
   display: inline-block;
@@ -360,7 +355,7 @@ ul.activities li.lastfm a {
   zoom: 1;
   *display: inline;
 }
-/* line 257, ../sass/screen.scss */
+/* line 252, ../sass/screen.scss */
 .m-imprint .m--content ul li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -373,7 +368,7 @@ ul.activities li.lastfm a {
 /**
  * gittip
  */
-/* line 273, ../sass/screen.scss */
+/* line 268, ../sass/screen.scss */
 .m-tipjar {
   padding-top: 40px;
   clear: both;
