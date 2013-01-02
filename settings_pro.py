@@ -407,7 +407,7 @@ CACHES = {
 }
 
 CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
-CACHE_TIMEOUT = 10800 # 3 hours
+CACHE_TIMEOUT = 3600*48/60 # 2880 minutes; two days (24 hours)
 CACHE_PREFIX = "Z"
 
 
