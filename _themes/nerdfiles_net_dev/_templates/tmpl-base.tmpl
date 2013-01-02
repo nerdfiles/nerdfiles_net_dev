@@ -113,6 +113,7 @@
         #RECENTLY PLAYED TRACKS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {% for bob in rt %}
              {{ forloop.counter }}. {{ bob }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+             #url {{ bob.get_url }}
           {% empty %}
         Must be trapped in a well or something...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         {% endfor %}

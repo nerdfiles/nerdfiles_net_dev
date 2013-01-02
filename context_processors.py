@@ -7,6 +7,7 @@ from django.contrib.sites.models import Site
 from django.core.cache import cache
 from kippt import kippt_wrapper
 from settings import API_KEY, API_SECRET, username, password_hash
+from pprint import pprint
 import pylast 
 
 # == CONTEXT PROCESSORS ======================================== #
@@ -116,6 +117,8 @@ def lastfm(request):
     lfm_data,
     TIMEOUT
   )
+
+  #pprint(lfm_data)
 
   #load raw
   return {
