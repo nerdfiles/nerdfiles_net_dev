@@ -50,7 +50,7 @@ def kippt_rss(request):
 def kippt_rss(request):
   k = kippt_wrapper.user('%s' % settings.KIPPT_API_USER, '%s' % settings.KIPPT_API_TOKEN,)
 
-  TIMEOUT = 1800*36*2 # wait a while (secs)
+  TIMEOUT = 3600*48/60 # two days (48 hours)
 
   kippt_imps = cache.get('kippt_imps')
   if kippt_imps:
@@ -93,7 +93,7 @@ def lastfm(request):
 
   #cache
   lfm_data = cache.get('lfm_data')
-  TIMEOUT = 1800*36 #secs
+  TIMEOUT = 3600*48/60 # two days (48 hours)
   if lfm_data:
     return {
       "rt": lfm_data
