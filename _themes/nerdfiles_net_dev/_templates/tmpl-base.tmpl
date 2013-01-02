@@ -56,18 +56,26 @@
 <html lang="en">
 
 <head>
+<!-- head:browser,dns-prefetch,meta,responses,presentation,ie,print -->
 {% analytical_head_top %}
-<meta charset="utf-8" />
 
+<!-- head::browser -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width" />
+
+<!-- head::dns-prefetch -->
 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
 <link rel="dns-prefetch" href="//code.jquery.com" />
 <link rel="dns-prefetch" href="//gittip.com" />
-<!--link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-<link rel="dns-prefetch" href="//nerdfilesdotnet.disqus.com" />
-<link rel="dns-prefetch" href="//ajax.cloudflare.com" /-->
 
+<!-- head::meta -->
 <title>{% page_attribute "page_title" %} &#9679; nerdfiles.net</title>
+<meta name="description" content="Web analyst / psychonaut / anarchist footballer / tactical urban cyclist / food hacker / aasimar —" />
 
+<!-- head::responses -->
+
+<!-- head::presentation -->
 {% render_block "font" %}
 
 {% render_block "css" %}
@@ -82,7 +90,13 @@
   rel="shotcut icon"
   href="{{ ASSETS_URL }}img-ui/favicon.png" />
 
+<!-- head::mediaquery -->
+
 {# render_block "mediaquery" #}
+
+<!-- head::ie -->
+
+<!-- head::print -->
 
 {% analytical_head_bottom %}
 </head>
