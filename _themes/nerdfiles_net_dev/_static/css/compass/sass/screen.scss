@@ -62,7 +62,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-family: 'Cedarville Cursive', cursive;
   font-size: 2em;
-  line-height: 1.8;
+  line-height: 1.7;
   //text-shadow: 0 0 1px #e0e0e0;
   //background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAIElEQVQIHWNMrLzlw4ADsIDE57WpbsEmz4RNECY2EJIA5doEDY8lKVEAAAAASUVORK5CYII=);
   //background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALklEQVQYGWNMrLzlw4ADPN3y8jlcCqTw////DIQwE1wHAcaQUIgSBHg8RH3PAAA6uSXJSGI7ZwAAAABJRU5ErkJggg==);
@@ -85,8 +85,12 @@ a {
   *display: inline;
   margin: 0 0 .1em 0;
   //@include border-radius(10px, 10px);
-  border-bottom: 1px #999 dashed; }
-a[rel="external"]::after { content: ' ⤴'; }
+  border-bottom: 1px #999 dashed; 
+  &[rel="external"]::after { content: ' ⤴'; }
+  &:hover { 
+    opacity: .5;
+  }
+}
 
 
 body.base { 
