@@ -80,15 +80,9 @@
 
 {% render_block "css" %}
 
-<link
-  rel="stylesheet" 
-  charset="utf-8" 
-  href="{{ ASSETS_URL }}font/iconic/iconic_fill/iconic_fill.css"
-/>
+<link rel="stylesheet" charset="utf-8" href="{{ ASSETS_URL }}font/iconic/iconic_fill/iconic_fill.css" />
 
-<link
-  rel="shotcut icon"
-  href="{{ ASSETS_URL }}img-ui/favicon.png" />
+<link rel="shotcut icon" href="{{ ASSETS_URL }}img-ui/favicon.png" />
 
 <!-- head::mediaquery -->
 
@@ -125,9 +119,7 @@
   <ul class="activities">
     {% if rt %}
     <li class="lastfm">
-      <a 
-        href="http://www.last.fm/listen/user/wittysense/personal"
-        title="
+      <a href="http://www.last.fm/listen/user/wittysense/personal" title="
         #RECENTLY PLAYED TRACKS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           {% for bob in rt %}
              {{ forloop.counter }}. {{ bob }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -162,9 +154,7 @@
 
   </ul><!-- .activities -->
 	<h1>
-    <a 
-      href="http://nerdfiles.net"
-      title="It's about time someone take things scificially.">
+    <a href="http://nerdfiles.net" title="It's about time someone take things scificially.">
       nerdfiles.net
     </a>
   </h1>
@@ -234,7 +224,7 @@
     <aside class="m m-imprint">
       <div class="m--content">
         <ul>
-          <li><a href="http://lint.brihten.com/html/report?u={{ SITE_URL }}&s=1111111">html</a></li>
+          <li><span class="t">#validate</span> <a href="http://lint.brihten.com/html/report?u={{ SITE_URL }}&s=1111111">html</a></li>
           <li><span class="t">#using</span> <a href="http://somerandomdude.com/work/iconic/">iconic</a></li>
         </ul>
       </div>
