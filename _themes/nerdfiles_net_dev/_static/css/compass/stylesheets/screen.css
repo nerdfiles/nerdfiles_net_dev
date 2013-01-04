@@ -134,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 body {
   text-rendering: optimizeLegibility;
   font-family: "Raleway", sans-serif;
-  font-family: 'Cedarville Cursive', cursive;
+  font-family: la-belle-aurore, 'Cedarville Cursive', sans-serif, cursive;
   font-size: 2em;
   line-height: 1.7;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
@@ -156,7 +156,7 @@ body {
 
 /* line 79, ../sass/screen.scss */
 a {
-  font-family: 'Cedarville Cursive', cursive;
+  font-family: la-belle-aurore, 'Cedarville Cursive', sans-serif, cursive;
   padding: 0 10px;
   text-decoration: none;
   display: inline-block;

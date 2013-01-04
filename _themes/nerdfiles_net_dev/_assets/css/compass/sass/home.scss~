@@ -20,10 +20,6 @@ h2 {
   clear: left;
 }
 
-footer { 
-  border-bottom: 4px #000 solid;
-}
-
 ol li .iconic {
   padding: 0.2em 0.5em 1em 1em;
   float: left;
