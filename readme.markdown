@@ -31,4 +31,8 @@ If a user clicks on anything, even the page itself, a feedback (recursive callba
 
 1. https://github.com/rafaelp/css_browser_selector
 2. https://github.com/benschwarz/metaquery/
+3. \#current http://www.dafont.com/la-belle-aurore.font
+4. http://fonts.googleapis.com/css?family=Cedarville+Cursive&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!/,;.#@$
+	1. !/,;.#@$: %21/%2C%3B.%23@%24
+	2. @see [http://coderstoolbox.net/string/](http://coderstoolbox.net/string/)
 
