@@ -22,13 +22,18 @@ If a user clicks on anything, even the page itself, a feedback (recursive callba
 4. Prep for tablets.
 5. (Buy a tablet.) Install tablet emulation.
 6. Implement [pyjade](https://github.com/SyrusAkbary/pyjade), [jade](https://github.com/visionmedia/jade/blob/master/Readme.md)
+7. Implement Stripe for micropayments and quick payments on invoices
 
-## Project Details
+##TEAM
 
 1. Dev (nerdfiles@gmail.com)
 
-## Deps
+##Essentials
 
 1. https://github.com/rafaelp/css_browser_selector
 2. https://github.com/benschwarz/metaquery/
+3. \#current [La Belle Aurore](https://typekit.com/eulas/00000000000000000001220a)
+4. http://fonts.googleapis.com/css?family=Cedarville+Cursive&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!/,;.#@$
+	1. !/,;.#@$: %21/%2C%3B.%23@%24
+	2. @see [http://coderstoolbox.net/string/](http://coderstoolbox.net/string/)
 
