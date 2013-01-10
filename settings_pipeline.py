@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 
+from urls_sugar.utils import patterns, url_sugar
+from urls_sugar.classes import Constant, Variable
+
 # == CORE/DEBUGGING ============================================== #
 
 DEBUG = True # True doesn't work; 500 errors, again
@@ -18,7 +21,7 @@ if LOCAL_DEVELOPMENT:
 
 urlpatterns = patterns('',
 
-  url(r'^_assets(?P<path>.*)$', 'django.views.static.serve',
+  #url(r'^_assets(?P<path>.*)$', 'django.views.static.serve',
 
   url_sugar([Constant('web-cv'),
               #Variable('pk', '\d+'),
@@ -26,11 +29,11 @@ urlpatterns = patterns('',
             ], page_view, name='web-cv'), #docs (?P<pk>\d+) #thescienceoftheparticular
 
 
-  {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-  url(r'^_static(?P<path>.*)$', 'django.views.static.serve',
+  #{'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+  #url(r'^_static(?P<path>.*)$', 'django.views.static.serve',
 
-  {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
-  url(r'', include('django.contrib.staticfiles.urls')),
+  #{'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
+  #url(r'', include('django.contrib.staticfiles.urls')),
 
 ) + urlpatterns
 
