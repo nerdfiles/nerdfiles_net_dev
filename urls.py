@@ -31,6 +31,8 @@ urlpatterns = patterns('',
 
   url(r'tumblr/', 'views.tumblr_redirect', name='tumblr'),
 
+  url(r'web-cv/', 'views.web_cv', name='web_cv'),
+
   # == admin dashboard == #
 
   url(r'^dashboard/', include(admin.site.urls)),
