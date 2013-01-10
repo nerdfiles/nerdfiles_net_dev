@@ -22,7 +22,9 @@ If a user clicks on anything, even the page itself, a feedback (recursive callba
 4. Prep for tablets.
 5. (Buy a tablet.) Install tablet emulation.
 6. Implement [pyjade](https://github.com/SyrusAkbary/pyjade), [jade](https://github.com/visionmedia/jade/blob/master/Readme.md)
-7. Implement Stripe for micropayments and quick payments on invoices
+7. Implement Stripe for micropayments and quick payments on invoices.
+8. See https://github.com/bazaarlabs/gitdocs for running subapps via PHP's WordPress.
+9. Determine a set of use-cases for the URL space of webjournal.nerdfiles.net/\* to be run as Python/Django apps.
 
 ##TEAM
 
