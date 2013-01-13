@@ -5,7 +5,8 @@
 	$(function() {
 	
     // wierd scroll-y links
-    
+
+    var 
     $("a[href^='#']").bind('click', function(e) {
       
       e.preventDefault();

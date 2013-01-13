@@ -32,7 +32,7 @@
           
     });
 
-    $('a[rel="external"]').on('click', function(e) {
+    /*$('a[rel="external"]').on('click', function(e) {
 
       e.preventDefault();
       
@@ -43,13 +43,12 @@
         '_blank'
       );
 
-      /*
       window.open(
         $a.prop('href'), 
         $a.prop('title')
       );
-      */
-    });
+      
+    });*/
 
 	});
 
