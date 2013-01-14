@@ -1,33 +1,19 @@
+// compass
 @import "compass/reset";
 @import "compass/css3/border-radius";
 @import "compass/css3/inline-block";
-@import "utils/_image-filters";
-/* silent scrollbars */
 
-::-webkit-scrollbar-track-piece {
-  background-color: #fff;
-  -webkit-border-radius: 0; }
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px; }
-::-webkit-scrollbar-thumb {
-  height: 50px;
-  background-color: #999;
-  -webkit-border-radius: 4px;
-  outline: 2px solid #fff;
-  outline-offset: -2px;
-  border: 2px solid #fff; }
-::-webkit-scrollbar-thumb:hover {
-  height: 50px;
-  background-color: #9f9f9f;
-  -webkit-border-radius: 4px; }
-:-webkit-scrollbar {  width: 16px }
+// scaffolding
+@import "modules/image-filters";
+@import "modules/access";
+@import "non-modular/hacks";
 
-.accessiblyhide { 
-  position: absolute;
-  left: -9999px;
+@mixin font-smoothing() {
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
 }
-
 
 /**
  * CSS3 Image Filter Tools
@@ -42,10 +28,7 @@
 
 body { 
   background: rgba(230,230,230,.6); 
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
+  @include font-smoothing;
 }
 
 /* Base */
@@ -62,18 +45,8 @@ body {
   font-family: la-belle-aurore, sans-serif;
   font-size: 2em;
   line-height: 1.7;
-  //text-shadow: 0 0 1px #e0e0e0;
-  //background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAIElEQVQIHWNMrLzlw4ADsIDE57WpbsEmz4RNECY2EJIA5doEDY8lKVEAAAAASUVORK5CYII=);
-  //background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAALklEQVQYGWNMrLzlw4ADPN3y8jlcCqTw////DIQwE1wHAcaQUIgSBHg8RH3PAAA6uSXJSGI7ZwAAAABJRU5ErkJggg==);
   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
 }
-
-#site-access ul { 
-  -moz-transform:rotate(10deg);
-  -o-transform:rotate(10deg);
-  -ms-transform:rotate(10deg);
-  -webkit-transform:rotate(10deg);
-  position: absolute; top: 40px; left: 30px; list-style: none; margin: 0; padding: 0; }
 
 a { 
   font-family: la-belle-aurore, sans-serif;

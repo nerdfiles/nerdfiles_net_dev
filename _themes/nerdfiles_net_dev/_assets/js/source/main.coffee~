@@ -11,9 +11,9 @@ $ ->
 
   # scrolly anchors
   nerds.scrollyanchors = -> 
-    $('a[href^="#"]').click (e) => 
-      el = @element
-      $el = $ @element
+    $('a[href^="#"]').click (e) -> 
+      el = @
+      $el = $ el
       target = window.location.hash
       $target = $(target)
       scope = 'html,body'

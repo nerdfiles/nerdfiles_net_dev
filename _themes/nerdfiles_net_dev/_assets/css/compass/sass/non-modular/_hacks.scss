@@ -1,0 +1,25 @@
+
+// silent scrollbars for chrome
+//
+// @nerdfiles 13 2013 01 22:43:13
+
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+  -webkit-border-radius: 0; }
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; }
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #999;
+  -webkit-border-radius: 4px;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+  border: 2px solid #fff; }
+::-webkit-scrollbar-thumb:hover {
+  height: 50px;
+  background-color: #9f9f9f;
+  -webkit-border-radius: 4px; }
+:-webkit-scrollbar {  width: 16px }
+
+
