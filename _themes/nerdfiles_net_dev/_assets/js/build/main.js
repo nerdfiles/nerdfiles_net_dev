@@ -12,32 +12,30 @@
       return nerds.extyanchors();
     };
     nerds.scrollyanchors = function() {
-      var _this = this;
       return $('a[href^="#"]').click(function(e) {
         var $el, $target, el, scope, target;
-        e.preventDefault();
-        el = _this.element;
-        $el = $(_this.element);
-        target = _this.hash;
+        el = this;
+        $el = $(el);
+        target = window.location.hash;
         $target = $(target);
         scope = 'html,body';
-        return $(scope).animate({
+        $(scope).animate({
           'scrollTop': ($target.offset().top)
         }, 750, 'swing', function() {
           if (__indexOf.call(window, "onhashchange") >= 0) {
             return window.location.hash = target;
           }
         });
+        return e.preventDefault();
       });
     };
     nerds.extyanchors = function() {
-      var _this = this;
       return $('a[rel="external"]').click(function(e) {
         var $el, el;
-        e.preventDefault();
-        el = _this.element;
-        $el = $(_this.element);
-        return window.open($el.prop('href'), $el.prop('title'));
+        el = this;
+        $el = $(el);
+        window.open($el.prop('href'), $el.prop('title'));
+        return e.preventDefault();
       });
     };
     return nerds.init();
