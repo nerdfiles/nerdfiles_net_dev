@@ -30,7 +30,7 @@
         });
       });
     };
-    return nerds.extyanchors = function() {
+    nerds.extyanchors = function() {
       var _this = this;
       return $('a[rel="external"]').click(function() {
         var $el, el;
@@ -40,6 +40,7 @@
         return window.open($el.prop('href'), $el.prop('title'));
       });
     };
+    return nerds.init();
   });
 
 }).call(this);
