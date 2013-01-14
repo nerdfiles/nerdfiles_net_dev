@@ -1,8 +1,14 @@
 
 $ ->
 
-  scrollyanchors =
-    scroll: -> $('a[href^="#"]').click => 
+  window.nerds ?= {}
+
+  nerds.init = ->
+    nerds.scrollyanchors()
+    nerds.extyanchors()
+
+  nerds.scrollyanchors = -> 
+    $('a[href^="#"]').click => 
       e.preventDefault();
       el = @element
       $el = $ @element
@@ -18,8 +24,8 @@ $ ->
           if "onhashchange" in window
             window.location.hash = target
 
-  extyanchors =
-    extopen: -> $('a[rel="external"]').click =>
+  nerds.extyanchors = -> 
+    $('a[rel="external"]').click =>
       e.preventDefault()
       el = @element
       $el = $ @element
