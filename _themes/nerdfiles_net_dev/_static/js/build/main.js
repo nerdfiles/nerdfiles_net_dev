@@ -12,10 +12,11 @@
     };
     nerds.scrollyanchors = function() {
       return $('a[href^="#"]').click(function(e) {
-        var $el, $target, el, scope, target;
+        var $el, $target, el, href, scope, target;
         el = this;
         $el = $(el);
-        target = window.location.hash;
+        href = $el.prop('href');
+        target = href.split('/')[href.split('/').length - 1];
         $target = $(target);
         scope = 'html,body';
         $(scope).animate({
