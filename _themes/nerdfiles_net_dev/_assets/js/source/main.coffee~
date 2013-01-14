@@ -1,4 +1,5 @@
-( $ ->
+
+$ ->
 
   scrollyanchors =
     scroll: -> $('a[href^="#"]').click => 
@@ -20,14 +21,12 @@
   extyanchors =
     extopen: -> $('a[rel="external"]').click =>
       e.preventDefault()
-      #el = @element
-      #$el = $ @element
+      el = @element
+      $el = $ @element
 
       #$el.attr
       #  'target'
       #  '_blank'
       
       window.open($el.prop('href'), $el.prop('title')
-
-)( jQuery );
 
