@@ -2,7 +2,7 @@
 (function() {
   var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
-  ($(function() {
+  $(function() {
     var extyanchors, scrollyanchors;
     scrollyanchors = {
       scroll: function() {
@@ -19,9 +19,7 @@
             'scrollTop': ($target.offset().top)
           }, 750, 'swing', function() {
             if (__indexOf.call(window, "onhashchange") >= 0) {
-
-            } else {
-
+              return window.location.hash = target;
             }
           });
         });
@@ -31,10 +29,14 @@
       extopen: function() {
         var _this = this;
         return $('a[rel="external"]').click(function() {
-          return e.preventDefault();
+          var $el, el;
+          e.preventDefault();
+          el = _this.element;
+          $el = $(_this.element);
+          return window.open($el.prop('href'), $el.prop('title'));
         });
       }
     };
-  }))(jQuery);
+  });
 
 }).call(this);

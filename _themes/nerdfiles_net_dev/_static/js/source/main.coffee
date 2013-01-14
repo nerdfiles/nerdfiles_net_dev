@@ -28,5 +28,5 @@ $ ->
       #  'target'
       #  '_blank'
       
-      window.open($el.prop('href'), $el.prop('title')
+      window.open($el.prop('href'), $el.prop('title'))
 
