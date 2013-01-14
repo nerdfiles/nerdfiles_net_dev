@@ -23,8 +23,8 @@ $ ->
         750
         'swing'
         () ->
-          if "onhashchange" in window
-            window.location.hash = target
+          #if "onhashchange" in window
+            #window.location.hash = target
       e.preventDefault();
 
   # external anchors

@@ -13,15 +13,15 @@
     nerds.scrollyanchors = function() {
       return $('a[href^="#"]').click(function(e) {
         var $el, $target, el, scope, target;
+        e.preventDefault();
         el = this;
         $el = $(el);
         target = window.location.hash;
         $target = $(target);
         scope = 'html,body';
-        $(scope).animate({
+        return $(scope).animate({
           'scrollTop': ($target.offset().top)
         }, 750, 'swing', function() {});
-        return e.preventDefault();
       });
     };
     nerds.extyanchors = function() {
