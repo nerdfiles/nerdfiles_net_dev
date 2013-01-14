@@ -1,7 +1,7 @@
-($ ->
+( $ ->
 
   scrollyanchors =
-    scroll: -> $('a[href^="#"]').click (e) => 
+    scroll: -> $('a[href^="#"]').click => 
       e.preventDefault();
       el = @element
       $el = $ @element
@@ -23,7 +23,7 @@
       #console.log(el) 
 
   extyanchors =
-    extopen: -> $('a[rel="external"]').click (e) =>
+    extopen: -> $('a[rel="external"]').click =>
       e.preventDefault()
       #el = @element
       #$el = $ @element
@@ -34,5 +34,5 @@
 
       #window.open($el.prop('href'), $el.prop('title')
 
-)(jQuery);
+)( jQuery );
 

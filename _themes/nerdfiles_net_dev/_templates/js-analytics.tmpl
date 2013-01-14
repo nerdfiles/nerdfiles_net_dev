@@ -1,15 +1,4 @@
 <!-- == BEHAVIOR: ANALYTICS ======================================= -->
 
-<script>
-  window._gaq = [
-    ['_setAccount','UA-1343124-3'],
-    ['_setDomainName', '.nerdfiles.net'],
-    ['_trackPageview'],
-    ['_trackPageLoadTime']
-  ];
-  Modernizr.load({
-    load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-  });
-</script>
-
+<script src='{{ ASSETS_URL }}js/build/ga.js'></script>
 
