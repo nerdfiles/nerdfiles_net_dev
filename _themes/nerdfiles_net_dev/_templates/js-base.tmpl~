@@ -11,4 +11,5 @@
 </script>
 <script src='{{ ASSETS_URL }}js/build/main.js'></script> 
 {% block extra %}{% endblock %}
+
 {% endblock %}
