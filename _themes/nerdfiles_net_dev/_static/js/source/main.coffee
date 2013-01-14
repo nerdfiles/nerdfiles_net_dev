@@ -12,7 +12,6 @@ $ ->
   # scrolly anchors
   nerds.scrollyanchors = -> 
     $('a[href^="#"]').click (e) -> 
-      e.preventDefault();
       el = @
       $el = $ el
       target = window.location.hash
@@ -26,6 +25,7 @@ $ ->
         () ->
           #if "onhashchange" in window
             #window.location.hash = target
+      e.preventDefault();
 
   # external anchors
   nerds.extyanchors = -> 
