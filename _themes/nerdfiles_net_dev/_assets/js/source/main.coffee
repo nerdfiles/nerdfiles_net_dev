@@ -1,5 +1,3 @@
-$ = jQuery
-
 ($ ->
 
   scrollyanchors =
@@ -36,5 +34,5 @@ $ = jQuery
 
       #window.open($el.prop('href'), $el.prop('title')
 
-)($);
+)(jQuery);
 

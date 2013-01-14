@@ -52,7 +52,7 @@
         //Modernizr.load('/_assets/js/all_compressed.js');
       
         //Modernizr.load('{{ ASSETS_URL }}js/plugins.js');
-        Modernizr.load('{{ ASSETS_URL }}js/global/main.js');
+        Modernizr.load('{{ ASSETS_URL }}js/build/main.js');
       
         /**
          * Extra junk...
