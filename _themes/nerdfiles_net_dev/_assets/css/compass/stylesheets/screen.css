@@ -313,19 +313,19 @@ ul.activities li a {
 ul.activities li.lastfm {
   background: url("../../../img-ui/ui-icon-headphones.png") no-repeat;
 }
-/* line 228, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 ul.activities li.lastfm a {
   padding: 0;
   margin: 0;
 }
 
-/* line 237, ../sass/screen.scss */
+/* line 238, ../sass/screen.scss */
 .site-footer {
   border-top: 4px black solid;
   padding-top: 20px;
 }
 
-/* line 249, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 .m-imprint {
   display: -moz-inline-stack;
   display: inline-block;
@@ -334,7 +334,7 @@ ul.activities li.lastfm a {
   zoom: 1;
   *display: inline;
 }
-/* line 251, ../sass/screen.scss */
+/* line 252, ../sass/screen.scss */
 .m-imprint .m--content {
   display: -moz-inline-stack;
   display: inline-block;
@@ -348,7 +348,7 @@ ul.activities li.lastfm a {
   margin: 0px 0px 0.5em;
   clear: left;
 }
-/* line 253, ../sass/screen.scss */
+/* line 254, ../sass/screen.scss */
 .m-imprint .m--content ul {
   display: -moz-inline-stack;
   display: inline-block;
@@ -357,7 +357,7 @@ ul.activities li.lastfm a {
   zoom: 1;
   *display: inline;
 }
-/* line 255, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 .m-imprint .m--content ul li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -370,7 +370,7 @@ ul.activities li.lastfm a {
 /**
  * gittip
  */
-/* line 271, ../sass/screen.scss */
+/* line 272, ../sass/screen.scss */
 .m-tipjar {
   padding-top: 40px;
   clear: both;
