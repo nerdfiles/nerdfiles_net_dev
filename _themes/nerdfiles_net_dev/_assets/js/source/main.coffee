@@ -14,7 +14,8 @@ $ ->
     $('a[href^="#"]').click (e) -> 
       el = @
       $el = $ el
-      target = window.location.hash
+      href = $el.prop('href')
+      target = href.split('/')[href.split('/').length-1]
       $target = $(target)
       scope = 'html,body'
 
