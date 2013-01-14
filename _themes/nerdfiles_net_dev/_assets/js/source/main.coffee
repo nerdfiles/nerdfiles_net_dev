@@ -11,7 +11,7 @@ $ ->
 
   # scrolly anchors
   nerds.scrollyanchors = -> 
-    $('a[href^="#"]').click => 
+    $('a[href^="#"]').click (e) => 
       e.preventDefault();
       el = @element
       $el = $ @element
@@ -29,7 +29,7 @@ $ ->
 
   # external anchors
   nerds.extyanchors = -> 
-    $('a[rel="external"]').click =>
+    $('a[rel="external"]').click (e) =>
       e.preventDefault()
       el = @element
       $el = $ @element

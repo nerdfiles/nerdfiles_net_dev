@@ -13,7 +13,7 @@
     };
     nerds.scrollyanchors = function() {
       var _this = this;
-      return $('a[href^="#"]').click(function() {
+      return $('a[href^="#"]').click(function(e) {
         var $el, $target, el, scope, target;
         e.preventDefault();
         el = _this.element;
@@ -32,7 +32,7 @@
     };
     nerds.extyanchors = function() {
       var _this = this;
-      return $('a[rel="external"]').click(function() {
+      return $('a[rel="external"]').click(function(e) {
         var $el, el;
         e.preventDefault();
         el = _this.element;
