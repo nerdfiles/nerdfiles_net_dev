@@ -1,5 +1,4 @@
-
-$ ->
+($ ->
 
   # universe
   window.nerds ?= {}
@@ -14,7 +13,8 @@ $ ->
     $('a[href^="#"]').click (e) -> 
       el = @
       $el = $ el
-      target = $el.prop('href').split('/')[$el.prop('href').split('/').length-1]
+      href = $el.prop('href')
+      target = href.split('/')[href.split('/').length-1]
       $target = $(target)
       scope = 'html,body'
 
@@ -42,4 +42,5 @@ $ ->
 
   # begin universe
   nerds.init()
+)(jQuery)
 

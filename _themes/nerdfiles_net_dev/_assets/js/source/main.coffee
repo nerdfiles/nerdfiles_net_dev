@@ -1,5 +1,4 @@
-
-$ ->
+($ ->
 
   # universe
   window.nerds ?= {}
@@ -43,4 +42,6 @@ $ ->
 
   # begin universe
   nerds.init()
+
+)(jQuery)
 
