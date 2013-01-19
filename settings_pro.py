@@ -184,7 +184,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
   'sekizai.context_processors.sekizai',
   
   'context_processors.site_info',
-  'context_processors.lastfm',
+  #'context_processors.lastfm',
   'context_processors.kippt_rss',
 
   #'context_processors.latest_tweet',

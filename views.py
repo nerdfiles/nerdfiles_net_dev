@@ -18,6 +18,17 @@ from sekizai.context import SekizaiContext
 from django.template import RequestContext
 import logging
 
+from django.core.cache import cache
+#from django.core import serializers
+#from django.utils import simplejson
+import json
+
+if settings.LOCAL_DEVELOPMENT:
+  import pdb
+
+# lastfm API
+from settings import API_KEY, API_SECRET, username, password_hash
+import pylast
 
 # == VIEWS ======================================== #
 
@@ -29,6 +40,44 @@ def render_response(request, *args, **kwargs):
 
 def tumblr_redirect(request):
   return redirect('http://wittysense.tumblr.com/')
+
+def lastfm_recent_tracks(request):
+
+  #cache
+  lfm_data = cache.get('lfm_data')
+  TIMEOUT = 3600*48/60 # two days (48 hours)
+  if lfm_data:
+    return HttpResponse(lfm_data, mimetype='application/json')
+
+  network = pylast.LastFMNetwork(api_key = API_KEY, api_secret = 
+      API_SECRET, username = username, password_hash = password_hash)
+
+  network.enable_caching()
+
+  user_data = network.get_user('wittysense')
+  r_tracks = user_data.get_recent_tracks(limit=5)
+  recent_tracks = [r.track for r in r_tracks]
+
+  #raw
+  lfm_data = recent_tracks
+  #pdb.set_trace()
+  track_data = ["%s - %s" % (tr.get_artist(), tr.get_title()) for tr in lfm_data]
+  #need to convert list to json
+  #must list comp to grab only track and artist unicode data
+  data = json.dumps(track_data)
+  #data = serializers.serialize('json', lfm_data)
+
+  #set cache for next time
+  cache.set(
+    "lfm_data",
+    data,
+    TIMEOUT
+  )
+
+  #pprint(lfm_data)
+
+  #load raw
+  return HttpResponse(data, mimetype='application/json')
 
 def error_404(request):
   return render_response(request, '404.tmpl')

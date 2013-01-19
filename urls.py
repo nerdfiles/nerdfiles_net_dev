@@ -6,6 +6,7 @@ from django.conf import settings
 from django.conf.urls.defaults import *
 from django.contrib import admin
 from django.views.generic.simple import redirect_to
+from views import *
 
 
 # == ADMIN ======================================== #
@@ -27,6 +28,7 @@ urlpatterns = patterns('',
 
   url(r'^dashboard/cache/', include('django_memcached.urls')),
 
+  url(r'__/recent-tracks/', 'views.lastfm_recent_tracks', name='lastfm_recent_tracks'),
   url(r'lastfm/', 'lastfm.views.lastfm_data', name='lastfm'),
 
   url(r'tumblr/', 'views.tumblr_redirect', name='tumblr'),

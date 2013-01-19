@@ -1,0 +1,24 @@
+<li class="lastfm" title="#using http://thenounproject.com/noun/headphones/#icon-No220 (The Noun Project)">
+  <a id="lastfm_recent_tracks" href="http://www.last.fm/listen/user/wittysense/personal" title="">
+    Recently Listened Tracks
+  </a>
+  <div itemscope itemtype="http://schema.org/MusicPlaylist" class="accessiblyhide">
+    <h2 itemprop="name">Recently Played Tracks</h2>
+    <!-- It's a fucking meta-playlist! -->
+    <meta itemprop="numTracks" content="5" />
+    <ol>
+    {# for track in rt #}
+      <li itemprop="track" itemscope itemtype="http://schema.org/MusicRecording">
+        {# if track.title #}
+        <span itemprop="byArtist">{# replace search="–" replacement="</span><span itemprop='name'>" #}{# track.title #}{# endreplace #}</span>
+        {# endif #}
+        <meta content="{{ track.url|cut:"www."}}" itemprop="url" />
+      </li>
+    {# empty #}
+      <li>
+        <p>Must be trapped in a well or something...</p>
+      </li>
+    {# endfor #}
+    </ol>
+  </div><!-- @itemscope:MusicPlaylist -->
+</li>
