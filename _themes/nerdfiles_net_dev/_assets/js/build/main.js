@@ -24,7 +24,7 @@
       success: function(data, textStatus, jqXHR) {
         var lastfm_recent_tracks$, t, title_content, _i, _len;
         lastfm_recent_tracks$ = $('#lastfm_recent_tracks');
-        title_content = '';
+        title_content = '\n';
         for (_i = 0, _len = data.length; _i < _len; _i++) {
           t = data[_i];
           title_content += t + "\n\n";

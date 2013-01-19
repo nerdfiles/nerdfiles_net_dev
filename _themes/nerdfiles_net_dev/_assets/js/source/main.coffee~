@@ -20,7 +20,7 @@ nerds.lastfm_recent_tracks = ->
       #wtf list chomps?
       title_content = ''
       for t in data
-        title_content += (t + ", \n")
+        title_content += (t + "\n\n")
       lastfm_recent_tracks$.prop 'title', "#{title_content}"
 
 # scrolly anchors

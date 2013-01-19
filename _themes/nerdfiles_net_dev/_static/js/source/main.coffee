@@ -18,7 +18,7 @@ nerds.lastfm_recent_tracks = ->
     success: (data, textStatus, jqXHR) ->
       lastfm_recent_tracks$ = $ '#lastfm_recent_tracks'
       #wtf list chomps?
-      title_content = ''
+      title_content = '\n'
       for t in data
         title_content += (t + "\n\n")
       lastfm_recent_tracks$.prop 'title', "#{title_content}"
