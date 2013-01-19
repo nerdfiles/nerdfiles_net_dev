@@ -89,6 +89,7 @@ def latest_tweet(request):
     "tweet": tweet
   }
 
+'''
 def lastfm(request):
 
   #cache
@@ -124,6 +125,7 @@ def lastfm(request):
   return {
     'rt': lfm_data,
   }
+'''
 
 def site_info(request):
   domain = Site.objects.get_current().domain
