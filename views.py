@@ -42,6 +42,7 @@ def tumblr_redirect(request):
   return redirect('http://wittysense.tumblr.com/')
 
 def lastfm_recent_tracks(request):
+  data = None
 
   #cache
   lfm_data = cache.get('lfm_data')
@@ -64,8 +65,9 @@ def lastfm_recent_tracks(request):
   track_data = ["%s - %s" % (tr.get_artist(), tr.get_title()) for tr in lfm_data]
   #need to convert list to json
   #must list comp to grab only track and artist unicode data
-  data = json.dumps(track_data)
-  #data = serializers.serialize('json', lfm_data)
+  if track_data:
+    data = json.dumps(track_data)
+    #data = serializers.serialize('json', lfm_data)
 
   #set cache for next time
   cache.set(
