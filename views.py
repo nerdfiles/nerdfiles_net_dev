@@ -42,8 +42,6 @@ def tumblr_redirect(request):
   return redirect('http://wittysense.tumblr.com/')
 
 def lastfm_recent_tracks(request):
-  data = []
-
   #cache
   lfm_data = cache.get('lfm_data')
   TIMEOUT = 3600*48/60 # two days (48 hours)
@@ -65,20 +63,20 @@ def lastfm_recent_tracks(request):
   track_data = ["%s - %s" % (tr.get_artist(), tr.get_title()) for tr in lfm_data]
   #need to convert list to json
   #must list comp to grab only track and artist unicode data
-  if track_data:
-    data = json.dumps(track_data)
+  #if track_data:
+  #  data = json.dumps(track_data)
 
   #set cache for next time
   cache.set(
     "lfm_data",
-    data,
+    track_data,
     TIMEOUT
   )
 
   #pprint(lfm_data)
 
   #load raw
-  return HttpResponse(data, mimetype='application/json')
+  return HttpResponse(track_data, mimetype='application/json')
 
 def error_404(request):
   return render_response(request, '404.tmpl')
