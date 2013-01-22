@@ -59,8 +59,8 @@ def lastfm_recent_tracks(request):
 
   #raw
   lfm_data = recent_tracks
-  #pdb.set_trace()
   track_data = ["%s - %s" % (tr.get_artist(), tr.get_title()) for tr in lfm_data]
+  #pdb.set_trace()
   #need to convert list to json
   #must list comp to grab only track and artist unicode data
   #if track_data:
