@@ -14,7 +14,7 @@ nerds.lastfm_recent_tracks = ->
     dataType: 'json'
     error: (jqXHR, textStatus, errorThrown) ->
       body$ = $ "body"
-      body$.append "err: #{textStatus}"
+      body$.addClass "err-#{textStatus}"
     success: (data, textStatus, jqXHR) ->
       lastfm_recent_tracks$ = $ '#lastfm_recent_tracks'
       #wtf list chomps?
