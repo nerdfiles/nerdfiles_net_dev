@@ -71,7 +71,7 @@ def lastfm_recent_tracks(request):
     track_data,
     TIMEOUT
   )
-  pdb.set_trace()
+  #pdb.set_trace()
 
   #pprint(lfm_data)
 
