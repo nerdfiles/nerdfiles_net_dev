@@ -19,7 +19,7 @@
       error: function(jqXHR, textStatus, errorThrown) {
         var body$;
         body$ = $("body");
-        return body$.addClass("err: " + textStatus);
+        return body$.addClass("err-" + textStatus);
       },
       success: function(data, textStatus, jqXHR) {
         var lastfm_recent_tracks$, t, title_content, _i, _len;
