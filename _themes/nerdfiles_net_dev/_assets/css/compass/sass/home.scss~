@@ -4,15 +4,16 @@ ul, ol {
 
 ol { 
   //border: 2px #000 solid;
+  position: relative;
   padding: .5em .5em 0 .5em;
   li { 
     color: #999; 
     margin: 0px 0px .5em;
-    clear: left;
+    display: inline-block;
   }
   li:hover { 
     color: #000; 
-    font-size: 1.3em;
+    //font-size: 1.3em;
   }
 }
 
@@ -21,9 +22,27 @@ h2 {
 }
 
 ol li .iconic {
-  padding: 0.2em 0.5em 1em 1em;
+  padding: 0.2em 0.5em 0 1em;
   float: left;
   position: relative;
   margin-left: -1em;
 }
 
+ol {
+  .exo {
+    position: absolute;
+    background: #fff;
+    border-top: 3px #222 solid;
+    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
+    font-size: 1.5rem;
+    left: -9999px;
+    padding: 1rem 1rem 1rem;
+    top: 4.5rem;
+    width: 75%;
+  }
+  li:hover {
+    .exo {
+      left: 0;
+    }
+  }
+}

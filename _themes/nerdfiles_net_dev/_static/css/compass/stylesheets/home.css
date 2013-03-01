@@ -5,29 +5,46 @@ ul li, ol li {
 
 /* line 5, ../sass/home.scss */
 ol {
-  padding: .5em .5em 0 .5em;
+  position: relative;
+  padding: 0.5em 0.5em 0 0.5em;
 }
-/* line 8, ../sass/home.scss */
+/* line 9, ../sass/home.scss */
 ol li {
   color: #999;
-  margin: 0px 0px .5em;
-  clear: left;
+  margin: 0px 0px 0.5em;
+  display: inline-block;
 }
-/* line 13, ../sass/home.scss */
+/* line 14, ../sass/home.scss */
 ol li:hover {
   color: #000;
-  font-size: 1.3em;
 }
 
-/* line 19, ../sass/home.scss */
+/* line 20, ../sass/home.scss */
 h2 {
   clear: left;
 }
 
-/* line 23, ../sass/home.scss */
+/* line 24, ../sass/home.scss */
 ol li .iconic {
-  padding: 0.2em 0.5em 1em 1em;
+  padding: 0.2em 0.5em 0 1em;
   float: left;
   position: relative;
   margin-left: -1em;
+}
+
+/* line 32, ../sass/home.scss */
+ol .exo {
+  position: absolute;
+  background: #fff;
+  border-top: 3px #222222 solid;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
+  font-size: 1.5rem;
+  left: -9999px;
+  padding: 1rem 1rem 1rem;
+  top: 4.5rem;
+  width: 100%;
+}
+/* line 44, ../sass/home.scss */
+ol li:hover .exo {
+  left: 0;
 }
