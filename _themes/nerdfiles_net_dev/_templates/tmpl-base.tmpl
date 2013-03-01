@@ -75,11 +75,6 @@
 <meta name="description" content="Web dev, San Francisco — JavaScript, jQuery, CoffeeScript, SASS, OO CSS, Grid Systems, Python, Django, PHP, WordPress, HTML5, Hypermedia, Web Science" />
 
 <!-- Who left this up here? -->
-{% render_block "scriptloader" %}
-
-{% render_block "js" %}
-
-{% render_block "analytics" %}
 
 <!-- head::responses -->
 
@@ -216,6 +211,12 @@
 {% render_block "tipjar" %}
 
 </div><!-- End .container -->
+
+{% render_block "scriptloader" %}
+
+{% render_block "js" %}
+
+{% render_block "analytics" %}
 
 {# render_block "landmine" #}
 
