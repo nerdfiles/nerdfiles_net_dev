@@ -7,7 +7,7 @@
   }
 
   nerds.lastfm_recent_tracks = function() {
-    return $.ajax('__/recent-tracks/', {
+    return $.ajax('/__/recent-tracks/', {
       type: 'GET',
       dataType: 'json',
       cache: true,
@@ -20,7 +20,7 @@
         var d, lastfm_recent_tracks$;
         d = $.parseJSON(data.responseText);
         lastfm_recent_tracks$ = $('#lastfm_recent_tracks');
-        return lastfm_recent_tracks$.prop('title', d.join('\n\n\t--\n\n'));
+        return lastfm_recent_tracks$.attr('title', d.join('\n — \n'));
       }
     });
   };

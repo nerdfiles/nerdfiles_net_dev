@@ -4,7 +4,7 @@ window.nerds ?= {}
 # init
 # lastfm recents
 nerds.lastfm_recent_tracks = ->
-  $.ajax('__/recent-tracks/',
+  $.ajax('/__/recent-tracks/',
     type: 'GET',
     dataType: 'json',
     cache: true,
@@ -14,7 +14,7 @@ nerds.lastfm_recent_tracks = ->
     complete: (data) ->
       d = $.parseJSON(data.responseText)
       lastfm_recent_tracks$ = $ '#lastfm_recent_tracks'
-      lastfm_recent_tracks$.prop 'title', d.join('\n\n\t--\n\n')
+      lastfm_recent_tracks$.attr 'title', d.join('\n —')
   )
 
 # scrolly anchors
