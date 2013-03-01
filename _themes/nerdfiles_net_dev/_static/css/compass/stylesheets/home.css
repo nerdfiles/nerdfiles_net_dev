@@ -37,26 +37,30 @@ ol li .iconic {
   0% {
     left: -9999px;
     top: 4.5rem;
+    top: 0;
   }
 
-  /* line 36, ../sass/home.scss */
+  /* line 37, ../sass/home.scss */
   100% {
     left: 0;
     top: 4.5rem;
+    top: 0;
   }
 }
 
-/* line 43, ../sass/home.scss */
+/* line 45, ../sass/home.scss */
 ol .exo {
   position: absolute;
+  z-index: 9001;
   border-top: 3px #222222 solid;
   font-size: 1.5rem;
   padding: 1rem 5% 1rem;
   top: 4.5rem;
+  top: 0;
   width: 90%;
   left: -9999px;
 }
-/* line 55, ../sass/home.scss */
+/* line 59, ../sass/home.scss */
 ol li:hover .exo {
   left: 0;
   animation-name: slide;
