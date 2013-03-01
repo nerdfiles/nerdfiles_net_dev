@@ -51,9 +51,9 @@ ol .exo {
   position: absolute;
   border-top: 3px #222222 solid;
   font-size: 1.5rem;
-  padding: 1rem 1rem 1rem;
+  padding: 1rem 5% 1rem;
   top: 4.5rem;
-  width: 100%;
+  width: 90%;
   left: -9999px;
 }
 /* line 55, ../sass/home.scss */

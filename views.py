@@ -44,7 +44,7 @@ def tumblr_redirect(request):
 def lastfm_recent_tracks(request):
   #cache
   lfm_data = cache.get('lfm_data')
-  TIMEOUT = 3600*48/60 # two days (48 hours)
+  TIMEOUT = 2880*2 # two days (48 hours)
   if lfm_data:
     return HttpResponse(lfm_data, mimetype='application/json')
 
