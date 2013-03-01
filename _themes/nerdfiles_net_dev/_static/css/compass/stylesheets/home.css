@@ -32,17 +32,33 @@ ol li .iconic {
   margin-left: -1em;
 }
 
-/* line 32, ../sass/home.scss */
+@keyframes slide {
+  /* line 32, ../sass/home.scss */
+  0% {
+    left: -9999px;
+    top: 4.5rem;
+  }
+
+  /* line 36, ../sass/home.scss */
+  100% {
+    left: 0;
+    top: 4.5rem;
+  }
+}
+
+/* line 43, ../sass/home.scss */
 ol .exo {
   position: absolute;
   border-top: 3px #222222 solid;
   font-size: 1.5rem;
-  left: -9999px;
   padding: 1rem 1rem 1rem;
   top: 4.5rem;
   width: 100%;
+  left: -9999px;
 }
-/* line 44, ../sass/home.scss */
+/* line 55, ../sass/home.scss */
 ol li:hover .exo {
   left: 0;
+  animation-name: slide;
+  animation-duration: 1s;
 }
