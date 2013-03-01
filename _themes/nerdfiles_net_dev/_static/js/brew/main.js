@@ -20,7 +20,7 @@
         var d, lastfm_recent_tracks$;
         d = $.parseJSON(data.responseText);
         lastfm_recent_tracks$ = $('#lastfm_recent_tracks');
-        return lastfm_recent_tracks$.prop('title', d.join('\n\n\t\t\t\t--'));
+        return lastfm_recent_tracks$.prop('title', d.join('\n\n\t--\n\n'));
       }
     });
   };

@@ -14,7 +14,7 @@ nerds.lastfm_recent_tracks = ->
     complete: (data) ->
       d = $.parseJSON(data.responseText)
       lastfm_recent_tracks$ = $ '#lastfm_recent_tracks'
-      lastfm_recent_tracks$.prop 'title', d.join('\n\n')
+      lastfm_recent_tracks$.prop 'title', d.join('\n\n\t--\n\n')
   )
 
 # scrolly anchors
