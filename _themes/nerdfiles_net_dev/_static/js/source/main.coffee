@@ -2,26 +2,20 @@
 window.nerds ?= {}
 
 # init
-nerds.init = ->
-  nerds.anchors_scroll()
-  nerds.anchors_external()
-  nerds.lastfm_recent_tracks()
-
 # lastfm recents
 nerds.lastfm_recent_tracks = ->
-  $.ajax '__/recent-tracks/',
-    type: 'GET'
-    dataType: 'json'
+  $.ajax('__/recent-tracks/',
+    type: 'GET',
+    dataType: 'json',
+    cache: true,
     error: (jqXHR, textStatus, errorThrown) ->
       body$ = $ "body"
       body$.addClass "err-#{textStatus}"
-    success: (data, textStatus, jqXHR) ->
+    complete: (data) ->
+      d = $.parseJSON(data.responseText)
       lastfm_recent_tracks$ = $ '#lastfm_recent_tracks'
-      #wtf list chomps?
-      title_content = '\n'
-      for t in data
-        title_content += (t + "\n\n")
-      lastfm_recent_tracks$.prop 'title', "#{title_content}"
+      lastfm_recent_tracks$.prop 'title', d.join('\n\n\t\t\t\t--')
+  )
 
 # scrolly anchors
 nerds.anchors_scroll = ->
@@ -54,6 +48,11 @@ nerds.anchors_external = ->
     
     window.open($el.prop('href'), $el.prop('title'))
     e.preventDefault()
+
+nerds.init = ->
+  nerds.anchors_scroll()
+  nerds.anchors_external()
+  nerds.lastfm_recent_tracks()
 
 $(document).ready ->
   # begin universe
