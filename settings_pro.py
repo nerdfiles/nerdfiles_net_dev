@@ -340,7 +340,7 @@ EMAIL_USE_TLS = True
 
 # == LOGGING ======================================= #
 
-import loggly_logger
+#import loggly_logger
 
 LOGGING = {
   'version': 1,

@@ -6,30 +6,21 @@
     window.nerds = {};
   }
 
-  nerds.init = function() {
-    nerds.anchors_scroll();
-    nerds.anchors_external();
-    return nerds.lastfm_recent_tracks();
-  };
-
   nerds.lastfm_recent_tracks = function() {
     return $.ajax('__/recent-tracks/', {
       type: 'GET',
       dataType: 'json',
+      cache: true,
       error: function(jqXHR, textStatus, errorThrown) {
         var body$;
         body$ = $("body");
         return body$.addClass("err-" + textStatus);
       },
-      success: function(data, textStatus, jqXHR) {
-        var lastfm_recent_tracks$, t, title_content, _i, _len;
+      complete: function(data) {
+        var d, lastfm_recent_tracks$;
+        d = $.parseJSON(data.responseText);
         lastfm_recent_tracks$ = $('#lastfm_recent_tracks');
-        title_content = '\n';
-        for (_i = 0, _len = data.length; _i < _len; _i++) {
-          t = data[_i];
-          title_content += t + "\n\n";
-        }
-        return lastfm_recent_tracks$.prop('title', "" + title_content);
+        return lastfm_recent_tracks$.prop('title', d.join('\n\n\t\t\t\t--'));
       }
     });
   };
@@ -58,6 +49,12 @@
       window.open($el.prop('href'), $el.prop('title'));
       return e.preventDefault();
     });
+  };
+
+  nerds.init = function() {
+    nerds.anchors_scroll();
+    nerds.anchors_external();
+    return nerds.lastfm_recent_tracks();
   };
 
   $(document).ready(function() {

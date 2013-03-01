@@ -7,7 +7,7 @@ from django.contrib.sites.models import Site
 from django.core.cache import cache
 from kippt import kippt_wrapper
 from settings import API_KEY, API_SECRET, username, password_hash
-from pprint import pprint
+#from pprint import pprint
 import pylast 
 
 # == CONTEXT PROCESSORS ======================================== #
@@ -50,7 +50,7 @@ def kippt_rss(request):
 def kippt_rss(request):
   k = kippt_wrapper.user('%s' % settings.KIPPT_API_USER, '%s' % settings.KIPPT_API_TOKEN,)
 
-  TIMEOUT = 3600*48/60 # two days (48 hours)
+  TIMEOUT = (3600*48/60)*5 # ten days
 
   kippt_imps = cache.get('kippt_imps')
   if kippt_imps:

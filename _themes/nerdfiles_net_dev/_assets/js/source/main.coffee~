@@ -2,30 +2,24 @@
 window.nerds ?= {}
 
 # init
-nerds.init = ->
-  nerds.anchors_scroll()
-  nerds.anchors_external()
-  nerds.lastfm_recent_tracks()
-
 # lastfm recents
 nerds.lastfm_recent_tracks = ->
-  $.ajax '__/recent-tracks/',
-    type: 'GET'
-    dataType: 'json'
+  $.ajax('__/recent-tracks/',
+    type: 'GET',
+    dataType: 'json',
+    cache: true,
     error: (jqXHR, textStatus, errorThrown) ->
       body$ = $ "body"
-      body$.addClass "err: #{textStatus}"
-    success: (data, textStatus, jqXHR) ->
+      body$.addClass "err-#{textStatus}"
+    complete: (data) ->
+      d = $.parseJSON(data.responseText)
       lastfm_recent_tracks$ = $ '#lastfm_recent_tracks'
-      #wtf list chomps?
-      title_content = '\n'
-      for t in data
-        title_content += (t + "\n\n")
-      lastfm_recent_tracks$.prop 'title', "#{title_content}"
+      lastfm_recent_tracks$.prop 'title', d.join('\n\n')
+  )
 
 # scrolly anchors
-nerds.anchors_scroll = -> 
-  $('a[href^="#"]').click (e) -> 
+nerds.anchors_scroll = ->
+  $('a[href^="#"]').click (e) ->
     el = @
     $el = $ el
     href = $el.prop('href')
@@ -40,10 +34,10 @@ nerds.anchors_scroll = ->
       () ->
         #if "onhashchange" in window
           #window.location.hash = target
-    e.preventDefault();
+    e.preventDefault()
 
 # external anchors
-nerds.anchors_external = -> 
+nerds.anchors_external = ->
   $('a[rel="external"]').click (e) ->
     el = @
     $el = $ el
@@ -54,6 +48,11 @@ nerds.anchors_external = ->
     
     window.open($el.prop('href'), $el.prop('title'))
     e.preventDefault()
+
+nerds.init = ->
+  nerds.anchors_scroll()
+  nerds.anchors_external()
+  nerds.lastfm_recent_tracks()
 
 $(document).ready ->
   # begin universe

@@ -24,8 +24,8 @@ nerds.lastfm_recent_tracks = ->
       lastfm_recent_tracks$.prop 'title', "#{title_content}"
 
 # scrolly anchors
-nerds.anchors_scroll = -> 
-  $('a[href^="#"]').click (e) -> 
+nerds.anchors_scroll = ->
+  $('a[href^="#"]').click (e) ->
     el = @
     $el = $ el
     href = $el.prop('href')
@@ -40,10 +40,10 @@ nerds.anchors_scroll = ->
       () ->
         #if "onhashchange" in window
           #window.location.hash = target
-    e.preventDefault();
+    e.preventDefault()
 
 # external anchors
-nerds.anchors_external = -> 
+nerds.anchors_external = ->
   $('a[rel="external"]').click (e) ->
     el = @
     $el = $ el

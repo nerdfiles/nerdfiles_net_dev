@@ -59,16 +59,18 @@ def lastfm_recent_tracks(request):
 
   #raw
   lfm_data = recent_tracks
-  track_data = ["%s - %s" % (tr.get_artist(), tr.get_title()) for tr in lfm_data]
+  #for tr in lfm_data:
+    #print dir(tr)
+  track_data = ["%s - %s on '%s'" % (tr.get_artist(), tr.get_title(), tr.get_album()) for tr in lfm_data]
   #need to convert list to json
   #must list comp to grab only track and artist unicode data
-  #if track_data:
-  #  data = json.dumps(track_data)
+  if track_data:
+    data = json.dumps(track_data)
 
   #set cache for next time
   cache.set(
     "lfm_data",
-    track_data,
+    data,
     TIMEOUT
   )
   #pdb.set_trace()
@@ -76,7 +78,7 @@ def lastfm_recent_tracks(request):
   #pprint(lfm_data)
 
   #load raw
-  return HttpResponse(track_data, mimetype='application/json')
+  return HttpResponse(data, mimetype='application/json')
 
 def error_404(request):
   return render_response(request, '404.tmpl')
