@@ -28,21 +28,34 @@ ol li .iconic {
   margin-left: -1em;
 }
 
+@keyframes slide {
+  0% {
+    left: -9999px;
+    top: 4.5rem;
+  }
+  100% {
+    left: 0;
+    top: 4.5rem;
+  }
+}
+
 ol {
   .exo {
     position: absolute;
-    background: #fff;
+    //background: #fff;
     border-top: 3px #222 solid;
     //background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
     font-size: 1.5rem;
-    left: -9999px;
     padding: 1rem 1rem 1rem;
     top: 4.5rem;
     width: 100%;
+    left: -9999px;
   }
   li:hover {
     .exo {
       left: 0;
+      animation-name: slide;
+      animation-duration: 2s;
     }
   }
 }
