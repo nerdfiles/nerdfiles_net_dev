@@ -33,12 +33,12 @@ ol {
     position: absolute;
     background: #fff;
     border-top: 3px #222 solid;
-    background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
+    //background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
     font-size: 1.5rem;
     left: -9999px;
     padding: 1rem 1rem 1rem;
     top: 4.5rem;
-    width: 75%;
+    width: 100%;
   }
   li:hover {
     .exo {
