@@ -32,22 +32,26 @@ ol li .iconic {
   0% {
     left: -9999px;
     top: 4.5rem;
+    top: 0;
   }
   100% {
     left: 0;
     top: 4.5rem;
+    top: 0;
   }
 }
 
 ol {
   .exo {
     position: absolute;
+    z-index: 9001;
     //background: #fff;
     border-top: 3px #222 solid;
     //background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
     font-size: 1.5rem;
     padding: 1rem 5% 1rem;
     top: 4.5rem;
+    top: 0;
     width: 90%;
     left: -9999px;
   }
