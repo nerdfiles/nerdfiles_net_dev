@@ -74,8 +74,8 @@ body.base {
   }
 
   .container { 
-    margin: 0 auto 30px; 
-    width: 60rem; }
+    padding: 0 10rem;
+  }
 
   header {
     border-bottom: 4px #111 solid; 
