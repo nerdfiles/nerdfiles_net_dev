@@ -63,6 +63,30 @@ a {
   }
 }
 
+// == Smartphones (portrait and landscape) ===================== //
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+}
+ 
+// == Smartphones (landscape) ================================== //
+
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+ 
+// == Smartphones (portrait) =================================== //
+
+@media only screen and (max-width : 320px) {
+  
+  body.base {
+    font-size: 1.7rem;
+    .container {
+      padding: 2%;
+    }
+  }
+
+}
 
 body.base { 
   padding: 100px 0;
@@ -74,7 +98,7 @@ body.base {
   }
 
   .container { 
-    padding: 0 10rem;
+    padding: 0 10%;
   }
 
   header {
