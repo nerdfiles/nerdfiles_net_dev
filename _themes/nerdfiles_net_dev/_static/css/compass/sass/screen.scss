@@ -43,7 +43,6 @@ h1,h2,h3,h4,h5,h6 {
 body {
   text-rendering: optimizeLegibility;
   font-family: la-belle-aurore, sans-serif;
-  font-size: 2em;
   line-height: 1.7;
   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
 }
@@ -67,6 +66,7 @@ a {
 
 body.base { 
   padding: 100px 0;
+  font-size: 3rem;
 
   hr {
     border: none; 
@@ -75,7 +75,8 @@ body.base {
 
   .container { 
     margin: 0 auto 30px; 
-    width: 720px; }
+    width: 60rem; }
+
   header {
     border-bottom: 4px #111 solid; 
     margin: 0 0 .5em;
