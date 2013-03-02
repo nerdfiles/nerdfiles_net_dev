@@ -32,10 +32,12 @@ ol li .iconic {
   0% {
     left: -9999px;
     top: 4.5rem;
+    top: 0;
   }
   100% {
     left: 0;
     top: 4.5rem;
+    top: 0;
   }
 }
 
