@@ -183,8 +183,7 @@ body.base hr {
 }
 /* line 76, ../sass/screen.scss */
 body.base .container {
-  margin: 0 auto 30px;
-  width: 60rem;
+  padding: 0 10rem;
 }
 /* line 80, ../sass/screen.scss */
 body.base header {
