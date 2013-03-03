@@ -256,7 +256,7 @@ section.important .ui.widget > *:first-child:after {
   color: #ccc;
   opacity: .7;
   padding-top: 30px;
-  top: 15px;
+  top: 25px;
 }
 /* line 163, ../sass/screen.scss */
 section.important .ui.widget p {
