@@ -57,6 +57,9 @@ a {
 
   body.base {
     font-size: 1.85rem;
+    .container {
+      padding: 0 10%;
+    }
   }
 
 }
@@ -80,7 +83,7 @@ body.base {
   }
 
   .container { 
-    padding: 0 10%;
+    padding: 0 20%;
   }
 
   header {
