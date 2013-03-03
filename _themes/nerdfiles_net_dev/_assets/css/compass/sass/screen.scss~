@@ -149,7 +149,7 @@ section.important {
       & > *:first-child:after {
         display: block;
         font: {
-          size: 3rem;
+          size: 15rem;
         }
         line-height: .7;
         content: "⌇";

@@ -350,13 +350,14 @@ ul.activities li.lastfm a {
 
 /* line 250, ../sass/screen.scss */
 #site-access {
+  background: none;
   font-size: 1rem;
 }
 
 /**
  * gittip
  */
-/* line 260, ../sass/screen.scss */
+/* line 261, ../sass/screen.scss */
 .m-tipjar {
   padding-top: 40px;
   clear: both;
