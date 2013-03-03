@@ -152,13 +152,13 @@ section.important {
         font: {
           size: 15rem;
         }
-        line-height: .7;
+        line-height: 0;
         content: "⌇";
         position: relative;
         color: #ccc;
         opacity: .7;
-        padding-top: 30px;
-        top: 25px;
+        margin-top: 200px;
+        padding: 0;
       }
       p { 
         margin: 0;
