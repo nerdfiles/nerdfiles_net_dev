@@ -67,3 +67,7 @@ ol li:hover .exo {
   animation-name: slide;
   animation-duration: 1s;
 }
+
+body.base h1 {
+  font-size: 1rem !important;
+}
