@@ -118,40 +118,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 16px;
 }
 
-/**
- * CSS3 Image Filter Tools
- */
-/* test */
-/* line 29, ../sass/screen.scss */
-body {
-  background: rgba(230, 230, 230, 0.6);
-  -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
-
-/* Base */
-/* line 37, ../sass/screen.scss */
+/* line 21, ../sass/screen.scss */
 p,
 ul, ol {
   margin: 0 0 1em;
 }
 
-/* line 40, ../sass/screen.scss */
+/* line 24, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.5em;
 }
 
-/* line 43, ../sass/screen.scss */
+/* line 27, ../sass/screen.scss */
 body {
   text-rendering: optimizeLegibility;
   font-family: la-belle-aurore, sans-serif;
   line-height: 1.7;
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-size: 2.65rem;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 38, ../sass/screen.scss */
 a {
   font-family: la-belle-aurore, sans-serif;
   padding: 0 10px;
@@ -160,80 +151,67 @@ a {
   *zoom: 1;
   *display: inline;
   margin: 0 0 0.1em 0;
-  border-bottom: 1px #999999 dashed;
+  border-bottom: 1px #222222 dashed;
 }
-/* line 60, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
 a[rel="external"]::after {
   content: ' ⤴';
 }
-/* line 61, ../sass/screen.scss */
+/* line 49, ../sass/screen.scss */
 a:hover {
   opacity: .5;
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* line 70, ../sass/screen.scss */
-  body.base {
-    font-size: 1.7rem;
-  }
-  /* line 72, ../sass/screen.scss */
+  /* line 59, ../sass/screen.scss */
   body.base .container {
     padding: 2%;
   }
 }
-/* line 89, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 body.base {
   padding: 100px 0;
-  font-size: 3rem;
 }
-/* line 93, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 body.base hr {
   border: none;
   border-top: 3px #cccccc dashed;
 }
-/* line 98, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 body.base .container {
   padding: 0 10%;
 }
-/* line 102, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 body.base header {
   border-bottom: 4px #111111 solid;
   margin: 0 0 0.5em;
   text-align: right;
 }
-/* line 108, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 body.base header h1 {
   display: inline-block;
-  font-size: 2em;
   line-height: 1;
   padding: 25px 0 25px;
 }
-/* line 114, ../sass/screen.scss */
-body.base .main h2 {
-  font-size: 1.5em;
-}
-/* line 119, ../sass/screen.scss */
+/* line 105, ../sass/screen.scss */
 body.base blockquote {
   box-shadow: 0 0 0.3em #cccccc;
   padding: 20px;
+  margin-bottom: 1rem;
 }
-/* line 120, ../sass/screen.scss */
+/* line 110, ../sass/screen.scss */
 body.base blockquote p {
   display: inline-block;
   margin: 0;
 }
-/* line 121, ../sass/screen.scss */
-body.base blockquote cite {
-  font-size: 16px;
-}
-/* line 122, ../sass/screen.scss */
+/* line 113, ../sass/screen.scss */
 body.base blockquote p::before {
   margin: 0 0.5em 0 0;
   content: "❝ ";
   display: inline-block;
 }
 
-/* line 126, ../sass/screen.scss */
+/* line 117, ../sass/screen.scss */
 .debug-False {
   display: none !important;
 }
@@ -241,17 +219,16 @@ body.base blockquote p::before {
 /**
  * Important! < Kippt Feed
  */
-/* line 136, ../sass/screen.scss */
+/* line 127, ../sass/screen.scss */
 section.important .ui.kippt {
   text-align: center;
 }
-/* line 138, ../sass/screen.scss */
+/* line 129, ../sass/screen.scss */
 section.important .ui.kippt .iconic {
-  font-size: 2em;
   line-height: 1em;
   vertical-align: middle;
 }
-/* line 144, ../sass/screen.scss */
+/* line 134, ../sass/screen.scss */
 section.important .ui.widget {
   padding: 10px 0 20px;
   /*
@@ -259,20 +236,17 @@ section.important .ui.widget {
     @include inline-block;
     margin: 0 20px 0 0;
     line-height: 0;
-    font: {
-      size: 3em;
-    }
     position: relative;
     top: -.1em;
     content: "⏧";
   }
   */
 }
-/* line 162, ../sass/screen.scss */
+/* line 149, ../sass/screen.scss */
 section.important .ui.widget > *:first-child:after {
   display: block;
+  font-size: 15rem;
   line-height: .7;
-  font-size: 3em;
   content: "⌇";
   position: relative;
   color: #ccc;
@@ -280,7 +254,7 @@ section.important .ui.widget > *:first-child:after {
   padding-top: 30px;
   top: 15px;
 }
-/* line 175, ../sass/screen.scss */
+/* line 162, ../sass/screen.scss */
 section.important .ui.widget p {
   margin: 0;
 }
@@ -302,14 +276,14 @@ section.important .ui.widget p {
 /**
  * last.fm
  */
-/* line 205, ../sass/screen.scss */
+/* line 192, ../sass/screen.scss */
 ul.activities {
   margin: 0;
   padding: 0;
   display: inline-block;
   text-align: left;
 }
-/* line 212, ../sass/screen.scss */
+/* line 199, ../sass/screen.scss */
 ul.activities li a {
   display: inline-block;
   width: 48px;
@@ -317,25 +291,24 @@ ul.activities li a {
   border: none;
   text-indent: -9999px;
 }
-/* line 222, ../sass/screen.scss */
+/* line 209, ../sass/screen.scss */
 ul.activities li.lastfm {
   background: url("../../../img-ui/ui-icon-headphones.png") no-repeat;
 }
-/* line 225, ../sass/screen.scss */
+/* line 212, ../sass/screen.scss */
 ul.activities li.lastfm a {
   padding: 0;
   margin: 0;
 }
 
-/* line 234, ../sass/screen.scss */
+/* line 221, ../sass/screen.scss */
 .site-footer {
   border-top: 4px black solid;
   padding-top: 20px;
 }
 
-/* line 246, ../sass/screen.scss */
+/* line 233, ../sass/screen.scss */
 .m-imprint {
-  font-size: 1.8rem;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
@@ -343,7 +316,7 @@ ul.activities li.lastfm a {
   zoom: 1;
   *display: inline;
 }
-/* line 249, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 .m-imprint .m--content {
   display: -moz-inline-stack;
   display: inline-block;
@@ -352,12 +325,11 @@ ul.activities li.lastfm a {
   zoom: 1;
   *display: inline;
   text-align: right;
-  font-size: .7em;
   padding: 0.4em 0 0;
   margin: 0px 0px 0.5em;
   clear: left;
 }
-/* line 251, ../sass/screen.scss */
+/* line 237, ../sass/screen.scss */
 .m-imprint .m--content ul {
   display: -moz-inline-stack;
   display: inline-block;
@@ -366,7 +338,7 @@ ul.activities li.lastfm a {
   zoom: 1;
   *display: inline;
 }
-/* line 253, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 .m-imprint .m--content ul li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -376,10 +348,15 @@ ul.activities li.lastfm a {
   *display: inline;
 }
 
+/* line 250, ../sass/screen.scss */
+#site-access {
+  font-size: 1rem;
+}
+
 /**
  * gittip
  */
-/* line 269, ../sass/screen.scss */
+/* line 260, ../sass/screen.scss */
 .m-tipjar {
   padding-top: 40px;
   clear: both;

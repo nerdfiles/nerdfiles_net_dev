@@ -15,23 +15,7 @@
   font-smoothing: antialiased;
 }
 
-/**
- * CSS3 Image Filter Tools
- */
-
-@function checkme() {
-
-}
-
-
-/* test */
-
-body { 
-  background: rgba(230,230,230,.6); 
-  @include font-smoothing;
-}
-
-/* Base */
+// == Base ===================================================== //
 
 p, 
 ul, ol { 
@@ -45,6 +29,10 @@ body {
   font-family: la-belle-aurore, sans-serif;
   line-height: 1.7;
   background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
+  @include font-smoothing;
+  font: {
+    size: 2.65rem;
+  }
 }
 
 a { 
@@ -56,7 +44,7 @@ a {
   *display: inline;
   margin: 0 0 .1em 0;
   //@include border-radius(10px, 10px);
-  border-bottom: 1px #999 dashed; 
+  border-bottom: 1px #222 dashed; 
   &[rel="external"]::after { content: ' ⤴'; }
   &:hover { 
     opacity: .5;
@@ -66,31 +54,27 @@ a {
 // == Smartphones (portrait and landscape) ===================== //
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-/* Styles */
-}
- 
-// == Smartphones (landscape) ================================== //
 
-@media only screen and (min-width : 321px) {
-/* Styles */
-}
- 
-// == Smartphones (portrait) =================================== //
-
-@media only screen and (max-width : 320px) {
-  
   body.base {
-    font-size: 1.7rem;
     .container {
       padding: 2%;
     }
   }
 
 }
+ 
+// == Smartphones (landscape) ================================== //
+
+@media only screen and (min-width : 321px) {
+}
+ 
+// == Smartphones (portrait) =================================== //
+
+@media only screen and (max-width : 320px) {
+}
 
 body.base { 
   padding: 100px 0;
-  font-size: 3rem;
 
   hr {
     border: none; 
@@ -109,18 +93,23 @@ body.base {
 
   header h1 { 
     display: inline-block;
-    font-size: 2em; 
     //border-top: 1px #999 dashed; 
     line-height: 1; 
     padding: 25px 0 25px; }
-    .main h2 { font-size: 1.5em; }
+    .main h2 { 
+    }
     .main header { }
     .main { 
     //border-bottom: 1px #999 dashed; 
   }
-  blockquote { box-shadow: 0 0 .3em #ccc; padding: 20px; }
+  blockquote { 
+    box-shadow: 0 0 .3em #ccc; 
+    padding: 20px; 
+    margin-bottom: 1rem;
+  }
   blockquote p { display: inline-block; margin: 0; }
-  blockquote cite { font-size: 16px; }
+  blockquote cite { 
+  }
   blockquote p::before { margin: 0 .5em 0 0; content: "❝ "; display: inline-block; }
 
 }//body.base
@@ -138,7 +127,6 @@ section.important {
     &.kippt { 
       text-align: center;
       .iconic {
-        font-size: 2em; 
         line-height: 1em; 
         vertical-align: middle;
       }
@@ -152,9 +140,6 @@ section.important {
         @include inline-block;
         margin: 0 20px 0 0;
         line-height: 0;
-        font: {
-          size: 3em;
-        }
         position: relative;
         top: -.1em;
         content: "⏧";
@@ -163,10 +148,10 @@ section.important {
 
       & > *:first-child:after {
         display: block;
-        line-height: .7;
         font: {
-          size: 3em;
+          size: 3rem;
         }
+        line-height: .7;
         content: "⌇";
         position: relative;
         color: #ccc;
@@ -246,7 +231,6 @@ ul.activities {
 }//.m
 
 .m-imprint {
-  font-size: 1.8rem;
   @include inline-block;
   .m--content {
     @include inline-block;
@@ -257,10 +241,15 @@ ul.activities {
       }
     }
     text-align: right;
-    font-size: .7em;
     padding: .4em 0 0;
     margin: 0px 0px .5em;
     clear: left;
+  }
+}
+
+#site-access {
+  font: {
+    size: 1rem;
   }
 }
 
