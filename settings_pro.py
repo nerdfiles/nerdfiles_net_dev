@@ -20,7 +20,6 @@
 
 from django.conf import settings
 import os, sys, datetime
-import posixpath
 import logging
 
 
