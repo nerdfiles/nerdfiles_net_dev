@@ -25,6 +25,27 @@
     });
   };
 
+  nerds.twitter_recent_tweets = function() {
+    return $.ajax('/__/recent-tweets/', {
+      type: 'GET',
+      dataType: 'json',
+      cache: true,
+      error: function(jqXHR, textStatus, errorThrown) {
+        var body$;
+        body$ = $('body');
+        return body$.addClass('err-#{textStatus}');
+      },
+      complete: function(data) {
+        var d, twitter_recent_tweets$;
+        d = $.parseJSON(data.responseText);
+        twitter_recent_tweets$ = $('#twitter_recent_tweets');
+        return $.each(d, function(k, v) {
+          return twitter_recent_tweets$.append('<li>' + v + '</li>');
+        });
+      }
+    });
+  };
+
   nerds.anchors_scroll = function() {
     return $('a[href^="#"]').click(function(e) {
       var $el, $target, el, href, scope, target;
@@ -54,7 +75,8 @@
   nerds.init = function() {
     nerds.anchors_scroll();
     nerds.anchors_external();
-    return nerds.lastfm_recent_tracks();
+    nerds.lastfm_recent_tracks();
+    return nerds.twitter_recent_tweets();
   };
 
   $(document).ready(function() {

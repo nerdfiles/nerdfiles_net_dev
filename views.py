@@ -4,31 +4,16 @@
 
 from django.conf import settings
 from django.conf.urls.defaults import *
-from django.core.urlresolvers import reverse
-from django import http
-from django.http import HttpResponseRedirect, HttpResponse
-from django.shortcuts import render_to_response, get_object_or_404, get_list_or_404, redirect
-from django.template import loader, Context
-from django.template.context import RequestContext
-from django.views.generic.simple import direct_to_template
-from django.views.generic.simple import redirect_to
-from django.views.generic import DetailView, ListView
-from django.http import Http404
-from sekizai.context import SekizaiContext
+from django.http import HttpResponse
+from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
-import logging
-
-from django.core.cache import cache
-#from django.core import serializers
-#from django.utils import simplejson
-import json
 
 if settings.LOCAL_DEVELOPMENT:
   import pdb
 
 # lastfm API
 from settings import API_KEY, API_SECRET, username, password_hash
-import pylast
+
 
 # == VIEWS ======================================== #
 
@@ -41,7 +26,40 @@ def render_response(request, *args, **kwargs):
 def tumblr_redirect(request):
   return redirect('http://wittysense.tumblr.com/')
 
+def twitter_recent_tweets(request):
+  import requests
+  from django.core.cache import cache
+  from pprint import pprint
+  import json
+  tw_data = cache.get('tw_data')
+  TIMEOUT = 2880*2
+  if tw_data:
+    return HttpResponse(tw_data, mimetype='application/json')
+
+  # tw_data
+  r = requests.get('http://twitter.com/users/show.json?screen_name=filesofnerds', 
+        auth=('filesofnerds', 'thec4tisonthem4t'))
+
+  #pprint(r)
+  #print r.status_code
+  #print r.text
+
+  tw_data = []
+
+  data = json.dumps(tw_data)
+
+  cache.set(
+    'tw_data',
+    data,
+    TIMEOUT
+  )
+
+  return HttpResponse(data, mimetype='application/json')
+
 def lastfm_recent_tracks(request):
+  import pylast
+  import json
+  from django.core.cache import cache
   #cache
   lfm_data = cache.get('lfm_data')
   TIMEOUT = 2880*2 # two days (48 hours)
@@ -74,8 +92,6 @@ def lastfm_recent_tracks(request):
     TIMEOUT
   )
   #pdb.set_trace()
-
-  #pprint(lfm_data)
 
   #load raw
   return HttpResponse(data, mimetype='application/json')
