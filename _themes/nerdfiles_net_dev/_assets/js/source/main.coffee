@@ -17,6 +17,22 @@ nerds.lastfm_recent_tracks = ->
       lastfm_recent_tracks$.attr 'title', d.join('\n — \n')
   )
 
+nerds.twitter_recent_tweets = ->
+  $.ajax('/__/recent-tweets/',
+    type: 'GET',
+    dataType: 'json',
+    cache: true,
+    error: (jqXHR, textStatus, errorThrown) ->
+      body$ = $ 'body'
+      body$.addClass 'err-#{textStatus}'
+    complete: (data) ->
+      d = $.parseJSON(data.responseText)
+      twitter_recent_tweets$ = $ '#twitter_recent_tweets'
+      $.each(d, (k, v)->
+        twitter_recent_tweets$.append '<li>' + v + '</li>'
+      )
+  )
+
 # scrolly anchors
 nerds.anchors_scroll = ->
   $('a[href^="#"]').click (e) ->
@@ -53,6 +69,7 @@ nerds.init = ->
   nerds.anchors_scroll()
   nerds.anchors_external()
   nerds.lastfm_recent_tracks()
+  nerds.twitter_recent_tweets()
 
 $(document).ready ->
   # begin universe
