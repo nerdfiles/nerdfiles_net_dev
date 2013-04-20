@@ -26,3 +26,5 @@ settings_loc.py
 settings_dev.py
 *.tmpl~
 _start/
+
+readme (Autosaved).markdown
