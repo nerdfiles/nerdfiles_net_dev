@@ -48,8 +48,6 @@ MANAGERS = ADMINS
 
 TIME_ZONE = 'America/Chicago'
 
-SITE_ID = 2
-
 INTERNAL_IPS = ('127.0.0.1',)
 
 if LOCAL_DEVELOPMENT:
@@ -118,16 +116,16 @@ ADMIN_MEDIA_PREFIX = '/_static/admin/'
 # == THEME/TEMPLATE/MEDIA ======================================= #
 
 THEME = "nerdfiles_net_dev"
-THEME_DIR = os.path.join(PROJECT_ROOT, "themes", THEME)
+THEME_DIR = os.path.join(PROJECT_ROOT, "..", "themes", THEME)
 
 TEMPLATE_DIRS = (
   #os.path.join(PROJECT_ROOT, "themes",),
-  os.path.join(PROJECT_ROOT, "themes", THEME, "_templates"),
+  os.path.join(PROJECT_ROOT, "..", "themes", THEME, "_templates"),
 )
 
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, "themes", THEME, "_assets")
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, "..", "themes", THEME, "_assets")
 
-STATIC_ROOT = os.path.join(PROJECT_ROOT, "themes", THEME, "_static")
+STATIC_ROOT = os.path.join(PROJECT_ROOT, "..", "themes", THEME, "_static")
 STATIC_URL = '/_static/'
 
 if LOCAL_DEVELOPMENT:
@@ -137,7 +135,6 @@ else:
 
 
 STATICFILES_DIRS = (
-  #("_static", os.path.join(PROJECT_ROOT, "themes", THEME, "_assets")),
 )
 
 STATICFILES_FINDERS = (
@@ -353,7 +350,7 @@ LOGGING = {
     'file': {
       'level': 'INFO',
       'class': 'logging.handlers.RotatingFileHandler',
-      'filename': os.path.join(PROJECT_ROOT, 'log', 'requests.log'),
+      'filename': os.path.join(PROJECT_ROOT, '../log', 'requests.log'),
       'maxBytes': 1024*1024*5, # 5MB
       'backupCount': 10,
       'formatter': 'standard'
@@ -362,13 +359,13 @@ LOGGING = {
       'level': 'DEBUG',
       'class': 'logging.FileHandler', # set the logging class to log to a file
       'formatter': 'verbose',         # define the formatter to associate
-      'filename': os.path.join(PROJECT_ROOT, 'log', 'userlogins.log') # log file
+      'filename': os.path.join(PROJECT_ROOT, '../log', 'userlogins.log') # log file
     },
     'file_usersaves': {               # define and name a second handler
       'level': 'DEBUG',
       'class': 'logging.FileHandler', # set the logging class to log to a file
       'formatter': 'verbose',         # define the formatter to associate
-      'filename': os.path.join(PROJECT_ROOT, 'log', 'usersaves.log')  # log file
+      'filename': os.path.join(PROJECT_ROOT, '../log', 'usersaves.log')  # log file
     },
   },
   'loggers': {
