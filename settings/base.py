@@ -77,7 +77,31 @@ USE_L10N = True
 
 # == URLCONF ======================================= #
 
-ROOT_URLCONF = 'nerdfiles_net.urls'
+ROOT_URLCONF = 'nerdfiles_net_dev.urls'
+
+
+# == DB ======================================= #
+
+'''DATABASE_ENGINE = 'django.db.backends.postgresql_psycopg2'
+DATABASE_NAME = 'nerdfiles_website'
+DATABASE_USER = 'nerdfiles_website'
+DATABASE_PASSWORD = 'f0xf0x0!6'
+#DATABASE_HOST = 'localhost'
+#DATABASE_PORT = '5432'
+DATABASE_HOST = ''
+DATABASE_PORT = ''
+'''
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'nerdfiles_website',
+        'USER': 'nerdfiles_website',
+        'PASSWORD': 'f0xf0x0!6',
+        #'HOST': 'localhost',
+        #'PORT': '1540',
+    }
+}
 
 
 # == URL ======================================= #
@@ -226,6 +250,7 @@ INSTALLED_APPS = (
   'utils',
   'templateaddons',
 
+  'nerdfiles_net_dev',
 )
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
