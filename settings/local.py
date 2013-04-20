@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import os
-from base import *
 from prod import *
 
 LOCAL_DEVELOPMENT = True
