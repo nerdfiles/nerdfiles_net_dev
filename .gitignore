@@ -1,4 +1,5 @@
 _assets/css-lib/*
+settings/__init__.py
 _assets/css-lib/gdgs/*
 _assetst /js-lib/
 .gitignore~
