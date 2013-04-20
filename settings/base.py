@@ -75,7 +75,7 @@ USE_L10N = True
 
 # == URLCONF ======================================= #
 
-ROOT_URLCONF = 'nerdfiles_net_dev.urls'
+ROOT_URLCONF = 'urls'
 
 
 # == DB ======================================= #
@@ -247,7 +247,6 @@ INSTALLED_APPS = (
   'utils',
   'templateaddons',
 
-  'nerdfiles_net_dev',
 )
 
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
