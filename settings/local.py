@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
+
 import os
-VENV_ROOT = os.path.join('Users','nerdfiles','.virtualenvs','nerdfiles_net_dev')
-ROOT_URLCONF = 'nerdfiles_net_dev.urls'
-INSTALLED_APPS += ('nerdfiles_net_dev',)
+from base import *
+from prod import *
+
 LOCAL_DEVELOPMENT = True
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+
+VENV_ROOT = os.path.join('Users','nerdfiles','.virtualenvs','nerdfiles_net_dev')
 DATABASE_ENGINE = 'django.db.backends.sqlite3'
 DATABASE_NAME = 'nerdfiles_net_dev.db'
 DATABASE_USER = ''
