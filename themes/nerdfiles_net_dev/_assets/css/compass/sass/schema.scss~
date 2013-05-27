@@ -1,4 +1,8 @@
 // schemas for object-oriented stylesheets (OOSS); i.e. OOSASS
+//
+// @see http://engineering.appfolio.com/2012/11/16/css-architecture/, 
+//      https://github.com/stubbornella/oocss/wiki/faq,
+//      http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
 
 // Component Specification
 //
@@ -6,7 +10,7 @@
 //
 //  <div class="component--newsletter-plugin>
 //    <div class="component-header"></div>
-//    <div class="component-footer control">
+//    <div class="component-footer events">
 //      <ul>
 //        <li><a href="/newsletter-submit" class="verb-namespace-N"></a>Submit</li>
 //      </ul>
@@ -26,7 +30,7 @@ body {
   .c--newsletter-plugin__mini-form { }
   .c--newsletter-plugin__mini-form--invalid { }
 
-  // General
+  // General ("Events")
 
   .component-namespace--object-namespace {
 
@@ -39,7 +43,7 @@ body {
     } // e.g.: .warning, .hidden, .invalid, .hover, etc.; usually the result (or think "end") of an action (verb) if a "js hook" is involved in the total interaction model for the module.
     
     // @events (interaction model that should be isomorphic with a "View" conceptualization of the component. We might call this "CSSComponentViews")
-    &.control {
+    &.events {
       .verb-namespace-N { // @note Think of an events object of a View here.
         @extend %verb-namespace-N;
       } // e.g.: Follow the naming convention in creating handlers should the module itself have a global interaction event in the total interaction model for the module.
