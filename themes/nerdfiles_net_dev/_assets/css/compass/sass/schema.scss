@@ -1,0 +1,34 @@
+// schemas for object-oriented stylesheets (OOSS); i.e. OOSASS
+
+// Component Specification
+//
+// USAGE: @include component-namespace;
+//
+//  <div class="c omponent--newsletter-plugin>
+//    <div class="c omponent-header"></div>
+//    <div class="c omponent-footer control">
+//      <ul>
+//        <li><a href="/newsletter-submit" class="verb-namespace-N"></a>Submit</li>
+//      </ul>
+//    </div>
+//  </div>
+
+body {
+  .c.omponent-namespace--object-namespace {
+
+    &.modifier-namespace-N {
+      @extend %modifier-namespace-N; // @note We only need the relevant modifiers once the stylesheet is parsed. Changing the modifier suggests, say, an overhaul or a business requirement change.
+    } // e.g.: .modal, .multi; 
+
+    &.predicate-namespace-N { 
+      @extend .predicate-namespace-N; // @note We may want to change "states" in the DOM for debugging
+    } // e.g.: .warning, .hidden, .invalid, .hover, etc.; usually the result (or think "end") of an action (verb) if a "js hook" is involved in the total interaction model for the module.
+    
+    // @events (interaction model that should be isomorphic with a "View" conceptualization of the component. We might call this "CSSComponentViews")
+    &.control {
+      .verb-namespace-N { // @note Think of an events object of a View here.
+        @extend %verb-namespace-N;
+      } // e.g.: Follow the naming convention in creating handlers should the module itself have a global interaction event in the total interaction model for the module.
+    }
+  }
+}
