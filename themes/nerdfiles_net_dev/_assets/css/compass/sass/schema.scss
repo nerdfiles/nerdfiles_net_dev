@@ -4,9 +4,9 @@
 //
 // USAGE: @include component-namespace;
 //
-//  <div class="c omponent--newsletter-plugin>
-//    <div class="c omponent-header"></div>
-//    <div class="c omponent-footer control">
+//  <div class="component--newsletter-plugin>
+//    <div class="component-header"></div>
+//    <div class="component-footer control">
 //      <ul>
 //        <li><a href="/newsletter-submit" class="verb-namespace-N"></a>Submit</li>
 //      </ul>
@@ -14,7 +14,21 @@
 //  </div>
 
 body {
-  .c.omponent-namespace--object-namespace {
+
+  // Styling Only (no "Events" to think about)
+
+  .component-namespace--object-namespace__sub-object-namespace--[.modifier-namespace-N] {
+
+  }
+  
+  // e.g.
+
+  .c--newsletter-plugin__mini-form { }
+  .c--newsletter-plugin__mini-form--invalid { }
+
+  // General ("Events")
+
+  .component-namespace--object-namespace {
 
     &.modifier-namespace-N {
       @extend %modifier-namespace-N; // @note We only need the relevant modifiers once the stylesheet is parsed. Changing the modifier suggests, say, an overhaul or a business requirement change.
