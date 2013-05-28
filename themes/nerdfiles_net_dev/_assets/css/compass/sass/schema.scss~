@@ -4,7 +4,9 @@
 //      https://github.com/stubbornella/oocss/wiki/faq,
 //      http://ianstormtaylor.com/oocss-plus-sass-is-the-best-way-to-css/
 
-// Component Specification
+// CSSComponentView Specification
+//
+// Generally, the conceptual scheme is Backbone.js. We're trying to expose an outline for shared interaction model.
 //
 // USAGE: @include component-namespace;
 //
