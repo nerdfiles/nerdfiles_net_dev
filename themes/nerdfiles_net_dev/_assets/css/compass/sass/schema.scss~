@@ -32,6 +32,37 @@ body {
   .c--newsletter-plugin__mini-form { }
   .c--newsletter-plugin__mini-form--invalid { }
 
+  // CSSComponentView
+  //
+  // @idea CSS Components map to MVC Views
+
+  // Pseodonesting
+
+  .Component--Payment {
+  }
+
+  .Component--Payment__btn-pay {
+  }
+
+  // Mixed Nesting
+  
+  .Component.Payment {
+  }
+
+  .Component.Payment__btn-pay {
+  }
+
+  // Nesting
+
+  .Component.Payment {
+    .btn-next {
+
+    }
+    .btn-pay {
+
+    }
+  }
+
   // General ("Events")
 
   .component-namespace--object-namespace {
@@ -42,7 +73,7 @@ body {
 
     &.predicate-namespace-N { 
       @extend .predicate-namespace-N; // @note We may want to change "states" in the DOM for debugging
-    } // e.g.: .warning, .hidden, .invalid, .hover, etc.; usually the result (or think "end") of an action (verb) if a "js hook" is involved in the total interaction model for the module.
+    } // e.g.: .optional, .warning, .hidden, .invalid, .hover, etc.; usually the result (or think "end") of an action (verb) if a "js hook" is involved in the total interaction model for the module.
     
     // @events (interaction model that should be isomorphic with a "View" conceptualization of the component. We might call this "CSSComponentViews")
     &.events {

@@ -32,6 +32,46 @@ body {
   .c--newsletter-plugin__mini-form { }
   .c--newsletter-plugin__mini-form--invalid { }
 
+  // CSSComponentView
+  //
+  // @idea CSS Components map to MVC Views
+
+  // Pseodonesting
+
+  .Component--Payment {
+
+    .control {
+      // @note Maps to MVC "events" specification.
+      //       Say: events: { "click .Component--Name .control a.btn-open": "handler"
+
+      .btn-open {
+
+      }
+    }
+  }
+
+  .Component--Payment__btn-pay {
+  }
+
+  // Mixed Nesting
+  
+  .Component.Payment {
+  }
+
+  .Component.Payment__btn-pay {
+  }
+
+  // Nesting
+
+  .Component.Payment {
+    .btn-next {
+
+    }
+    .btn-pay {
+
+    }
+  }
+
   // General ("Events")
 
   .component-namespace--object-namespace {
