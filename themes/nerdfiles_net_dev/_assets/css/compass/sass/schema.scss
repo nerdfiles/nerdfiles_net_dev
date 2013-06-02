@@ -38,7 +38,7 @@ body {
 
   // Pseodonesting
 
-  .Component--Payment {
+  .Component--NameView {
 
     .control {
       // @note Maps to MVC "events" specification.
@@ -50,20 +50,20 @@ body {
     }
   }
 
-  .Component--Payment__btn-pay {
+  .Component--NameView__btn-pay {
   }
 
   // Mixed Nesting
   
-  .Component.Payment {
+  .Component.NameView {
   }
 
-  .Component.Payment__btn-pay {
+  .Component.NameView__btn-pay {
   }
 
   // Nesting
 
-  .Component.Payment {
+  .Component.NameView {
     .btn-next {
 
     }

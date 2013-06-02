@@ -39,6 +39,15 @@ body {
   // Pseodonesting
 
   .Component--Payment {
+
+    .control {
+      // @note Maps to MVC "events" specification.
+      //       Say: events: { "click .Component--Name .control a.btn-open": "handler"
+
+      .btn-open {
+
+      }
+    }
   }
 
   .Component--Payment__btn-pay {
