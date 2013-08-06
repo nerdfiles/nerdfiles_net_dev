@@ -1,3 +1,0 @@
-# nerdfiles.net
-
-Blugggh.
