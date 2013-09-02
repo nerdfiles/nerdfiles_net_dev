@@ -91,6 +91,11 @@ LOGGING = {
 }
 
 try:
+    from db_settings import *
+except ImportError:
+    pass
+
+try:
     from local_settings import *
     INSTALLED_APPS += DEBUG_APPS
 except ImportError:
