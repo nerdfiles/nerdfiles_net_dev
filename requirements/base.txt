@@ -1,0 +1,9 @@
+Django==1.5.2
+Fabric==1.7.0
+South==0.8.2
+django-cors-headers==0.11
+djangorestframework==2.3.7
+paramiko==1.11.0
+psycopg2==2.5.1
+pycrypto==2.6
+wsgiref==0.1.2
