@@ -28,6 +28,7 @@ def tumblr_redirect(request):
 
 def twitter_recent_tweets(request):
   import requests
+  import twitter_auth
   from django.core.cache import cache
   from pprint import pprint
   import json
@@ -36,13 +37,14 @@ def twitter_recent_tweets(request):
   if tw_data:
     return HttpResponse(tw_data, mimetype='application/json')
 
-  # tw_data
-  r = requests.get('http://twitter.com/users/show.json?screen_name=filesofnerds', 
-        auth=('filesofnerds', 'thec4tisonthem4t'))
+  username = ''
+  passphrase = ''
 
-  #pprint(r)
-  #print r.status_code
-  #print r.text
+  # tw_data
+  r = requests.get('http://twitter.com/users/show.json?screen_name=%s' % (username), 
+        auth=('%s' % (username), '%s' % (passphrase)))
+
+  pprint(r.json)
 
   tw_data = []
 
