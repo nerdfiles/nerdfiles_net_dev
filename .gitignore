@@ -20,6 +20,7 @@ tmp/*
 *.sqlite
 *.db
 *.py~
+*.log.*
 *.log
 *.markdown~
 *.gitignore~
