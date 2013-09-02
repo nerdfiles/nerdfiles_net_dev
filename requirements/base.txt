@@ -3,7 +3,9 @@ Fabric==1.7.0
 South==0.8.2
 django-cors-headers==0.11
 djangorestframework==2.3.7
+kippt==2.0.0
 paramiko==1.11.0
 psycopg2==2.5.1
 pycrypto==2.6
+requests==1.2.3
 wsgiref==0.1.2

@@ -7,6 +7,11 @@ from rest_framework import permissions
 from django.contrib.auth.models import User
 
 
+def render_response(request, *args, **kwargs):
+    kwargs['context_instance'] = RequestContext(request)
+    return render_to_response(*args, **kwargs)
+
+
 class UserList(generics.ListCreateAPIView):
     """List all users or create a new User"""
     permission_classes = (permissions.IsAuthenticated,)
@@ -33,3 +38,11 @@ class AddressDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = (permissions.IsAuthenticated,)
     model = Address
     serializer_class = AddressSerializer
+
+
+def HomeView(request):
+    '''
+        Landing page view.
+    '''
+    context = {'CONTEXT': True}
+    return render_response(request, 'base.tmpl.haml', context)

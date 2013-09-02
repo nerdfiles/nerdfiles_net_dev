@@ -1,0 +1,375 @@
+@charset "UTF-8";
+/* line 17, ../../../../../../../../.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../.rvm/gems/ruby-1.9.3-p362/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 2, ../sass/modules/_access.scss */
+.accessiblyhide {
+  position: absolute;
+  left: -9999px;
+}
+
+/* line 7, ../sass/modules/_access.scss */
+#site-access ul {
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 6, ../sass/non-modular/_hacks.scss */
+::-webkit-scrollbar-track-piece {
+  background-color: #fff;
+  -webkit-border-radius: 0;
+}
+
+/* line 9, ../sass/non-modular/_hacks.scss */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* line 12, ../sass/non-modular/_hacks.scss */
+::-webkit-scrollbar-thumb {
+  height: 50px;
+  background-color: #999;
+  -webkit-border-radius: 4px;
+  outline: 2px solid white;
+  outline-offset: -2px;
+  border: 2px solid white;
+}
+
+/* line 19, ../sass/non-modular/_hacks.scss */
+::-webkit-scrollbar-thumb:hover {
+  height: 50px;
+  background-color: #9f9f9f;
+  -webkit-border-radius: 4px;
+}
+
+/* line 23, ../sass/non-modular/_hacks.scss */
+:-webkit-scrollbar {
+  width: 16px;
+}
+
+/* line 21, ../sass/screen.scss */
+p,
+ul, ol {
+  margin: 0 0 1em;
+}
+
+/* line 24, ../sass/screen.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.5em;
+}
+
+/* line 27, ../sass/screen.scss */
+body {
+  text-rendering: optimizeLegibility;
+  font-family: la-belle-aurore, sans-serif;
+  line-height: 1.7;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2N8+eLPfwYiACNIobgECyMhtaMK8YYQ0cEDAIomJ9dCuQoaAAAAAElFTkSuQmCC);
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-size: 2.65rem;
+}
+
+/* line 38, ../sass/screen.scss */
+a {
+  font-family: la-belle-aurore, sans-serif;
+  padding: 0 10px;
+  text-decoration: none;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  margin: 0 0 0.1em 0;
+  border-bottom: 1px #222222 dashed;
+}
+/* line 48, ../sass/screen.scss */
+a[rel="external"]::after {
+  content: ' ⤴';
+}
+/* line 49, ../sass/screen.scss */
+a:hover {
+  opacity: .5;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* line 58, ../sass/screen.scss */
+  body.base {
+    font-size: 1.85rem;
+  }
+  /* line 60, ../sass/screen.scss */
+  body.base .container {
+    padding: 0 10%;
+  }
+}
+/* line 77, ../sass/screen.scss */
+body.base {
+  padding: 100px 0;
+}
+/* line 80, ../sass/screen.scss */
+body.base hr {
+  border: none;
+  border-top: 3px #cccccc dashed;
+}
+/* line 85, ../sass/screen.scss */
+body.base .container {
+  padding: 0 20%;
+}
+/* line 89, ../sass/screen.scss */
+body.base header {
+  border-bottom: 4px #111111 solid;
+  margin: 0 0 0.5em;
+  text-align: right;
+}
+/* line 95, ../sass/screen.scss */
+body.base header h1 {
+  display: inline-block;
+  line-height: 1;
+  padding: 25px 0 25px;
+}
+/* line 106, ../sass/screen.scss */
+body.base blockquote {
+  box-shadow: 0 0 0.3em #cccccc;
+  padding: 20px;
+  margin-bottom: 1rem;
+}
+/* line 111, ../sass/screen.scss */
+body.base blockquote p {
+  display: inline-block;
+  margin: 0;
+}
+/* line 114, ../sass/screen.scss */
+body.base blockquote p::before {
+  margin: 0 0.5em 0 0;
+  content: "❝ ";
+  display: inline-block;
+}
+
+/* line 118, ../sass/screen.scss */
+.debug-False {
+  display: none !important;
+}
+
+/**
+ * Important! < Kippt Feed
+ */
+/* line 128, ../sass/screen.scss */
+section.important .ui.kippt {
+  text-align: center;
+}
+/* line 130, ../sass/screen.scss */
+section.important .ui.kippt .iconic {
+  line-height: 1em;
+  vertical-align: middle;
+}
+/* line 135, ../sass/screen.scss */
+section.important .ui.widget {
+  padding: 10px 0 20px;
+  /*
+  & > *:first-child:before {
+    @include inline-block;
+    margin: 0 20px 0 0;
+    line-height: 0;
+    position: relative;
+    top: -.1em;
+    content: "⏧";
+  }
+  */
+}
+/* line 150, ../sass/screen.scss */
+section.important .ui.widget > *:first-child:after {
+  display: block;
+  font-size: 15rem;
+  line-height: 0;
+  content: "⌇";
+  position: relative;
+  color: #ccc;
+  opacity: .7;
+  margin-top: 200px;
+  padding: 0;
+}
+/* line 163, ../sass/screen.scss */
+section.important .ui.widget p {
+  margin: 0;
+}
+
+/**
+ * SoundCloud
+ *
+ * Some kind of module for SoundCloud?
+ */
+/**
+ * Kippt
+ */
+/**
+ * Flickr
+ */
+/**
+ * github
+ */
+/**
+ * last.fm
+ */
+/* line 193, ../sass/screen.scss */
+ul.activities {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  text-align: left;
+}
+/* line 200, ../sass/screen.scss */
+ul.activities li a {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border: none;
+  text-indent: -9999px;
+}
+/* line 210, ../sass/screen.scss */
+ul.activities li.lastfm {
+  background: url("../../../img-ui/ui-icon-headphones.png") no-repeat;
+}
+/* line 213, ../sass/screen.scss */
+ul.activities li.lastfm a {
+  padding: 0;
+  margin: 0;
+}
+
+/* line 222, ../sass/screen.scss */
+.site-footer {
+  border-top: 4px black solid;
+  padding-top: 20px;
+  font-size: 1rem;
+}
+
+/* line 235, ../sass/screen.scss */
+.m-imprint {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 237, ../sass/screen.scss */
+.m-imprint .m--content {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  text-align: right;
+  padding: 0.4em 0 0;
+  margin: 0px 0px 0.5em;
+  clear: left;
+}
+/* line 239, ../sass/screen.scss */
+.m-imprint .m--content ul {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 241, ../sass/screen.scss */
+.m-imprint .m--content ul li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 252, ../sass/screen.scss */
+#site-access {
+  background: none;
+  font-size: 1rem;
+}
+
+/**
+ * gittip
+ */
+/* line 263, ../sass/screen.scss */
+.m-tipjar {
+  padding-top: 40px;
+  clear: both;
+  display: block;
+  text-align: center;
+}
+
+/**
+ * disqus
+ */

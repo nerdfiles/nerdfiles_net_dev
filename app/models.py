@@ -4,6 +4,12 @@ from rest_framework.authtoken.models import Token
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
+import logging
+
+l = logging.getLogger('django.db.backends')
+l.setLevel(logging.DEBUG)
+l.addHandler(logging.StreamHandler())
+
 
 @receiver(post_save, sender=User)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
@@ -13,6 +19,7 @@ def create_auth_token(sender, instance=None, created=False, **kwargs):
 
 
 class Address(models.Model):
+
     ''' Model features for an address '''
     street = models.CharField(max_length=200)
     city = models.CharField(max_length=200)
