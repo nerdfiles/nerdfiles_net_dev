@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.conf.urls.i18n import i18n_patterns
 from django.contrib import admin
 admin.autodiscover()
 
@@ -10,5 +11,13 @@ def rut_roh(request):
 
 
 urlpatterns = patterns('backend.views',
-                       url(r'^dashboard/', include(admin.site.urls)),
+                       url(r'^rut-rot/$', rut_roh),
+                       url(r'^dashboard/cache/', include(
+                           'django_memcached.urls')),
                        url(r'^', include('app.urls')))
+
+
+urlpatterns += i18n_patterns('backend.views',
+                             url(r'^dashboard/', include(admin.site.urls)),
+                             url(r'^', include('cms.urls'))
+                             )

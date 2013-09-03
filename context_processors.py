@@ -1,33 +1,6 @@
 from django.conf import settings
 
 
-def kippt_rss(request):
-    from django.core.cache import cache
-    from settings import API_KEY, API_SECRET, username, password_hash
-    from kippt import kippt_wrapper
-    k = kippt_wrapper.user('%s' %
-                           settings.KIPPT_API_USER, '%s' % settings.KIPPT_API_TOKEN,)
-
-    TIMEOUT = (3600*48/60)*5  # ten days
-
-    kippt_imps = cache.get('kippt_imps')
-    if kippt_imps:
-        return {
-            "imp_feed": kippt_imps
-        }
-
-    kippt_imps = k.getClips(134737, 2)
-    cache.set(
-        'kippt_imps',
-        kippt_imps[1],
-        TIMEOUT
-    )
-
-    return {
-        "imp_feed": kippt_imps[1],
-    }
-
-
 def latest_tweet(request):
     from django.core.cache import cache
     tweet = cache.get('tweet')
@@ -56,21 +29,8 @@ def site_info(request):
     domain = Site.objects.get_current().domain
     http_host = request.META.get('HTTP_HOST')
 
-    COFFEE_URL = 'build'
-
-    if domain == 'example.com':
-        domain = http_host
-
-    if settings.LOCAL_DEVELOPMENT:
-        # domain = 'localhost:8001'
-        settings.ASSETS_URL = '/_assets/'
-        COFFEE_URL = 'brew'
-
     return {
-        'LOCAL': settings.LOCAL_DEVELOPMENT,
-        'SITE_URL': 'http://' + domain + '/',
-        'ASSETS_URL': 'http://' + domain + settings.ASSETS_URL,
-        'COFFEE_URL': COFFEE_URL,
+        'SITE_URL': 'http://' + http_host + '/'
     }
 
 
