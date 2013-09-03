@@ -17,7 +17,7 @@ urlpatterns = patterns('backend.views',
                        url(r'^', include('app.urls')))
 
 
-urlpatterns += i18n_patterns('backend.views',
-                             url(r'^dashboard/', include(admin.site.urls)),
-                             url(r'^', include('cms.urls'))
-                             )
+urlpatterns += patterns('backend.views',
+                        url(r'^dashboard/', include(admin.site.urls)),
+                        url(r'^', include('cms.urls'))
+                        )

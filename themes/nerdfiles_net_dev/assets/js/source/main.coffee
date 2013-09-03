@@ -1,6 +1,7 @@
 # universe
 window.nerds ?= {}
 
+
 # init
 # lastfm recents
 nerds.lastfm_recent_tracks = () ->

@@ -30,7 +30,8 @@ def site_info(request):
     http_host = request.META.get('HTTP_HOST')
 
     return {
-        'SITE_URL': 'http://' + http_host + '/'
+        'SITE_URL': 'http://' + http_host + '/',
+        'ASSETS_URL': '//' + http_host + '/assets/'
     }
 
 

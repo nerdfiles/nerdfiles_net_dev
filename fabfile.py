@@ -17,9 +17,9 @@ def launch(version="", port=8001):
 
 def install(version=""):
     """Install Django and config"""
-    local("python%s manage.py syncdb" % version)
+    local("python%s manage.py syncdb --all" % version)
     local("python%s manage.py schemamigration --initial app" % version)
-    local("python%s manage.py migrate rest_framework.authtoken " % version)
+    # local("python%s manage.py migrate rest_framework.authtoken " % version)
     local("python%s manage.py createsuperuser" % version)
 
 
