@@ -68,6 +68,10 @@ ol li:hover .exo {
   animation-duration: 1s;
 }
 
-body.base h1 {
-  font-size: 1rem !important;
+/*body.base h1 {
+  font-size: 1.4rem !important;
+}*/
+
+.main section div {
+  text-align: center;
 }

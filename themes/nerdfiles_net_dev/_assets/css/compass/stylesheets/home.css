@@ -67,3 +67,8 @@ ol li:hover .exo {
   animation-name: slide;
   animation-duration: 1s;
 }
+
+/* Never do this... */
+.main section div {
+    text-align: center;
+}

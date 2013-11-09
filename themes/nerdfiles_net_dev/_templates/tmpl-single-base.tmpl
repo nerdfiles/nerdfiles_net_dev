@@ -11,16 +11,10 @@
 {{ block.super }}
 {% endblock %}
 
+{% block page_schema %}itemscope itemtype="http://schema.org/ItemPage"{% endblock %}
+
 {% block disqus %}
 {% addtoblock "disqus" %}
 {% include "js-disqus.tmpl" %}
 {% endaddtoblock %}
-{% endblock %}
-
-{% block footer %}
-<footer>
-{% placeholder "Footer" or %}
-	<p>...</p>
-{% endplaceholder %}
-</footer>
 {% endblock %}

@@ -8,6 +8,7 @@
 <script src='{{ ASSETS_URL }}js-lib/metaquery/metaquery.min.js'></script>
 <script>
   $('body').data('SITE_URL', '{{ SITE_URL }}');
+  $('html').removeClass('no-js');
 </script>
 <script src='{{ ASSETS_URL }}js/{{ COFFEE_URL }}/main.js'></script> 
 {% block extra %}{% endblock %}
