@@ -130,26 +130,14 @@ def lastfm(request):
 '''
 
 def site_info(request):
-  from django.contrib.sites.models import Site
-  domain = Site.objects.get_current().domain
-  http_host = request.META.get('HTTP_HOST')
+    from django.contrib.sites.models import Site
+    domain = Site.objects.get_current().domain
+    http_host = request.META.get('HTTP_HOST')
 
-  COFFEE_URL = 'build'
-  
-  if domain == 'example.com':
-    domain = http_host
-
-  if settings.LOCAL_DEVELOPMENT: 
-    #domain = 'localhost:8001'
-    settings.ASSETS_URL = '/_assets/'
-    COFFEE_URL = 'brew'
-
-  return { 
-    'LOCAL': settings.LOCAL_DEVELOPMENT,
-    'SITE_URL': 'http://' + domain + '/',
-    'ASSETS_URL': 'http://' + domain + settings.ASSETS_URL,
-    'COFFEE_URL': COFFEE_URL,
-  }
+    return {
+        'SITE_URL': 'http://' + http_host + '/',
+        'ASSETS_URL': '//' + http_host + '/assets/'
+    }
 
 def google_analytics(request):
 
@@ -165,4 +153,3 @@ def google_analytics(request):
             f.close()
 
     return dict(GA_CODE=GA_CODE)
-
