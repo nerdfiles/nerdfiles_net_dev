@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-
-# == IMPORTS ======================================== #
-
 from django.conf import settings
 
 # == CONTEXT PROCESSORS ======================================== #
@@ -136,7 +132,8 @@ def site_info(request):
 
     return {
         'SITE_URL': 'http://' + http_host + '/',
-        'ASSETS_URL': '//' + http_host + '/assets/'
+        'ASSETS_URL': '//' + http_host + '/assets/',
+        'COFFEE_URL': 'build'
     }
 
 def google_analytics(request):

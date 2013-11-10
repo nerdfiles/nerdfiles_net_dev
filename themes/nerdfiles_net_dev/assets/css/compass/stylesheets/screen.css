@@ -373,3 +373,17 @@ ul.activities li.lastfm a {
 /**
  * disqus
  */
+.nerdfiles-net-my-card li {
+  margin-bottom: 1em;
+  font-size: .85em;
+}
+
+.nerdfiles-net-my-card .main li:before {
+  padding-right: .5em;
+  content: "—";
+}
+
+.base .main h2 {
+  font-size: 1.4em;
+}
+
