@@ -12,10 +12,12 @@
     $('html').removeClass('no-js');
     $('li').on('touchstart', function () {
         var that = this;
-        $(that).find('.exo').addClass('hover');
         window.setTimeout(function () {
-            $(that).find('.exo').removeClass('hover');
-        }, 3000);
+            $(that).find('.exo').addClass('hover');
+        }, 1000);
+        window.setTimeout(function () {
+            $(that).find('.exo').addClass('hover');
+        }, 4000);
     });
 })(jQuery);
 </script>
