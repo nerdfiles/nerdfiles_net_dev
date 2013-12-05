@@ -51,7 +51,7 @@ urlpatterns = patterns('',
   url(r'^assets(?P<path>.*)$', 'django.views.static.serve',
 
   {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-  url(r'^static(?P<path>.*)$', 'django.views.static.serve',
+  url(r'^_static(?P<path>.*)$', 'django.views.static.serve',
 
   {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
   url(r'', include('django.contrib.staticfiles.urls')),

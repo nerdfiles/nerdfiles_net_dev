@@ -48,6 +48,7 @@ ol li .iconic {
   }
 }
 
+
 /* line 45, ../sass/home.scss */
 ol .exo {
   position: absolute;
@@ -62,6 +63,14 @@ ol .exo {
 }
 /* line 59, ../sass/home.scss */
 ol li:hover .exo {
+  left: 0;
+  top: 0;
+  animation-name: slide;
+  animation-duration: 1s;
+}
+
+ol li .exo.hover {
+  /* Interesting accidental feature when tapping on second item in list */
   left: 0;
   top: 0;
   animation-name: slide;
