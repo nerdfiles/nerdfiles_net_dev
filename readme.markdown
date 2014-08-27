@@ -25,6 +25,7 @@ If a user clicks on anything, even the page itself, a feedback (recursive callba
 7. Implement Stripe for micropayments and quick payments on invoices.
 8. See https://github.com/bazaarlabs/gitdocs for running subapps via PHP's WordPress.
 9. Determine a set of use-cases for the URL space of webjournal.nerdfiles.net/\* to be run as Python/Django apps.
+10. Set @kippt to use Inbox for “Hey!” section, but continue to link to Important feed.
 
 ##TEAM
 
