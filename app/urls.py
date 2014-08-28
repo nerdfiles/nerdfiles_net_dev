@@ -6,10 +6,12 @@ from app import views
 
 urlpatterns = patterns(
     'app',
+
     # url(r'^$', 'views.HomeView', name='home'),
     url(r'^addresses$', views.AddressList.as_view(), name='address-list'),
     url(r'^addresses/(?P<pk>[0-9]+)$', views.AddressDetail.as_view(
     ), name='address-detail'),
+
     url(r'^users$', views.UserList.as_view(),
         name='user-list'),
     url(r'^users/(?P<pk>[0-9]+)$', views.UserDetail.as_view(
