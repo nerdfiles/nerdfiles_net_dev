@@ -136,7 +136,11 @@
 
 {% render_block "kippt" %}
 
+<!--
 {% cache 2880 main %}
+{% endcache %}
+-->
+
 {% block main_content %}
 <section>
     <article
@@ -144,15 +148,14 @@
       role="main"
       class="main"
     >
-        <section>
-        {% placeholder "Main" or %}
-          <p><code>.empty</code></p>
-        {% endplaceholder %}
-        </section>
+      <section>
+      {% placeholder "Main" or %}
+        <p><code>.empty</code></p>
+      {% endplaceholder %}
+      </section>
     </article>
 </section>
 {% endblock %}
-{% endcache %}
 
 {% block disqus %}
 {% endblock %}
