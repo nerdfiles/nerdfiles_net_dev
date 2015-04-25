@@ -36,3 +36,4 @@ db_settings.py*
 tools/
 static/
 filer_public
+*.orig
