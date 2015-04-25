@@ -45,7 +45,7 @@ nerds.anchors_scroll = () ->
     $target = $(target)
     scope = 'html,body'
     $(scope).animate
-      'scrollTop': ($target.offset().top)
+      'scrollTop': $target.offset().top
       750
       'swing'
       () ->
