@@ -15,13 +15,9 @@ handler404 = 'app.views.error_404'
 urlpatterns = patterns(
     '',
 
-
-    url(r'^', include('cms.urls')),
-    url(r'^', include('cms.urls', namespace='imagestore')),
+    url(r'^dashboard/', include(admin.site.urls)),
     url(r'__/recent-tracks/', views.lastfm_recent_tracks,
         name='lastfm_recent_tracks'),
-    url(r'^dashboard/', include(admin.site.urls)),
-
 
     #url(r'^$', 'views.HomeView', name='home'),
     url(r'^addresses$', views.AddressList.as_view(), name='address-list'),
@@ -35,6 +31,9 @@ urlpatterns = patterns(
 
     url(r'^api-token-auth/',
         'rest_framework.authtoken.views.obtain_auth_token'),
+
+    url(r'^', include('cms.urls')),
+    url(r'^', include('cms.urls', namespace='imagestore')),
 
 )
 
