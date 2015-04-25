@@ -15,7 +15,14 @@ LASTFM_API_SECRET = '15097744590f54e0f9df2c8c5bee4cd0'
 LASTFM_USER = 'wittysense'
 LASTFM_PASS = 'sfeO46NcYmavPA=='
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+]
+
+INTERNAL_IPS = ('127.0.0.1',)
+LANGUAGES = [
+    ('en', 'English'),
+]
 
 LANGUAGE_CODE = 'en'
 
@@ -90,15 +97,16 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+    'django.contrib.sites',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.sites',
     'django.contrib.messages',
+    'django.contrib.comments',
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
     'django.contrib.admin',
-    'debug_toolbar',
+    #'south',
     'rest_framework.authtoken',
     'rest_framework',
     'analytical',
@@ -125,6 +133,7 @@ INSTALLED_APPS = (
     'utils',
 
     'app',
+    'debug_toolbar',
 )
 
 THUMBNAIL_PROCESSORS = (
