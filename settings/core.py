@@ -10,6 +10,11 @@ REST_FRAMEWORK = {
 
 SECRET_KEY = '&9u2v1iwln==r#ld$pbkvjjh$)ek^-k8(e7nzbx9*qt(dqm64*'
 
+LASTFM_API_KEY = '4c84847605bf2fd159d3aa5277ef2f32'
+LASTFM_API_SECRET = '15097744590f54e0f9df2c8c5bee4cd0'
+LASTFM_USER = 'wittysense'
+LASTFM_PASS = 'sfeO46NcYmavPA=='
+
 ALLOWED_HOSTS = []
 
 LANGUAGE_CODE = 'en'
@@ -30,7 +35,7 @@ STATIC_ROOT = os.path.join(PROJECT_PATH, '..', 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(PROJECT_PATH, '../static/'),
+    MEDIA_ROOT,
 )
 
 STATICFILES_FINDERS = (
@@ -45,9 +50,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.media',
     'django.core.context_processors.static',
     'django.contrib.auth.context_processors.auth',
-    'cms.context_processors.media',
+    'cms.context_processors.cms_settings',
     'sekizai.context_processors.sekizai',
-    'context_processors.site_info',
+    'app.context_processors.site_info',
 )
 
 TEMPLATE_LOADERS = (
@@ -96,27 +101,28 @@ INSTALLED_APPS = (
     'debug_toolbar',
     'rest_framework.authtoken',
     'rest_framework',
-    'south',
     'analytical',
     'sekizai',
+    'treebeard',
 
     'cms',
     'menus',
     'mptt',
 
     'sorl.thumbnail',
-    'djangocms_text_ckeditor',
-    'djangocms_picture',
-    'djangocms_link',
-    'djangocms_file',
-    'djangocms_snippet', #potential security hazard @see http://docs.django-cms.org/en/latest/getting_started/installation/integrate.html
-    'djangocms_googlemap',
-    'djangocms_inherit',
+    #'djangocms_text_ckeditor',
+    #'djangocms_picture',
+    #'djangocms_link',
+    #'djangocms_file',
+    #'djangocms_snippet', #potential security hazard @see http://docs.django-cms.org/en/latest/getting_started/installation/integrate.html
+    #'djangocms_googlemap',
+    #'djangocms_inherit',
     'django_extensions',
 
     'filer',
     'easy_thumbnails',
     'corsheaders',
+    'utils',
 
     'app',
 )

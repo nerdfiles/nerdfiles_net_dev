@@ -7,8 +7,7 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
-from settings import API_KEY, API_SECRET, username, password_hash
-from django.conf.urls.defaults import *
+from django.conf.urls import patterns, url, include
 
 
 
@@ -119,8 +118,10 @@ def lastfm_recent_tracks(request):
         return HttpResponse(lfm_data, mimetype='application/json')
 
     print dir(settings)
-    network = pylast.LastFMNetwork(api_key=settings.LASTFM_API_KEY, api_secret=
-                                   settings.LASTFM_API_SECRET, username=settings.LASTFM_USER, password_hash=settings.LASTFM_PASS)
+    network = pylast.LastFMNetwork(api_key=settings.LASTFM_API_KEY,
+                                   api_secret=settings.LASTFM_API_SECRET,
+                                   username=settings.LASTFM_USER,
+                                   password_hash=settings.LASTFM_PASS)
 
     network.enable_caching()
 

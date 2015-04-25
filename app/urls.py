@@ -18,9 +18,9 @@ def rut_roh(request):
 
 urlpatterns = patterns('backend.views',
                        url(r'^rut-rot/$', rut_roh),
-                       url(r'^dashboard/cache/', include(
-                           'django_memcached.urls')),
-                       url(r'^', include('app.urls')))
+                       #url(r'^dashboard/cache/', include(
+                           #'django_memcached.urls')),
+                      )
 
 
 urlpatterns += patterns('backend.views',
