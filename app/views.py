@@ -115,17 +115,17 @@ def lastfm_recent_tracks(request):
     lfm_data = cache.get('lfm_data')
     TIMEOUT = 2880*2  # two days (48 hours)
     if lfm_data:
-        return HttpResponse(lfm_data, mimetype='application/json')
+        return HttpResponse(lfm_data)
 
-    print dir(settings)
+    #print dir(settings)
     network = pylast.LastFMNetwork(api_key=settings.LASTFM_API_KEY,
                                    api_secret=settings.LASTFM_API_SECRET,
                                    username=settings.LASTFM_USER,
-                                   password_hash=settings.LASTFM_PASS)
+                                   password_hash=pylast.md5(settings.LASTFM_PASS))
 
     network.enable_caching()
 
-    user_data = network.get_user('wittysense')
+    user_data = network.get_user(settings.LASTFM_USER)
     r_tracks = user_data.get_recent_tracks(limit=5)
     recent_tracks = [r.track for r in r_tracks]
 
@@ -149,7 +149,7 @@ def lastfm_recent_tracks(request):
     # pdb.set_trace()
 
     # load raw
-    return HttpResponse(data, mimetype='application/json')
+    return HttpResponse(data)
 
 
 def error_404(request):

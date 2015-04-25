@@ -1,7 +1,7 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework.urlpatterns import format_suffix_patterns
-from app import views
+import views
 
 from django.conf.urls import patterns, include, url
 from django.conf.urls.i18n import i18n_patterns
@@ -15,25 +15,24 @@ handler404 = 'app.views.error_404'
 urlpatterns = patterns(
     '',
 
+    url(r'__/recent-tracks/', views.lastfm_recent_tracks,
+        name='lastfm_recent_tracks'),
     url(r'^dashboard/', include(admin.site.urls)),
     url(r'^', include('cms.urls')),
-    #url(r'^', include('cms.urls', namespace='imagestore')),
+    url(r'^', include('cms.urls', namespace='imagestore')),
 
     #url(r'^$', 'views.HomeView', name='home'),
-    #url(r'^addresses$', views.AddressList.as_view(), name='address-list'),
-    #url(r'^addresses/(?P<pk>[0-9]+)$', views.AddressDetail.as_view(
-    #), name='address-detail'),
+    url(r'^addresses$', views.AddressList.as_view(), name='address-list'),
+    url(r'^addresses/(?P<pk>[0-9]+)$', views.AddressDetail.as_view(
+    ), name='address-detail'),
 
-    #url(r'^users$', views.UserList.as_view(),
-    #    name='user-list'),
-    #url(r'^users/(?P<pk>[0-9]+)$', views.UserDetail.as_view(
-    #), name='user-detail'),
+    url(r'^users$', views.UserList.as_view(),
+        name='user-list'),
+    url(r'^users/(?P<pk>[0-9]+)$', views.UserDetail.as_view(
+    ), name='user-detail'),
 
-    #url(r'__/recent-tracks/', 'views.lastfm_recent_tracks',
-    #    name='lastfm_recent_tracks'),
-
-    #url(r'^api-token-auth/',
-    #    'rest_framework.authtoken.views.obtain_auth_token'),
+    url(r'^api-token-auth/',
+        'rest_framework.authtoken.views.obtain_auth_token'),
 
 )
 
