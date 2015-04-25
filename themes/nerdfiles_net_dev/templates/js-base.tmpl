@@ -3,13 +3,16 @@
 {% block before_script %}{% endblock %}
 
 {% block script %}
-<script src='http://code.jquery.com/jquery.min.js'></script>
+<script
+  charset="utf-8"
+  src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+></script>
 <!--script src='{{ ASSETS_URL }}js-lib/jquery-waypoints/waypoints.min.js'></script-->
 <script src='{{ ASSETS_URL }}js-lib/metaquery/metaquery.min.js'></script>
 <script>
   $('body').data('SITE_URL', '{{ SITE_URL }}');
 </script>
-<script src='{{ ASSETS_URL }}js/build/main.js'></script> 
+<script src='{{ ASSETS_URL }}js/source/boot.js'></script> 
 {% block extra %}{% endblock %}
 
 {% endblock %}

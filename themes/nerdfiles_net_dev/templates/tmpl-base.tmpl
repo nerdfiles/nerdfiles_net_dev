@@ -123,7 +123,7 @@
 
     {% include "js-lastfm.tmpl" %}
 
-    {% include "js-twitter.tmpl" %}
+    {# include "js-twitter.tmpl" #}
 
   </ul><!-- .activities -->
   <h1>
@@ -139,21 +139,16 @@
 {% cache 2880 main %}
 {% block main_content %}
 <section>
-    <article id="main-content" role="main" class="main">
-
-        <!--section>
-          <header>
-            <h1>
-            </h1>
-          </header>
-        </section-->
-    
+    <article
+      id="main-content"
+      role="main"
+      class="main"
+    >
         <section>
-        {% placeholder "Main Content" or %}
+        {% placeholder "Main" or %}
           <p><code>.empty</code></p>
         {% endplaceholder %}
         </section>
-
     </article>
 </section>
 {% endblock %}
