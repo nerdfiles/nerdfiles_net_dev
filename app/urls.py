@@ -18,6 +18,7 @@ urlpatterns = patterns(
 
     url(r'^', include('cms.urls')),
     url(r'^', include('cms.urls', namespace='imagestore')),
+
     url(r'__/recent-tracks/', views.lastfm_recent_tracks,
         name='lastfm_recent_tracks'),
     url(r'^dashboard/', include(admin.site.urls)),

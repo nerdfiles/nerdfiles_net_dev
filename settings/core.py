@@ -125,7 +125,7 @@ INSTALLED_APPS = (
     'djangocms_snippet', #potential security hazard @see http://docs.django-cms.org/en/latest/getting_started/installation/integrate.html
     'djangocms_googlemap',
     'djangocms_inherit',
-    'django_extensions',
+    #'django_extensions',
 
     'filer',
     'easy_thumbnails',
