@@ -1,6 +1,0 @@
----
-- hosts: rdbms
-  sudo: yes
-  roles:
-    - common
-    - rdbms

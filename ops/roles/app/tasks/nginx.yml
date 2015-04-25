@@ -1,7 +1,0 @@
----
-- name: install nginx
-  apt: pkg=nginx state=latest
-  notify:
-    - disable default nginx configuration
-    - remove default nginx configuration
-

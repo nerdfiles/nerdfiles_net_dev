@@ -7,6 +7,9 @@ from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.shortcuts import render_to_response, redirect
 from django.template import RequestContext
+from settings import API_KEY, API_SECRET, username, password_hash
+from django.conf.urls.defaults import *
+
 
 
 def render_response(request, *args, **kwargs):
@@ -45,6 +48,38 @@ class AddressDetail(generics.RetrieveUpdateDestroyAPIView):
     model = Address
     serializer_class = AddressSerializer
 
+
+def twitter_recent_tweets(request):
+  import requests
+  import twitter_auth
+  from django.core.cache import cache
+  from pprint import pprint
+  import json
+  tw_data = cache.get('tw_data')
+  TIMEOUT = 2880*2
+  if tw_data:
+    return HttpResponse(tw_data, mimetype='application/json')
+
+  username = ''
+  passphrase = ''
+
+  # tw_data
+  r = requests.get('http://twitter.com/users/show.json?screen_name=%s' % (username),
+        auth=('%s' % (username), '%s' % (passphrase)))
+
+  pprint(r.json)
+
+  tw_data = []
+
+  data = json.dumps(tw_data)
+
+  cache.set(
+    'tw_data',
+    data,
+    TIMEOUT
+  )
+
+  return HttpResponse(data, mimetype='application/json')
 
 def kippt_clips(request):
     """call to kippt"""

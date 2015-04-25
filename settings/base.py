@@ -80,16 +80,6 @@ ROOT_URLCONF = 'urls'
 
 # == DB ======================================= #
 
-'''DATABASE_ENGINE = 'django.db.backends.postgresql_psycopg2'
-DATABASE_NAME = 'nerdfiles_website'
-DATABASE_USER = 'nerdfiles_website'
-DATABASE_PASSWORD = 'f0xf0x0!6'
-#DATABASE_HOST = 'localhost'
-#DATABASE_PORT = '5432'
-DATABASE_HOST = ''
-DATABASE_PORT = ''
-'''
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -156,14 +146,14 @@ TEMPLATE_LOADERS = (
 # == TEMPLATE LOADERS ======================================= #
 
 TEMPLATE_CONTEXT_PROCESSORS = (
- 
+
   'django.contrib.auth.context_processors.auth',
   'django.core.context_processors.request',
   #'django.core.context_processors.auth',
 
   #'django.core.context_processors.auth',
   #'django.contrib.auth.context_processors.auth',
- 
+
   'django.core.context_processors.i18n',
   #'django.core.context_processors.request',
   'django.core.context_processors.media',
@@ -171,7 +161,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
   'cms.context_processors.media',
   'sekizai.context_processors.sekizai',
-  
+
   'context_processors.site_info',
   #'context_processors.lastfm',
   'context_processors.kippt_rss',
@@ -219,7 +209,7 @@ INSTALLED_APPS = (
   'django.contrib.sites',
   'django.contrib.messages',
   'django.contrib.staticfiles',
- 
+
   # == django cms == #
   'cms',
   'menus',
@@ -231,7 +221,7 @@ INSTALLED_APPS = (
   'cms.plugins.snippet',
   'cms.plugins.googlemap',
   'sekizai',
- 
+
   # == apps == #
   'notification',
   #'lastfm',
@@ -255,28 +245,28 @@ CMS_MEDIA_PATH = 'cms/'
 CMS_MEDIA_ROOT = MEDIA_ROOT + CMS_MEDIA_PATH
 CMS_MEDIA_URL = MEDIA_URL + CMS_MEDIA_PATH
 CMS_TEMPLATES = (
-  
+
   # errors
   ('404.tmpl', 'Template: 404 (not found)'),
   ('500.tmpl', 'Template: 500 (generic error)'),
-  
+
   # standards
   ('tmpl-base.tmpl', 'Template: Base'),
 
   # home
   ('tmpl-home-base.tmpl', 'Template: Homepage (landing)'),
-  
+
   # pages
   ('tmpl-single-base.tmpl', 'Single Template: Base'), # presentation of generic single content
-  
+
   # forms
   ('tmpl-form-base.tmpl', 'Form Template: Base'),
   ('tmpl-form-hello.tmpl', 'Form Template: Hello (contact)'),
   ('tmpl-form-locate.tmpl', 'Form Template: Locate (wtf iz dis?)'),
-  
+
   # aggregates
   ('tmpl-list-base.tmpl', 'List Template: Base'),
-  
+
 )
 
 
@@ -377,14 +367,14 @@ LOGGING = {
       'handlers': ['file_userlogins'], # specify what handler to associate
       'level': 'INFO',                 # specify the logging level
       'propagate': True,
-    },     
+    },
 
     'logview.usersaves': {             # define another logger
       'handlers': ['file_usersaves'],  # associate a different handler
       'level': 'INFO',                 # specify the logging level
       'propagate': True,
-    },        
-  }       
+    },
+  }
 }
 
 

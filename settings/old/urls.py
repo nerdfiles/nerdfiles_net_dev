@@ -19,7 +19,7 @@ admin.autodiscover()
 def rut_roh(request):
   """ Simulates a server error """
   1/0
-    
+
 
 # == URLPATTERNS ======================================== #
 
@@ -40,7 +40,7 @@ urlpatterns = patterns('',
 
   url(r'^dashboard/', include(admin.site.urls)),
 
-  url(r'^dashboard/doc/', include('django.contrib.admindocs.urls')),  
+  url(r'^dashboard/doc/', include('django.contrib.admindocs.urls')),
 
   url(r'^', include('cms.urls')),
 
@@ -49,14 +49,27 @@ urlpatterns = patterns('',
 urlpatterns = patterns('',
 
   url(r'^assets(?P<path>.*)$', 'django.views.static.serve',
-
   {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-  url(r'^_static(?P<path>.*)$', 'django.views.static.serve',
 
+  url(r'^_static(?P<path>.*)$', 'django.views.static.serve',
   {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
+
   url(r'', include('django.contrib.staticfiles.urls')),
 
 ) + urlpatterns
+
+#urlpatterns = patterns(
+    #'',
+    #url(r'^_assets/(?P<path>.*)$', 'django.views.static.serve',
+        #{'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+#) + urlpatterns + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+#urlpatterns = patterns(
+    #'',
+    #url(r'^static/(?P<path>.*)$', 'django.views.static.serve',
+        #{'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
+#) + urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
 
 
 # == LOCAL ======================================== #

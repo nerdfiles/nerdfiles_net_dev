@@ -8,6 +8,8 @@ REST_FRAMEWORK = {
     )
 }
 
+SECRET_KEY = '&9u2v1iwln==r#ld$pbkvjjh$)ek^-k8(e7nzbx9*qt(dqm64*'
+
 ALLOWED_HOSTS = []
 
 LANGUAGE_CODE = 'en'
@@ -24,7 +26,7 @@ THEME = 'nerdfiles_net_dev'
 
 MEDIA_ROOT = os.path.join(PROJECT_PATH, "..", "themes", THEME, "assets")
 MEDIA_URL = '/assets/'
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(PROJECT_PATH, '..', 'static')
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
@@ -68,16 +70,15 @@ MIDDLEWARE_CLASSES = (
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
 
-    # 'django.middleware.cache.UpdateCacheMiddleware',
-    # 'django.middleware.cache.FetchFromCacheMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
 
-    # Uncomment the next line for simple clickjacking protection:
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'project.urls'
+ROOT_URLCONF = 'app.urls'
 
-WSGI_APPLICATION = 'project.wsgi.application'
+WSGI_APPLICATION = 'app.wsgi.application'
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, '../themes/%s/templates' % THEME),
@@ -92,7 +93,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
     'django.contrib.admin',
-    'app',
+    'debug_toolbar',
     'rest_framework.authtoken',
     'rest_framework',
     'south',
@@ -103,25 +104,21 @@ INSTALLED_APPS = (
     'menus',
     'mptt',
 
-    'cms.plugins.file',
-    'cms.plugins.flash',
-    'cms.plugins.googlemap',
-    'cms.plugins.link',
-    'cms.plugins.picture',
-    'cms.plugins.teaser',
-    'cms.plugins.text',
-    'cms.plugins.video',
-    'cms.plugins.twitter',
+    'sorl.thumbnail',
+    'djangocms_text_ckeditor',
+    'djangocms_picture',
+    'djangocms_link',
+    'djangocms_file',
+    'djangocms_snippet', #potential security hazard @see http://docs.django-cms.org/en/latest/getting_started/installation/integrate.html
+    'djangocms_googlemap',
+    'djangocms_inherit',
+    'django_extensions',
 
     'filer',
     'easy_thumbnails',
-    'cmsplugin_filer_file',
-    'cmsplugin_filer_folder',
-    'cmsplugin_filer_image',
-    'cmsplugin_filer_teaser',
-    'cmsplugin_filer_video',
-
     'corsheaders',
+
+    'app',
 )
 
 THUMBNAIL_PROCESSORS = (
@@ -191,13 +188,18 @@ CACHE_BACKEND = 'memcached://127.0.0.1:11211/'
 CACHE_TIMEOUT = 2880  # two days (24 hours)
 CACHE_PREFIX = "Z"
 
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
+DEBUG_TOOLBAR_CONFIG = {'INTERCEPT_REDIRECTS': False, }
+
+
 try:
     from db_settings import *
 except ImportError:
     pass
 
-try:
-    from local_settings import *
-    INSTALLED_APPS += DEBUG_APPS
-except ImportError:
-    pass
+#try:
+    #from local_settings import *
+    #INSTALLED_APPS += DEBUG_APPS
+#except ImportError:
+    #pass
+
