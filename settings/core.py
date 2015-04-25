@@ -118,14 +118,14 @@ INSTALLED_APPS = (
     'mptt',
 
     #'sorl.thumbnail',
-    #'djangocms_text_ckeditor',
-    #'djangocms_picture',
-    #'djangocms_link',
-    #'djangocms_file',
-    #'djangocms_snippet', #potential security hazard @see http://docs.django-cms.org/en/latest/getting_started/installation/integrate.html
-    #'djangocms_googlemap',
-    #'djangocms_inherit',
-    #'django_extensions',
+    'djangocms_text_ckeditor',
+    'djangocms_picture',
+    'djangocms_link',
+    'djangocms_file',
+    'djangocms_snippet', #potential security hazard @see http://docs.django-cms.org/en/latest/getting_started/installation/integrate.html
+    'djangocms_googlemap',
+    'djangocms_inherit',
+    'django_extensions',
 
     'filer',
     'easy_thumbnails',
@@ -135,6 +135,15 @@ INSTALLED_APPS = (
     'app',
     'debug_toolbar',
 )
+
+MIGRATION_MODULES = {
+    'djangocms_picture': 'djangocms_picture.migrations_django',
+    'djangocms_snippet': 'djangocms_snippet.migrations_django',
+    'djangocms_inherit': 'djangocms_inherit.migrations_django',
+    'djangocms_googlemap': 'djangocms_googlemap.migrations_django',
+    'djangocms_file': 'djangocms_file.migrations_django',
+    'djangocms_link': 'djangocms_link.migrations_django',
+}
 
 THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.colorspace',
