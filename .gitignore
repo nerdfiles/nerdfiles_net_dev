@@ -33,3 +33,4 @@ prod.py
 readme (Autosaved).markdown
 local_settings.py*
 db_settings.py*
+tools/
