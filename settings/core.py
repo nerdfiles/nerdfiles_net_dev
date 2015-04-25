@@ -109,7 +109,7 @@ INSTALLED_APPS = (
     #'south',
     'rest_framework.authtoken',
     'rest_framework',
-    'analytical',
+    #'analytical',
     'sekizai',
     'treebeard',
 
