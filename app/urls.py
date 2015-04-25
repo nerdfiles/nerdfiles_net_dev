@@ -15,11 +15,13 @@ handler404 = 'app.views.error_404'
 urlpatterns = patterns(
     '',
 
+
+    url(r'^', include('cms.urls')),
+    url(r'^', include('cms.urls', namespace='imagestore')),
     url(r'__/recent-tracks/', views.lastfm_recent_tracks,
         name='lastfm_recent_tracks'),
     url(r'^dashboard/', include(admin.site.urls)),
-    url(r'^', include('cms.urls')),
-    url(r'^', include('cms.urls', namespace='imagestore')),
+
 
     #url(r'^$', 'views.HomeView', name='home'),
     url(r'^addresses$', views.AddressList.as_view(), name='address-list'),
@@ -51,8 +53,10 @@ urlpatterns = patterns(
         {'document_root': settings.STATIC_ROOT, 'show_indexes': True}),
 ) + urlpatterns + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
+'''
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = patterns(
         '',
         url(r'^__debug__/', include(debug_toolbar.urls)),) + urlpatterns
+'''
