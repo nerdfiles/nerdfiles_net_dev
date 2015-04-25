@@ -26,7 +26,7 @@ LANGUAGES = [
 
 LANGUAGE_CODE = 'en'
 
-SITE_ID = 1
+SITE_ID = 2
 
 USE_I18N = False
 
