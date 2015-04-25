@@ -118,13 +118,13 @@ INSTALLED_APPS = (
     'mptt',
 
     'sorl.thumbnail',
-    #'djangocms_text_ckeditor',
-    #'djangocms_picture',
-    #'djangocms_link',
-    #'djangocms_file',
-    #'djangocms_snippet', #potential security hazard @see http://docs.django-cms.org/en/latest/getting_started/installation/integrate.html
-    #'djangocms_googlemap',
-    #'djangocms_inherit',
+    'djangocms_text_ckeditor',
+    'djangocms_picture',
+    'djangocms_link',
+    'djangocms_file',
+    'djangocms_snippet', #potential security hazard @see http://docs.django-cms.org/en/latest/getting_started/installation/integrate.html
+    'djangocms_googlemap',
+    'djangocms_inherit',
     'django_extensions',
 
     'filer',
