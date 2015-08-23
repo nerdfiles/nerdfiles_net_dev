@@ -36,4 +36,8 @@ db_settings.py*
 tools/
 static/
 filer_public
+<<<<<<< HEAD
 *.orig
+=======
+core.py
+>>>>>>> develop
